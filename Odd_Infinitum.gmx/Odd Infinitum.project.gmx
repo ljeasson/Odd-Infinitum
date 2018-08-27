@@ -253,6 +253,7 @@
       <object>objects\inventory_controller</object>
       <object>objects\menu_UI_controller</object>
       <object>objects\menu_controller</object>
+      <object>objects\internet_controller</object>
       <object>objects\player_death_controller</object>
       <object>objects\core_destroyer_laser_controller</object>
       <object>objects\stat_counter_controller</object>

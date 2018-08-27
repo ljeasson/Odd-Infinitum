@@ -62,7 +62,7 @@ if (key_laser)
     // If laser is fired with no health, take damage
     if (global.overheat <= 0)
     {
-        player_take_damage_heat(2);
+        player_take_damage_heat(5);
     }
 }
 
