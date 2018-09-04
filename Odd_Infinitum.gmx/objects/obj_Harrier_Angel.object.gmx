@@ -31,21 +31,25 @@ boss_health = 100;
 boss_name = "Harrier Angel";
 
 // State 
+state = harrier_angel_states.intro;
 
 // Damage
 damaged = false;
 
-// Set Path
-path_start(path_Harrier_Angel_1, 3, path_action_restart, true);
+// Attack Timers
+attack_lock = false;
 
-// Attack timers
+// Counter
+counter = 0;
+
+// Morph Timer
+morph = false;
 
 // Status booleans
 explosion_imminent = false;
 
 // Entrance and exit speeds
 entrance_speed = 5;
-exit_speed = 1;
 
 // Player damage ratings
 laser_weakness = 2.5;
@@ -132,6 +136,190 @@ instance_create(room_width/2, room_height/2, obj_Hostile_Pilot_Beacon);
           <argument>
             <kind>0</kind>
             <string>500</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Explosion Timer</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Create Explosion and Destroy
+instance_create(x,y,obj_Big_Explosion);
+instance_destroy();
+
+// Stop Audio
+audio_stop_all();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Damaged</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>damaged</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Disable Attack Lock</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>attack_lock</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Boss Action Manager
+
+// States
+switch (state)
+{
+    // Boss Stages
+    case harrier_angel_states.intro:
+        scr_harrier_angel_intro();
+        break;
+    case harrier_angel_states.phase_1:
+        scr_harrier_angel_phase_1();
+        break;
+    case harrier_angel_states.phase_2:
+        scr_harrier_angel_phase_2();
+        break;
+    case harrier_angel_states.defeat:
+        scr_harrier_angel_defeat();
+        break;
+}
+
+if (boss_health &lt; 0) {boss_health = 0;}
+if (boss_health == 0) {state = harrier_angel_states.defeat;}
+</string>
           </argument>
         </arguments>
       </action>
@@ -279,17 +467,14 @@ instance_create(room_width/2, room_height/2, obj_Hostile_Pilot_Beacon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// White Flash
-if (damaged)
-{
-    shader_set(shd_white_sprite);
-    draw_self();
-    draw_set_color(c_ltgray);
-    shader_reset();
-} else 
-{
-    draw_self();
-}
+            <string>///Draw Healthbar and Text
+draw_self();
+draw_set_color(c_white);
+draw_set_font(UI_Font);
+draw_set_halign(fa_left);
+draw_text(80,room_height-120,boss_name);
+draw_healthbar(80,room_height-96,room_width-80,room_height-64,boss_health,c_black,c_red,c_green,0,false,false);
+
 </string>
           </argument>
         </arguments>
@@ -310,14 +495,17 @@ if (damaged)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw Healthbar and Text
-draw_self();
-draw_set_color(c_white);
-draw_set_font(UI_Font);
-draw_set_halign(fa_left);
-draw_text(80,room_height-120,boss_name);
-draw_healthbar(80,room_height-96,room_width-80,room_height-64,boss_health,c_black,c_red,c_green,0,false,false);
-
+            <string>/// White Flash
+if (damaged)
+{
+    shader_set(shd_white_sprite);
+    draw_self();
+    draw_set_color(c_ltgray);
+    shader_reset();
+} else 
+{
+    draw_self();
+}
 </string>
           </argument>
         </arguments>

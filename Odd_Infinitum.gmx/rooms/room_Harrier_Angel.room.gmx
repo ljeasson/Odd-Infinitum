@@ -10,7 +10,15 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>window_set_cursor(cr_none);</code>
+  <code>enum harrier_angel_states
+{
+    intro,
+    phase_1,
+    phase_2,
+    defeat
+}
+
+window_set_cursor(cr_none);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
