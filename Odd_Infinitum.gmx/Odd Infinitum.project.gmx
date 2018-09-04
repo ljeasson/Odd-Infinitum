@@ -137,6 +137,7 @@
     <sprite>sprites\spr_Rocket_Bomb</sprite>
     <sprite>sprites\spr_Pilot_Insignia</sprite>
     <sprite>sprites\spr_Friendly_Pilot_Beacon</sprite>
+    <sprite>sprites\spr_Hostile_Pilot_Beacon</sprite>
     <sprites name="Keyboard Buttons">
       <sprite>sprites\spr_Button_Blank</sprite>
       <sprite>sprites\spr_Button_Blank_2</sprite>
@@ -191,6 +192,7 @@
     <path>paths\path_Defector_2</path>
     <path>paths\path_Defector_3</path>
     <path>paths\path_Fleet_Commander_1</path>
+    <path>paths\path_Harrier_Angel_1</path>
   </paths>
   <scripts name="scripts">
     <scripts name="General Scripts">
@@ -367,6 +369,7 @@
       <object>objects\obj_Missile_Barrage_Inv</object>
       <object>objects\obj_Pilot_Insignia</object>
       <object>objects\obj_Friendly_Pilot_Beacon</object>
+      <object>objects\obj_Hostile_Pilot_Beacon</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_text</object>
