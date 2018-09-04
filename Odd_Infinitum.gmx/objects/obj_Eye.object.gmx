@@ -232,7 +232,8 @@ image_angle = point_direction(x, y, obj_Player.x, obj_Player.y) - 180;
 // Attacks
 if (!attack_lock)
 {
-    instance_create(x,y,obj_Egg_Bouncing);
+    if (instance_number(obj_Egg_Bouncing) &lt; 20) 
+        instance_create(x,y,obj_Egg_Bouncing);
     
     attack_lock = true;
     alarm[1] = 60;

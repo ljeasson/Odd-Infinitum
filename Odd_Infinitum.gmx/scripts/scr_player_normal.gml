@@ -83,6 +83,11 @@ if (key_dodge_released)
     // Disable Dodge
     player_dodge = 0;
 }
+if (player_dodge)
+{
+    // Create Blur Effect by spawning fading player spirtes
+    instance_create(x,y,obj_Player_Fade)
+}    
 
 // Missile
 if (key_missile and global.missile_count > 0)

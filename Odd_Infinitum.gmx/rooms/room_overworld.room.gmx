@@ -71,6 +71,8 @@ window_set_cursor(cr_none);</code>
     <instance objName="obj_Marker_Tutorial" x="288" y="720" name="inst_FAB27AC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Level_Final" x="1136" y="-288" name="inst_055C3C4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Marker_Level_Final" x="1216" y="304" name="inst_4C971653" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Level_3" x="1040" y="512" name="inst_8783937B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Marker_Level_3" x="1136" y="640" name="inst_BFB5BBCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -168,6 +168,7 @@ window_set_cursor(cr_none);</code>
     <instance objName="obj_Cave_Wall" x="1344" y="0" name="inst_F897606B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Cave_Wall" x="1376" y="0" name="inst_89806B22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Cave_Wall" x="1408" y="0" name="inst_49A545D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="The_Queen_sound" x="32" y="0" name="inst_3D6BF0B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
