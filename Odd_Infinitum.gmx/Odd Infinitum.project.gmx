@@ -201,6 +201,7 @@
       <script>scripts\generate_random_sequence.gml</script>
       <script>scripts\generate_explosions.gml</script>
       <script>scripts\regain_health.gml</script>
+      <script>scripts\follow.gml</script>
     </scripts>
     <scripts name="Damage Scripts">
       <script>scripts\player_take_damage.gml</script>
