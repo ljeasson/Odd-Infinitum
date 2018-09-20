@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Pause
+
 // Take screenshot of current screen
 screen_save("pause.png");
 

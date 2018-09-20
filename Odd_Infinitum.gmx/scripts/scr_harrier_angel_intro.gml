@@ -1,28 +1,27 @@
 // Create Portal
-if (!instance_exists(obj_Portal))
-    instance_create(x,y,obj_Portal);
+//if (!instance_exists(obj_Portal))
+//    instance_create(x,y,obj_Portal);
 
 //Morph Between Sprites
-var choice = irandom(3);
 
 if (counter < 120)
 {
     if (!attack_lock)
     {
-        if (choice == 0){
-            sprite_index = spr_Harrier_Angel_1;
-            attack_lock = true;
-            alarm[0] = 3.25;
-        }
-        else if (choice == 1){ 
+        if (sprite_index == spr_Harrier_Angel_1){
             sprite_index = spr_Harrier_Angel_2;
             attack_lock = true;
-            alarm[0] = 3.25;
+            alarm[0] = 7.5;
         }
-        else if (choice == 2){ 
+        else if (sprite_index == spr_Harrier_Angel_2){ 
             sprite_index = spr_Harrier_Angel_3;
             attack_lock = true;
-            alarm[0] = 3.25;
+            alarm[0] = 7.5;
+        }
+        else if (sprite_index == spr_Harrier_Angel_3){ 
+            sprite_index = spr_Harrier_Angel_1;
+            attack_lock = true;
+            alarm[0] = 7.5;
         }   
     }
     counter += 1;

@@ -69,12 +69,20 @@ if (key_up)
 {
     if (interest == "Mission")
         interest = "Exit";
-    else if (interest == "Exit")
+    else if (interest == "Options")
         interest = "Mission";
+    else if (interest == "Credits")
+        interest = "Options";
+    else if (interest == "Exit")
+        interest = "Credits";
 }
 if (key_down)
 {
     if (interest == "Mission")
+        interest = "Options";
+    else if (interest == "Options")
+        interest = "Credits";
+    else if (interest == "Credits")
         interest = "Exit";
     else if (interest == "Exit")
         interest = "Mission";
@@ -112,11 +120,29 @@ if (key_select)
 if (interest == "Mission")
 {
     obj_Mission_Button.image_blend = c_aqua;
+    obj_Options_Button.image_blend = c_white;
+    obj_Credits_Button.image_blend = c_white;
+    obj_Quit_Button.image_blend = c_white;
+}
+else if (interest == "Options")
+{
+    obj_Mission_Button.image_blend = c_white;
+    obj_Options_Button.image_blend = c_aqua;
+    obj_Credits_Button.image_blend = c_white;
+    obj_Quit_Button.image_blend = c_white;
+}
+else if (interest == "Credits")
+{
+    obj_Mission_Button.image_blend = c_white;
+    obj_Options_Button.image_blend = c_white;
+    obj_Credits_Button.image_blend = c_aqua;
     obj_Quit_Button.image_blend = c_white;
 }
 else if (interest == "Exit")
 {
     obj_Mission_Button.image_blend = c_white;
+    obj_Options_Button.image_blend = c_white;
+    obj_Credits_Button.image_blend = c_white;
     obj_Quit_Button.image_blend = c_aqua;
 }
 </string>
