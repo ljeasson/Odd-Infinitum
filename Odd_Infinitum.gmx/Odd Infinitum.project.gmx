@@ -157,6 +157,11 @@
       <sprite>sprites\spr_Options</sprite>
       <sprite>sprites\spr_Restart</sprite>
       <sprite>sprites\spr_Exit</sprite>
+      <sprite>sprites\spr_1</sprite>
+      <sprite>sprites\spr_2</sprite>
+      <sprite>sprites\spr_3</sprite>
+      <sprite>sprites\spr_Summon_Friendly_Pilot</sprite>
+      <sprite>sprites\spr_Wait_To_Be_Summoned</sprite>
     </sprites>
     <sprites name="Controller Buttons">
       <sprite>sprites\spr_Controller_Button_Blank</sprite>
@@ -340,6 +345,9 @@
       <object>objects\obj_Level_2</object>
       <object>objects\obj_Level_3</object>
       <object>objects\obj_Level_Final</object>
+      <object>objects\obj_Messaging_Beacon_Tool</object>
+      <object>objects\obj_Friendly_Pilot_Beacon_Tool</object>
+      <object>objects\obj_Hostile_Pilot_Beacon_Tool</object>
     </objects>
     <objects name="Laser Alternates">
       <object>objects\obj_Triple_Shot</object>
@@ -357,6 +365,8 @@
       <object>objects\obj_Credits_Button</object>
       <object>objects\obj_Quit_Button</object>
       <object>objects\obj_Done</object>
+      <object>objects\obj_Summon_Friendly_Pilot</object>
+      <object>objects\obj_Wait_To_Be_Summoned</object>
     </objects>
     <objects name="Shop Items">
       <object>objects\obj_Triple_Shot_Shop_Item</object>
