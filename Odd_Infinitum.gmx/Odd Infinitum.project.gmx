@@ -162,6 +162,7 @@
       <sprite>sprites\spr_3</sprite>
       <sprite>sprites\spr_Summon_Friendly_Pilot</sprite>
       <sprite>sprites\spr_Wait_To_Be_Summoned</sprite>
+      <sprite>sprites\spr_Cancel</sprite>
     </sprites>
     <sprites name="Controller Buttons">
       <sprite>sprites\spr_Controller_Button_Blank</sprite>
@@ -367,6 +368,7 @@
       <object>objects\obj_Done</object>
       <object>objects\obj_Summon_Friendly_Pilot</object>
       <object>objects\obj_Wait_To_Be_Summoned</object>
+      <object>objects\obj_Cancel</object>
     </objects>
     <objects name="Shop Items">
       <object>objects\obj_Triple_Shot_Shop_Item</object>
@@ -448,8 +450,10 @@
       <object>objects\obj_Blood_Explosion</object>
       <object>objects\obj_Tentacle</object>
     </objects>
-    <object>objects\obj_Harrier_Angel</object>
-    <object>objects\obj_Portal</object>
+    <objects name="Harrier Angel">
+      <object>objects\obj_Harrier_Angel</object>
+      <object>objects\obj_Portal</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Level_1_Core_Destroyer</timeline>

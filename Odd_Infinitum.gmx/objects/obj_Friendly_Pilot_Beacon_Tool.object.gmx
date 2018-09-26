@@ -28,10 +28,123 @@
             <string>/// Instantiate Variables
 
 // Choice Selection
-selection = "summoning";
+selection = "Summon";
 
 // Show Menu
-show_menu = false;
+show_summon_menu = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Take Input
+
+// Pause Controls
+var key_up = keyboard_check_pressed(vk_up) 
+            || gamepad_button_check_pressed(0, gp_padu)
+            || gamepad_axis_value(0, gp_axislv) &gt; 0;
+            
+var key_down = keyboard_check_pressed(vk_down) 
+            || gamepad_button_check_pressed(0, gp_padd)
+            || gamepad_axis_value(0, gp_axislv) &lt; 0;
+            
+var key_select = keyboard_check_pressed(vk_return)
+            || gamepad_button_check_pressed(0, gp_face1);
+  
+                      
+// Change Option with Keyboard Input          
+if (key_up)
+{
+    if (selection == "Summon")
+        selection = "Cancel";
+    else if (selection == "Wait")
+        selection = "Summon";
+    else if (selection == "Cancel")
+        selection = "Wait";
+}
+if (key_down)
+{
+    if (selection == "Summon")
+        selection = "Wait";
+    else if (selection == "Wait")
+        selection = "Cancel";
+    else if (selection == "Cancel")
+        selection = "Summon";
+}
+
+if (key_select)
+{
+    //if (selection == "Summon")
+        
+    //else if (selection == "Wait")
+        
+    if (selection == "Cancel")
+        show_summon_menu = false;
+}
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Highlight Option
+
+if (instance_exists(obj_Summon_Friendly_Pilot) 
+    &amp;&amp; instance_exists(obj_Wait_To_Be_Summoned)
+    &amp;&amp; instance_exists(obj_Cancel))
+{
+    if (selection == "Summon")
+    {
+        obj_Summon_Friendly_Pilot.image_blend = c_aqua;
+        obj_Wait_To_Be_Summoned.image_blend = c_white;
+        obj_Cancel.image_blend = c_white;
+    }
+    else if (selection == "Wait")
+    {
+        obj_Summon_Friendly_Pilot.image_blend = c_white;
+        obj_Wait_To_Be_Summoned.image_blend = c_aqua;
+        obj_Cancel.image_blend = c_white;
+    }
+    else if (selection == "Cancel")
+    {
+        obj_Summon_Friendly_Pilot.image_blend = c_white;
+        obj_Wait_To_Be_Summoned.image_blend = c_white;
+        obj_Cancel.image_blend = c_aqua;
+    }
+}
+
 </string>
           </argument>
         </arguments>
@@ -57,32 +170,27 @@ show_menu = false;
             <string>/// Draw Menu
 draw_self();
 
-if (show_menu)
+if (show_summon_menu)
 {
     // Create message box
-    scr_message_box("Friendly Pilot Beacon", room_width/2, room_height/2 - 64);
+    if (instance_number(obj_message_box) &lt; 1)
+        scr_message_box("Friendly Pilot Beacon", room_width/2, room_height/2 - 64);
     
     // Change sprite color
     image_blend = c_aqua;
     
     // Draw buttons
-    if (instance_number(obj_Summon_Friendly_Pilot) &lt; 1 &amp;&amp; instance_number(obj_Wait_To_Be_Summoned) &lt; 1)
+    if (instance_number(obj_Summon_Friendly_Pilot) &lt; 1 
+        &amp;&amp; instance_number(obj_Wait_To_Be_Summoned) &lt; 1
+        &amp;&amp; instance_number(obj_Cancel) &lt; 1)
     {
-        var summon = instance_create(room_width/2, room_height/2 + 64, obj_Summon_Friendly_Pilot); 
-        var wait = instance_create(room_width/2, room_height/2 + 128, obj_Wait_To_Be_Summoned);
-    
-        // Highlight selection
-        if (selection == "summoning")
-        {
-            summon.image_blend = c_aqua;
-            wait.image_blend = c_white;
-        }
-        else if (selection == "be summoned")
-        {
-            summon.image_blend = c_white;
-            wait.image_blend = c_aqua;
-        }
+        instance_create(room_width/2, room_height/2 + 64, obj_Summon_Friendly_Pilot); 
+        instance_create(room_width/2, room_height/2 + 128, obj_Wait_To_Be_Summoned);
+        instance_create(room_width/2, room_height/2 + 192, obj_Cancel);
     }
+    
+    // Freeze Player Movement
+    obj_Player_Overworld.menu = true;
        
 }
 else
@@ -96,6 +204,10 @@ else
     // Clear buttons
     instance_destroy(obj_Summon_Friendly_Pilot);
     instance_destroy(obj_Wait_To_Be_Summoned);
+    instance_destroy(obj_Cancel);
+    
+    // Unfreeze Player Movement
+    obj_Player_Overworld.menu = false;
 }
 </string>
           </argument>
@@ -121,74 +233,10 @@ else
             <kind>1</kind>
             <string>/// Enable Menu
 
-if (!show_menu)
-    show_menu = true;
+if (!show_summon_menu)
+    show_summon_menu = true;
 else
-    show_menu = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="40">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Toggle Options (DOWN)
-
-if (show_menu)
-{
-    if (selection == "summoning")
-        selection = "be summoned";
-    
-    else if (selection == "be summoned")
-        selection = "summoning";
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="38">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Toggle Options (UP)
-
-if (show_menu)
-{
-    if (selection == "summoning")
-        selection = "be summoned";
-    
-    else if (selection == "be summoned")
-        selection = "summoning";
-}
+    show_summon_menu = false;
 </string>
           </argument>
         </arguments>

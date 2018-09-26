@@ -33,6 +33,9 @@ overworld_speed = 4;
 
 // Inventory Open
 inventory_open = false;
+
+// Menu Open
+menu = false;
 </string>
           </argument>
         </arguments>
@@ -65,7 +68,7 @@ key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0)
 key_inventory = keyboard_check_pressed(vk_shift) || (gamepad_button_check_pressed(0, gp_shoulderr));
 
 // Read movement controls
-if (!inventory_open)
+if (!inventory_open &amp;&amp; !menu)
 {
     if (key_left and x &gt; 0) { x -= overworld_speed };
     if (key_right and x &lt;= room_width - 56) { x += overworld_speed };
