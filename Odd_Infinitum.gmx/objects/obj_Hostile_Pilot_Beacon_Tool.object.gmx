@@ -7,7 +7,208 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Instantiate Variables
+
+// Choice Selection
+selection = "Invade";
+
+// Show Menu
+show_invade_menu = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Take Input
+
+// Pause Controls
+var key_up = keyboard_check_pressed(vk_up) 
+            || gamepad_button_check_pressed(0, gp_padu)
+            || gamepad_axis_value(0, gp_axislv) &gt; 0;
+            
+var key_down = keyboard_check_pressed(vk_down) 
+            || gamepad_button_check_pressed(0, gp_padd)
+            || gamepad_axis_value(0, gp_axislv) &lt; 0;
+            
+var key_select = keyboard_check_pressed(vk_return)
+            || gamepad_button_check_pressed(0, gp_face1);
+  
+var key_menu = keyboard_check_pressed(ord("3"));
+                      
+// Change Option with Keyboard Input          
+if (key_up &amp;&amp; show_invade_menu)
+{
+    if (selection == "Invade")
+        selection = "Cancel";
+    else if (selection == "Cancel")
+        selection = "Invade";
+}
+if (key_down &amp;&amp; show_invade_menu)
+{
+    if (selection == "Invade")
+        selection = "Cancel";
+    else if (selection == "Cancel")
+        selection = "Invade";
+}
+
+if (key_select &amp;&amp; show_invade_menu)
+{
+    //if (selection == "Invade")
+        
+    if (selection == "Cancel")
+        show_invade_menu = false;
+}
+
+if (key_menu)
+{
+    // Enable Menu
+    if (!show_invade_menu)
+        show_invade_menu = true;
+    else
+        show_invade_menu = false;
+}
+    
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Highlight Option
+
+if (instance_exists(obj_Invade_Pilots_World) 
+    &amp;&amp; instance_exists(obj_Cancel))
+{
+    if (selection == "Invade")
+    {
+        obj_Invade_Pilots_World.image_blend = c_red;
+        obj_Cancel.image_blend = c_white;
+    }
+    else if (selection == "Cancel")
+    {
+        obj_Invade_Pilots_World.image_blend = c_white;
+        obj_Cancel.image_blend = c_red;
+    }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw Menu
+draw_self();
+
+if (show_invade_menu)
+{
+    // Create message box
+    if (instance_number(obj_message_box) &lt; 1)
+        scr_message_box("Hostile Pilot Beacon", room_width/2, room_height/2 - 64);
+    
+    // Change sprite color
+    image_blend = c_red;
+    
+    // Draw buttons
+    if (instance_number(obj_Invade_Pilots_World) &lt; 1 
+        &amp;&amp; instance_number(obj_Cancel) &lt; 1)
+    {
+        instance_create(room_width/2, room_height/2 + 64, obj_Invade_Pilots_World); 
+        instance_create(room_width/2, room_height/2 + 128, obj_Cancel);
+    }
+    
+    // Freeze Player Movement
+    obj_Player_Overworld.menu = true;      
+}
+else
+{
+    // Clear message box
+    instance_destroy(obj_message_box);
+    
+    // Revert sprite color
+    image_blend = c_white;
+    
+    // Clear buttons
+    instance_destroy(obj_Invade_Pilots_World);
+    instance_destroy(obj_Cancel);
+    
+    // Unfreeze Player Movement
+    obj_Player_Overworld.menu = false;
+    
+    // Set Selection to "Summon"
+    selection = "Invade";
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

@@ -162,6 +162,7 @@
       <sprite>sprites\spr_3</sprite>
       <sprite>sprites\spr_Summon_Friendly_Pilot</sprite>
       <sprite>sprites\spr_Wait_To_Be_Summoned</sprite>
+      <sprite>sprites\spr_Invade_Pilots_World</sprite>
       <sprite>sprites\spr_Cancel</sprite>
     </sprites>
     <sprites name="Controller Buttons">
@@ -368,6 +369,7 @@
       <object>objects\obj_Done</object>
       <object>objects\obj_Summon_Friendly_Pilot</object>
       <object>objects\obj_Wait_To_Be_Summoned</object>
+      <object>objects\obj_Invade_Pilots_World</object>
       <object>objects\obj_Cancel</object>
     </objects>
     <objects name="Shop Items">

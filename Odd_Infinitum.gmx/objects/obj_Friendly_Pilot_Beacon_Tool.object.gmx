@@ -68,9 +68,10 @@ var key_down = keyboard_check_pressed(vk_down)
 var key_select = keyboard_check_pressed(vk_return)
             || gamepad_button_check_pressed(0, gp_face1);
   
+var key_menu = keyboard_check_pressed(ord("2"));
                       
 // Change Option with Keyboard Input          
-if (key_up)
+if (key_up &amp;&amp; show_summon_menu)
 {
     if (selection == "Summon")
         selection = "Cancel";
@@ -79,7 +80,7 @@ if (key_up)
     else if (selection == "Cancel")
         selection = "Wait";
 }
-if (key_down)
+if (key_down &amp;&amp; show_summon_menu)
 {
     if (selection == "Summon")
         selection = "Wait";
@@ -89,13 +90,22 @@ if (key_down)
         selection = "Summon";
 }
 
-if (key_select)
+if (key_select &amp;&amp; show_summon_menu)
 {
     //if (selection == "Summon")
         
     //else if (selection == "Wait")
         
     if (selection == "Cancel")
+        show_summon_menu = false;
+}
+
+if (key_menu)
+{
+    // Enable Menu
+    if (!show_summon_menu)
+        show_summon_menu = true;
+    else
         show_summon_menu = false;
 }
     
@@ -190,8 +200,7 @@ if (show_summon_menu)
     }
     
     // Freeze Player Movement
-    obj_Player_Overworld.menu = true;
-       
+    obj_Player_Overworld.menu = true;      
 }
 else
 {
@@ -208,35 +217,10 @@ else
     
     // Unfreeze Player Movement
     obj_Player_Overworld.menu = false;
+    
+    // Set Selection to "Summon"
+    selection = "Summon";
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="50">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Enable Menu
-
-if (!show_summon_menu)
-    show_summon_menu = true;
-else
-    show_summon_menu = false;
 </string>
           </argument>
         </arguments>
