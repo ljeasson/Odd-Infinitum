@@ -19,8 +19,13 @@ key_alt_laser = keyboard_check_pressed(ord('G')) || (gamepad_button_check_presse
 key_alt_laser_hold = keyboard_check(ord('G')) || (gamepad_button_check(0,gp_face2));
 key_missile = keyboard_check_pressed(ord('F')) || (gamepad_button_check_pressed(0,gp_face3));
 key_missile_regain = keyboard_check_pressed(ord('R')) || (gamepad_button_check_pressed(0,gp_face4));
+
+// Dodge controls
 key_dodge_pressed = keyboard_check_pressed(vk_shift) || (gamepad_button_check_pressed(0,gp_shoulderrb));
 key_dodge_released = keyboard_check_released(vk_shift) || (gamepad_button_check_released(0,gp_shoulderrb));
+
+// Energy Buckler controls
+key_energy_buckler = keyboard_check_pressed(ord('T')) // Add Gamepad Control
 
 // Read movement controls
 if (key_left and x > 0) { x -= player_speed };
@@ -208,5 +213,22 @@ if (key_alt_laser_hold)
             fire_again = false
             alarm[1] = global.shot_timer;
         }
+    }
+}
+
+// Energy Buckler
+if (key_energy_buckler)
+{
+    if (fire_again)
+    {
+        // Create energy buckler instance
+        instance_create(x+24,y+16,obj_Energy_Buckler);
+        
+        // Decrease overheat by 10
+        global.overheat -= 10;
+        
+        // Disable fire_again
+        fire_again = false
+        alarm[1] = 60;
     }
 }

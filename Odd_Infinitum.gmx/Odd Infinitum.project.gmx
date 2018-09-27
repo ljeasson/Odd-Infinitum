@@ -51,6 +51,8 @@
       <sprite>sprites\spr_Giant_Laser</sprite>
       <sprite>sprites\spr_Missile</sprite>
       <sprite>sprites\spr_Player_Explosion</sprite>
+      <sprite>sprites\spr_Energy_Buckler</sprite>
+      <sprite>sprites\spr_Energy_Buckler_Parry</sprite>
     </sprites>
     <sprites name="Background">
       <sprite>sprites\spr_Star</sprite>
@@ -315,6 +317,9 @@
       <object>objects\obj_Laser_Short_Range</object>
       <object>objects\obj_Regain_Laser</object>
       <object>objects\obj_Missile</object>
+      <object>objects\obj_Energy_Buckler</object>
+      <object>objects\obj_Energy_Buckler_Parry</object>
+      <object>objects\obj_Parry_Shot</object>
       <object>objects\obj_Damaged_Screen</object>
       <object>objects\obj_Heat_Screen</object>
       <object>objects\obj_Overheat</object>
