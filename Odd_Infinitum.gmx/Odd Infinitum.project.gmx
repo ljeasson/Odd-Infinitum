@@ -276,7 +276,6 @@
       <object>objects\UI_controller</object>
       <object>objects\overworld_controller</object>
       <object>objects\shop_controller</object>
-      <object>objects\tutorial_controller</object>
       <object>objects\inventory_controller</object>
       <object>objects\menu_UI_controller</object>
       <object>objects\menu_controller</object>
@@ -285,6 +284,11 @@
       <object>objects\core_destroyer_laser_controller</object>
       <object>objects\stat_counter_controller</object>
       <object>objects\obj_Back_To_Overworld</object>
+      <objects name="Tutorial Controllers">
+        <object>objects\tutorial_controller</object>
+        <object>objects\tutorial_controller_basics</object>
+        <object>objects\tutorial_controller_missile</object>
+      </objects>
       <objects name="Sound Controllers">
         <object>objects\main_menu_sound</object>
         <object>objects\overworld_sound</object>
@@ -339,6 +343,10 @@
     <object>objects\obj_Explosion_Medium</object>
     <object>objects\obj_Explosion_Large</object>
     <object>objects\obj_Big_Explosion</object>
+    <objects name="Tutorial">
+      <object>objects\obj_Marker_Laser</object>
+      <object>objects\obj_Marker_Missile</object>
+    </objects>
     <objects name="Overworld">
       <object>objects\obj_Player_Overworld</object>
       <object>objects\obj_Marker_Tutorial</object>
@@ -469,12 +477,16 @@
   <rooms name="rooms">
     <room>rooms\room_init</room>
     <room>rooms\room_menu</room>
+    <rooms name="Tutorial">
+      <room>rooms\room_tutorial</room>
+      <room>rooms\room_tutorial_laser</room>
+      <room>rooms\room_tutorial_missile</room>
+    </rooms>
     <room>rooms\room_overworld</room>
     <room>rooms\room_Core_Destroyer</room>
     <room>rooms\room_Fleet_Commander_Daemeon</room>
     <room>rooms\room_Harrier_Angel</room>
     <room>rooms\room_The_Queen</room>
-    <room>rooms\room_tutorial</room>
     <room>rooms\room_pilot_base</room>
     <room>rooms\room_Test</room>
   </rooms>

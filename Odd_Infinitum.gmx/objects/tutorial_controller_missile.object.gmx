@@ -28,8 +28,8 @@
             <string>/// Draw Upgrade Items
 
 // Set Margins
-right_margin = 192;
-left_margin = room_width - 192;
+right_margin = room_width - 192;
+left_margin = 192;
 
 // Create Player
 instance_create(room_width/2-24, room_height/2+16, obj_Player);
@@ -62,14 +62,20 @@ draw_set_colour(c_white);
 draw_set_font(UI_Font_Large);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-
-
-// Speed Boost
-draw_text(left_margin, 320, "SPEED BOOST");
+    
+// Missile
+draw_text(left_margin, 128, "MISSILE");
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-    draw_sprite(spr_Controller_RT, 0, left_margin, 320 + 96)
+    draw_sprite(spr_Controller_X, 0, left_margin, 128 + 96)
 else
-    draw_sprite(spr_Shift, 0, left_margin, 320 + 96)
+    draw_sprite(spr_F, 0, left_margin, 128 + 96)
+
+// Missile Regain
+draw_text(right_margin, 512, "MISSILE RELOAD");
+if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
+    draw_sprite(spr_Controller_Y, 0, right_margin, 512 + 96)
+else
+    draw_sprite(spr_R, 0, right_margin, 512 + 96)
 
 </string>
           </argument>

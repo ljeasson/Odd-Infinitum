@@ -28,8 +28,8 @@
             <string>/// Draw Upgrade Items
 
 // Set Margins
-right_margin = 192;
-left_margin = room_width - 192;
+right_margin = room_width - 192;
+left_margin = 192;
 
 // Create Player
 instance_create(room_width/2-24, room_height/2+16, obj_Player);
@@ -63,14 +63,31 @@ draw_set_font(UI_Font_Large);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 
-
-// Speed Boost
-draw_text(left_margin, 320, "SPEED BOOST");
+// Move
+draw_text(left_margin, 128, "MOVE");
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-    draw_sprite(spr_Controller_RT, 0, left_margin, 320 + 96)
+    draw_sprite(spr_Controller_Stick_L, 0, left_margin, 128 + 96)
 else
-    draw_sprite(spr_Shift, 0, left_margin, 320 + 96)
+{
+    draw_sprite(spr_Up, 0, left_margin, 128 + 96)
+    draw_sprite(spr_Down, 0, left_margin, 128 + 144)
+    draw_sprite(spr_Left, 0, left_margin - 48, 128 + 144)
+    draw_sprite(spr_Right, 0, left_margin + 48, 128 + 144)
+}
+    
+// Laser
+draw_text(right_margin, 128, "LASER");
+if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
+    draw_sprite(spr_Controller_A, 0, right_margin, 128 + 96)
+else
+    draw_sprite(spr_Button_Blank, 0, right_margin, 128 + 96)
 
+// Alt Laser
+draw_text(right_margin, 512, "ALT LASER");
+if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
+    draw_sprite(spr_Controller_B, 0, right_margin, 512 + 96)
+else
+    draw_sprite(spr_G, 0, right_margin, 512 + 96)
 </string>
           </argument>
         </arguments>
