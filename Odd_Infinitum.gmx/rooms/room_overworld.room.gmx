@@ -12,9 +12,14 @@
   <showcolour>-1</showcolour>
   <code>enum overworld_states
 {
-    normal,
-    inventory
-}
+    idle,
+    summoning,
+    invading,
+    waiting_c,
+    waiting_p,
+    connected_c,
+    connected_p
+};
 
 window_set_cursor(cr_none);</code>
   <enableViews>0</enableViews>

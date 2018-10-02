@@ -217,12 +217,17 @@
       <script>scripts\player_take_damage_heat.gml</script>
       <script>scripts\boss_take_damage.gml</script>
     </scripts>
-    <scripts name="UI">
+    <scripts name="UI Scripts">
       <script>scripts\scr_text.gml</script>
       <script>scripts\scr_item_description.gml</script>
       <script>scripts\scr_message_box.gml</script>
       <script>scripts\scr_item_reward.gml</script>
       <script>scripts\scr_victory_stats.gml</script>
+    </scripts>
+    <scripts name="Networking Scripts">
+      <script>scripts\process_packet.gml</script>
+      <script>scripts\scr_player_summoning.gml</script>
+      <script>scripts\scr_player_waiting.gml</script>
     </scripts>
     <scripts name="Asteroid Scripts">
       <script>scripts\generate_asteroid.gml</script>
@@ -284,6 +289,10 @@
       <object>objects\core_destroyer_laser_controller</object>
       <object>objects\stat_counter_controller</object>
       <object>objects\obj_Back_To_Overworld</object>
+      <objects name="Network Controllers">
+        <object>objects\obj_Server</object>
+        <object>objects\obj_Client</object>
+      </objects>
       <objects name="Tutorial Controllers">
         <object>objects\tutorial_controller</object>
         <object>objects\tutorial_controller_basics</object>

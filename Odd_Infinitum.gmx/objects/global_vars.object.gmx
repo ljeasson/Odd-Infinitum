@@ -42,7 +42,7 @@ global.shop_currency = 0;
 // QUEST ITEMS
 global.pilot_insignia = false;
 global.messaging_beacon = true;
-global.friendly_pilot_beacon = false;
+global.friendly_pilot_beacon = true;
 global.hostile_pilot_beacon = false;
 
 //DAMAGE RATINGS (PLAYER)

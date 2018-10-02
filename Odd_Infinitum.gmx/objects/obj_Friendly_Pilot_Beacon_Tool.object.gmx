@@ -92,11 +92,17 @@ if (key_down &amp;&amp; show_summon_menu)
 
 if (key_select &amp;&amp; show_summon_menu)
 {
-    //if (selection == "Summon")
-        
-    //else if (selection == "Wait")
-        
-    if (selection == "Cancel")
+    if (selection == "Summon")
+    {
+        scr_player_summoning();    
+        show_summon_menu = false;
+    }
+    else if (selection == "Wait")
+    {
+        scr_player_waiting();
+        show_summon_menu = false;
+    }
+    else if (selection == "Cancel")
         show_summon_menu = false;
 }
 
