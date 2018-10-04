@@ -51,6 +51,44 @@ send_buffer = buffer_create(buffer_size, buffer_type, buffer_alignment);
 
 // Text
 scr_text("This is a Server#Waiting for a Friendly Pilot", 2, room_width/2, room_height/2 + 64);
+
+//variables for drawing circles.
+myx = 0;
+myy = 0;
+remotex = 0;
+remotey = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//encode mouse position and transmit
+buffer_seek(send_buffer, buffer_seek_start,0);
+buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_u32,mouse_x);//mousepos
+buffer_write(send_buffer, buffer_u32,mouse_y);
+network_send_udp(socket,remote_ip,remote_port,send_buffer,buffer_tell(send_buffer));
+
+//update my circle
+myx = mouse_x;
+myy = mouse_y;
 </string>
           </argument>
         </arguments>
@@ -83,6 +121,31 @@ remote_ip = string(async_load[? "ip"]);
 var buffer = async_load[? "buffer"];
 buffer_seek(buffer, buffer_seek_start, 0);
 process_packet(buffer);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//draw some circles
+draw_circle_colour(myx,myy,32,c_white,c_red,false);
+draw_circle_colour(remotex,remotey,32,c_black,c_blue,false);
 </string>
           </argument>
         </arguments>
