@@ -228,6 +228,7 @@
       <script>scripts\process_packet.gml</script>
       <script>scripts\scr_player_summoning.gml</script>
       <script>scripts\scr_player_waiting.gml</script>
+      <script>scripts\scr_player_connected.gml</script>
     </scripts>
     <scripts name="Asteroid Scripts">
       <script>scripts\generate_asteroid.gml</script>

@@ -14,11 +14,8 @@
 {
     idle,
     summoning,
-    invading,
-    waiting_c,
-    waiting_p,
-    connected_c,
-    connected_p
+    waiting,
+    connected
 };
 
 window_set_cursor(cr_none);</code>

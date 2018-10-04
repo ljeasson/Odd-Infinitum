@@ -94,12 +94,12 @@ if (key_select &amp;&amp; show_summon_menu)
 {
     if (selection == "Summon")
     {
-        scr_player_summoning();    
+        obj_Player_Overworld.overworld_state = overworld_states.summoning;    
         show_summon_menu = false;
     }
     else if (selection == "Wait")
     {
-        scr_player_waiting();
+        obj_Player_Overworld.overworld_state = overworld_states.waiting;
         show_summon_menu = false;
     }
     else if (selection == "Cancel")
