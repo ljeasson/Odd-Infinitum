@@ -68,7 +68,7 @@ remotey = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="50">
+    <event eventtype="5" enumb="40">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -88,13 +88,109 @@ remotey = 0;
             <string>//encode mouse position and transmit
 buffer_seek(send_buffer, buffer_seek_start,0);
 buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_u32,mouse_x);//mousepos
-buffer_write(send_buffer, buffer_u32,mouse_y);
+buffer_write(send_buffer, buffer_u32,x);
+buffer_write(send_buffer, buffer_u32,y);
 network_send_udp(socket,remote_ip,remote_port,send_buffer,buffer_tell(send_buffer));
 
 //update my circle
-myx = mouse_x;
-myy = mouse_y;
+myy += 4;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//encode mouse position and transmit
+buffer_seek(send_buffer, buffer_seek_start,0);
+buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_u32,x);
+buffer_write(send_buffer, buffer_u32,y);
+network_send_udp(socket,remote_ip,remote_port,send_buffer,buffer_tell(send_buffer));
+
+//update my circle
+myx += 4;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//encode mouse position and transmit
+buffer_seek(send_buffer, buffer_seek_start,0);
+buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_u32,x);
+buffer_write(send_buffer, buffer_u32,y);
+network_send_udp(socket,remote_ip,remote_port,send_buffer,buffer_tell(send_buffer));
+
+//update my circle
+myy -= 4;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//encode mouse position and transmit
+buffer_seek(send_buffer, buffer_seek_start,0);
+buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_u32,x);
+buffer_write(send_buffer, buffer_u32,y);
+network_send_udp(socket,remote_ip,remote_port,send_buffer,buffer_tell(send_buffer));
+
+//update my circle
+myx -= 4;
+
 </string>
           </argument>
         </arguments>
