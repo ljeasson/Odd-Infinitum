@@ -50,7 +50,13 @@ var buffer_alignment = 1;
 send_buffer = buffer_create(buffer_size, buffer_type, buffer_alignment);
 
 // Text
-scr_text("This is a Server#Waiting for a Friendly Pilot", 2, room_width/2, room_height/2 + 64);
+//scr_text("This is a Server#Waiting for a Friendly Pilot", 2, room_width/2, room_height/2 + 64);
+
+// Movement controls
+key_up = keyboard_check(vk_up) || (gamepad_axis_value(0,gp_axislv) &lt; 0);
+key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0);
+key_left = keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0);
+key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0);
 
 //variables for drawing circles.
 myx = 0;

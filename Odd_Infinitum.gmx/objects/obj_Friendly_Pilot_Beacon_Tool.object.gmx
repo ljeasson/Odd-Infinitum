@@ -94,12 +94,14 @@ if (key_select &amp;&amp; show_summon_menu)
 {
     if (selection == "Summon")
     {
-        obj_Player_Overworld.overworld_state = overworld_states.summoning;    
+        //obj_Player_Overworld.overworld_state = overworld_states.summoning;   
+        scr_player_summoning(); 
         show_summon_menu = false;
     }
     else if (selection == "Wait")
     {
-        obj_Player_Overworld.overworld_state = overworld_states.waiting;
+        //obj_Player_Overworld.overworld_state = overworld_states.waiting;
+        scr_player_waiting();
         show_summon_menu = false;
     }
     else if (selection == "Cancel")
@@ -206,7 +208,7 @@ if (show_summon_menu)
     }
     
     // Freeze Player Movement
-    obj_Player_Overworld.menu = true;      
+    //obj_Player_Overworld.menu = true;      
 }
 else
 {
@@ -222,7 +224,7 @@ else
     instance_destroy(obj_Cancel);
     
     // Unfreeze Player Movement
-    obj_Player_Overworld.menu = false;
+    //obj_Player_Overworld.menu = false;
     
     // Set Selection to "Summon"
     selection = "Summon";

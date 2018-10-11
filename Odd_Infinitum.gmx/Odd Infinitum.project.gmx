@@ -230,14 +230,14 @@
       <script>scripts\scr_player_waiting.gml</script>
       <script>scripts\scr_player_connected.gml</script>
     </scripts>
-    <scripts name="Asteroid Scripts">
-      <script>scripts\generate_asteroid.gml</script>
-      <script>scripts\generate_asteroid_following.gml</script>
-    </scripts>
     <scripts name="Player States">
       <script>scripts\scr_player_normal.gml</script>
       <script>scripts\scr_player_damaged.gml</script>
       <script>scripts\scr_player_dead.gml</script>
+    </scripts>
+    <scripts name="Asteroid Scripts">
+      <script>scripts\generate_asteroid.gml</script>
+      <script>scripts\generate_asteroid_following.gml</script>
     </scripts>
     <scripts name="Core Destroyer States">
       <script>scripts\scr_core_destroyer_phase1.gml</script>
@@ -498,7 +498,7 @@
     <room>rooms\room_Harrier_Angel</room>
     <room>rooms\room_The_Queen</room>
     <room>rooms\room_pilot_base</room>
-    <room>rooms\room_Test</room>
+    <room>rooms\room_Network_Test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -40,8 +40,8 @@ else
 
 // Server IP and Port, needed to send packets
 // Know IP adress for now, will later get from server
-//ip = "127.0.0.1";
-ip = get_string_async("Enter IP Address of Server", "127.0.0.1");
+//ip = "192.168.0.24";
+ip = "127.0.0.1";
 remote_port = 3065;
 
 // Make buffer to hold packet 
