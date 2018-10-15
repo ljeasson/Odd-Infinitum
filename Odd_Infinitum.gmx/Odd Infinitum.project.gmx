@@ -211,6 +211,7 @@
       <script>scripts\generate_explosions.gml</script>
       <script>scripts\regain_health.gml</script>
       <script>scripts\follow_object.gml</script>
+      <script>scripts\Callout.gml</script>
     </scripts>
     <scripts name="Damage Scripts">
       <script>scripts\player_take_damage.gml</script>
@@ -338,6 +339,7 @@
       <object>objects\obj_Heat_Screen</object>
       <object>objects\obj_Overheat</object>
       <object>objects\obj_Player_Explosion</object>
+      <object>objects\obj_Callout</object>
       <object>objects\particle_Player_Explosion</object>
     </objects>
     <object>objects\obj_Star</object>

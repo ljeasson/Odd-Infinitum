@@ -36,6 +36,18 @@ if (key_down and y <= room_height - 32) { y += player_speed };
 // Set sprite to normal
 obj_Player.sprite_index = spr_Player;
 
+// Callouts
+if (keyboard_check_pressed(ord('1'))) {Callout(global.callout_1)};
+if (keyboard_check_pressed(ord('2'))) {Callout(global.callout_2)};
+if (keyboard_check_pressed(ord('3'))) {Callout(global.callout_3)};
+if (keyboard_check_pressed(ord('4'))) {Callout(global.callout_4)};
+if (keyboard_check_pressed(ord('5'))) {Callout(global.callout_5)};
+if (keyboard_check_pressed(ord('6'))) {Callout(global.callout_6)};
+if (keyboard_check_pressed(ord('7'))) {Callout(global.callout_7)};
+if (keyboard_check_pressed(ord('8'))) {Callout(global.callout_8)};
+if (keyboard_check_pressed(ord('9'))) {Callout(global.callout_9)};
+if (keyboard_check_pressed(ord('0'))) {Callout(global.callout_10)};
+
 // Read laser and missile controls
 // Laser
 if (key_laser) 
