@@ -96,9 +96,9 @@ if (showtext == 1)
     draw_set_font(UI_Font_Large);
     draw_text(room_width/2, room_height - 128, "PROCEED");
     if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-        draw_sprite(spr_Controller_A, 0, room_width/2, room_height - 64);
+        draw_sprite(spr_Controller_A, 0, room_width/2, room_height - 84);
     else
-        draw_sprite(spr_Button_Blank, 0, room_width/2, room_height - 64);
+        draw_sprite(spr_Button_Blank, 0, room_width/2, room_height - 84);
 }
 </string>
           </argument>

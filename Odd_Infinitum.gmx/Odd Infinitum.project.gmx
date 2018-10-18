@@ -312,7 +312,7 @@
       </objects>
       <objects name="Tutorial Controllers">
         <object>objects\tutorial_controller</object>
-        <object>objects\tutorial_controller_basics</object>
+        <object>objects\tutorial_controller_laser</object>
         <object>objects\tutorial_controller_missile</object>
       </objects>
       <objects name="Sound Controllers">
@@ -380,7 +380,7 @@
       <object>objects\obj_Big_Explosion</object>
     </objects>
     <objects name="Tutorial">
-      <object>objects\obj_Marker_Basics</object>
+      <object>objects\obj_Marker_Laser</object>
       <object>objects\obj_Marker_Missile</object>
     </objects>
     <objects name="Overworld">
@@ -515,7 +515,7 @@
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>
-      <room>rooms\room_tutorial_basics</room>
+      <room>rooms\room_tutorial_laser</room>
       <room>rooms\room_tutorial_missile</room>
     </rooms>
     <room>rooms\room_overworld</room>

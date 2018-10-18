@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>window_set_cursor(cr_none);</code>
+  <code>// Disable Cursor
+window_set_cursor(cr_none);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -53,9 +54,9 @@
   <instances>
     <instance objName="room_controller" x="32" y="0" name="inst_E1846FB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="UI_controller" x="0" y="0" name="inst_B4D8FDF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Marker_Basics" x="288" y="176" name="inst_8E560BCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Marker_Laser" x="144" y="400" name="inst_8E560BCA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="tutorial_controller" x="0" y="32" name="inst_89C71BB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Marker_Missile" x="176" y="384" name="inst_5F9FC06F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Marker_Missile" x="224" y="592" name="inst_5F9FC06F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

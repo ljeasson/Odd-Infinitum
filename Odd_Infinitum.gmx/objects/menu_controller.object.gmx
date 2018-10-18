@@ -91,7 +91,7 @@ if (key_down)
 if (key_select)
 {
     if (interest == "Mission")
-        room_goto(room_overworld);
+        room_goto(room_tutorial);
     else if (interest == "Exit")
         game_end();
 }
