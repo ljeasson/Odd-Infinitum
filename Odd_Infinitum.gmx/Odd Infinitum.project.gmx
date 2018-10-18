@@ -209,9 +209,7 @@
       <script>scripts\Chance.gml</script>
       <script>scripts\generate_random_sequence.gml</script>
       <script>scripts\generate_explosions.gml</script>
-      <script>scripts\regain_health.gml</script>
       <script>scripts\follow_object.gml</script>
-      <script>scripts\Callout.gml</script>
     </scripts>
     <scripts name="Damage Scripts">
       <script>scripts\player_take_damage.gml</script>
@@ -230,6 +228,19 @@
       <script>scripts\scr_player_summoning.gml</script>
       <script>scripts\scr_player_waiting.gml</script>
       <script>scripts\scr_player_connected.gml</script>
+    </scripts>
+    <scripts name="Player Scripts">
+      <script>scripts\regain_health.gml</script>
+      <script>scripts\fire_laser.gml</script>
+      <script>scripts\fire_regain_laser.gml</script>
+      <script>scripts\fire_alt_laser.gml</script>
+      <script>scripts\fire_missile.gml</script>
+      <script>scripts\missile_regain.gml</script>
+      <script>scripts\energy_buckler.gml</script>
+      <script>scripts\check_dodge.gml</script>
+      <script>scripts\dodge.gml</script>
+      <script>scripts\check_callout.gml</script>
+      <script>scripts\callout.gml</script>
     </scripts>
     <scripts name="Player States">
       <script>scripts\scr_player_normal.gml</script>
@@ -338,9 +349,8 @@
       <object>objects\obj_Damaged_Screen</object>
       <object>objects\obj_Heat_Screen</object>
       <object>objects\obj_Overheat</object>
-      <object>objects\obj_Player_Explosion</object>
       <object>objects\obj_Callout</object>
-      <object>objects\particle_Player_Explosion</object>
+      <object>objects\obj_Player_Explosion</object>
     </objects>
     <object>objects\obj_Star</object>
     <object>objects\obj_Star_Still</object>

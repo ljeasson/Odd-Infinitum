@@ -2,10 +2,9 @@
 // Reads input from keyboard
 
 // Check Dodge
-if (player_dodge == 0)
-    player_speed = 4;
-else
-    player_speed = 8;
+// Player speed is 8 when dodging
+// Player speed is 4 otherwise
+check_dodge();
 
 // Movement controls
 key_up = keyboard_check(vk_up) || (gamepad_axis_value(0,gp_axislv) < 0);
@@ -25,54 +24,15 @@ if (key_up and y > 80) { y -= player_speed };
 if (key_down and y <= room_height - 32) { y += player_speed };
 
 // Set sprite to damaged
-obj_Player.sprite_index = spr_Player_Damaged;
+if (obj_Player.sprite_index != spr_Player_Damaged)
+    obj_Player.sprite_index = spr_Player_Damaged;
 
 // Callouts
-if (keyboard_check_pressed(ord('1'))) {Callout(global.callout_1)};
-if (keyboard_check_pressed(ord('2'))) {Callout(global.callout_2)};
-if (keyboard_check_pressed(ord('3'))) {Callout(global.callout_3)};
-if (keyboard_check_pressed(ord('4'))) {Callout(global.callout_4)};
-if (keyboard_check_pressed(ord('5'))) {Callout(global.callout_5)};
-if (keyboard_check_pressed(ord('6'))) {Callout(global.callout_6)};
-if (keyboard_check_pressed(ord('7'))) {Callout(global.callout_7)};
-if (keyboard_check_pressed(ord('8'))) {Callout(global.callout_8)};
-if (keyboard_check_pressed(ord('9'))) {Callout(global.callout_9)};
-if (keyboard_check_pressed(ord('0'))) {Callout(global.callout_10)};
+check_callout();
 
-// Read laser and missile controls
+// Laser and Missile controls
 // Laser
-if (key_laser) 
-{
-    // Play Laser sound
-    var pitch = audio_sound_pitch(snd_Player_Laser_Regain, random_range(0.85,1.15));
-    audio_play_sound(snd_Player_Laser_Regain, pitch, false);    
-
-    // Create Spark Effect
-    effect_create_above(ef_spark,x+48,y+24,1,c_blue);
-    
-    // Create instance of laser moving to the right with a speed of 8
-    var laser = instance_create(x+48,y+24,obj_Regain_Laser);
-    laser.direction = 0;
-    laser.speed = global.laser_speed;
-    
-    // Decrease overheat amount by 20
-    global.overheat -= 15;
-    
-    // If laser is fired with no health, take damage
-    if (global.overheat <= 0)
-    {
-        health -= 2;
-    }
-}
+fire_regain_laser();
 
 // Dodge
-if (key_dodge_pressed)
-{
-    obj_Player.image_blend = c_aqua;
-    player_dodge = 1;
-}
-if (key_dodge_released)
-{
-    obj_Player.image_blend = c_white;
-    player_dodge = 0;
-}
+dodge();
