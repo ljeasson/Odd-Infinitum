@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>enum overworld_states
+  <code>// States
+enum overworld_states
 {
     idle,
     summoning,
@@ -18,6 +19,12 @@
     connected
 };
 
+// Set Health to 100
+health = 100; 
+// Set Missile count to 2
+global.missile_count = 2;
+
+// Disable Cursor
 window_set_cursor(cr_none);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>0</clearViewBackground>

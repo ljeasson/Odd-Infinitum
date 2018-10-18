@@ -384,11 +384,6 @@ else
     instance_destroy(obj_Vortex);
     instance_destroy(obj_Blue_Ring);
     
-    // Destroy Particles
-//    part_type_destroy(particle_Core_Destroyer_Laser.particle1); // Clear Particles
-//    part_emitter_destroy_all(particle_Core_Destroyer_Laser.particle_sys); // Destroy Emitter
-//    part_system_destroy(particle_Core_Destroyer_Laser.particle_sys); // Destroy System
-            
     // Generate Explosions
     generate_explosions(200);
         

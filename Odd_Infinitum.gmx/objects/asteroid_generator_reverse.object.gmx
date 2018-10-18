@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///Initialize Asteroid Generation Chances
 small_asteroid_chance = 0.1;
-medium_asteroid_chance = 0.05;
-large_asteroid_chance = 0.025;
+medium_asteroid_chance = 0.025;
+large_asteroid_chance = 0.015;
 </string>
           </argument>
         </arguments>

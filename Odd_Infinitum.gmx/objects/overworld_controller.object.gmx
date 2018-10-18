@@ -25,19 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Instantiate Pilot tools at bottom of screen
+            <string>/// Instantiate Pilot Tools
 
 // Messaging Beacon
 if (global.messaging_beacon)
-    instance_create(room_width/2 - 192, room_height - 48, obj_Messaging_Beacon_Tool)
+    instance_create(room_width/2 - 192, 48, obj_Messaging_Beacon_Tool)
 
 // Friendly Pilot Beacon
 if (global.friendly_pilot_beacon)
-    instance_create(room_width/2, room_height - 48, obj_Friendly_Pilot_Beacon_Tool)
+    instance_create(room_width/2, 48, obj_Friendly_Pilot_Beacon_Tool)
 
 // Hostile Pilot Beacon
 if (global.hostile_pilot_beacon)
-    instance_create(room_width/2 + 192, room_height - 48, obj_Hostile_Pilot_Beacon_Tool)
+    instance_create(room_width/2 + 192, 48, obj_Hostile_Pilot_Beacon_Tool)
 
 </string>
           </argument>
@@ -77,15 +77,33 @@ if (instance_number(inventory_controller) == 0)
         draw_sprite(spr_Shift, 0, room_width-90, room_height-64);
 }
 
-// Draw Number Buttons next to Pilot Tools
-if (global.messaging_beacon)
-    draw_sprite(spr_1, 0, room_width/2 - 240, room_height - 48);
+// Draw Pilot Tools and Number Buttons
+if (!obj_Player_Overworld.menu &amp;&amp; !obj_Player_Overworld.inventory_open)
+{
+    if (global.messaging_beacon)
+    {
+        // Draw Messaging Beacon Sprite
+        draw_sprite(spr_Pilot_Insignia, 0, room_width/2 - 192, 48); 
+        // Draw 1 Key Sprite
+        draw_sprite(spr_1, 0, room_width/2 - 240, 48);
+    }
+        
+    if (global.friendly_pilot_beacon)
+    {
+        // Draw Friendly Pilot Beacon Sprite
+        draw_sprite(spr_Friendly_Pilot_Beacon, 0, room_width/2, 48); 
+        // Draw 2 Key Sprite
+        draw_sprite(spr_2, 0, room_width/2 - 64, 48);
+    }
     
-if (global.friendly_pilot_beacon)
-    draw_sprite(spr_2, 0, room_width/2 - 64, room_height - 48);
-    
-if (global.hostile_pilot_beacon)
-    draw_sprite(spr_3, 0, room_width/2 + 128, room_height - 48);
+    if (global.hostile_pilot_beacon)
+    {
+        // Draw Hostile Pilot Beacon Sprite
+        draw_sprite(spr_Hostile_Pilot_Beacon, 0, room_width/2 + 192, 48);
+        // Draw 3 Key Sprite
+        draw_sprite(spr_3, 0, room_width/2 + 128, 48);
+    }
+}
 </string>
           </argument>
         </arguments>
