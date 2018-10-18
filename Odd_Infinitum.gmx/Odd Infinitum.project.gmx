@@ -189,6 +189,10 @@
       <sprite>sprites\spr_Loading</sprite>
       <sprite>sprites\spr_Burn</sprite>
       <sprite>sprites\spr_Swirl</sprite>
+      <sprite>sprites\spr_Expanding_Circle</sprite>
+      <sprite>sprites\spr_aqua_spark</sprite>
+      <sprite>sprites\spr_blue_spark</sprite>
+      <sprite>sprites\spr_Ring</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -351,22 +355,32 @@
       <object>objects\obj_Overheat</object>
       <object>objects\obj_Callout</object>
       <object>objects\obj_Player_Explosion</object>
+      <object>objects\obj_aqua_spark</object>
+      <object>objects\obj_blue_spark</object>
+      <object>objects\obj_Health_Regain_Effect</object>
+      <object>objects\obj_Ring</object>
     </objects>
-    <object>objects\obj_Star</object>
-    <object>objects\obj_Star_Still</object>
-    <object>objects\obj_Star_Smaller</object>
-    <object>objects\obj_Star_Smaller_Still</object>
-    <object>objects\obj_Star_Smallest</object>
-    <object>objects\obj_Star_Smallest_Still</object>
-    <object>objects\obj_Small_Asteroid_1</object>
-    <object>objects\obj_Medium_Asteroid_1</object>
-    <object>objects\obj_Large_Asteroid_1</object>
-    <object>objects\obj_Explosion_Small</object>
-    <object>objects\obj_Explosion_Medium</object>
-    <object>objects\obj_Explosion_Large</object>
-    <object>objects\obj_Big_Explosion</object>
+    <objects name="Stars">
+      <object>objects\obj_Star</object>
+      <object>objects\obj_Star_Still</object>
+      <object>objects\obj_Star_Smaller</object>
+      <object>objects\obj_Star_Smaller_Still</object>
+      <object>objects\obj_Star_Smallest</object>
+      <object>objects\obj_Star_Smallest_Still</object>
+    </objects>
+    <objects name="Asteroids">
+      <object>objects\obj_Small_Asteroid_1</object>
+      <object>objects\obj_Medium_Asteroid_1</object>
+      <object>objects\obj_Large_Asteroid_1</object>
+    </objects>
+    <objects name="Explosions">
+      <object>objects\obj_Explosion_Small</object>
+      <object>objects\obj_Explosion_Medium</object>
+      <object>objects\obj_Explosion_Large</object>
+      <object>objects\obj_Big_Explosion</object>
+    </objects>
     <objects name="Tutorial">
-      <object>objects\obj_Marker_Laser</object>
+      <object>objects\obj_Marker_Basics</object>
       <object>objects\obj_Marker_Missile</object>
     </objects>
     <objects name="Overworld">
@@ -501,7 +515,7 @@
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>
-      <room>rooms\room_tutorial_laser</room>
+      <room>rooms\room_tutorial_basics</room>
       <room>rooms\room_tutorial_missile</room>
     </rooms>
     <room>rooms\room_overworld</room>
