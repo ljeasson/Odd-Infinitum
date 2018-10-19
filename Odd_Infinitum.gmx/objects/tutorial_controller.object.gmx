@@ -71,7 +71,7 @@ draw_text(room_width/2, 128, "This traing room will teach you how to control you
 draw_text(room_width/2, 192, "You can PROCEED to training module and repeat these as many times as needed");
 
 draw_set_font(UI_Font_Medium);
-draw_text(room_width/2, room_height-48, "When you are ready, PROCEED to the right to advance"); 
+draw_text(room_width/2, room_height-48, "When you are ready, fly to the right to advance"); 
 
 // Move
 draw_text(right_margin, room_height/2 - 64, "MOVE");

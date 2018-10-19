@@ -194,6 +194,9 @@
       <sprite>sprites\spr_blue_spark</sprite>
       <sprite>sprites\spr_Ring</sprite>
     </sprites>
+    <sprite>sprites\spr_Square</sprite>
+    <sprite>sprites\spr_Laser_Training_Ship</sprite>
+    <sprite>sprites\spr_Missile_Training_Ship</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Pilot_Hangar</background>
@@ -382,6 +385,12 @@
     <objects name="Tutorial">
       <object>objects\obj_Marker_Laser</object>
       <object>objects\obj_Marker_Missile</object>
+      <object>objects\obj_Back</object>
+      <object>objects\obj_To_Mission</object>
+      <object>objects\obj_Laser_Training_Ship</object>
+      <object>objects\obj_Training_Spawn</object>
+      <object>objects\obj_Missile_Training_Ship</object>
+      <object>objects\obj_Training_Spawn_2</object>
     </objects>
     <objects name="Overworld">
       <object>objects\obj_Player_Overworld</object>
@@ -508,7 +517,6 @@
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Level_1_Core_Destroyer</timeline>
-    <timeline>timelines\timeline1</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
