@@ -17,15 +17,12 @@ key_laser = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,
 key_dodge_pressed = keyboard_check_pressed(vk_shift) || (gamepad_button_check_pressed(0,gp_shoulderrb));
 key_dodge_released = keyboard_check_released(vk_shift) || (gamepad_button_check_released(0,gp_shoulderrb));
 
-// Read movement controls
-if (key_left and x > 0) { x -= player_speed };
-if (key_right and x <= room_width - 56) { x += player_speed };
-if (key_up and y > 80) { y -= player_speed };
-if (key_down and y <= room_height - 32) { y += player_speed };
-
 // Set sprite to damaged
 if (obj_Player.sprite_index != spr_Player_Damaged)
     obj_Player.sprite_index = spr_Player_Damaged;
+
+// Read movement controls
+movement();
 
 // Callouts
 check_callout();

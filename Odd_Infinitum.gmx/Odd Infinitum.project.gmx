@@ -232,11 +232,14 @@
     </scripts>
     <scripts name="Networking Scripts">
       <script>scripts\process_packet.gml</script>
+      <script>scripts\write_buffer_movement_SERVER.gml</script>
+      <script>scripts\write_buffer_movment_CLIENT.gml</script>
       <script>scripts\scr_player_summoning.gml</script>
       <script>scripts\scr_player_waiting.gml</script>
       <script>scripts\scr_player_connected.gml</script>
     </scripts>
     <scripts name="Player Scripts">
+      <script>scripts\movement.gml</script>
       <script>scripts\regain_health.gml</script>
       <script>scripts\fire_laser.gml</script>
       <script>scripts\fire_regain_laser.gml</script>
@@ -296,6 +299,7 @@
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\global_vars</object>
+      <object>objects\global_vars_network</object>
       <object>objects\room_controller</object>
       <object>objects\pause_controller</object>
       <object>objects\UI_controller</object>

@@ -26,15 +26,12 @@ key_dodge_released = keyboard_check_released(vk_shift) || (gamepad_button_check_
 // Energy Buckler controls
 key_energy_buckler = keyboard_check_pressed(ord('T')) // Add Gamepad Control
 
-// Read movement controls
-if (key_left and x > 0) { x -= player_speed };
-if (key_right and x <= room_width - 56) { x += player_speed };
-if (key_up and y > 80) { y -= player_speed };
-if (key_down and y <= room_height - 32) { y += player_speed };
-
 // Set sprite to normal
 if (obj_Player.sprite_index != spr_Player)
     obj_Player.sprite_index = spr_Player;
+
+// Read movement controls
+movement();
 
 // Callouts
 check_callout();

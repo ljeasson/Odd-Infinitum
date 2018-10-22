@@ -86,12 +86,8 @@ remotey = room_height/2 + 64;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//encode mouse position and transmit
-buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_s16,myx);
-buffer_write(send_buffer, buffer_s16,myy);
-network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
+            <string>// Write buffer
+write_buffer_movment_CLIENT();
 
 //update my circle
 myy += 4;
@@ -118,12 +114,8 @@ myy += 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//encode mouse position and transmit
-buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_s16,myx);
-buffer_write(send_buffer, buffer_s16,myy);
-network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
+            <string>// Write buffer
+write_buffer_movment_CLIENT();
 
 //update my circle
 myx += 4
@@ -150,12 +142,8 @@ myx += 4
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//encode mouse position and transmit
-buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_s16,myx);
-buffer_write(send_buffer, buffer_s16,myy);
-network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
+            <string>// Write buffer
+write_buffer_movment_CLIENT();
 
 //update my circle
 myy -= 4;
@@ -182,12 +170,8 @@ myy -= 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//encode mouse position and transmit
-buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_s16,myx);
-buffer_write(send_buffer, buffer_s16,myy);
-network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
+            <string>// Write buffer
+write_buffer_movment_CLIENT();
 
 //update my circle
 myx -= 4
@@ -241,7 +225,7 @@ process_packet(buffer);
           <argument>
             <kind>1</kind>
             <string>/// Draw fighters
-draw_sprite(spr_Player, -1, myx, myy);
+//draw_sprite(spr_Player, -1, myx, myy);
 draw_sprite(spr_Player, -1, remotex, remotey);
 
 //draw_circle_colour(myx,myy,32,c_white,c_red,false);
