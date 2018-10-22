@@ -519,6 +519,7 @@
     <timeline>timelines\Level_1_Core_Destroyer</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room_Network_Test</room>
     <room>rooms\room_init</room>
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
@@ -532,7 +533,6 @@
     <room>rooms\room_Harrier_Angel</room>
     <room>rooms\room_The_Queen</room>
     <room>rooms\room_pilot_base</room>
-    <room>rooms\room_Network_Test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

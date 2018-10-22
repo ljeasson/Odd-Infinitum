@@ -214,7 +214,7 @@ global.aoe_damage = 50;
           <argument>
             <kind>1</kind>
             <string>///Go to next room
-room_goto_next();
+//room_goto_next();
 
 // Go to Network Test
 //room_goto(room_Network_Test);

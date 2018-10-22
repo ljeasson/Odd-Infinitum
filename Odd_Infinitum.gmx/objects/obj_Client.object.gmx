@@ -57,12 +57,13 @@ key_up = keyboard_check(vk_up) || (gamepad_axis_value(0,gp_axislv) &lt; 0);
 key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0);
 key_left = keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0);
 key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0);
+key_laser = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1));
 
 //variables for drawing circles.
-myx = 0;
-myy = 0;
-remotex = 0;
-remotey = 0;
+myx = room_width/2;
+myy = room_height/2 - 64;
+remotex = room_width/2;
+remotey = room_height/2 + 64;
 </string>
           </argument>
         </arguments>
@@ -87,9 +88,9 @@ remotey = 0;
             <kind>1</kind>
             <string>//encode mouse position and transmit
 buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_u32,x);
-buffer_write(send_buffer, buffer_u32,y);
+buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_s16,myx);
+buffer_write(send_buffer, buffer_s16,myy);
 network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
 
 //update my circle
@@ -119,13 +120,13 @@ myy += 4;
             <kind>1</kind>
             <string>//encode mouse position and transmit
 buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_u32,x);
-buffer_write(send_buffer, buffer_u32,y);
+buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_s16,myx);
+buffer_write(send_buffer, buffer_s16,myy);
 network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
 
 //update my circle
-myx += 4;
+myx += 4
 
 </string>
           </argument>
@@ -151,9 +152,9 @@ myx += 4;
             <kind>1</kind>
             <string>//encode mouse position and transmit
 buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_u32,x);
-buffer_write(send_buffer, buffer_u32,y);
+buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_s16,myx);
+buffer_write(send_buffer, buffer_s16,myy);
 network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
 
 //update my circle
@@ -183,13 +184,13 @@ myy -= 4;
             <kind>1</kind>
             <string>//encode mouse position and transmit
 buffer_seek(send_buffer, buffer_seek_start,0);
-buffer_write(send_buffer, buffer_u8,1); //id. Use different ones for different msg types
-buffer_write(send_buffer, buffer_u32,x);
-buffer_write(send_buffer, buffer_u32,y);
+buffer_write(send_buffer, buffer_u8,2); //id. Use different ones for different msg types
+buffer_write(send_buffer, buffer_s16,myx);
+buffer_write(send_buffer, buffer_s16,myy);
 network_send_udp(socket,ip,remote_port,send_buffer,buffer_tell(send_buffer));
 
 //update my circle
-myx -= 4;
+myx -= 4
 
 </string>
           </argument>
@@ -239,9 +240,12 @@ process_packet(buffer);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw some circles
-draw_circle_colour(myx,myy,32,c_white,c_red,false);
-draw_circle_colour(remotex,remotey,32,c_black,c_blue,false);
+            <string>/// Draw fighters
+draw_sprite(spr_Player, -1, myx, myy);
+draw_sprite(spr_Player, -1, remotex, remotey);
+
+//draw_circle_colour(myx,myy,32,c_white,c_red,false);
+//draw_circle_colour(remotex,remotey,32,c_black,c_blue,false);
 </string>
           </argument>
         </arguments>

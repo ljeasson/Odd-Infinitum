@@ -205,7 +205,8 @@ if (show_summon_menu)
     }
     
     // Freeze Player Movement
-    obj_Player_Overworld.menu = true;      
+    if (instance_exists(obj_Player_Overworld))
+        obj_Player_Overworld.menu = true;      
 }
 else
 {
@@ -221,7 +222,8 @@ else
     instance_destroy(obj_Cancel);
     
     // Unfreeze Player Movement
-    obj_Player_Overworld.menu = false;
+    if (instance_exists(obj_Player_Overworld))
+        obj_Player_Overworld.menu = false;
     
     // Set Selection to "Summon"
     selection = "Summon";
