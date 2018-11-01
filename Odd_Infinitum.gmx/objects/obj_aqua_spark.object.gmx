@@ -26,8 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Update X and Y position with Player X and Y
-x = obj_Player.x + 48;
-y = obj_Player.y + 24;
+if (instance_exists(obj_Player))
+{
+    x = obj_Player.x + 48;
+    y = obj_Player.y + 24;
+}
 </string>
           </argument>
         </arguments>

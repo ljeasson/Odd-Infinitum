@@ -194,8 +194,10 @@
       <sprite>sprites\spr_Ring</sprite>
       <sprite>sprites\spr_Square</sprite>
     </sprites>
-    <sprite>sprites\spr_Laser_Training_Ship</sprite>
-    <sprite>sprites\spr_Missile_Training_Ship</sprite>
+    <sprites name="Tutorial">
+      <sprite>sprites\spr_Laser_Training_Ship</sprite>
+      <sprite>sprites\spr_Missile_Training_Ship</sprite>
+    </sprites>
     <sprite>sprites\spr_Rocket_Bomb</sprite>
   </sprites>
   <backgrounds name="background">
@@ -245,6 +247,11 @@
       <script>scripts\regain_health.gml</script>
       <script>scripts\fire_laser.gml</script>
       <script>scripts\fire_alt_laser.gml</script>
+      <scripts name="Lasers">
+        <script>scripts\scr_basic_laser.gml</script>
+        <script>scripts\scr_triple_shot.gml</script>
+        <script>scripts\scr_giant_laser.gml</script>
+      </scripts>
       <script>scripts\fire_regain_laser.gml</script>
       <script>scripts\fire_missile.gml</script>
       <script>scripts\missile_regain.gml</script>
@@ -286,6 +293,7 @@
       <script>scripts\scr_the_queen_phase3.gml</script>
       <script>scripts\scr_the_queen_defeat.gml</script>
     </scripts>
+    <script>scripts\scr_rapid_fire.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_white_sprite.shader</shader>

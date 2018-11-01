@@ -44,7 +44,7 @@ fire_laser(x,y);
 fire_alt_laser(x,y);
 
 // Missile
-fire_missile();
+fire_missile(x,y);
 
 // Dodge
 dodge();   
