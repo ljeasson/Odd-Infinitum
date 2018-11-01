@@ -35,9 +35,9 @@ left_margin = 192;
 instance_create(room_width/2-24, room_height/2+16, obj_Player);
 
 // Create Missile Training Ships
-instance_create(right_margin - 32, 64 + room_height/2 - 192, obj_Training_Spawn_2);
+instance_create(right_margin - 32, 64 + room_height/2 - 128, obj_Training_Spawn_2);
 instance_create(right_margin,      64 + room_height/2,       obj_Training_Spawn_2);
-instance_create(right_margin - 32, 64 + room_height/2 + 192, obj_Training_Spawn_2);
+instance_create(right_margin - 32, 64 + room_height/2 + 128, obj_Training_Spawn_2);
 </string>
           </argument>
         </arguments>

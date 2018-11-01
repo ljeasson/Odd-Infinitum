@@ -32,7 +32,6 @@ global.connected = false;
 
 // UI VARIABLES
 health = 100;
-score = 0;
 global.laser_speed = 10;
 global.overheat = 100;
 global.overheat_recharge = 0.6;
@@ -44,8 +43,7 @@ global.seen_intro = false;
 global.seen_tutorial = false;
 
 // QUEST ITEMS
-global.pilot_insignia = false;
-global.messaging_beacon = true;
+global.pilot_insignia = true;
 global.friendly_pilot_beacon = true;
 global.hostile_pilot_beacon = false;
 
@@ -89,14 +87,23 @@ global.large_asteroid_damage = 30;
             <kind>1</kind>
             <string>/// Shop Varaibles
 
-//Laser Upgrades
-global.triple_shot_bought = false;
-global.rapid_fire_bought = false;
-global.giant_laser_bought = false;
-//Missile Upgrades
-global.basic_missile_bought = false;
-global.homing_missile_bought = false;
-global.missile_barrage_bought = false;
+// Lasers
+global.basic_laser = true;
+global.triple_shot = true;
+global.rapid_fire = true;
+global.giant_laser = true;
+
+// Rapid Fire Timer 
+global.shot_timer = 7.5;
+
+// Missiles
+global.basic_missile = true;
+global.homing_missile = true;
+global.missile_barrage = true;
+
+// Augments
+
+// Skins 
 </string>
           </argument>
         </arguments>
@@ -117,19 +124,17 @@ global.missile_barrage_bought = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Weapon Variables
+            <string>/// Inventory Variables
 
-//Lasers
-global.basic_laser = true;
-global.triple_shot = false;
-global.rapid_fire = false;
-global.shot_timer = 7.5;
-global.giant_laser = false;
+// Laser
+global.laser = "basic_laser";
+// Alt Laser
+global.alt_laser = "triple_shot";
+// Missile
+global.missile = "basic_missile";
+// Augment
+global.augment = 0;
 
-//Missiles
-global.missile = true;
-global.homing_missile = false;
-global.missile_barrage = false;
 </string>
           </argument>
         </arguments>

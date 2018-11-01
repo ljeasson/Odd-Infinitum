@@ -30,15 +30,15 @@ var box_x = obj_Missile_Box.x-32;
 var box_y = obj_Missile_Box.y;
 
 draw_self();
-if (global.missile)
+if (global.missile == "basic_missile")
 {
     draw_sprite(spr_Basic_Missile_Shop_Item,0,box_x,box_y);
 }
-else if (global.homing_missile &amp;&amp; global.homing_missile_bought)
+if (global.missile == "homing_missile")
 {
     draw_sprite(spr_Homing_Missile_Shop_Item,0,box_x,box_y);
 }
-else if (global.missile_barrage &amp;&amp; global.missile_barrage_bought)
+if (global.missile == "missile_barrage")
 {
     draw_sprite(spr_Missile_Barrage_Shop_Item,0,box_x,box_y);
 }

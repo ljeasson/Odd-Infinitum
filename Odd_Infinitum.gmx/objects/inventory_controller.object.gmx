@@ -33,28 +33,28 @@ alt_laser_box_column = room_width/2-96;
 missile_box_column = room_width/2+96;
 augment_box_column = room_width/2+256
 
-
 // Equip Boxes
-var laser_box = instance_create(laser_box_column, 256,obj_Laser_Box);
-var alt_laser_box = instance_create(alt_laser_box_column, 256,obj_Alt_Laser_Box);
-var missile_box = instance_create(missile_box_column, 256,obj_Missile_Box);
-var augment_box = instance_create(augment_box_column, 256,obj_Augment_Box);
-
+instance_create(laser_box_column,256,obj_Laser_Box);
+instance_create(alt_laser_box_column,256,obj_Alt_Laser_Box);
+instance_create(missile_box_column,256,obj_Missile_Box);
+instance_create(augment_box_column,256,obj_Augment_Box);
 
 // Laser Objects
-instance_create(256,room_height-400,obj_Basic_Laser);
-if (global.triple_shot_bought)
+if (global.basic_laser)
+    instance_create(256,room_height-400,obj_Basic_Laser_Inv);
+if (global.triple_shot)
     instance_create(352,room_height-400,obj_Triple_Shot_Inv);
-if (global.rapid_fire_bought)
+if (global.rapid_fire)
     instance_create(448,room_height-400,obj_Rapid_Fire_Inv);
-if (global.giant_laser_bought)
+if (global.giant_laser)
     instance_create(544,room_height-400,obj_Giant_Laser_Inv);
 
 // Missile Objects
-instance_create(256,room_height-305,obj_Basic_Missile);
-if (global.homing_missile_bought)
+if (global.basic_missile)
+    instance_create(256,room_height-305,obj_Basic_Missile_Inv);
+if (global.homing_missile)
     instance_create(352,room_height-305,obj_Homing_Missile_Inv);
-if (global.missile_barrage_bought)
+if (global.missile_barrage)
     instance_create(448,room_height-305,obj_Missile_Barrage_Inv);
 </string>
           </argument>
@@ -116,7 +116,7 @@ window_set_cursor(cr_none);
         <exetype>1</exetype>
         <functionname>action_kill_object</functionname>
         <codestring></codestring>
-        <whoName>obj_Basic_Laser</whoName>
+        <whoName>obj_Basic_Laser_Inv</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
@@ -130,7 +130,7 @@ window_set_cursor(cr_none);
         <exetype>1</exetype>
         <functionname>action_kill_object</functionname>
         <codestring></codestring>
-        <whoName>obj_Basic_Missile</whoName>
+        <whoName>obj_Basic_Missile_Inv</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>

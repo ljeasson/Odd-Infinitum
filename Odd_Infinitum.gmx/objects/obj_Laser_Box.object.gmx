@@ -30,19 +30,19 @@ var box_x = obj_Laser_Box.x-32;
 var box_y = obj_Laser_Box.y;
 
 draw_self();
-if (global.basic_laser)
+if (global.laser == "basic_laser")
 {
     draw_sprite(spr_Basic_Laser_Shop_Item,0,box_x,box_y);
 }
-if (global.triple_shot &amp;&amp; global.triple_shot_bought)
+else if (global.laser == "triple_shot")
 {
     draw_sprite(spr_Triple_Shot_Shop_Item,0,box_x,box_y);
 }
-else if (global.rapid_fire &amp;&amp; global.rapid_fire_bought)
+else if (global.laser == "rapid_fire")
 {
     draw_sprite(spr_Rapid_Fire_Shop_Item,0,box_x,box_y);
 }
-else if (global.giant_laser &amp;&amp; global.giant_laser_bought)
+else if (global.laser == "giant_laser")
 {
     draw_sprite(spr_Giant_Laser_Shop_Item,0,box_x,box_y);
 }

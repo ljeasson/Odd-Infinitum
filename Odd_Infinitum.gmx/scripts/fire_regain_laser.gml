@@ -1,6 +1,9 @@
 // fire_regain_laser()
 // Fires a Regain Laser to replenish health
 
+X = argument0;
+Y = argument1;
+
 if (key_laser) 
 {
     // Play Laser sound
@@ -9,10 +12,10 @@ if (key_laser)
 
     // Create Spark Effect
     //effect_create_above(ef_spark,x+48,y+24,1,c_blue);
-    instance_create(x,y,obj_blue_spark);
+    instance_create(X,Y,obj_blue_spark);
     
     // Create instance of laser moving to the right with a speed of 8
-    var laser = instance_create(x+48,y+24,obj_Regain_Laser);
+    var laser = instance_create(X+48,Y+24,obj_Regain_Laser);
     laser.direction = 0;
     laser.speed = global.laser_speed;
     

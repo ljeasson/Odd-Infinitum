@@ -3,7 +3,7 @@
 // Play First Voice
 if (!voice_2_played){
     audio_play_sound(vc_Core_Destroyer_2, 2, false);
-    scr_text("Capacity Exceeded... Discharging payload...", 0.5, room_width/2, room_height/2);
+    scr_text("Capacity Exceeded... #Discharging payload...", 0.5, room_width/2, room_height/2);
     voice_2_played = true;
 }
 

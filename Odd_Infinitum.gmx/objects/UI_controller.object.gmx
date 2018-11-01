@@ -43,19 +43,17 @@ draw_sprite(spr_Health_Container,-1,16,16);
 //Draw Overheat Container Sprite
 draw_sprite(spr_Overheat_Container,-1,16,36);
 
-////Draw Player Sprite
-//draw_sprite(spr_Player,-1,344,28);
-////Draw Life Count
-//draw_text(404,36,lives);
-
 //Draw Missile Count
 var missile_sprite = draw_sprite(spr_Missile_Icon,-1,256,44);
 //Draw Missile Count
-draw_text(278,36,global.missile_count);
+draw_set_font(UI_Font_Medium);
+draw_set_halign(fa_left);
+draw_text(278,32,global.missile_count);
 
 // Draw Pilot Currency
-draw_set_font(UI_Font_Large);
-draw_text(room_width - 128,32,global.shop_currency);
+draw_set_font(UI_Font_Medium);
+draw_set_halign(fa_left);
+draw_text(32,80,global.shop_currency);
 </string>
           </argument>
         </arguments>

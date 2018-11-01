@@ -38,10 +38,10 @@ check_callout();
 
 // Laser and Missile controls
 // Laser
-fire_laser();
+fire_laser(x,y);
 
 // Alt Laser
-fire_alt_laser();
+fire_alt_laser(x,y);
 
 // Missile
 fire_missile();

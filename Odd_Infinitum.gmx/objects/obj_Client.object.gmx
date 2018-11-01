@@ -61,9 +61,9 @@ key_laser = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,
 
 //variables for drawing circles.
 myx = room_width/2;
-myy = room_height/2 - 64;
+myy = room_height/2;
 remotex = room_width/2;
-remotey = room_height/2 + 64;
+remotey = room_height/2;
 </string>
           </argument>
         </arguments>
@@ -87,7 +87,8 @@ remotey = room_height/2 + 64;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
+//write_buffer_movment_CLIENT();
+write_buffer_action_CLIENT(0);
 
 //update my circle
 myy += 4;
@@ -115,7 +116,8 @@ myy += 4;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
+//write_buffer_movment_CLIENT();
+write_buffer_action_CLIENT(0);
 
 //update my circle
 myx += 4
@@ -143,7 +145,8 @@ myx += 4
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
+//write_buffer_movment_CLIENT();
+write_buffer_action_CLIENT(0);
 
 //update my circle
 myy -= 4;
@@ -171,7 +174,8 @@ myy -= 4;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
+//write_buffer_movment_CLIENT();
+write_buffer_action_CLIENT(0);
 
 //update my circle
 myx -= 4
@@ -230,6 +234,34 @@ draw_sprite(spr_Player, -1, remotex, remotey);
 
 //draw_circle_colour(myx,myy,32,c_white,c_red,false);
 //draw_circle_colour(remotex,remotey,32,c_black,c_blue,false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Write buffer
+write_buffer_action_CLIENT(1);
+
+//update my circle
+myy += 4;
+
 </string>
           </argument>
         </arguments>

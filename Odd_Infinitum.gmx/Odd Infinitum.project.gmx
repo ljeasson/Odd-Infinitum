@@ -53,6 +53,9 @@
       <sprite>sprites\spr_Player_Explosion</sprite>
       <sprite>sprites\spr_Energy_Buckler</sprite>
       <sprite>sprites\spr_Energy_Buckler_Parry</sprite>
+      <sprite>sprites\spr_Pilot_Insignia</sprite>
+      <sprite>sprites\spr_Friendly_Pilot_Beacon</sprite>
+      <sprite>sprites\spr_Hostile_Pilot_Beacon</sprite>
     </sprites>
     <sprites name="Background">
       <sprite>sprites\spr_Star</sprite>
@@ -136,10 +139,6 @@
       <sprite>sprites\spr_Overheat</sprite>
       <sprite>sprites\spr_Cursor</sprite>
     </sprites>
-    <sprite>sprites\spr_Rocket_Bomb</sprite>
-    <sprite>sprites\spr_Pilot_Insignia</sprite>
-    <sprite>sprites\spr_Friendly_Pilot_Beacon</sprite>
-    <sprite>sprites\spr_Hostile_Pilot_Beacon</sprite>
     <sprites name="Keyboard Buttons">
       <sprite>sprites\spr_Button_Blank</sprite>
       <sprite>sprites\spr_Button_Blank_2</sprite>
@@ -193,10 +192,11 @@
       <sprite>sprites\spr_aqua_spark</sprite>
       <sprite>sprites\spr_blue_spark</sprite>
       <sprite>sprites\spr_Ring</sprite>
+      <sprite>sprites\spr_Square</sprite>
     </sprites>
-    <sprite>sprites\spr_Square</sprite>
     <sprite>sprites\spr_Laser_Training_Ship</sprite>
     <sprite>sprites\spr_Missile_Training_Ship</sprite>
+    <sprite>sprites\spr_Rocket_Bomb</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Pilot_Hangar</background>
@@ -233,7 +233,9 @@
     <scripts name="Networking Scripts">
       <script>scripts\process_packet.gml</script>
       <script>scripts\write_buffer_movement_SERVER.gml</script>
+      <script>scripts\write_buffer_action_SERVER.gml</script>
       <script>scripts\write_buffer_movment_CLIENT.gml</script>
+      <script>scripts\write_buffer_action_CLIENT.gml</script>
       <script>scripts\scr_player_summoning.gml</script>
       <script>scripts\scr_player_waiting.gml</script>
       <script>scripts\scr_player_connected.gml</script>
@@ -242,8 +244,8 @@
       <script>scripts\movement.gml</script>
       <script>scripts\regain_health.gml</script>
       <script>scripts\fire_laser.gml</script>
-      <script>scripts\fire_regain_laser.gml</script>
       <script>scripts\fire_alt_laser.gml</script>
+      <script>scripts\fire_regain_laser.gml</script>
       <script>scripts\fire_missile.gml</script>
       <script>scripts\missile_regain.gml</script>
       <script>scripts\energy_buckler.gml</script>
@@ -303,6 +305,7 @@
       <object>objects\room_controller</object>
       <object>objects\pause_controller</object>
       <object>objects\UI_controller</object>
+      <object>objects\UI_controller_remote</object>
       <object>objects\overworld_controller</object>
       <object>objects\shop_controller</object>
       <object>objects\inventory_controller</object>
@@ -310,7 +313,6 @@
       <object>objects\menu_controller</object>
       <object>objects\internet_controller</object>
       <object>objects\player_death_controller</object>
-      <object>objects\core_destroyer_laser_controller</object>
       <object>objects\stat_counter_controller</object>
       <object>objects\obj_Back_To_Overworld</object>
       <objects name="Network Controllers">
@@ -446,11 +448,11 @@
       <object>objects\obj_Alt_Laser_Box</object>
       <object>objects\obj_Missile_Box</object>
       <object>objects\obj_Augment_Box</object>
-      <object>objects\obj_Basic_Laser</object>
+      <object>objects\obj_Basic_Laser_Inv</object>
       <object>objects\obj_Triple_Shot_Inv</object>
       <object>objects\obj_Rapid_Fire_Inv</object>
       <object>objects\obj_Giant_Laser_Inv</object>
-      <object>objects\obj_Basic_Missile</object>
+      <object>objects\obj_Basic_Missile_Inv</object>
       <object>objects\obj_Homing_Missile_Inv</object>
       <object>objects\obj_Missile_Barrage_Inv</object>
       <object>objects\obj_Pilot_Insignia</object>
@@ -470,7 +472,7 @@
       <object>objects\obj_Small_Asteroid_Following</object>
       <object>objects\obj_Medium_Asteroid_Following</object>
       <object>objects\obj_Large_Asteroid_Following</object>
-      <object>objects\particle_Core_Destroyer_Laser</object>
+      <object>objects\core_destroyer_laser_controller</object>
       <object>objects\obj_Vortex</object>
       <object>objects\obj_Blue_Ring</object>
     </objects>
@@ -505,6 +507,10 @@
         <object>objects\obj_Defector_3_Combat</object>
       </objects>
     </objects>
+    <objects name="Harrier Angel">
+      <object>objects\obj_Harrier_Angel</object>
+      <object>objects\obj_Portal</object>
+    </objects>
     <objects name="The Queen">
       <object>objects\obj_The_Queen</object>
       <object>objects\obj_Eye</object>
@@ -513,10 +519,6 @@
       <object>objects\obj_Cave_Wall</object>
       <object>objects\obj_Blood_Explosion</object>
       <object>objects\obj_Tentacle</object>
-    </objects>
-    <objects name="Harrier Angel">
-      <object>objects\obj_Harrier_Angel</object>
-      <object>objects\obj_Portal</object>
     </objects>
   </objects>
   <timelines name="timelines">
@@ -532,11 +534,13 @@
       <room>rooms\room_tutorial_missile</room>
     </rooms>
     <room>rooms\room_overworld</room>
-    <room>rooms\room_Core_Destroyer</room>
-    <room>rooms\room_Fleet_Commander_Daemeon</room>
-    <room>rooms\room_Harrier_Angel</room>
-    <room>rooms\room_The_Queen</room>
     <room>rooms\room_pilot_base</room>
+    <rooms name="Bosses">
+      <room>rooms\room_Core_Destroyer</room>
+      <room>rooms\room_Fleet_Commander_Daemeon</room>
+      <room>rooms\room_Harrier_Angel</room>
+      <room>rooms\room_The_Queen</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

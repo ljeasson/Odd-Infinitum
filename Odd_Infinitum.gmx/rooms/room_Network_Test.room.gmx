@@ -57,6 +57,7 @@
     <instance objName="background_object_generator" x="32" y="0" name="inst_9C217E0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="global_vars_network" x="0" y="0" name="inst_26D1DC3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Player" x="208" y="256" name="inst_B251D138" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="UI_controller" x="32" y="32" name="inst_611D91D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

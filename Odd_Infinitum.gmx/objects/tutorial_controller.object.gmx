@@ -64,7 +64,10 @@ draw_set_valign(fa_top);
 
 // Instructional Text
 draw_set_font(UI_Font_Large);
-draw_text(room_width/2, 64, "Welcome, Scouter");
+if (global.pilot_insignia)
+    draw_text(room_width/2, 64, "Welcome, Pilot");
+else
+    draw_text(room_width/2, 64, "Welcome, Scouter");
 
 draw_set_font(UI_Font);
 draw_text(room_width/2, 128, "This traing room will teach you how to control your spacecraft");

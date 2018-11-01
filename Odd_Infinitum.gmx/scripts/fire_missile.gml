@@ -4,7 +4,7 @@
 if (key_missile and global.missile_count > 0)
 {
     // Normal Missile
-    if (global.missile)
+    if (global.missile == "basic_missile")
     {
         // Create Effect
         effect_create_above(ef_smoke,x+48,y+24,0,c_white);    
@@ -25,7 +25,7 @@ if (key_missile and global.missile_count > 0)
     }
     
     // Homing Missile   
-    if (global.homing_missile)
+    if (global.missile = "homing_missile")
     {
         // Create Effect
         effect_create_above(ef_smoke,x+48,y+24,0,c_white);    
@@ -41,7 +41,7 @@ if (key_missile and global.missile_count > 0)
     }
     
     // Missile Barrage
-    if (global.missile_barrage and global.missile_count >= 3)
+    if (global.missile = "missile_barrage" && global.missile_count >= 3)
     {
         // Create Effect
         effect_create_above(ef_smoke,x+48,y+24,0,c_white);    

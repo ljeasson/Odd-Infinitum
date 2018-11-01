@@ -28,7 +28,7 @@
             <string>/// Instantiate Pilot Tools
 
 // Messaging Beacon
-if (global.messaging_beacon)
+if (global.pilot_insignia)
     instance_create(room_width/2 - 192, 48, obj_Messaging_Beacon_Tool)
 
 // Friendly Pilot Beacon
@@ -80,7 +80,7 @@ if (instance_number(inventory_controller) == 0)
 // Draw Pilot Tools and Number Buttons
 if (!obj_Player_Overworld.menu &amp;&amp; !obj_Player_Overworld.inventory_open)
 {
-    if (global.messaging_beacon)
+    if (global.pilot_insignia)
     {
         // Draw Messaging Beacon Sprite
         draw_sprite(spr_Pilot_Insignia, 0, room_width/2 - 192, 48); 

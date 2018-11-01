@@ -70,11 +70,13 @@ instance_create(left_margin + 40, room_height - 80, obj_Done);
 draw_sprite(spr_Player_Base, 0, room_width/2-24, room_height/2-16 - 64);
 draw_sprite(spr_Platform, 0, room_width/2, room_height/2 - 16);
 
+/*
 // Draw Player Currency
 draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text(room_width-128, 32, global.shop_currency);
+*/
 </string>
           </argument>
         </arguments>
