@@ -67,6 +67,38 @@ remotey = room_height/2;
 
 // Create Remote UI
 instance_create(x,y,UI_controller_remote);
+// Create Remote Player
+instance_create(remotex,remotey,obj_Player_Remote);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Update Position of Remote Fighter
+if (instance_exists(obj_Player_Remote))
+{
+    obj_Player_Remote.x = remotex;
+    obj_Player_Remote.y = remotey;
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -90,8 +122,8 @@ instance_create(x,y,UI_controller_remote);
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-//write_buffer_movement_SERVER();
-write_buffer_action_SERVER(0);
+write_buffer_movement_SERVER();
+//write_buffer_action_SERVER(0);
 
 //update my circle
 myy += 4;
@@ -119,8 +151,8 @@ myy += 4;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-//write_buffer_movement_SERVER();
-write_buffer_action_SERVER(0);
+write_buffer_movement_SERVER();
+//write_buffer_action_SERVER(0);
 
 //update my circle
 myx += 4;
@@ -148,8 +180,8 @@ myx += 4;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-//write_buffer_movement_SERVER();
-write_buffer_action_SERVER(0);
+write_buffer_movement_SERVER();
+//write_buffer_action_SERVER(0);
 
 //update my circle
 myy -= 4;
@@ -177,8 +209,8 @@ myy -= 4;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-//write_buffer_movement_SERVER();
-write_buffer_action_SERVER(0);
+write_buffer_movement_SERVER();
+//write_buffer_action_SERVER(0);
 
 //update my circle
 myx -= 4;
@@ -215,62 +247,6 @@ remote_ip = string(async_load[? "ip"]);
 var buffer = async_load[? "buffer"];
 buffer_seek(buffer, buffer_seek_start, 0);
 process_packet(buffer);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw fighters
-//draw_sprite(spr_Player, -1, myx, myy);
-draw_sprite(spr_Player, -1, remotex, remotey);
-
-//draw_circle_colour(myx,myy,32,c_white,c_red,false);
-//draw_circle_colour(remotex,remotey,32,c_black,c_blue,false);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_action_SERVER(1);
-
-//update my circle
-myy += 4;
-
 </string>
           </argument>
         </arguments>

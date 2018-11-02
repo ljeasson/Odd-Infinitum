@@ -247,13 +247,19 @@
       <script>scripts\regain_health.gml</script>
       <script>scripts\fire_laser.gml</script>
       <script>scripts\fire_alt_laser.gml</script>
+      <script>scripts\fire_regain_laser.gml</script>
       <scripts name="Lasers">
         <script>scripts\scr_basic_laser.gml</script>
         <script>scripts\scr_triple_shot.gml</script>
         <script>scripts\scr_giant_laser.gml</script>
+        <script>scripts\scr_rapid_fire.gml</script>
       </scripts>
-      <script>scripts\fire_regain_laser.gml</script>
       <script>scripts\fire_missile.gml</script>
+      <scripts name="Missiles">
+        <script>scripts\scr_basic_missile.gml</script>
+        <script>scripts\scr_homing_missile.gml</script>
+        <script>scripts\scr_missile_barrage.gml</script>
+      </scripts>
       <script>scripts\missile_regain.gml</script>
       <script>scripts\energy_buckler.gml</script>
       <script>scripts\check_dodge.gml</script>
@@ -265,6 +271,11 @@
       <script>scripts\scr_player_normal.gml</script>
       <script>scripts\scr_player_damaged.gml</script>
       <script>scripts\scr_player_dead.gml</script>
+    </scripts>
+    <scripts name="Remote Player States">
+      <script>scripts\scr_remote_player_normal.gml</script>
+      <script>scripts\scr_remote_player_damaged.gml</script>
+      <script>scripts\scr_remote_player_dead.gml</script>
     </scripts>
     <scripts name="Asteroid Scripts">
       <script>scripts\generate_asteroid.gml</script>
@@ -293,7 +304,6 @@
       <script>scripts\scr_the_queen_phase3.gml</script>
       <script>scripts\scr_the_queen_defeat.gml</script>
     </scripts>
-    <script>scripts\scr_rapid_fire.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_white_sprite.shader</shader>
@@ -324,6 +334,7 @@
       <object>objects\stat_counter_controller</object>
       <object>objects\obj_Back_To_Overworld</object>
       <objects name="Network Controllers">
+        <object>objects\obj_Player_Remote</object>
         <object>objects\obj_Server</object>
         <object>objects\obj_Client</object>
       </objects>

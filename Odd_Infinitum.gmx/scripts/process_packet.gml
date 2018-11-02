@@ -5,9 +5,13 @@ var message_id = buffer_read(buffer, buffer_u8);
 
 var moveX = buffer_read(buffer, buffer_s16);
 var moveY = buffer_read(buffer, buffer_s16);
-var action = buffer_read(buffer, buffer_u16);
+//var action = buffer_read(buffer, buffer_u16);
 // more buffer reading ...
 
+remotex = moveX;
+remotey = moveY;
+
+/*
 // Do something with data
 switch (action)
 {
@@ -17,6 +21,6 @@ switch (action)
     default:
         remotex = moveX;
         remotey = moveY;
-        break;
-        
+        break;    
 }
+*/
