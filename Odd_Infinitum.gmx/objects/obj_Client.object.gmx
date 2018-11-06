@@ -65,10 +65,10 @@ myy = room_height/2;
 remotex = room_width/2;
 remotey = room_height/2;
 
-// Create Remote UI
-instance_create(x,y,UI_controller_remote);
 // Create Remote Player
 instance_create(remotex,remotey,obj_Player_Remote);
+// Create Remote UI
+instance_create(x,y,UI_controller_remote);
 </string>
           </argument>
         </arguments>
@@ -122,11 +122,11 @@ if (instance_exists(obj_Player_Remote))
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
-//write_buffer_action_CLIENT(0);
+write_buffer_CLIENT(0);
 
-//update my circle
-myy += 4;
+// Update Movement
+if (myy &lt; room_height - 32)
+    myy += 4;
 
 </string>
           </argument>
@@ -151,11 +151,11 @@ myy += 4;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
-//write_buffer_action_CLIENT(0);
+write_buffer_CLIENT(0);
 
-//update my circle
-myx += 4
+// Update Movement
+if (myx &lt; room_width - 56)
+    myx += 4
 
 </string>
           </argument>
@@ -180,12 +180,11 @@ myx += 4
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
-//write_buffer_action_CLIENT(0);
+write_buffer_CLIENT(0);
 
-//update my circle
-myy -= 4;
-
+// Update Movement
+if (myy &gt; 80)
+    myy -= 4;
 </string>
           </argument>
         </arguments>
@@ -209,11 +208,11 @@ myy -= 4;
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_movment_CLIENT();
-//write_buffer_action_CLIENT(0);
+write_buffer_CLIENT(0);
 
-//update my circle
-myx -= 4
+// Update Movement
+if (myx &gt; 0)
+    myx -= 4
 
 </string>
           </argument>
@@ -241,6 +240,31 @@ myx -= 4
 var buffer = async_load[? "buffer"];
 buffer_seek(buffer, buffer_seek_start, 0);
 process_packet(buffer);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Write buffer
+write_buffer_CLIENT(1);
+
 </string>
           </argument>
         </arguments>

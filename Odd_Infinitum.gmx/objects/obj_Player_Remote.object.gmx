@@ -29,11 +29,20 @@
 remote_state = player_states.normal;
 fire_again_remote = true;
 
+// Action
+action = 0;
+
 // Set controller dead zone
 gamepad_set_axis_deadzone(0,0.7);
 
 // Dodge
 player_dodge = 0;
+
+// Health, Energy, and Score
+remote_health = 100;
+remote_energy = 100;
+remote_missile_count = 2;
+remote_pilot_currency = 0;
 
 // Initialize End-of-Level Stat Values
 Victory = 2000;
@@ -219,17 +228,17 @@ switch (remote_state)
 }
 
 // Replenish overheat if overheat is less than 100
-if (global.overheat &lt; 100) { global.overheat += global.overheat_recharge };
+if (remote_energy &lt; 100) { remote_energy += global.overheat_recharge };
 
 // If overheat is less than 0, set equal to 0
-if (global.overheat &lt; 0) { global.overheat = 0 };
+if (remote_energy &lt; 0) { remote_energy = 0 };
 // If overheat is greater than 100, set equal to 100
-if (global.overheat &gt; 100) { global.overheat = 100 };
+if (remote_energy &gt; 100) { remote_energy = 100 };
 
 // If health is greater than 100, set equal to 100
-if (health &gt; 100) { health = 100 };
+if (remote_health &gt; 100) { remote_health = 100 };
 // If health is less than 0, change player state to dead
-if (health &lt;= 0) { state = player_states.dead };
+if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
 </string>
           </argument>
         </arguments>

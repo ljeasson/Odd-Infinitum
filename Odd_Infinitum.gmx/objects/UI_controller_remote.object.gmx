@@ -25,35 +25,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw UI
+            <string>/// Draw UI
 
-//Settings
+// Settings
 draw_set_colour(c_white);
 draw_set_font(UI_Font);
 draw_set_halign(fa_center);
 
-//Health Bar
-draw_healthbar(room_width-40,19,room_width-140,36,health,c_silver,c_red,c_lime,0,false,false);
+// Health Bar
+draw_healthbar(room_width-40,19,room_width-140,36,obj_Player_Remote.remote_health,c_silver,c_red,c_lime,0,false,false);
 
-//Overheat Bar
-draw_healthbar(room_width-40,48,room_width-140,64,global.overheat,c_silver,c_red,c_blue,0,false,false);
+// Energy Bar
+draw_healthbar(room_width-40,48,room_width-140,64,obj_Player_Remote.remote_energy,c_silver,c_red,c_blue,0,false,false);
 
-//Draw Health Container Sprite
+// Draw Health Container Sprite
 draw_sprite(spr_Health_Container,-1,room_width-150-16,16);
-//Draw Overheat Container Sprite
+// Draw Overheat Container Sprite
 draw_sprite(spr_Overheat_Container,-1,room_width-150-16,36);
 
-//Draw Missile Count
+// Draw Missile Count
 var missile_sprite = draw_sprite(spr_Missile_Icon,-1,room_width-278,44);
-//Draw Missile Count
+// Draw Missile Count
 draw_set_font(UI_Font_Medium);
 draw_set_halign(fa_right);
-draw_text(room_width-256,32,global.missile_count);
+draw_text(room_width-256,32,obj_Player_Remote.remote_missile_count);
 
 // Draw Pilot Currency
 draw_set_font(UI_Font_Medium);
 draw_set_halign(fa_right);
-draw_text(room_width-32,80,global.shop_currency);
+draw_text(room_width-32,80,obj_Player_Remote.remote_pilot_currency);
 </string>
           </argument>
         </arguments>

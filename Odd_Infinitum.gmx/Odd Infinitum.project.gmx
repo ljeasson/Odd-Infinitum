@@ -234,10 +234,8 @@
     </scripts>
     <scripts name="Networking Scripts">
       <script>scripts\process_packet.gml</script>
-      <script>scripts\write_buffer_movement_SERVER.gml</script>
-      <script>scripts\write_buffer_action_SERVER.gml</script>
-      <script>scripts\write_buffer_movment_CLIENT.gml</script>
-      <script>scripts\write_buffer_action_CLIENT.gml</script>
+      <script>scripts\write_buffer_SERVER.gml</script>
+      <script>scripts\write_buffer_CLIENT.gml</script>
       <script>scripts\scr_player_summoning.gml</script>
       <script>scripts\scr_player_waiting.gml</script>
       <script>scripts\scr_player_connected.gml</script>
@@ -323,7 +321,6 @@
       <object>objects\room_controller</object>
       <object>objects\pause_controller</object>
       <object>objects\UI_controller</object>
-      <object>objects\UI_controller_remote</object>
       <object>objects\overworld_controller</object>
       <object>objects\shop_controller</object>
       <object>objects\inventory_controller</object>
@@ -335,6 +332,7 @@
       <object>objects\obj_Back_To_Overworld</object>
       <objects name="Network Controllers">
         <object>objects\obj_Player_Remote</object>
+        <object>objects\UI_controller_remote</object>
         <object>objects\obj_Server</object>
         <object>objects\obj_Client</object>
       </objects>

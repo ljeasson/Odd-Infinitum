@@ -30,24 +30,44 @@ key_energy_buckler = keyboard_check_pressed(ord('T')) // Add Gamepad Control
 if (obj_Player.sprite_index != spr_Player)
     obj_Player.sprite_index = spr_Player;
 
-// Callouts
-check_callout();
-
-// Laser and Missile controls
-// Laser
-fire_laser(obj_Player_Remote.x,obj_Player_Remote.y);
-
-// Alt Laser
-fire_alt_laser(obj_Player_Remote.x,obj_Player_Remote.y);
-
-// Missile
-fire_missile(obj_Player_Remote.x,obj_Player_Remote.y);
-
-// Dodge
-dodge();   
-
-// Missile Regain
-missile_regain();
-
-// Energy Buckler
-energy_buckler();
+switch (action)
+{
+    // Laser and Missile controls
+    case 1:
+        // Laser
+        fire_laser(x,y);
+        action = 0;
+        break;
+    case 2:
+        // Alt Laser
+        fire_alt_laser(x,y);
+        action = 0;
+        break;
+    case 3:
+        // Missile
+        fire_missile(x,y);
+        action = 0;
+        break;
+    case 4:
+        // Dodge
+        dodge();
+        action = 0;
+        break;
+    case 5:
+        // Energy Buckler
+        energy_buckler();
+        action = 0;
+        break;
+    case 6:
+        // Callouts
+        check_callout();
+        action = 0;
+        break;
+    case 7:
+        // Missile Regain
+        missile_regain();
+        action = 0;
+        break;
+    default:
+        break;    
+}
