@@ -1,18 +1,21 @@
 // energy_buckler()
 // Creates Energy Buckler designed for temporary defense and counters
 
-if (key_energy_buckler)
+X = argument0;
+Y = argument1;
+
+if (fire_again)
 {
-    if (fire_again)
-    {
-        // Create energy buckler instance
-        instance_create(x+24,y+16,obj_Energy_Buckler);
+    // Create energy buckler instance
+    var buckler = instance_create(x,y,obj_Energy_Buckler);
+    buckler.x = X+24;
+    buckler.y = Y+16;
         
-        // Decrease overheat by 10
-        global.overheat -= 10;
+    // Decrease overheat by 10
+    global.overheat -= 10;
         
-        // Disable fire_again
-        fire_again = false
-        alarm[1] = 60;
-    }
+    // Disable fire_again
+    fire_again = false
+    alarm[1] = 60;
 }
+

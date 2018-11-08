@@ -70,8 +70,8 @@
             <string>/// Update X and Y position
 if (instance_exists(obj_Player))
 {
-    x = obj_Player.x + 24;
-    y = obj_Player.y + 16;
+    x = obj_Energy_Buckler.x;
+    y = obj_Energy_Buckler.y;
 } 
 </string>
           </argument>

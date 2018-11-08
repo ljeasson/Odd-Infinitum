@@ -38,19 +38,26 @@ check_callout();
 
 // Laser and Missile controls
 // Laser
-fire_laser(x,y);
+if (key_laser) 
+{
+    fire_laser(x,y);
+    if (instance_exists(obj_Server))
+        write_buffer_SERVER(1);
+    if (instance_exists(obj_Client))
+        write_buffer_CLIENT(1);
+}
 
 // Alt Laser
-fire_alt_laser(x,y);
+if (key_alt_laser) fire_alt_laser(x,y);
 
 // Missile
-fire_missile(x,y);
+if (key_missile) fire_missile(x,y);
 
 // Dodge
 dodge();   
 
 // Missile Regain
-missile_regain();
+if (key_missile_regain) missile_regain(x,y);
 
 // Energy Buckler
-energy_buckler();
+if (key_energy_buckler) energy_buckler(x,y);

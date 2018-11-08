@@ -129,7 +129,7 @@ global.missile_barrage = true;
 // Laser
 global.laser = "basic_laser";
 // Alt Laser
-global.alt_laser = "triple_shot";
+global.alt_laser = "triple shot";
 // Missile
 global.missile = "basic_missile";
 // Augment

@@ -4,7 +4,7 @@
 X = argument0;
 Y = argument1;
 
-if (key_missile and global.missile_count > 0)
+if (global.missile_count > 0)
 {
     // Normal Missile
     if (global.missile == "basic_missile") scr_basic_missile();

@@ -32,6 +32,9 @@ fire_again_remote = true;
 // Action
 action = 0;
 
+// Color Image
+image_blend = c_aqua;
+
 // Set controller dead zone
 gamepad_set_axis_deadzone(0,0.7);
 

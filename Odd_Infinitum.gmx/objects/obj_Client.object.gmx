@@ -36,7 +36,7 @@ socket = network_create_socket(type);
 if (socket &lt; 0)
     scr_text("UDP Client Socket Error", 2, room_width/2, room_height/2);  // Error!
 else
-    scr_text("UDP Server Socket Created", 2, room_width/2, room_height/2);  // Success!
+    scr_text("Summoned as Friendly Pilot", 2, room_width/2, room_height/2);  // Success!
 
 // Server IP and Port, needed to send packets
 // Know IP adress for now, will later get from server
@@ -50,20 +50,11 @@ var buffer_type = buffer_fixed;
 var buffer_alignment = 1;
 send_buffer = buffer_create(buffer_size, buffer_type, buffer_alignment);
 
-//scr_text("This is a Client#Waiting to be summoned", 2, room_width/2, room_height/2 + 64);
-
-// Movement controls
-key_up = keyboard_check(vk_up) || (gamepad_axis_value(0,gp_axislv) &lt; 0);
-key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0);
-key_left = keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0);
-key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0);
-key_laser = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1));
-
 //variables for drawing circles.
 myx = room_width/2;
-myy = room_height/2;
-remotex = room_width/2;
-remotey = room_height/2;
+myy = room_width/2;
+remotex = myx;
+remotey = myy;
 
 // Create Remote Player
 instance_create(remotex,remotey,obj_Player_Remote);
@@ -104,121 +95,6 @@ if (instance_exists(obj_Player_Remote))
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="40">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_CLIENT(0);
-
-// Update Movement
-if (myy &lt; room_height - 32)
-    myy += 4;
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="39">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_CLIENT(0);
-
-// Update Movement
-if (myx &lt; room_width - 56)
-    myx += 4
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="38">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_CLIENT(0);
-
-// Update Movement
-if (myy &gt; 80)
-    myy -= 4;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="37">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_CLIENT(0);
-
-// Update Movement
-if (myx &gt; 0)
-    myx -= 4
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="7" enumb="68">
       <action>
         <libid>1</libid>
@@ -245,7 +121,34 @@ process_packet(buffer);
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="32">
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw "SUMMON" Text
+draw_set_colour(c_white);
+draw_set_font(UI_Font_Large);
+draw_set_halign(fa_center);
+draw_text(room_width/2,room_height-64,"SUMMON");
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="84">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -263,7 +166,82 @@ process_packet(buffer);
           <argument>
             <kind>1</kind>
             <string>// Write buffer
-write_buffer_CLIENT(1);
+write_buffer_CLIENT(6);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Write buffer
+write_buffer_CLIENT(4);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="71">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Write buffer
+write_buffer_CLIENT(2);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="70">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Write buffer
+write_buffer_CLIENT(3);
 
 </string>
           </argument>

@@ -29,7 +29,7 @@ check_callout();
 
 // Laser and Missile controls
 // Laser
-fire_regain_laser(x,y);
+if (key_laser) fire_regain_laser(x,y);
 
 // Dodge
 dodge();
