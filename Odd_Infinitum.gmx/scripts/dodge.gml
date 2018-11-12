@@ -20,4 +20,4 @@ if (key_dodge_released)
 
 // Create Blur Effect by spawning fading player spirtes
 if (player_dodge)
-    instance_create(x,y,obj_Player_Fade)
+    instance_create(x,y,obj_Player_Fade);

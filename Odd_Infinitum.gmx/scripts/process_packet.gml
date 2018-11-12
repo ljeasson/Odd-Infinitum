@@ -11,4 +11,5 @@ var action = buffer_read(buffer, buffer_u8);
 // Do something with data
 remotex = moveX;
 remotey = moveY;
-obj_Player_Remote.action = action;
+if (instance_exists(obj_Player_Remote))
+    obj_Player_Remote.action = action;

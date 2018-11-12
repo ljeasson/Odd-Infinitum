@@ -55,10 +55,24 @@ myy = room_width/2;
 remotex = myx;
 remotey = myy;
 
-// Create Remote Player
-instance_create(remotex,remotey,obj_Player_Remote);
-// Create Remote UI
-instance_create(x,y,UI_controller_remote);
+if (room == room_overworld)
+{
+    // Create Remote Overworld Player
+    instance_create(remotex,remotey,obj_Player_Overworld_Remote);
+
+    // Update Player Number
+    global.num_players += 1;
+}
+else
+{
+    // Create Remote Player
+    instance_create(remotex,remotey,obj_Player_Remote);
+    // Create Remote UI
+    instance_create(x,y,UI_controller_remote);
+
+    // Update Player Number
+    global.num_players += 1;
+}
 
 </string>
           </argument>
@@ -87,6 +101,11 @@ if (instance_exists(obj_Player_Remote))
 {
     obj_Player_Remote.x = remotex;
     obj_Player_Remote.y = remotey;
+}
+if (instance_exists(obj_Player_Overworld_Remote))
+{
+    obj_Player_Overworld_Remote.x = remotex;
+    obj_Player_Overworld_Remote.y = remotey;
 }
 
 
@@ -149,106 +168,6 @@ draw_set_colour(c_white);
 draw_set_font(UI_Font_Large);
 draw_set_halign(fa_center);
 draw_text(room_width/2,room_height-64,"HOST");
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="84">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_SERVER(6);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_SERVER(4);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="71">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_SERVER(2);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="70">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Write buffer
-write_buffer_SERVER(3);
-
 </string>
           </argument>
         </arguments>

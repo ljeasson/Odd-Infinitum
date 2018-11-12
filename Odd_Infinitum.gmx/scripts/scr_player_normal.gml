@@ -48,16 +48,44 @@ if (key_laser)
 }
 
 // Alt Laser
-if (key_alt_laser) fire_alt_laser(x,y);
-
+if (key_alt_laser) 
+{
+    fire_alt_laser(x,y);
+    if (instance_exists(obj_Server))
+        write_buffer_SERVER(2);
+    if (instance_exists(obj_Client))
+        write_buffer_CLIENT(2);
+}
+    
 // Missile
-if (key_missile) fire_missile(x,y);
+if (key_missile)
+{
+    fire_missile(x,y);
+    if (instance_exists(obj_Server))
+        write_buffer_SERVER(3);
+    if (instance_exists(obj_Client))
+        write_buffer_CLIENT(3);
+}
+
+// Missile Regain
+if (key_missile_regain) 
+{
+    missile_regain(x,y);
+    if (instance_exists(obj_Server))
+        write_buffer_SERVER(4);
+    if (instance_exists(obj_Client))
+        write_buffer_CLIENT(4);
+}
 
 // Dodge
 dodge();   
 
-// Missile Regain
-if (key_missile_regain) missile_regain(x,y);
-
 // Energy Buckler
-if (key_energy_buckler) energy_buckler(x,y);
+if (key_energy_buckler)
+{
+    energy_buckler(x,y);
+    if (instance_exists(obj_Server))
+        write_buffer_SERVER(6);
+    if (instance_exists(obj_Client))
+        write_buffer_CLIENT(6);
+}

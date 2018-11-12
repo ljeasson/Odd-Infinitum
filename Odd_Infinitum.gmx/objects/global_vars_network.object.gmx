@@ -38,6 +38,9 @@ global.overheat_recharge = 0.6;
 global.missile_count = 2;
 global.shop_currency = 0;
 
+// PLAYER NUMBER
+global.num_players = 1;
+
 // FLAGS
 global.seen_intro = false;
 global.seen_tutorial = false;
@@ -129,7 +132,7 @@ global.missile_barrage = true;
 // Laser
 global.laser = "basic_laser";
 // Alt Laser
-global.alt_laser = "triple shot";
+global.alt_laser = "triple_shot";
 // Missile
 global.missile = "basic_missile";
 // Augment

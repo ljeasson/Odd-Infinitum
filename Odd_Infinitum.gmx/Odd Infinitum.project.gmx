@@ -332,6 +332,7 @@
       <object>objects\obj_Back_To_Overworld</object>
       <objects name="Network Controllers">
         <object>objects\obj_Player_Remote</object>
+        <object>objects\obj_Player_Overworld_Remote</object>
         <object>objects\UI_controller_remote</object>
         <object>objects\obj_Server</object>
         <object>objects\obj_Client</object>
