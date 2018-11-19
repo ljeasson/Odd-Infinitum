@@ -4,9 +4,6 @@
 X = argument0;
 Y = argument1;
 
-// If laser is fired with no health, take damage
-if (global.overheat <= 0) player_take_damage_heat(5);
-
 // Basic Laser
 if (global.laser == "basic_laser") scr_basic_laser();
     
@@ -18,3 +15,6 @@ if (global.laser == "triple_shot") scr_triple_shot();
 
 // Rapid fire
 //if (global.laser == "rapid_fire") scr_rapid_fire();
+
+// If laser is fired with no health, take damage
+if (global.overheat <= 0) player_take_damage_heat(5);
