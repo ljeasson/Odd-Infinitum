@@ -47,16 +47,17 @@ remote_energy = 100;
 remote_missile_count = 2;
 remote_pilot_currency = 0;
 
-// Initialize End-of-Level Stat Values
-Victory = 2000;
-Missiles = 0;
-Enemies_Destroyed = 0;
-No_Overheat = 5000;
-No_Overheat_Earned = 0;
-No_Damage = 10000;
-No_Damage_Earned = 0;
-
-Total = 0;
+// Callouts
+remote_callout_1 = "Greetings!";
+remote_callout_2 = "Good Luck";
+remote_callout_3 = "Follow my Lead";
+remote_callout_4 = "ENGAGE!";
+remote_callout_5 = "MAYDAY!";
+remote_callout_6 = "Great Shot!";
+remote_callout_7 = "Well Done!";
+remote_callout_8 = "Copy That";
+remote_callout_9 = "Something's up Ahead";
+remote_callout_10 = "Enemy Contact!";
 </string>
           </argument>
         </arguments>
@@ -264,7 +265,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -306,7 +307,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -348,7 +349,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -390,7 +391,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -432,7 +433,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -474,7 +475,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -516,7 +517,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -558,7 +559,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -600,7 +601,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -642,7 +643,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -684,7 +685,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -726,7 +727,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -768,7 +769,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -810,7 +811,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -852,20 +853,6 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
     <event eventtype="4" ename="obj_Red_Spread">
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>601</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -880,7 +867,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -904,6 +891,20 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
     </event>
     <event eventtype="4" ename="obj_Wave_Shot">
       <action>
@@ -922,7 +923,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -964,7 +965,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1006,7 +1007,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1048,7 +1049,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1104,7 +1105,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1146,7 +1147,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1202,7 +1203,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1244,7 +1245,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1286,7 +1287,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1328,7 +1329,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1370,7 +1371,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1412,7 +1413,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1454,7 +1455,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1496,7 +1497,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>player_take_damage</script>
+            <script>player_take_damage_remote</script>
           </argument>
           <argument>
             <kind>0</kind>

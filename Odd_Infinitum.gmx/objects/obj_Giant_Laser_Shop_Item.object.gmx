@@ -62,7 +62,7 @@ else
     showtext = 0;
 }
 
-if (global.giant_laser_bought)
+if (global.giant_laser)
 {
     instance_destroy(obj_item_description);
     instance_destroy();
@@ -179,7 +179,7 @@ if (global.giant_laser_bought)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.giant_laser_bought</string>
+            <string>global.giant_laser</string>
           </argument>
           <argument>
             <kind>0</kind>

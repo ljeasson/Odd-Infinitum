@@ -30,6 +30,9 @@ callout_text = "";
 
 // Start alarm
 alarm[0] = 90;
+
+// Object to follow
+object_to_follow = obj_Player;
 </string>
           </argument>
         </arguments>
@@ -70,9 +73,8 @@ alarm[0] = 90;
             <kind>1</kind>
             <string>/// Draw Callout Text
 draw_set_font(UI_Font);
-//draw_set_halign(fa_center);
-//draw_set_valign(fa_middle);
-draw_text(obj_Player.x+24,obj_Player.y-32,callout_text);
+draw_set_halign(fa_center);
+draw_text(object_to_follow.x+24,object_to_follow.y-32,callout_text);
 </string>
           </argument>
         </arguments>

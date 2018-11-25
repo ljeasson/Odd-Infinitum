@@ -223,7 +223,9 @@
     </scripts>
     <scripts name="Damage Scripts">
       <script>scripts\player_take_damage.gml</script>
+      <script>scripts\player_take_damage_remote.gml</script>
       <script>scripts\player_take_damage_heat.gml</script>
+      <script>scripts\player_take_damage_heat_remote.gml</script>
       <script>scripts\boss_take_damage.gml</script>
     </scripts>
     <scripts name="UI Scripts">
@@ -266,6 +268,25 @@
       <script>scripts\check_callout.gml</script>
       <script>scripts\callout.gml</script>
     </scripts>
+    <scripts name="Remote Scripts">
+      <script>scripts\regain_health_remote.gml</script>
+      <script>scripts\fire_laser_remote.gml</script>
+      <script>scripts\fire_alt_laser_remote.gml</script>
+      <script>scripts\fire_regain_laser_remote.gml</script>
+      <scripts name="Remote Lasers">
+        <script>scripts\scr_basic_laser_remote.gml</script>
+        <script>scripts\scr_triple_shot_remote.gml</script>
+      </scripts>
+      <script>scripts\fire_missile_remote.gml</script>
+      <scripts name="Remote Missiles">
+        <script>scripts\scr_basic_missile_remote.gml</script>
+        <script>scripts\scr_homing_missile_remote.gml</script>
+        <script>scripts\scr_missile_barrage_remote.gml</script>
+      </scripts>
+      <script>scripts\missile_regain_remote.gml</script>
+      <script>scripts\energy_buckler_remote.gml</script>
+      <script>scripts\callout_remote.gml</script>
+    </scripts>
     <scripts name="Player States">
       <script>scripts\scr_player_normal.gml</script>
       <script>scripts\scr_player_damaged.gml</script>
@@ -292,7 +313,9 @@
     </scripts>
     <scripts name="Harrier Angel">
       <script>scripts\scr_harrier_angel_intro.gml</script>
-      <script>scripts\scr_harrier_angel_phase_1.gml</script>
+      <script>scripts\scr_harrier_angel_phase_1_1.gml</script>
+      <script>scripts\scr_harrier_angel_phase_1_2.gml</script>
+      <script>scripts\scr_harrier_angel_phase_1_3.gml</script>
       <script>scripts\scr_harrier_angel_phase_2.gml</script>
       <script>scripts\scr_harrier_angel_defeat.gml</script>
     </scripts>
@@ -328,6 +351,7 @@
       <object>objects\menu_UI_controller</object>
       <object>objects\menu_controller</object>
       <object>objects\internet_controller</object>
+      <object>objects\options_controller</object>
       <object>objects\player_death_controller</object>
       <object>objects\stat_counter_controller</object>
       <object>objects\obj_Back_To_Overworld</object>
@@ -545,6 +569,7 @@
     <timeline>timelines\Level_1_Core_Destroyer</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room_Network_Test</room>
     <room>rooms\room_init</room>
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
@@ -554,7 +579,6 @@
     </rooms>
     <room>rooms\room_overworld</room>
     <room>rooms\room_pilot_base</room>
-    <room>rooms\room_Network_Test</room>
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
       <room>rooms\room_Fleet_Commander_Daemeon</room>

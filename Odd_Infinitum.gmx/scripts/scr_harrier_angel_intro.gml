@@ -1,29 +1,17 @@
 // Create Portal
-//if (!instance_exists(obj_Portal))
-//    instance_create(x,y,obj_Portal);
+if (!instance_exists(obj_Portal))
+    instance_create(x,y,obj_Portal);
 
 //Morph Between Sprites
 
-if (counter < 120)
+if (counter < 240)
 {
-    if (!attack_lock)
-    {
-        if (sprite_index == spr_Harrier_Angel_1){
-            sprite_index = spr_Harrier_Angel_2;
-            attack_lock = true;
-            alarm[0] = 7.5;
-        }
-        else if (sprite_index == spr_Harrier_Angel_2){ 
-            sprite_index = spr_Harrier_Angel_3;
-            attack_lock = true;
-            alarm[0] = 7.5;
-        }
-        else if (sprite_index == spr_Harrier_Angel_3){ 
-            sprite_index = spr_Harrier_Angel_1;
-            attack_lock = true;
-            alarm[0] = 7.5;
-        }   
-    }
+    // Set Sprite
+    if (counter == 60)        sprite_index = spr_Harrier_Angel_2;
+    else if (counter == 120)  sprite_index = spr_Harrier_Angel_3;
+    else if (counter == 180)  sprite_index = spr_Harrier_Angel_1;        
+    
+    // Update Counter
     counter += 1;
 }
 else
@@ -35,5 +23,5 @@ else
     sprite_index = spr_Harrier_Angel_1;
 
     // State Transition
-    state = harrier_angel_states.phase_1;
+    state = harrier_angel_states.phase_1_1;
 }

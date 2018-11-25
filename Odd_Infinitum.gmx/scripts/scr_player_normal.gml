@@ -24,7 +24,7 @@ key_dodge_pressed = keyboard_check_pressed(vk_shift) || (gamepad_button_check_pr
 key_dodge_released = keyboard_check_released(vk_shift) || (gamepad_button_check_released(0,gp_shoulderrb));
 
 // Energy Buckler controls
-key_energy_buckler = keyboard_check_pressed(ord('T')) // Add Gamepad Control
+key_energy_buckler = keyboard_check_pressed(ord('T')) || (gamepad_button_check_pressed(0,gp_shoulderlb));
 
 // Set sprite to normal
 if (obj_Player.sprite_index != spr_Player)

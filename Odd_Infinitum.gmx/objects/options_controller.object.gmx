@@ -25,25 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw Upgrade Items
-
-// Set Margins
-right_margin = 96;
-left_margin = room_width - 160;
-botom_margin_1 = room_height - 128;
-bottom_margin_2 = room_height - 64;
-
-// Draw Laser Upgrades
-instance_create(right_margin, 128, obj_Triple_Shot_Shop_Item);
-instance_create(right_margin, 224, obj_Rapid_Fire_Shop_Item);
-instance_create(right_margin, 320, obj_Giant_Laser_Shop_Item);
-
-// Draw Missile Upgrades
-instance_create(left_margin, 128, obj_Homing_Missile_Shop_Item);
-instance_create(left_margin, 224, obj_Missile_Barrage_Shop_Item);
-
-// Draw Done Button
-instance_create(left_margin + 40, room_height - 80, obj_Done);
+            <string>/// Set Cursor
+window_set_cursor(cr_default);
 </string>
           </argument>
         </arguments>
@@ -66,12 +49,18 @@ instance_create(left_margin + 40, room_height - 80, obj_Done);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw Text and Sprites
+            <string>///Draw Select Screen
 
-// Draw Player
-draw_sprite(spr_Player_Base, 0, room_width/2-24, room_height/2-16 - 64);
-draw_sprite(spr_Platform, 0, room_width/2, room_height/2 - 16);
+//draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_dkgray,c_dkgray,c_black, false);
+//draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_ltgray,c_ltgray,c_ltgray,true);
 
+// Text Settings
+draw_set_colour(c_white);
+draw_set_halign(fa_center);
+
+// Draw "Options" Text    
+draw_set_font(UI_Font_Large);
+draw_text(room_width/2, 128, "Options");
 </string>
           </argument>
         </arguments>

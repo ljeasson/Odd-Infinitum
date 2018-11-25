@@ -13,7 +13,9 @@
   <code>enum harrier_angel_states
 {
     intro,
-    phase_1,
+    phase_1_1,
+    phase_1_2,
+    phase_1_3,
     phase_2,
     defeat
 }

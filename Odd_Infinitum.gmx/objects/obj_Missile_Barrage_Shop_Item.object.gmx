@@ -62,7 +62,7 @@ else
     showtext = 0;
 }
 
-if (global.missile_barrage_bought)
+if (global.missile_barrage)
 {
     instance_destroy(obj_item_description);
     instance_destroy();
@@ -179,7 +179,7 @@ if (global.missile_barrage_bought)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.missile_barrage_bought</string>
+            <string>global.missile_barrage</string>
           </argument>
           <argument>
             <kind>0</kind>

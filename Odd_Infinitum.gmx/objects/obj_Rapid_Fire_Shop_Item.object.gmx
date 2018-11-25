@@ -62,7 +62,7 @@ else
     showtext = 0;
 }
 
-if (global.rapid_fire_bought)
+if (global.rapid_fire)
 {
     instance_destroy(obj_item_description);
     instance_destroy();
@@ -180,7 +180,7 @@ if (global.rapid_fire_bought)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.rapid_fire_bought</string>
+            <string>global.rapid_fire</string>
           </argument>
           <argument>
             <kind>0</kind>

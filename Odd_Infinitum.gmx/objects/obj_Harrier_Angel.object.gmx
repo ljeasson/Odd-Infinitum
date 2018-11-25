@@ -306,8 +306,14 @@ switch (state)
     case harrier_angel_states.intro:
         scr_harrier_angel_intro();
         break;
-    case harrier_angel_states.phase_1:
-        scr_harrier_angel_phase_1();
+    case harrier_angel_states.phase_1_1:
+        scr_harrier_angel_phase_1_1();
+        break;
+    case harrier_angel_states.phase_1_2:
+        scr_harrier_angel_phase_1_2();
+        break;
+    case harrier_angel_states.phase_1_3:
+        scr_harrier_angel_phase_1_3();
         break;
     case harrier_angel_states.phase_2:
         scr_harrier_angel_phase_2();

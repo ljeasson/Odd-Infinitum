@@ -15,3 +15,6 @@ if (global.missile_count > 0)
     // Missile Barrage
     if (global.missile = "missile_barrage" && global.missile_count >= 3) scr_missile_barrage();
 }
+
+// If missile is fired with no energy, take damage
+if (global.overheat <= 0) player_take_damage_heat(10);

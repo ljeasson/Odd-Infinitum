@@ -62,7 +62,7 @@ else
     showtext = 0;
 }
 
-if (global.triple_shot_bought)
+if (global.triple_shot)
 {
     instance_destroy(obj_item_description);
     instance_destroy();
@@ -180,7 +180,7 @@ if (global.triple_shot_bought)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.triple_shot_bought</string>
+            <string>global.triple_shot</string>
           </argument>
           <argument>
             <kind>0</kind>

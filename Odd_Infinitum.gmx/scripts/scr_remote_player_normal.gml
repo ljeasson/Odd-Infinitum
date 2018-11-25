@@ -14,39 +14,88 @@ switch (action)
     // Laser and Missile controls
     case 1:
         // Laser
-        fire_laser(x,y);
+        fire_laser_remote(x,y);
         action = 0;
         break;
     case 2:
         // Alt Laser
-        fire_alt_laser(x,y);
+        fire_alt_laser_remote(x,y);
         action = 0;
         break;
     case 3:
         // Missile
-        fire_missile(x,y);
+        fire_missile_remote(x,y);
         action = 0;
         break;
     case 4:
         // Missile Regain
-        missile_regain(x,y);
+        missile_regain_remote(x,y);
         action = 0;
         break;
     case 5:    
         // Dodge
-        dodge();
+        //dodge();
+        // Does this automatically
+        // by updating X and Y position
         action = 0;
         break;
     case 6:
         // Energy Buckler
-        energy_buckler(x,y);
+        energy_buckler_remote(x,y);
         action = 0;
         break;
-    case 7:
+    
+    case 71:
         // Callouts
-        check_callout();
+        callout_remote(remote_callout_1);
+        action = 0;
+        break;
+    case 72:
+        // Callouts
+        callout_remote(remote_callout_2);
+        action = 0;
+        break;     
+    case 73:
+        // Callouts
+        callout_remote(remote_callout_3);
+        action = 0;
+        break;    
+    case 74:
+        // Callouts
+        callout_remote(remote_callout_4);
+        action = 0;
+        break;  
+    case 75:
+        // Callouts
+        callout_remote(remote_callout_5);
+        action = 0;
+        break;    
+    case 76:
+        // Callouts
+        callout_remote(remote_callout_6);
         action = 0;
         break;   
+    case 77:
+        // Callouts
+        callout_remote(remote_callout_7);
+        action = 0;
+        break;   
+    case 78:
+        // Callouts
+        callout_remote(remote_callout_8);
+        action = 0;
+        break; 
+    case 79:
+        // Callouts
+        callout_remote(remote_callout_9);
+        action = 0;
+        break; 
+    case 70:
+        // Callouts
+        callout_remote(remote_callout_10);
+        action = 0;
+        break;       
+        
     default:
         break;    
 }
