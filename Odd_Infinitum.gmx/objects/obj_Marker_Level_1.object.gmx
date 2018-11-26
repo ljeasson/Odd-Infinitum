@@ -55,6 +55,10 @@ text = "Asteroid Field";
     if (!obj_Player_Overworld.inventory_open &amp;&amp; (keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1))))
     {
         room_goto(room_Core_Destroyer);
+        if (instance_exists(obj_Server))
+            write_buffer_SERVER(80);
+        if (instance_exists(obj_Client))
+            write_buffer_SERVER(80);
     }
 }
 else

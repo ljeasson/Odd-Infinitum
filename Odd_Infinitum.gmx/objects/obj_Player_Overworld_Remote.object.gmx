@@ -156,6 +156,24 @@ switch (action)
         action = 0;
         break;
         
+    // Boss Rooms
+    case 80:
+        room_goto(room_Core_Destroyer);
+        action = 0;
+        break;
+    case 81:
+        room_goto(room_Fleet_Commander_Daemeon);
+        action = 0;
+        break;
+    case 82:
+        room_goto(room_Harrier_Angel);
+        action = 0;
+        break;
+    case 83:
+        room_goto(room_The_Queen);
+        action = 0;
+        break;
+        
     default:
         break;
 }

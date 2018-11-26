@@ -55,6 +55,10 @@ text = "Alien Homeworld";
     if (!obj_Player_Overworld.inventory_open &amp;&amp; (keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1))))
     {
         room_goto(room_The_Queen);
+        if (instance_exists(obj_Server))
+            write_buffer_SERVER(83);
+        if (instance_exists(obj_Client))
+            write_buffer_SERVER(83);
     }
 }
 else
