@@ -139,6 +139,9 @@ if (!inventory_open &amp;&amp; !menu)
     }
 }
 
+// Callouts
+check_callout();
+
 // Open Inventory
 if (key_inventory &amp;&amp; !inventory_open)
     inventory_open = true;

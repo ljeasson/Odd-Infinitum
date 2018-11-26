@@ -56,7 +56,7 @@ alpha = clamp(alpha + (fade * 0.05), 0, 1);
 
 if (alpha == 1)
 {
-    room_goto(transition);
+    //room_goto(transition);
     fade = -1;
 }
 

@@ -74,7 +74,10 @@ object_to_follow = obj_Player;
             <string>/// Draw Callout Text
 draw_set_font(UI_Font);
 draw_set_halign(fa_center);
-draw_text(object_to_follow.x+24,object_to_follow.y-32,callout_text);
+if (instance_exists(obj_Player_Overworld))
+    draw_text(obj_Player_Overworld.x+24,obj_Player_Overworld.y-32,callout_text);
+else
+    draw_text(object_to_follow.x+24,object_to_follow.y-32,callout_text);
 </string>
           </argument>
         </arguments>

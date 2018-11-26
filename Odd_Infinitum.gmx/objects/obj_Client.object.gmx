@@ -56,6 +56,15 @@ myy = room_width/2;
 remotex = myx;
 remotey = myy;
 
+// Fade In and Out
+instance_create(x,y,obj_Fade);
+
+// Change Sprite Color
+if (instance_exists(obj_Player))
+    obj_Player.image_blend = c_aqua;
+else
+    obj_Player_Overworld.image_blend = c_aqua;
+
 if (room == room_overworld)
 {
     // Create Remote Overworld Player
@@ -63,6 +72,9 @@ if (room == room_overworld)
 
     // Update Player Number
     global.num_players += 1;
+    
+    // Enable Co-op
+    global.coop = true;
 }
 else
 {
@@ -73,6 +85,9 @@ else
 
     // Update Player Number
     global.num_players += 1;
+    
+    // Enable Co-op
+    global.coop = true;
 }
 
 </string>

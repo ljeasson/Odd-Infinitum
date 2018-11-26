@@ -32,6 +32,21 @@ overworld_state = overworld_states.idle;
 
 // Speed
 overworld_speed = 4;
+
+// Action
+action = 0;
+
+// Callouts
+remote_callout_1 = "Greetings!";
+remote_callout_2 = "Good Luck";
+remote_callout_3 = "Follow my Lead";
+remote_callout_4 = "ENGAGE!";
+remote_callout_5 = "MAYDAY!";
+remote_callout_6 = "Great Shot!";
+remote_callout_7 = "Well Done!";
+remote_callout_8 = "Copy That";
+remote_callout_9 = "Something's up Ahead";
+remote_callout_10 = "Enemy Contact!";
 </string>
           </argument>
         </arguments>
@@ -87,8 +102,63 @@ switch (overworld_state)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Reads input from keyboard
-
+            <string>/// Read Actions
+switch (action)
+{
+    case 71:
+        // Callouts
+        callout_remote(remote_callout_1);
+        action = 0;
+        break;
+    case 72:
+        // Callouts
+        callout_remote(remote_callout_2);
+        action = 0;
+        break;     
+    case 73:
+        // Callouts
+        callout_remote(remote_callout_3);
+        action = 0;
+        break;    
+    case 74:
+        // Callouts
+        callout_remote(remote_callout_4);
+        action = 0;
+        break;  
+    case 75:
+        // Callouts
+        callout_remote(remote_callout_5);
+        action = 0;
+        break;    
+    case 76:
+        // Callouts
+        callout_remote(remote_callout_6);
+        action = 0;
+        break;   
+    case 77:
+        // Callouts
+        callout_remote(remote_callout_7);
+        action = 0;
+        break;   
+    case 78:
+        // Callouts
+        callout_remote(remote_callout_8);
+        action = 0;
+        break; 
+    case 79:
+        // Callouts
+        callout_remote(remote_callout_9);
+        action = 0;
+        break; 
+    case 70:
+        // Callouts
+        callout_remote(remote_callout_10);
+        action = 0;
+        break;
+        
+    default:
+        break;
+}
 </string>
           </argument>
         </arguments>

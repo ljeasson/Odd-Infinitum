@@ -13,3 +13,5 @@ remotex = moveX;
 remotey = moveY;
 if (instance_exists(obj_Player_Remote))
     obj_Player_Remote.action = action;
+if (instance_exists(obj_Player_Overworld_Remote))
+    obj_Player_Overworld_Remote.action = action;

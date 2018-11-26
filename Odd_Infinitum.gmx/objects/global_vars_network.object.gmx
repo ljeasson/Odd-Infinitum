@@ -41,6 +41,12 @@ global.shop_currency = 0;
 // PLAYER NUMBER
 global.num_players = 1;
 
+// CO-OP INDICATOR
+global.coop = false;
+
+// HOST INDICATOR
+global.is_host = false;
+
 // FLAGS
 global.seen_intro = false;
 global.seen_tutorial = false;

@@ -56,6 +56,8 @@ if (global.homing_missile)
     instance_create(352,room_height-305,obj_Homing_Missile_Inv);
 if (global.missile_barrage)
     instance_create(448,room_height-305,obj_Missile_Barrage_Inv);
+
+// Augment Objects
 </string>
           </argument>
         </arguments>

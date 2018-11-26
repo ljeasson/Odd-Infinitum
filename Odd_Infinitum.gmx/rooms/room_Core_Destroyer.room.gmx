@@ -22,7 +22,15 @@
 scr_text("SEARCH AND RESCUE", 0.5, room_width/2, room_height/2);
 scr_text("Locate survivors on the remote asteroid colony Thera", 0.5, room_width/2, room_height/2+32);
 
-window_set_cursor(cr_none);</code>
+window_set_cursor(cr_none);
+
+if (global.coop)
+{
+    if (global.is_host)
+        instance_create(0,0,obj_Server);
+    else
+        instance_create(0,0,obj_Client);
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

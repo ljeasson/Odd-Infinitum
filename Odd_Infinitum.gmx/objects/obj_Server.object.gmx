@@ -55,23 +55,34 @@ myy = room_width/2;
 remotex = myx;
 remotey = myy;
 
+// Mark Player as Host
+global.is_host = true;
+
 if (room == room_overworld)
 {
     // Create Remote Overworld Player
-    instance_create(remotex,remotey,obj_Player_Overworld_Remote);
-
+    var remote_player = instance_create(remotex,remotey,obj_Player_Overworld_Remote);
+    remote_player.image_blend = c_aqua;
+    
     // Update Player Number
     global.num_players += 1;
+    
+    // Enable Co-op
+    global.coop = true;
 }
 else
 {
     // Create Remote Player
-    instance_create(remotex,remotey,obj_Player_Remote);
+    var remote_player = instance_create(remotex,remotey,obj_Player_Remote);
+    remote_player.image_blend = c_aqua;
     // Create Remote UI
     instance_create(x,y,UI_controller_remote);
 
     // Update Player Number
     global.num_players += 1;
+    
+    // Enable Co-op
+    global.coop = true;
 }
 
 </string>

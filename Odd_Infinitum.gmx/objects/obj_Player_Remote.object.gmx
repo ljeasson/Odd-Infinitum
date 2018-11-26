@@ -26,14 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize state and key variables
-remote_state = player_states.normal;
+remote_state = remote_player_states.normal;
 fire_again_remote = true;
 
 // Action
 action = 0;
-
-// Color Image
-image_blend = c_aqua;
 
 // Set controller dead zone
 gamepad_set_axis_deadzone(0,0.7);
@@ -191,7 +188,7 @@ fire_again_remote = true;
           <argument>
             <kind>1</kind>
             <string>/// Switch from damaged state to normal state
-remote_state = player_states.normal;
+obj_Player_Remote.remote_state = remote_player_states.normal;
 </string>
           </argument>
         </arguments>
