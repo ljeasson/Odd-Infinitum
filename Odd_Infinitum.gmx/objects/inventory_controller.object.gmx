@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Instantiate Inventory Objects
+            <string>///Instantiate Variables
 
 // Alignment Variables
 laser_box_column = room_width/2-256;
@@ -33,31 +33,8 @@ alt_laser_box_column = room_width/2-96;
 missile_box_column = room_width/2+96;
 augment_box_column = room_width/2+256
 
-// Equip Boxes
-instance_create(laser_box_column,256,obj_Laser_Box);
-instance_create(alt_laser_box_column,256,obj_Alt_Laser_Box);
-instance_create(missile_box_column,256,obj_Missile_Box);
-instance_create(augment_box_column,256,obj_Augment_Box);
-
-// Laser Objects
-if (global.basic_laser)
-    instance_create(256,room_height-400,obj_Basic_Laser_Inv);
-if (global.triple_shot)
-    instance_create(352,room_height-400,obj_Triple_Shot_Inv);
-if (global.rapid_fire)
-    instance_create(448,room_height-400,obj_Rapid_Fire_Inv);
-if (global.giant_laser)
-    instance_create(544,room_height-400,obj_Giant_Laser_Inv);
-
-// Missile Objects
-if (global.basic_missile)
-    instance_create(256,room_height-305,obj_Basic_Missile_Inv);
-if (global.homing_missile)
-    instance_create(352,room_height-305,obj_Homing_Missile_Inv);
-if (global.missile_barrage)
-    instance_create(448,room_height-305,obj_Missile_Barrage_Inv);
-
-// Augment Objects
+// Menu
+menu = inventory_states.lasers;
 </string>
           </argument>
         </arguments>
@@ -80,6 +57,35 @@ if (global.missile_barrage)
             <kind>1</kind>
             <string>/// Set Cursor
 window_set_cursor(cr_default);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// States
+enum inventory_states
+{
+    main,
+    lasers,
+    missiles,
+    augments,
+    skins
+}
 </string>
           </argument>
         </arguments>
@@ -280,28 +286,24 @@ window_set_cursor(cr_none);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw Select Screen
+            <string>/// Draw Select Screen
 
+// Draw Rectangles
 draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_dkgray,c_dkgray,c_black, false);
 draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_ltgray,c_ltgray,c_ltgray,true);
 
-// Draw Text
-draw_set_colour(c_black);
-draw_set_font(UI_Font);
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-
-// Text for Equip Boxes
-draw_text(laser_box_column, 224,"LASER");
-draw_text(alt_laser_box_column, 224,"ALT LASER");
-draw_text(missile_box_column, 224,"MISSILE");
-draw_text(augment_box_column, 224,"AUGMENT");
-   
-// Text for Selectable Items 
-draw_text(192,room_height-384+20,"LASERS:");
-draw_text(192,room_height-289+20,"MISSILES:");
-draw_text(192,room_height-192+20,"AUGMENTS:");
-    
+// State Machine
+switch (menu)
+{
+    case inventory_states.main:
+        scr_inventory_main();
+    case inventory_states.lasers:
+        scr_inventory_laser();
+    case inventory_states.missiles:
+        scr_inventory_missile();
+    case inventory_states.skins:
+        scr_inventory_skin();    
+}   
 </string>
           </argument>
         </arguments>

@@ -56,9 +56,6 @@ myy = room_width/2;
 remotex = myx;
 remotey = myy;
 
-// Fade In and Out
-instance_create(x,y,obj_Fade);
-
 // Change Sprite Color
 if (instance_exists(obj_Player))
     obj_Player.image_blend = c_aqua;
