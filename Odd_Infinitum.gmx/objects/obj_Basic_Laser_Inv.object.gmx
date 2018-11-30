@@ -51,6 +51,8 @@ global.alt_laser = "basic_laser";
             <kind>1</kind>
             <string>/// Set Laser to Basic Laser
 global.laser = "basic_laser";
+clear_inventory_screen();
+inventory_controller.menu = inventory_states.main;
 </string>
           </argument>
         </arguments>
