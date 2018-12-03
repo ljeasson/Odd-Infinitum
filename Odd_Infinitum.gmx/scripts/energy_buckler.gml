@@ -1,9 +1,6 @@
 // energy_buckler()
 // Creates Energy Buckler designed for temporary defense and counters
 
-X = argument0;
-Y = argument1;
-
 if (fire_again)
 {
     // Create energy buckler instance

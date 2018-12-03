@@ -26,6 +26,9 @@ key_dodge_released = keyboard_check_released(vk_shift) || (gamepad_button_check_
 // Energy Buckler controls
 key_energy_buckler = keyboard_check_pressed(ord('T')) || (gamepad_button_check_pressed(0,gp_shoulderlb));
 
+// Healing controls
+key_heal = keyboard_check_pressed(ord('E'));
+
 // Set sprite to normal
 if (obj_Player.sprite_index != spr_Player)
     obj_Player.sprite_index = spr_Player;
@@ -70,22 +73,32 @@ if (key_missile)
 // Missile Regain
 if (key_missile_regain) 
 {
-    missile_regain(x,y);
+    missile_regain();
     if (instance_exists(obj_Server))
         write_buffer_SERVER(4);
     if (instance_exists(obj_Client))
         write_buffer_CLIENT(4);
 }
 
-// Dodge
-dodge();   
-
 // Energy Buckler
 if (key_energy_buckler)
 {
-    energy_buckler(x,y);
+    energy_buckler();
     if (instance_exists(obj_Server))
         write_buffer_SERVER(6);
     if (instance_exists(obj_Client))
         write_buffer_CLIENT(6);
 }
+
+// Heal
+if (key_heal)
+{
+    heal();
+    if (instance_exists(obj_Server))
+        write_buffer_SERVER(7);
+    if (instance_exists(obj_Client))
+        write_buffer_CLIENT(7);
+}
+
+// Dodge
+dodge();   

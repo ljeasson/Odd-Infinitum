@@ -1,9 +1,6 @@
 // missile_regain()
 // Replenishes missile at the expense of some health
 
-X = argument0;
-Y = argument1;
-
 // Play Sound
 audio_play_sound(snd_Missile_Regain, 1, false);
 

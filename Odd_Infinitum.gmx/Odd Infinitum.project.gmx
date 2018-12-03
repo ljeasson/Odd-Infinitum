@@ -268,6 +268,7 @@
       <script>scripts\dodge.gml</script>
       <script>scripts\check_callout.gml</script>
       <script>scripts\callout.gml</script>
+      <script>scripts\heal.gml</script>
     </scripts>
     <scripts name="Remote Scripts">
       <script>scripts\regain_health_remote.gml</script>
@@ -577,6 +578,7 @@
     <timeline>timelines\Level_1_Core_Destroyer</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\room_Network_Test</room>
     <room>rooms\room_init</room>
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
@@ -586,7 +588,6 @@
     </rooms>
     <room>rooms\room_overworld</room>
     <room>rooms\room_pilot_base</room>
-    <room>rooms\room_Network_Test</room>
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
       <room>rooms\room_Fleet_Commander_Daemeon</room>

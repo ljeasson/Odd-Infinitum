@@ -109,22 +109,23 @@ global.trident = true;
 global.shot_timer = 7.5;
 
 // Missiles
-global.basic_missile = false;
+global.basic_missile = true;
 global.homing_missile = false;
 global.missile_barrage = false;
 global.harrier_strike = true;
 global.fleetbreaker = true;
 
 // Augments
-global.glass_cannon = true;
+global.quick_repair = true;
+global.emergency_repair = true;
+global.auto_counter = true;
 global.close_call_stasis = true;
 global.close_call_supercharge = true;
 global.tortise = true;
 global.buckler_repair = true;
 global.buckler_reload = true;
 global.automated_repair = true;
-global.emergency_repair = true;
-global.auto_counter = true;
+global.glass_cannon = true;
 
 // Skins 
 </string>
@@ -156,7 +157,7 @@ global.alt_laser = "triple_shot";
 // Missile
 global.missile = "basic_missile";
 // Augment
-global.augment = 0;
+global.augment = "quick_repair";
 
 </string>
           </argument>
