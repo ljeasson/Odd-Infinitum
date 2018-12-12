@@ -174,8 +174,8 @@ draw_set_font(UI_Font_Medium);
 draw_set_halign(fa_left);
 draw_text(left_column, 224, "Full Screen");
 draw_set_halign(fa_center);
-if (!global.full_screen) draw_text(right_column, 224, "DISABLED");
-else                     draw_text(right_column, 224, "ENABLED");
+if (window_get_fullscreen()) draw_text(right_column, 224, "ENABLED");
+else                         draw_text(right_column, 224, "DISABLED");
 
 // Music Volume
 draw_set_halign(fa_left);

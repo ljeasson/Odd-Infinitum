@@ -45,6 +45,7 @@
       <sprite>sprites\spr_Laser_Short</sprite>
       <sprite>sprites\spr_Regain_Laser</sprite>
       <sprite>sprites\spr_Triple_Shot</sprite>
+      <sprite>sprites\spr_Seeker_Shot</sprite>
       <sprite>sprites\spr_Rapid_Fire</sprite>
       <sprite>sprites\spr_Charge_Shot_1</sprite>
       <sprite>sprites\spr_Charge_Shot_2</sprite>
@@ -122,6 +123,7 @@
       <sprite>sprites\spr_Basic_Laser_Shop_Item</sprite>
       <sprite>sprites\spr_Triple_Shot_Shop_Item</sprite>
       <sprite>sprites\spr_Rapid_Fire_Shop_Item</sprite>
+      <sprite>sprites\spr_Seeker_Shot_Shop_Item</sprite>
       <sprite>sprites\spr_Giant_Laser_Shop_Item</sprite>
       <sprite>sprites\spr_Basic_Missile_Shop_Item</sprite>
       <sprite>sprites\spr_Homing_Missile_Shop_Item</sprite>
@@ -253,8 +255,9 @@
       <scripts name="Lasers">
         <script>scripts\scr_basic_laser.gml</script>
         <script>scripts\scr_triple_shot.gml</script>
-        <script>scripts\scr_giant_laser.gml</script>
         <script>scripts\scr_rapid_fire.gml</script>
+        <script>scripts\scr_seeker_shot.gml</script>
+        <script>scripts\scr_giant_laser.gml</script>
       </scripts>
       <script>scripts\fire_missile.gml</script>
       <scripts name="Missiles">
@@ -364,6 +367,7 @@
       <object>objects\player_death_controller</object>
       <object>objects\stat_counter_controller</object>
       <object>objects\obj_Back_To_Overworld</object>
+      <object>objects\obj_Fade</object>
       <objects name="Network Controllers">
         <object>objects\obj_Player_Remote</object>
         <object>objects\obj_Player_Overworld_Remote</object>
@@ -470,6 +474,7 @@
     <objects name="Laser Alternates">
       <object>objects\obj_Triple_Shot</object>
       <object>objects\obj_Rapid_Fire</object>
+      <object>objects\obj_Seeker_Shot</object>
       <object>objects\obj_Giant_Laser</object>
     </objects>
     <objects name="Missile Alternates">
@@ -504,6 +509,7 @@
       <object>objects\obj_Basic_Laser_Inv</object>
       <object>objects\obj_Triple_Shot_Inv</object>
       <object>objects\obj_Rapid_Fire_Inv</object>
+      <object>objects\obj_Seeker_Shot_Inv</object>
       <object>objects\obj_Giant_Laser_Inv</object>
       <object>objects\obj_Basic_Missile_Inv</object>
       <object>objects\obj_Homing_Missile_Inv</object>
@@ -573,7 +579,6 @@
       <object>objects\obj_Blood_Explosion</object>
       <object>objects\obj_Tentacle</object>
     </objects>
-    <object>objects\obj_Fade</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Level_1_Core_Destroyer</timeline>

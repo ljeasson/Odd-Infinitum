@@ -49,6 +49,7 @@ exit_speed = 1;
 laser_weakness = 1;
 triple_shot_weakness = 2;
 rapid_fire_weakness = 0.5;
+seeker_shot_weakness = 0.25;
 giant_laser_weakness = 4;
 
 missile_weakness = 10;

@@ -149,7 +149,6 @@ global.glass_cannon = true;
           <argument>
             <kind>1</kind>
             <string>/// Options Variables
-global.full_screen = false;
 global.music_volume = 10;
 global.sfx_volume = 10;
 </string>
@@ -224,6 +223,14 @@ global.red_missile_damage = 35;
 //...
  
 //Dreadnought
+ 
+//...
+
+//Gyrator
+
+//...
+
+//The Swarm
  
 //...
  
