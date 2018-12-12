@@ -114,7 +114,7 @@ var key_exit = keyboard_check_pressed(vk_escape)
             || gamepad_button_check_pressed(0, gp_start);
                       
 // Change Option with Keyboard Input          
-if (key_up)
+if (key_up &amp;&amp; !instance_exists(options_controller))
 {
     if (interest == "Continue")
         interest = "Exit";
@@ -125,7 +125,7 @@ if (key_up)
     else if (interest == "Exit")
         interest = "Restart";
 }
-if (key_down)
+if (key_down &amp;&amp; !instance_exists(options_controller))
 {
     if (interest == "Continue")
         interest = "Options";
@@ -137,12 +137,12 @@ if (key_down)
         interest = "Continue";
 }
 
-if (key_select)
+if (key_select &amp;&amp; !instance_exists(options_controller))
 {
     if (interest == "Continue")
         instance_destroy();
     else if (interest == "Options")
-        {} // TO BE ADDED LATER
+        instance_create(x,y,options_controller);
     else if (interest == "Restart") 
     {
         if (file_exists("pause.png"))
@@ -166,7 +166,7 @@ if (key_select)
     }
 }
 
-if (key_exit)
+if (key_exit &amp;&amp; !instance_exists(options_controller))
     instance_destroy();
 </string>
           </argument>

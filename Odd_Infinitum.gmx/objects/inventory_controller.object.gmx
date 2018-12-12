@@ -34,7 +34,7 @@ missile_box_column = room_width/2+96;
 augment_box_column = room_width/2+256
 
 // Menu
-menu = inventory_states.lasers;
+menu = inventory_states.main;
 </string>
           </argument>
         </arguments>
@@ -82,6 +82,7 @@ enum inventory_states
 {
     main,
     lasers,
+    alt_lasers,
     missiles,
     augments,
     skins
@@ -297,12 +298,19 @@ switch (menu)
 {
     case inventory_states.main:
         scr_inventory_main();
+        break;
     case inventory_states.lasers:
         scr_inventory_laser();
+        break;
+    case inventory_states.alt_lasers:
+        scr_inventory_alt_laser();
+        break;
     case inventory_states.missiles:
         scr_inventory_missile();
+        break;
     case inventory_states.skins:
-        scr_inventory_skin();    
+        scr_inventory_skin();   
+        break; 
 }   
 </string>
           </argument>

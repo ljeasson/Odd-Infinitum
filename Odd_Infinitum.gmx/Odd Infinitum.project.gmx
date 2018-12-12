@@ -330,10 +330,12 @@
     </scripts>
     <script>scripts\scr_inventory_main.gml</script>
     <script>scripts\scr_inventory_laser.gml</script>
+    <script>scripts\scr_inventory_alt_laser.gml</script>
     <script>scripts\scr_inventory_missile.gml</script>
     <script>scripts\scr_inventory_augment.gml</script>
     <script>scripts\scr_inventory_skin.gml</script>
     <script>scripts\clear_inventory_screen.gml</script>
+    <script>scripts\toggle_fullscreen.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_white_sprite.shader</shader>
@@ -356,7 +358,6 @@
       <object>objects\overworld_controller</object>
       <object>objects\shop_controller</object>
       <object>objects\inventory_controller</object>
-      <object>objects\menu_UI_controller</object>
       <object>objects\menu_controller</object>
       <object>objects\internet_controller</object>
       <object>objects\options_controller</object>
@@ -578,7 +579,6 @@
     <timeline>timelines\Level_1_Core_Destroyer</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\room_Network_Test</room>
     <room>rooms\room_init</room>
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
@@ -588,6 +588,7 @@
     </rooms>
     <room>rooms\room_overworld</room>
     <room>rooms\room_pilot_base</room>
+    <room>rooms\room_Network_Test</room>
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
       <room>rooms\room_Fleet_Commander_Daemeon</room>

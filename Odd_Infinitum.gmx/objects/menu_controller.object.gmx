@@ -27,6 +27,13 @@
             <kind>1</kind>
             <string>/// Default menu option
 interest = "Mission";
+
+// Create Menu UI
+instance_create(room_width/2, room_height/2-192, obj_Title);
+instance_create(room_width/2, room_height/2+32, obj_Mission_Button);
+instance_create(room_width/2, room_height/2+96, obj_Options_Button);
+instance_create(room_width/2, room_height/2+160, obj_Credits_Button);
+instance_create(room_width/2, room_height/2+224, obj_Quit_Button);
 </string>
           </argument>
         </arguments>
@@ -65,7 +72,7 @@ var key_select = keyboard_check_pressed(vk_return)
   
                       
 // Change Option with Keyboard Input          
-if (key_up)
+if (key_up &amp;&amp; !instance_exists(options_controller))
 {
     if (interest == "Mission")
         interest = "Exit";
@@ -76,7 +83,7 @@ if (key_up)
     else if (interest == "Exit")
         interest = "Credits";
 }
-if (key_down)
+if (key_down &amp;&amp; !instance_exists(options_controller))
 {
     if (interest == "Mission")
         interest = "Options";
@@ -88,15 +95,15 @@ if (key_down)
         interest = "Mission";
 }
 
-if (key_select)
+if (key_select &amp;&amp; !instance_exists(options_controller))
 {
     if (interest == "Mission")
     {
-        if (!global.seen_tutorial)
-            room_goto(room_tutorial);
-        else
-            room_goto(room_overworld);
+        if (!global.seen_tutorial) room_goto(room_tutorial);
+        else room_goto(room_overworld);
     }
+    else if (interest == "Options")
+        instance_create(x,y,options_controller);
     else if (interest == "Exit")
         game_end();
 }

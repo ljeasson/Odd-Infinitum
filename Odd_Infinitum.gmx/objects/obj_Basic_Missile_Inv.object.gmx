@@ -25,8 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Set Missile
+            <string>/// Set Missile to Basic Missile
 global.missile = "basic_missile";
+clear_inventory_screen();
+inventory_controller.menu = inventory_states.main;
 </string>
           </argument>
         </arguments>

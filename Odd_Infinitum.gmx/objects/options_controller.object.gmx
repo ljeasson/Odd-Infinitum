@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,6 +27,110 @@
             <kind>1</kind>
             <string>/// Set Cursor
 window_set_cursor(cr_default);
+
+// Interest
+interest = "full_screen";
+
+// Columns
+left_column = room_width/2 - 256;
+right_column = room_width/2 + 160;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Take Input
+
+// Pause Controls
+var key_up = keyboard_check_pressed(vk_up) 
+            || gamepad_button_check_pressed(0, gp_padu)
+            || gamepad_axis_value(0, gp_axislv) &gt; 0;
+            
+var key_down = keyboard_check_pressed(vk_down) 
+            || gamepad_button_check_pressed(0, gp_padd)
+            || gamepad_axis_value(0, gp_axislv) &lt; 0;
+            
+var key_left = keyboard_check_pressed(vk_left) 
+            || gamepad_button_check_pressed(0, gp_padl)
+            //|| gamepad_axis_value(0, gp_axislv) &gt; 0;
+            
+var key_right = keyboard_check_pressed(vk_right) 
+            || gamepad_button_check_pressed(0, gp_padr)
+            //|| gamepad_axis_value(0, gp_axislv) &lt; 0;
+            
+var key_select = keyboard_check_pressed(vk_return)
+            || gamepad_button_check_pressed(0, gp_face1);
+  
+                      
+// Change Option with Keyboard Input          
+if (key_up)
+{
+    if (interest == "full_screen")
+        interest = "back";
+    else if (interest == "music_volume")
+        interest = "full_screen";
+    else if (interest == "sfx_volume")
+        interest = "music_volume";
+    else if (interest == "back")
+        interest = "sfx_volume";
+    
+}
+if (key_down)
+{
+    if (interest == "full_screen")
+        interest = "music_volume";
+    else if (interest == "music_volume")
+        interest = "sfx_volume";
+    else if (interest == "sfx_volume")
+        interest = "back";
+    else if (interest == "back")
+        interest = "full_screen";
+}
+
+if (key_select)
+{
+    if (interest == "full_screen") toggle_fullscreen();
+    else if (interest == "back")
+        instance_destroy(options_controller);
+}
+
+if (key_left)
+{
+    if (interest == "music_volume")
+        if (global.music_volume &gt; 0)
+            global.music_volume -= 1
+    if (interest == "sfx_volume")
+        if (global.sfx_volume &gt; 0)
+            global.sfx_volume -= 1
+}
+
+if (key_right)
+{
+    if (interest == "music_volume")
+        if (global.music_volume &lt; 10)
+            global.music_volume += 1
+    if (interest == "sfx_volume")
+        if (global.sfx_volume &lt; 10)
+            global.sfx_volume += 1
+}    
 </string>
           </argument>
         </arguments>
@@ -51,16 +155,90 @@ window_set_cursor(cr_default);
             <kind>1</kind>
             <string>///Draw Select Screen
 
-//draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_dkgray,c_dkgray,c_black, false);
-//draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_ltgray,c_ltgray,c_ltgray,true);
+draw_rectangle_colour(384,128,room_width-384,room_height-128,c_ltgray,c_dkgray,c_dkgray,c_black, false);
+draw_rectangle_colour(384,128,room_width-384,room_height-128,c_ltgray,c_ltgray,c_ltgray,c_ltgray,true);
 
 // Text Settings
 draw_set_colour(c_white);
-draw_set_halign(fa_center);
 
 // Draw "Options" Text    
 draw_set_font(UI_Font_Large);
-draw_text(room_width/2, 128, "Options");
+draw_set_halign(fa_center);
+draw_text(room_width/2, 160, "OPTIONS");
+
+
+// Draw Options
+draw_set_font(UI_Font_Medium);
+
+// Full Screen
+draw_set_halign(fa_left);
+draw_text(left_column, 224, "Full Screen");
+draw_set_halign(fa_center);
+if (!global.full_screen) draw_text(right_column, 224, "DISABLED");
+else                     draw_text(right_column, 224, "ENABLED");
+
+// Music Volume
+draw_set_halign(fa_left);
+draw_text(left_column, 272, "Music Volume");
+draw_set_halign(fa_center);
+draw_text(right_column, 272, global.music_volume);
+
+// SFX Volume
+draw_set_halign(fa_left);
+draw_text(left_column, 320, "SFX Volume");
+draw_set_halign(fa_center);
+draw_text(right_column, 320, global.sfx_volume);
+
+// Draw "Back" Text    
+draw_set_font(UI_Font_Large);
+draw_set_halign(fa_center);
+draw_text(room_width/2, room_height-192, "BACK");
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Highlight Selected Option
+
+if (interest == "full_screen")
+{
+    draw_set_colour(c_aqua);
+    draw_rectangle(right_column-80, 224-24,
+                   right_column+80, 224+24, true);
+}
+else if (interest == "music_volume")
+{
+    draw_set_colour(c_aqua);
+    draw_text(right_column-80, 272, "&lt;");
+    draw_text(right_column+80, 272, "&gt;");
+}
+else if (interest == "sfx_volume")
+{
+    draw_set_colour(c_aqua);
+    draw_text(right_column-80, 320, "&lt;");
+    draw_text(right_column+80, 320, "&gt;");
+}
+else if (interest == "back")
+{
+    draw_set_colour(c_aqua);
+    draw_rectangle(room_width/2-64, room_height-192-32, 
+                   room_width/2+64, room_height-192+32, true);
+}
 </string>
           </argument>
         </arguments>
