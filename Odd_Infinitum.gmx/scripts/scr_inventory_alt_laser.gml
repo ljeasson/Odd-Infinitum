@@ -10,12 +10,13 @@ draw_set_valign(fa_middle);
 draw_text(room_width/2, 96, "LASERS");
 
 // Instantiate and Populate Array
-var lasers = array_create(5);
+var lasers = array_create(6);
 lasers[0] = obj_Basic_Laser_Inv;
 lasers[1] = obj_Triple_Shot_Inv;
 lasers[2] = obj_Rapid_Fire_Inv;
 lasers[3] = obj_Giant_Laser_Inv;
 lasers[4] = obj_Seeker_Shot_Inv;
+lasers[5] = obj_Charge_Shot_Inv;
 
 // Draw Laser Objects
 for (i = 1; i <= array_length_1d(lasers); i++)

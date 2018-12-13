@@ -16,6 +16,9 @@ if (global.alt_laser == "rapid_fire") scr_rapid_fire();
 // Seeker shot
 if (global.alt_laser == "seeker_shot") scr_seeker_shot();
 
+// Charge shot
+if (global.alt_laser == "charge_shot") scr_charge_shot();
+
 // Giant Laser
 //if (global.alt_laser = "giant_laser") scr_giant_laser();
 

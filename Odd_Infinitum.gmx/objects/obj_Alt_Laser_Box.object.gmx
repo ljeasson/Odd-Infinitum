@@ -71,6 +71,11 @@ else if (global.alt_laser == "seeker_shot")
 {
     draw_sprite(spr_Seeker_Shot_Shop_Item,0,box_x,box_y);
 }
+else if (global.alt_laser == "charge_shot")
+{
+    draw_sprite(spr_Charge_Shot_Shop_Item,0,box_x,box_y);
+}
+
 
 else if (global.alt_laser == "giant_laser")
 {

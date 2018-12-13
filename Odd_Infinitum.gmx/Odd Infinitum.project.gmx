@@ -124,6 +124,7 @@
       <sprite>sprites\spr_Triple_Shot_Shop_Item</sprite>
       <sprite>sprites\spr_Rapid_Fire_Shop_Item</sprite>
       <sprite>sprites\spr_Seeker_Shot_Shop_Item</sprite>
+      <sprite>sprites\spr_Charge_Shot_Shop_Item</sprite>
       <sprite>sprites\spr_Giant_Laser_Shop_Item</sprite>
       <sprite>sprites\spr_Basic_Missile_Shop_Item</sprite>
       <sprite>sprites\spr_Homing_Missile_Shop_Item</sprite>
@@ -223,6 +224,7 @@
       <script>scripts\generate_explosions.gml</script>
       <script>scripts\follow_object.gml</script>
       <script>scripts\instance_create_once.gml</script>
+      <script>scripts\toggle_fullscreen.gml</script>
     </scripts>
     <scripts name="Damage Scripts">
       <script>scripts\player_take_damage.gml</script>
@@ -246,6 +248,11 @@
       <script>scripts\scr_player_waiting.gml</script>
       <script>scripts\scr_player_connected.gml</script>
     </scripts>
+    <scripts name="Player States">
+      <script>scripts\scr_player_normal.gml</script>
+      <script>scripts\scr_player_damaged.gml</script>
+      <script>scripts\scr_player_dead.gml</script>
+    </scripts>
     <scripts name="Player Scripts">
       <script>scripts\movement.gml</script>
       <script>scripts\regain_health.gml</script>
@@ -257,6 +264,7 @@
         <script>scripts\scr_triple_shot.gml</script>
         <script>scripts\scr_rapid_fire.gml</script>
         <script>scripts\scr_seeker_shot.gml</script>
+        <script>scripts\scr_charge_shot.gml</script>
         <script>scripts\scr_giant_laser.gml</script>
       </scripts>
       <script>scripts\fire_missile.gml</script>
@@ -273,7 +281,7 @@
       <script>scripts\callout.gml</script>
       <script>scripts\heal.gml</script>
     </scripts>
-    <scripts name="Remote Scripts">
+    <scripts name="Remote Player Scripts">
       <script>scripts\regain_health_remote.gml</script>
       <script>scripts\fire_laser_remote.gml</script>
       <script>scripts\fire_alt_laser_remote.gml</script>
@@ -292,11 +300,6 @@
       <script>scripts\energy_buckler_remote.gml</script>
       <script>scripts\callout_remote.gml</script>
     </scripts>
-    <scripts name="Player States">
-      <script>scripts\scr_player_normal.gml</script>
-      <script>scripts\scr_player_damaged.gml</script>
-      <script>scripts\scr_player_dead.gml</script>
-    </scripts>
     <scripts name="Remote Player States">
       <script>scripts\scr_remote_player_normal.gml</script>
       <script>scripts\scr_remote_player_damaged.gml</script>
@@ -305,6 +308,15 @@
     <scripts name="Asteroid Scripts">
       <script>scripts\generate_asteroid.gml</script>
       <script>scripts\generate_asteroid_following.gml</script>
+    </scripts>
+    <scripts name="Inventory Scipts">
+      <script>scripts\scr_inventory_main.gml</script>
+      <script>scripts\scr_inventory_laser.gml</script>
+      <script>scripts\scr_inventory_alt_laser.gml</script>
+      <script>scripts\scr_inventory_missile.gml</script>
+      <script>scripts\scr_inventory_augment.gml</script>
+      <script>scripts\scr_inventory_skin.gml</script>
+      <script>scripts\clear_inventory_screen.gml</script>
     </scripts>
     <scripts name="Core Destroyer States">
       <script>scripts\scr_core_destroyer_phase1.gml</script>
@@ -331,14 +343,6 @@
       <script>scripts\scr_the_queen_phase3.gml</script>
       <script>scripts\scr_the_queen_defeat.gml</script>
     </scripts>
-    <script>scripts\scr_inventory_main.gml</script>
-    <script>scripts\scr_inventory_laser.gml</script>
-    <script>scripts\scr_inventory_alt_laser.gml</script>
-    <script>scripts\scr_inventory_missile.gml</script>
-    <script>scripts\scr_inventory_augment.gml</script>
-    <script>scripts\scr_inventory_skin.gml</script>
-    <script>scripts\clear_inventory_screen.gml</script>
-    <script>scripts\toggle_fullscreen.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shd_white_sprite.shader</shader>
@@ -475,6 +479,7 @@
       <object>objects\obj_Triple_Shot</object>
       <object>objects\obj_Rapid_Fire</object>
       <object>objects\obj_Seeker_Shot</object>
+      <object>objects\obj_Charge_Shot</object>
       <object>objects\obj_Giant_Laser</object>
     </objects>
     <objects name="Missile Alternates">
@@ -510,6 +515,7 @@
       <object>objects\obj_Triple_Shot_Inv</object>
       <object>objects\obj_Rapid_Fire_Inv</object>
       <object>objects\obj_Seeker_Shot_Inv</object>
+      <object>objects\obj_Charge_Shot_Inv</object>
       <object>objects\obj_Giant_Laser_Inv</object>
       <object>objects\obj_Basic_Missile_Inv</object>
       <object>objects\obj_Homing_Missile_Inv</object>
