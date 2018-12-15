@@ -27,33 +27,36 @@
             <kind>1</kind>
             <string>///Draw UI
 
-//Settings
-draw_set_colour(c_white);
-draw_set_font(UI_Font);
-draw_set_halign(fa_center);
+if (global.show_player_ui)
+{
+    // Settings
+    draw_set_colour(c_white);
+    draw_set_font(UI_Font);
+    draw_set_halign(fa_center);
 
-//Health Bar
-draw_healthbar(40,19,140,36,health,c_silver,c_red,c_lime,0,false,false);
+    // Health Bar
+    draw_healthbar(40,19,140,36,health,c_silver,c_red,c_lime,0,false,false);
 
-//Overheat Bar
-draw_healthbar(40,48,140,64,global.overheat,c_silver,c_red,c_blue,0,false,false);
+    // Energy Bar
+    draw_healthbar(40,48,140,64,global.overheat,c_silver,c_red,c_blue,0,false,false);
 
-//Draw Health Container Sprite
-draw_sprite(spr_Health_Container,-1,16,16);
-//Draw Overheat Container Sprite
-draw_sprite(spr_Overheat_Container,-1,16,36);
+    // Draw Health Container Sprite
+    draw_sprite(spr_Health_Container,-1,16,16);
+    // Draw Overheat Container Sprite
+    draw_sprite(spr_Overheat_Container,-1,16,36);
 
-//Draw Missile Count
-var missile_sprite = draw_sprite(spr_Missile_Icon,-1,256,44);
-//Draw Missile Count
-draw_set_font(UI_Font_Medium);
-draw_set_halign(fa_left);
-draw_text(278,32,global.missile_count);
+    //Draw Missile Sprite
+    var missile_sprite = draw_sprite(spr_Missile_Icon,-1,256,44);
+    //Draw Missile Count
+    draw_set_font(UI_Font_Medium);
+    draw_set_halign(fa_left);
+    draw_text(278,32,global.missile_count);
 
-// Draw Pilot Currency
-draw_set_font(UI_Font_Medium);
-draw_set_halign(fa_left);
-draw_text(32,80,global.shop_currency);
+    // Draw Pilot Currency
+    draw_set_font(UI_Font_Medium);
+    draw_set_halign(fa_left);
+    draw_text(32,80,global.shop_currency);
+}
 </string>
           </argument>
         </arguments>

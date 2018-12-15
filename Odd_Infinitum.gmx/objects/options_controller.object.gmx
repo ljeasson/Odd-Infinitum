@@ -89,8 +89,12 @@ if (key_up)
         interest = "full_screen";
     else if (interest == "sfx_volume")
         interest = "music_volume";
-    else if (interest == "back")
+    else if (interest == "player_UI")
         interest = "sfx_volume";
+    else if (interest == "boss_UI")
+        interest = "player_UI";
+    else if (interest == "back")
+        interest = "boss_UI";
     
 }
 if (key_down)
@@ -100,7 +104,13 @@ if (key_down)
     else if (interest == "music_volume")
         interest = "sfx_volume";
     else if (interest == "sfx_volume")
-        interest = "back";
+        interest = "player_UI";
+    else if (interest == "player_UI")
+        interest = "boss_UI";
+    else if (interest == "player_UI")
+        interest = "boss_UI";
+    else if (interest == "boss_UI")
+        interest = "back";    
     else if (interest == "back")
         interest = "full_screen";
 }
@@ -108,6 +118,8 @@ if (key_down)
 if (key_select)
 {
     if (interest == "full_screen") toggle_fullscreen();
+    if (interest == "player_UI") global.show_player_ui = !global.show_player_ui; 
+    if (interest == "boss_UI") global.show_boss_ui = !global.show_boss_ui;
     else if (interest == "back")
         instance_destroy(options_controller);
 }
@@ -189,6 +201,20 @@ draw_text(left_column, 320, "SFX Volume");
 draw_set_halign(fa_center);
 draw_text(right_column, 320, global.sfx_volume);
 
+// Player UI
+draw_set_halign(fa_left);
+draw_text(left_column, 368, "Show Player UI");
+draw_set_halign(fa_center);
+if (global.show_player_ui) draw_text(right_column, 368, "ENABLED");
+else                         draw_text(right_column, 368, "DISABLED");
+
+// Boss UI
+draw_set_halign(fa_left);
+draw_text(left_column, 416, "Show Boss UI");
+draw_set_halign(fa_center);
+if (global.show_boss_ui) draw_text(right_column, 416, "ENABLED");
+else                         draw_text(right_column, 416, "DISABLED");
+
 // Draw "Back" Text    
 draw_set_font(UI_Font_Large);
 draw_set_halign(fa_center);
@@ -232,6 +258,18 @@ else if (interest == "sfx_volume")
     draw_set_colour(c_aqua);
     draw_text(right_column-80, 320, "&lt;");
     draw_text(right_column+80, 320, "&gt;");
+}
+else if (interest == "player_UI")
+{
+    draw_set_colour(c_aqua);
+    draw_rectangle(right_column-80, 368-24,
+                   right_column+80, 368+24, true);
+}
+else if (interest == "boss_UI")
+{
+    draw_set_colour(c_aqua);
+    draw_rectangle(right_column-80, 416-24,
+                   right_column+80, 416+24, true);
 }
 else if (interest == "back")
 {

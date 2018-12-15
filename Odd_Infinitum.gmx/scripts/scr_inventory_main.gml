@@ -24,9 +24,15 @@ draw_text(augment_box_column, 224,"AUGMENT");
 ///////////////////////////////////////////////////
 
 // Equip Boxes
+draw_sprite(spr_Button_Space_Small,0,laser_box_column,256+112);
 instance_create_once(laser_box_column,256,obj_Laser_Box);
+
+draw_sprite(spr_G_Small,0,alt_laser_box_column,256+112);
 instance_create_once(alt_laser_box_column,256,obj_Alt_Laser_Box);
+
+draw_sprite(spr_F_Small,0,missile_box_column,256+112);
 instance_create_once(missile_box_column,256,obj_Missile_Box);
+
 instance_create_once(augment_box_column,256,obj_Augment_Box);
 
 /*

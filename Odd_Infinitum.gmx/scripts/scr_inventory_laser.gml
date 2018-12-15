@@ -13,11 +13,11 @@ draw_text(room_width/2, 96, "LASERS");
 lasers[0,0] = obj_Basic_Laser_Inv;
 lasers[1,0] = obj_Triple_Shot_Inv;
 lasers[2,0] = obj_Rapid_Fire_Inv;
-lasers[3,0] = obj_Giant_Laser_Inv;
+lasers[3,0] = obj_Charge_Shot_Inv;
 lasers[0,1] = obj_Seeker_Shot_Inv;
-lasers[1,1] = obj_Charge_Shot_Inv;
-lasers[2,1] = obj_Charge_Shot_Inv;
-lasers[3,1] = obj_Charge_Shot_Inv;
+lasers[1,1] = obj_Seeker_Shot_Inv;
+lasers[2,1] = obj_Seeker_Shot_Inv;
+lasers[3,1] = obj_Seeker_Shot_Inv;
 
 // Draw Laser Objects
 for (i = 1; i <= 4; i++)

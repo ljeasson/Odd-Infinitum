@@ -151,6 +151,9 @@
             <kind>1</kind>
             <string>//
 
+if (!instance_exists(obj_Fleet_Commander_Daemeon))
+    instance_destroy();
+
 x = obj_Fleet_Commander_Daemeon.x-112;
 y = obj_Fleet_Commander_Daemeon.y
 

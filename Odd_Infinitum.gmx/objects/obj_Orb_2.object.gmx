@@ -308,7 +308,8 @@ if (orb_health == 0) instance_destroy();
             <kind>1</kind>
             <string>///Draw Healthbar and Text
 draw_self();
-draw_healthbar(x-80,y+56,x+80,y+72,orb_health,c_black,c_red,c_green,0,false,false);
+if (global.show_boss_ui)
+    draw_healthbar(x-80,y+56,x+80,y+72,orb_health,c_black,c_red,c_green,0,false,false);
 </string>
           </argument>
         </arguments>

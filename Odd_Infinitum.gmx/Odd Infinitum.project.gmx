@@ -154,6 +154,9 @@
       <sprite>sprites\spr_R</sprite>
       <sprite>sprites\spr_G</sprite>
       <sprite>sprites\spr_F</sprite>
+      <sprite>sprites\spr_Button_Space_Small</sprite>
+      <sprite>sprites\spr_F_Small</sprite>
+      <sprite>sprites\spr_G_Small</sprite>
       <sprite>sprites\spr_Shift</sprite>
       <sprite>sprites\spr_Proceed</sprite>
       <sprite>sprites\spr_Equip</sprite>

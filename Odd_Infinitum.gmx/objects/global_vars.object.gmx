@@ -151,6 +151,8 @@ global.glass_cannon = true;
             <string>/// Options Variables
 global.music_volume = 10;
 global.sfx_volume = 10;
+global.show_player_ui = true;
+global.show_boss_ui = true;
 </string>
           </argument>
         </arguments>
