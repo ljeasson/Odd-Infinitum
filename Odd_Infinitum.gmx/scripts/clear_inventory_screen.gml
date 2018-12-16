@@ -1,6 +1,10 @@
 /// clear_inventory_screen()
 /// Clears current inventory screen so that new inventory screen can be drawn
 
+// Clear Buttons
+instance_destroy(obj_Back_Button_Inv);
+instance_destroy(obj_Done_Button_Inv);
+
 // Clear Boxes
 instance_destroy(obj_Laser_Box); 
 instance_destroy(obj_Alt_Laser_Box);

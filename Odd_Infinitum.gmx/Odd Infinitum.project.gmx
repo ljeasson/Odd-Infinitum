@@ -161,6 +161,7 @@
       <sprite>sprites\spr_Proceed</sprite>
       <sprite>sprites\spr_Equip</sprite>
       <sprite>sprites\spr_Done</sprite>
+      <sprite>sprites\spr_Back</sprite>
       <sprite>sprites\spr_Continue</sprite>
       <sprite>sprites\spr_Options</sprite>
       <sprite>sprites\spr_Restart</sprite>
@@ -504,6 +505,8 @@
     <objects name="Shop Items">
       <object>objects\obj_Triple_Shot_Shop_Item</object>
       <object>objects\obj_Rapid_Fire_Shop_Item</object>
+      <object>objects\obj_Seeker_Shot_Shop_Item</object>
+      <object>objects\obj_Charge_Shot_Shop_Item</object>
       <object>objects\obj_Giant_Laser_Shop_Item</object>
       <object>objects\obj_Standard_Missile_Shop_Item</object>
       <object>objects\obj_Homing_Missile_Shop_Item</object>
@@ -523,6 +526,8 @@
       <object>objects\obj_Basic_Missile_Inv</object>
       <object>objects\obj_Homing_Missile_Inv</object>
       <object>objects\obj_Missile_Barrage_Inv</object>
+      <object>objects\obj_Back_Button_Inv</object>
+      <object>objects\obj_Done_Button_Inv</object>
       <object>objects\obj_Pilot_Insignia</object>
       <object>objects\obj_Friendly_Pilot_Beacon</object>
       <object>objects\obj_Hostile_Pilot_Beacon</object>

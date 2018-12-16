@@ -10,6 +10,7 @@ draw_set_valign(fa_middle);
 draw_text(room_width/2, 96, "PILOT INVENTORY");
 
 // Text for Equip Boxes
+draw_set_colour(c_white);
 draw_set_font(UI_Font);
 draw_text(laser_box_column, 224,"LASER");
 draw_text(alt_laser_box_column, 224,"ALT LASER");

@@ -27,10 +27,10 @@
             <kind>1</kind>
             <string>showtext = 0;
 mouse_enter = false;
-name = "Giant Laser";
-desc = "Devasting high-damage laser beam.  Similar to Charge Shot, but remains active as long as the fire button is held down.  Use with caution as the laser consumes a lot of energy and can cause overheat";
+name = "Contact Beam";
+desc = "Devasting high-damage laser beam quicker than Charge Shot. Use with caution as the laser consumes a lot of energy and can cause overheat";
 cost = 50;
-e_use = 90;
+damage = "Very High";
 </string>
           </argument>
         </arguments>
@@ -141,33 +141,9 @@ if (global.giant_laser)
     <event eventtype="6" enumb="0">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.shop_currency</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>-10</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -179,11 +155,15 @@ if (global.giant_laser)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.giant_laser</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
+            <string>/// Buy Item
+if (global.shop_currency &gt;= cost)
+{
+    global.shop_currency -= cost
+    global.giant_laser = true;
+}
+else
+    scr_message_box("Not enough Pilot Currency", room_width/2, room_height/2);
+</string>
           </argument>
         </arguments>
       </action>
@@ -209,7 +189,7 @@ if (global.giant_laser)
 
 if (showtext == 1)
 {
-    scr_item_description(name, desc, cost, e_use, x + sprite_width + sprite_width/4, y + sprite_height/4);
+    scr_item_description(name, desc, cost, damage, x + sprite_width + sprite_width/4, y + sprite_height/4);
 }
 </string>
           </argument>

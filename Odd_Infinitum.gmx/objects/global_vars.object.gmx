@@ -101,7 +101,6 @@ global.basic_laser = true;
 global.triple_shot = false;
 global.rapid_fire = false;
 global.giant_laser = false;
-//--
 global.seeker_shot = true;
 global.charge_shot = true;
 global.trident = true;

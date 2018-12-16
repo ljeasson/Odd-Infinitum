@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>///Instantiate Variables
 
+box_width_left = room_width/2;
+box_width_right = room_width/2;
+box_width_left_final = 64;
+box_width_right_final = room_width-64;
+
 // Alignment Variables
 laser_box_column = room_width/2-256;
 alt_laser_box_column = room_width/2-96;
@@ -138,13 +143,24 @@ window_set_cursor(cr_none);
             <kind>1</kind>
             <string>/// Draw Select Screen
 
-// Draw Rectangles
-draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_dkgray,c_dkgray,c_black, false);
-draw_rectangle_colour(64,64,room_width-64,room_height-64,c_ltgray,c_ltgray,c_ltgray,c_ltgray,true);
-
-// State Machine
-switch (menu)
+if (box_width_left &gt; box_width_left_final &amp;&amp; box_width_right &lt; box_width_right_final)
 {
+    // Draw Rectangles
+    draw_rectangle_colour(box_width_left,64,box_width_right,room_height-64,c_ltgray,c_dkgray,c_dkgray,c_black, false);
+    draw_rectangle_colour(box_width_left,64,box_width_right,room_height-64,c_ltgray,c_ltgray,c_ltgray,c_ltgray,true);
+    box_width_left -= 64;
+    box_width_right += 64;
+}
+else
+{
+    // Draw Rectangles
+    draw_rectangle_colour(box_width_left_final,64,box_width_right_final,room_height-64,c_ltgray,c_dkgray,c_dkgray,c_black, false);
+    draw_rectangle_colour(box_width_left_final,64,box_width_right_final,room_height-64,c_ltgray,c_ltgray,c_ltgray,c_ltgray,true);
+    draw_rectangle_colour(128,128,room_width-128,room_height-128,c_black,c_black,c_black,c_black,false);
+    
+    // State Machine
+    switch (menu)
+    {
     case inventory_states.main:
         scr_inventory_main();
         break;
@@ -160,7 +176,8 @@ switch (menu)
     case inventory_states.skins:
         scr_inventory_skin();   
         break; 
-}   
+    }   
+}
 </string>
           </argument>
         </arguments>

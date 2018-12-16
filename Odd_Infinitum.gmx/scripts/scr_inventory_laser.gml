@@ -23,3 +23,6 @@ lasers[3,1] = obj_Seeker_Shot_Inv;
 for (i = 1; i <= 4; i++)
     for (j = 0; j < 2; j++)
         instance_create_once(80 + i*244, 176 + j*108, lasers[i-1,j]);
+        
+// Draw Back Button
+instance_create_once(80,72,obj_Back_Button_Inv);

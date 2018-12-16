@@ -8,11 +8,11 @@ with (item_description)
     name = argument0;
     desc = argument1;
     cost = argument2;
-    e_use = argument3;
+    damage = argument3;
     text = string(name) + "##" 
             + string(desc) 
             + "##Cost: " + string(cost) 
-            + "#Energy Use: " + string(e_use);
+            + "#Damage: " + string(damage);
     spd = 1;
     font = UI_Font;
     
