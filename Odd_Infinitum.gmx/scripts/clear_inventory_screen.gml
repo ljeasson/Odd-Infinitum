@@ -10,6 +10,7 @@ instance_destroy(obj_Laser_Box);
 instance_destroy(obj_Alt_Laser_Box);
 instance_destroy(obj_Missile_Box);
 instance_destroy(obj_Augment_Box);
+instance_destroy(obj_Skin_Box);
 
 // Clear Laser Inventory Items
 instance_destroy(obj_Basic_Laser_Inv);

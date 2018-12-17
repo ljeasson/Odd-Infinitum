@@ -523,6 +523,7 @@
       <object>objects\obj_Alt_Laser_Box</object>
       <object>objects\obj_Missile_Box</object>
       <object>objects\obj_Augment_Box</object>
+      <object>objects\obj_Skin_Box</object>
       <object>objects\obj_Basic_Laser_Inv</object>
       <object>objects\obj_Triple_Shot_Inv</object>
       <object>objects\obj_Rapid_Fire_Inv</object>

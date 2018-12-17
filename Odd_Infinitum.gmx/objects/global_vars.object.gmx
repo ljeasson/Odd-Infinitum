@@ -51,10 +51,10 @@ global.is_host = false;
 global.seen_intro = false;
 global.seen_tutorial = false;
 
-// QUEST ITEMS
+// PILOT TOOLS
 global.pilot_insignia = true;
 global.friendly_pilot_beacon = true;
-global.hostile_pilot_beacon = false;
+global.hostile_pilot_beacon = true;
 
 // CALLOUTS
 global.callout_1 = "Greetings!";
@@ -182,6 +182,8 @@ global.alt_laser = "triple_shot";
 global.missile = "basic_missile";
 // Augment
 global.augment = "quick_repair";
+// Skin
+global.skin = "pilot";
 
 </string>
           </argument>

@@ -173,6 +173,9 @@ else
     case inventory_states.missiles:
         scr_inventory_missile();
         break;
+    case inventory_states.augments:
+        scr_inventory_augment();
+        break;
     case inventory_states.skins:
         scr_inventory_skin();   
         break; 
