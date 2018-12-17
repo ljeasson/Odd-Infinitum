@@ -56,25 +56,17 @@ var box_y = obj_Laser_Box.y;
 
 draw_self();
 if (global.laser == "basic_laser")
-{
     draw_sprite(spr_Basic_Laser_Shop_Item,0,box_x,box_y);
-}
 else if (global.laser == "triple_shot")
-{
     draw_sprite(spr_Triple_Shot_Shop_Item,0,box_x,box_y);
-}
 else if (global.laser == "rapid_fire")
-{
     draw_sprite(spr_Rapid_Fire_Shop_Item,0,box_x,box_y);
-}
 else if (global.laser == "seeker_shot")
-{
     draw_sprite(spr_Seeker_Shot_Shop_Item,0,box_x,box_y);
-}
 else if (global.laser == "charge_shot")
-{
     draw_sprite(spr_Charge_Shot_Shop_Item,0,box_x,box_y);
-}
+else if (global.laser == "trident")
+    draw_sprite(spr_Trident_Shop_Item,0,box_x,box_y);
 
 else if (global.laser == "giant_laser")
 {

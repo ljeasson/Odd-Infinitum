@@ -19,6 +19,9 @@ if (global.alt_laser == "seeker_shot") scr_seeker_shot();
 // Charge shot
 if (global.alt_laser == "charge_shot") scr_charge_shot();
 
+// Trident
+if (global.alt_laser == "trident") scr_trident();
+
 // Giant Laser
 //if (global.alt_laser = "giant_laser") scr_giant_laser();
 

@@ -15,7 +15,7 @@ lasers[1,0] = obj_Triple_Shot_Inv;
 lasers[2,0] = obj_Rapid_Fire_Inv;
 lasers[3,0] = obj_Charge_Shot_Inv;
 lasers[0,1] = obj_Seeker_Shot_Inv;
-lasers[1,1] = obj_Seeker_Shot_Inv;
+lasers[1,1] = obj_Trident_Inv;
 lasers[2,1] = obj_Seeker_Shot_Inv;
 lasers[3,1] = obj_Seeker_Shot_Inv;
 

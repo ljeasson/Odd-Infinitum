@@ -50,6 +50,7 @@
       <sprite>sprites\spr_Charge_Shot_1</sprite>
       <sprite>sprites\spr_Charge_Shot_2</sprite>
       <sprite>sprites\spr_Charge_Shot_3</sprite>
+      <sprite>sprites\spr_Trident_Laser</sprite>
       <sprite>sprites\spr_Giant_Laser</sprite>
       <sprite>sprites\spr_Missile</sprite>
       <sprite>sprites\spr_Player_Explosion</sprite>
@@ -126,6 +127,7 @@
       <sprite>sprites\spr_Seeker_Shot_Shop_Item</sprite>
       <sprite>sprites\spr_Charge_Shot_Shop_Item</sprite>
       <sprite>sprites\spr_Giant_Laser_Shop_Item</sprite>
+      <sprite>sprites\spr_Trident_Shop_Item</sprite>
       <sprite>sprites\spr_Basic_Missile_Shop_Item</sprite>
       <sprite>sprites\spr_Homing_Missile_Shop_Item</sprite>
       <sprite>sprites\spr_Missile_Barrage_Shop_Item</sprite>
@@ -209,7 +211,8 @@
     <sprite>sprites\spr_Rocket_Bomb</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\back_Pilot_Hangar</background>
+    <background>background\back_Hangar</background>
+    <background>background\back_Pilot_Base</background>
     <background>background\back_Cave</background>
   </backgrounds>
   <paths name="paths">
@@ -270,6 +273,7 @@
         <script>scripts\scr_seeker_shot.gml</script>
         <script>scripts\scr_charge_shot.gml</script>
         <script>scripts\scr_giant_laser.gml</script>
+        <script>scripts\scr_trident.gml</script>
       </scripts>
       <script>scripts\fire_missile.gml</script>
       <scripts name="Missiles">
@@ -485,6 +489,7 @@
       <object>objects\obj_Seeker_Shot</object>
       <object>objects\obj_Charge_Shot</object>
       <object>objects\obj_Giant_Laser</object>
+      <object>objects\obj_Trident_Laser</object>
     </objects>
     <objects name="Missile Alternates">
       <object>objects\obj_Homing_Missile</object>
@@ -508,6 +513,7 @@
       <object>objects\obj_Seeker_Shot_Shop_Item</object>
       <object>objects\obj_Charge_Shot_Shop_Item</object>
       <object>objects\obj_Giant_Laser_Shop_Item</object>
+      <object>objects\obj_Trident_Shop_Item</object>
       <object>objects\obj_Standard_Missile_Shop_Item</object>
       <object>objects\obj_Homing_Missile_Shop_Item</object>
       <object>objects\obj_Missile_Barrage_Shop_Item</object>
@@ -523,6 +529,7 @@
       <object>objects\obj_Seeker_Shot_Inv</object>
       <object>objects\obj_Charge_Shot_Inv</object>
       <object>objects\obj_Giant_Laser_Inv</object>
+      <object>objects\obj_Trident_Inv</object>
       <object>objects\obj_Basic_Missile_Inv</object>
       <object>objects\obj_Homing_Missile_Inv</object>
       <object>objects\obj_Missile_Barrage_Inv</object>

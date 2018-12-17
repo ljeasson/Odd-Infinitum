@@ -70,10 +70,11 @@ instance_create(right_margin + 40, room_height - 80, obj_Done);
             <kind>1</kind>
             <string>/// Draw Text and Sprites
 
-// Draw Player
-draw_sprite(spr_Player_Base, 0, room_width/2-24, room_height/2-16 - 64);
+// Draw Platform
 draw_sprite(spr_Platform, 0, room_width/2, room_height/2 - 16);
 
+// Draw Player
+draw_sprite(spr_Player_Base, 0, room_width/2-24, room_height/2-16 - 64);
 </string>
           </argument>
         </arguments>
