@@ -202,6 +202,7 @@
       <sprite>sprites\spr_aqua_spark</sprite>
       <sprite>sprites\spr_blue_spark</sprite>
       <sprite>sprites\spr_Ring</sprite>
+      <sprite>sprites\spr_Rotator</sprite>
       <sprite>sprites\spr_Square</sprite>
     </sprites>
     <sprites name="Tutorial">
@@ -214,6 +215,9 @@
     <background>background\back_Hangar</background>
     <background>background\back_Pilot_Base</background>
     <background>background\back_Cave</background>
+    <background>background\grid_1</background>
+    <background>background\grid_2</background>
+    <background>background\grid_3</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_Core_Destroyer_Enter</path>
@@ -436,6 +440,7 @@
       <object>objects\obj_blue_spark</object>
       <object>objects\obj_Health_Regain_Effect</object>
       <object>objects\obj_Ring</object>
+      <object>objects\obj_Rotator</object>
     </objects>
     <objects name="Stars">
       <object>objects\obj_Star</object>

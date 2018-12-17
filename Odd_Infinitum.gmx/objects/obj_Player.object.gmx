@@ -29,6 +29,9 @@
 state = player_states.normal;
 fire_again = true;
 
+// Create Teleportation Effect
+instance_create(x,y,obj_Rotator);
+
 // Set controller dead zone
 gamepad_set_axis_deadzone(0,0.7);
 
