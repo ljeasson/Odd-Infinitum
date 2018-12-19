@@ -53,8 +53,8 @@ global.seen_tutorial = false;
 
 // PILOT TOOLS
 global.pilot_insignia = true;
-global.friendly_pilot_beacon = true;
-global.hostile_pilot_beacon = true;
+global.friendly_pilot_beacon = false;
+global.hostile_pilot_beacon = false;
 
 // CALLOUTS
 global.callout_1 = "Greetings!";
@@ -68,8 +68,8 @@ global.callout_8 = "Copy That";
 global.callout_9 = "Something's up Ahead";
 global.callout_10 = "Enemy Contact!";
 
-//DAMAGE RATINGS (PLAYER)
-//Asteroid Damage Ratings
+// DAMAGE RATINGS (PLAYER)
+// Asteroid Damage Ratings
 global.small_asteroid_damage = 15;
 global.medium_asteroid_damage = 20;
 global.large_asteroid_damage = 30;
@@ -101,9 +101,9 @@ global.basic_laser = true;
 global.triple_shot = false;
 global.rapid_fire = false;
 global.giant_laser = false;
-global.seeker_shot = true;
-global.charge_shot = true;
-global.trident = true;
+global.seeker_shot = false;
+global.charge_shot = false;
+global.trident = false;
 // Rapid Fire Timer 
 global.shot_timer = 7.5;
 
@@ -111,8 +111,8 @@ global.shot_timer = 7.5;
 global.basic_missile = true;
 global.homing_missile = false;
 global.missile_barrage = false;
-global.harrier_strike = true;
-global.fleetbreaker = true;
+global.harrier_strike = false;
+global.fleetbreaker = false;
 
 // Augments
 global.quick_repair = true;
@@ -177,7 +177,7 @@ global.show_boss_ui = true;
 // Laser
 global.laser = "basic_laser";
 // Alt Laser
-global.alt_laser = "triple_shot";
+global.alt_laser = "basic_laser";
 // Missile
 global.missile = "basic_missile";
 // Augment
@@ -254,6 +254,30 @@ global.aoe_damage = 50;
   
 //The Arbiter of the Cosmos
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Progression
+global.fleet_commander_daemeon_unlocked = false;
+global.harrier_angel_unlocked = false;
+global.the_queen_unlocked = false;
 </string>
           </argument>
         </arguments>

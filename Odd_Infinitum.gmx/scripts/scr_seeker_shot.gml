@@ -2,6 +2,9 @@
 
 if (fire_again)
 {
+    // Play Laser sound
+    audio_play_sound(snd_Seeker_Shot, 2, false);
+
     // Create rapid fire instance
     instance_create(X+48,Y+24,obj_Seeker_Shot);
         

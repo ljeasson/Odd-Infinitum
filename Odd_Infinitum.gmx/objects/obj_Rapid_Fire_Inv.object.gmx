@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>showtext = 0;
 text = "Rapid Fire";
+
+if (!global.rapid_fire) instance_destroy();
 </string>
           </argument>
         </arguments>

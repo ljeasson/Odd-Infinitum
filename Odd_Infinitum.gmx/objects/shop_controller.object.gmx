@@ -36,9 +36,9 @@ bottom_margin_2 = room_height - 64;
 // Draw Laser Upgrades
 instance_create(left_margin, 128, obj_Triple_Shot_Shop_Item);
 instance_create(left_margin, 224, obj_Rapid_Fire_Shop_Item);
-instance_create(left_margin, 320, obj_Giant_Laser_Shop_Item);
-instance_create(left_margin, 416, obj_Seeker_Shot_Shop_Item);
-instance_create(left_margin, 512, obj_Charge_Shot_Shop_Item);
+instance_create(left_margin, 320, obj_Seeker_Shot_Shop_Item);
+instance_create(left_margin, 416, obj_Charge_Shot_Shop_Item);
+//instance_create(left_margin, 512, obj_Giant_Laser_Shop_Item);
 
 // Draw Missile Upgrades
 instance_create(right_margin, 128, obj_Homing_Missile_Shop_Item);

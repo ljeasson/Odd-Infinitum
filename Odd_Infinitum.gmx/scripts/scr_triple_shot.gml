@@ -1,5 +1,11 @@
 /// Triple Shot
 
+// Play Laser sound
+audio_play_sound(snd_Triple_Shot, 2, false);
+
+// Create Spark Effect
+var spark = instance_create(x,y,obj_green_spark);
+
 // Create 3 triple shot instances
 shot1 = instance_create(X+48,Y+24,obj_Triple_Shot);
 shot1.direction = 0;

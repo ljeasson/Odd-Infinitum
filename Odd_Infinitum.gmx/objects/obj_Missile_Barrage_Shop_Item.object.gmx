@@ -138,7 +138,7 @@ if (global.missile_barrage)
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="0">
+    <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -189,7 +189,7 @@ else
 
 if (showtext == 1)
 {
-    scr_item_description(name, desc, cost, m_use, x - 288 - sprite_width/4, y + sprite_height/4);
+    scr_item_description_missile(name, desc, cost, m_use, x - 288 - sprite_width/4, y + sprite_height/4);
 }
 </string>
           </argument>

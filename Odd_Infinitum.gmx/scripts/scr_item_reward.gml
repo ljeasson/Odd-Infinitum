@@ -1,6 +1,6 @@
 /// scr_message("Message", Item, x, y)
-item_description = instance_create(argument2, argument3, obj_message_box);
-with (item_description)
+item_reward = instance_create(argument2, argument3, obj_message_box);
+with (item_reward)
 {
     padding = 16;
     maxlength = 512;

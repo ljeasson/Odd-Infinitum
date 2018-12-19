@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>showtext = 0;
 text = "Spread Shot";
+
+if (!global.triple_shot) instance_destroy();
 </string>
           </argument>
         </arguments>

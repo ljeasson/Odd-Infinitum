@@ -109,8 +109,30 @@ missile_weakness = 10;
           <argument>
             <kind>1</kind>
             <string>/// Reward Hostile Pilot Beacon
-scr_item_reward("Hostile Pilot Beacon Gained", "obj_Pilot_Insignia", room_width/2, room_height/2+64);
+scr_message_box("Hostile Pilot Beacon Gained", room_width/2, room_height/2+64);
 instance_create(room_width/2, room_height/2, obj_Hostile_Pilot_Beacon);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Unlock Harrier Angel Boss Fight
+global.the_queen_unlocked = true;
 </string>
           </argument>
         </arguments>
@@ -136,6 +158,28 @@ instance_create(room_width/2, room_height/2, obj_Hostile_Pilot_Beacon);
           <argument>
             <kind>0</kind>
             <string>500</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Go back to Overworld
+instance_create(x,y,obj_Back_To_Overworld);
+</string>
           </argument>
         </arguments>
       </action>

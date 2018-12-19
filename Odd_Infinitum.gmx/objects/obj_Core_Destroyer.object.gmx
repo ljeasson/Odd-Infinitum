@@ -146,8 +146,30 @@ flash_timer = 30;
           <argument>
             <kind>1</kind>
             <string>/// Reward Pilot Insignia
-scr_item_reward("Pilot Insignia Gained", "obj_Pilot_Insignia", room_width/2, room_height/2+64);
+scr_message_box("Pilot Insignia Gained", room_width/2, room_height/2+64);
 instance_create(room_width/2, room_height/2, obj_Pilot_Insignia);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Unlock Fleet Commander Daemeon Boss Fight
+global.fleet_commander_daemeon_unlocked = true;
 </string>
           </argument>
         </arguments>
@@ -173,6 +195,28 @@ instance_create(room_width/2, room_height/2, obj_Pilot_Insignia);
           <argument>
             <kind>0</kind>
             <string>200</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Go back to Overworld
+instance_create(x,y,obj_Back_To_Overworld);
+</string>
           </argument>
         </arguments>
       </action>
