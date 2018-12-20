@@ -19,7 +19,7 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>snd_Overworld</sound>
+            <sound>snd_Overworld_New</sound>
           </argument>
         </arguments>
       </action>

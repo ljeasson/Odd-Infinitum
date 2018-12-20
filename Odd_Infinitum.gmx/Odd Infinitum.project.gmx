@@ -36,6 +36,7 @@
     <sound>sound\snd_Main_Menu_New</sound>
     <sound>sound\snd_Overworld_New</sound>
     <sound>sound\snd_Victory</sound>
+    <sound>sound\snd_Tutorial</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -404,6 +405,7 @@
       </objects>
       <objects name="Sound Controllers">
         <object>objects\main_menu_sound</object>
+        <object>objects\tutorial_sound_controller</object>
         <object>objects\overworld_sound</object>
         <object>objects\Fleet_Commander_sound</object>
         <object>objects\Harrier_Angel_sound</object>
