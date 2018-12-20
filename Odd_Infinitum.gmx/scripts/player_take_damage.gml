@@ -1,7 +1,11 @@
 /// If damage is taken in normal state, switch to damaged state
 /// and decrease health by a specified amount
 
-if (obj_Player.state == player_states.normal) {
+if (obj_Player.state == player_states.normal) 
+{
+    // Disable No Damage Reward
+    obj_Player.No_Damage_Earned = 0;    
+
     // Play Damage Sound
     audio_play_sound(snd_Player_Damage, 1, false);
     

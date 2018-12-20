@@ -33,6 +33,9 @@
       <sound>sound\vc_Core_Destroyer_2</sound>
       <sound>sound\vc_Core_Destroyer_3</sound>
     </sounds>
+    <sound>sound\snd_Main_Menu_New</sound>
+    <sound>sound\snd_Overworld_New</sound>
+    <sound>sound\snd_Victory</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -252,8 +255,6 @@
       <script>scripts\scr_item_description.gml</script>
       <script>scripts\scr_item_description_missile.gml</script>
       <script>scripts\scr_message_box.gml</script>
-      <script>scripts\scr_item_reward.gml</script>
-      <script>scripts\scr_victory_stats.gml</script>
     </scripts>
     <scripts name="Networking Scripts">
       <script>scripts\process_packet.gml</script>
@@ -385,7 +386,8 @@
       <object>objects\internet_controller</object>
       <object>objects\options_controller</object>
       <object>objects\player_death_controller</object>
-      <object>objects\stat_counter_controller</object>
+      <object>objects\victory_stat_controller</object>
+      <object>objects\victory_stat_container</object>
       <object>objects\obj_Back_To_Overworld</object>
       <object>objects\obj_Fade</object>
       <objects name="Network Controllers">

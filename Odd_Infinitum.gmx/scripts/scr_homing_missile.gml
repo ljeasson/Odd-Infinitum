@@ -11,3 +11,6 @@ global.overheat -= 35;
         
 // Decrease missile count by 1
 global.missile_count -= 1;
+
+// Increase Overall Missile Count
+obj_Player.Missiles += 1;

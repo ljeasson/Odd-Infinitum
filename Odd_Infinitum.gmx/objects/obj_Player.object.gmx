@@ -41,13 +41,10 @@ player_dodge = 0;
 // Initialize End-of-Level Stat Values
 Victory = 2000;
 Missiles = 0;
-Enemies_Destroyed = 0;
 No_Overheat = 5000;
-No_Overheat_Earned = 0;
+No_Overheat_Earned = 1;
 No_Damage = 10000;
-No_Damage_Earned = 0;
-
-Total = 0;
+No_Damage_Earned = 1;
 </string>
           </argument>
         </arguments>

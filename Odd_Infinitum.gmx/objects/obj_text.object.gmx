@@ -28,8 +28,13 @@
             <string>alpha = 0;
 print = "";
 time = 0;
+font = "";
+kill_text = 0;
+
 depth = depth - instance_number(obj_text);
-alarm[0] = 300;
+
+if (kill_text)
+    alarm[0] = 300;
 </string>
           </argument>
         </arguments>
