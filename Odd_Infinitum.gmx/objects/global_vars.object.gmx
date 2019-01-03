@@ -276,7 +276,7 @@ global.aoe_damage = 50;
             <kind>1</kind>
             <string>/// Progression
 global.fleet_commander_daemeon_unlocked = false;
-global.harrier_angel_unlocked = false;
+global.harrier_angel_unlocked = true;
 global.the_queen_unlocked = false;
 </string>
           </argument>

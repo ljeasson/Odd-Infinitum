@@ -106,6 +106,12 @@
       <sprite>sprites\spr_Harrier_Angel_1</sprite>
       <sprite>sprites\spr_Harrier_Angel_2</sprite>
       <sprite>sprites\spr_Harrier_Angel_3</sprite>
+      <sprite>sprites\spr_Harrier_Angel_1_2</sprite>
+      <sprite>sprites\spr_Harrier_Angel_1_3</sprite>
+      <sprite>sprites\spr_Harrier_Angel_2_1</sprite>
+      <sprite>sprites\spr_Harrier_Angel_2_3</sprite>
+      <sprite>sprites\spr_Harrier_Angel_3_1</sprite>
+      <sprite>sprites\spr_Harrier_Angel_3_2</sprite>
     </sprites>
     <sprites name="The Queen">
       <sprite>sprites\spr_The_Queen</sprite>
@@ -210,6 +216,12 @@
       <sprite>sprites\spr_green_spark</sprite>
       <sprite>sprites\spr_Ring</sprite>
       <sprite>sprites\spr_Rotator</sprite>
+      <sprite>sprites\spr_Ray</sprite>
+      <sprite>sprites\spr_Blue_Flash</sprite>
+      <sprite>sprites\spr_Flame_Warp</sprite>
+      <sprite>sprites\spr_Thruster</sprite>
+      <sprite>sprites\spr_Beam</sprite>
+      <sprite>sprites\spr_Pulsing_Potral</sprite>
       <sprite>sprites\spr_Square</sprite>
     </sprites>
     <sprites name="Tutorial">
@@ -347,6 +359,7 @@
       <script>scripts\scr_fleet_commander_defeat.gml</script>
     </scripts>
     <scripts name="Harrier Angel">
+      <script>scripts\form_transition.gml</script>
       <script>scripts\scr_harrier_angel_intro.gml</script>
       <script>scripts\scr_harrier_angel_phase_1_1.gml</script>
       <script>scripts\scr_harrier_angel_phase_1_2.gml</script>

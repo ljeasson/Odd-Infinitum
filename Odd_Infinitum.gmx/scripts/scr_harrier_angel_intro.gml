@@ -7,9 +7,9 @@ if (!instance_exists(obj_Portal))
 if (counter < 240)
 {
     // Set Sprite
-    if (counter == 60)        sprite_index = spr_Harrier_Angel_2;
-    else if (counter == 120)  sprite_index = spr_Harrier_Angel_3;
-    else if (counter == 180)  sprite_index = spr_Harrier_Angel_1;        
+    if (counter == 60)        form_transition(spr_Harrier_Angel_2);
+    else if (counter == 120)  form_transition(spr_Harrier_Angel_3);
+    else if (counter == 180)  form_transition(spr_Harrier_Angel_1);        
     
     // Update Counter
     counter += 1;
@@ -20,7 +20,7 @@ else
     instance_destroy(obj_Portal);
 
     // Set Default Sprite
-    sprite_index = spr_Harrier_Angel_1;
+    form_transition(spr_Harrier_Angel_1);
 
     // State Transition
     state = harrier_angel_states.phase_1_1;
