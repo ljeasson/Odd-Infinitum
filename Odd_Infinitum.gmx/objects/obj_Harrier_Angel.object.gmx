@@ -250,7 +250,11 @@ global.the_queen_unlocked = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create Explosion and Destroy
+            <string>// Destroy portals
+instance_destroy(obj_Portal_1);
+instance_destroy(obj_Portal_2);
+
+/// Create Explosion and Destroy
 instance_create(x,y,obj_Big_Explosion);
 instance_destroy();
 
@@ -396,6 +400,10 @@ switch (state)
         break;
 }
 
+// If health is at 50%, transition to second phase
+if (boss_health &lt;= 50) {state = harrier_angel_states.phase_2;}
+
+// If boss health is 0, then enter defeated state
 if (boss_health &lt; 0) {boss_health = 0;}
 if (boss_health == 0) {state = harrier_angel_states.defeat;}
 </string>

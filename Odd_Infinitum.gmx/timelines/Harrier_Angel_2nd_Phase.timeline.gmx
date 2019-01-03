@@ -19,6 +19,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Transition back to default form
+form_transition(spr_Harrier_Angel_1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </entry>
+  <entry>
+    <step>150</step>
+    <event>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Start Flyover Path
 path_start(path_Harrier_Angel_Flyover, 10, path_action_stop, true);
 </string>
@@ -28,7 +55,7 @@ path_start(path_Harrier_Angel_Flyover, 10, path_action_stop, true);
     </event>
   </entry>
   <entry>
-    <step>300</step>
+    <step>450</step>
     <event>
       <action>
         <libid>1</libid>
@@ -55,7 +82,7 @@ instance_create(x,y,obj_Blue_Flash);
     </event>
   </entry>
   <entry>
-    <step>420</step>
+    <step>570</step>
     <event>
       <action>
         <libid>1</libid>
@@ -83,7 +110,7 @@ instance_create(room_width-256,room_height/2,obj_Portal_2);
     </event>
   </entry>
   <entry>
-    <step>600</step>
+    <step>750</step>
     <event>
       <action>
         <libid>1</libid>
