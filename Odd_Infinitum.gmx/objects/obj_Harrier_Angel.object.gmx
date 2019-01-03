@@ -33,6 +33,9 @@ boss_name = "Harrier Angel";
 // State 
 state = harrier_angel_states.intro;
 
+// Flyover
+flyover = false;
+
 // Damage
 damaged = false;
 
@@ -545,16 +548,13 @@ if (boss_health == 0) {state = harrier_angel_states.defeat;}
             <kind>1</kind>
             <string>/// Freeze Animation
 
-//image_speed = 0;
-//image_index = image_number - 1;
-
 if (sprite_index == spr_Harrier_Angel_2_1 || sprite_index == spr_Harrier_Angel_3_1)
     sprite_index = spr_Harrier_Angel_1; 
 if (sprite_index == spr_Harrier_Angel_1_2 || sprite_index == spr_Harrier_Angel_3_2)
     sprite_index = spr_Harrier_Angel_2; 
-if (sprite_index == spr_Harrier_Angel_1_3 || sprite_index == spr_Harrier_Angel_3_1)
+if (sprite_index == spr_Harrier_Angel_1_3 || sprite_index == spr_Harrier_Angel_2_3)
     sprite_index = spr_Harrier_Angel_3;
-    
+ 
 </string>
           </argument>
         </arguments>

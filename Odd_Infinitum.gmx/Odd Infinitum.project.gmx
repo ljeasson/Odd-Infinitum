@@ -221,7 +221,8 @@
       <sprite>sprites\spr_Flame_Warp</sprite>
       <sprite>sprites\spr_Thruster</sprite>
       <sprite>sprites\spr_Beam</sprite>
-      <sprite>sprites\spr_Pulsing_Potral</sprite>
+      <sprite>sprites\spr_Pulsing_Potral_Large</sprite>
+      <sprite>sprites\spr_Pulsing_Portal_Small</sprite>
       <sprite>sprites\spr_Square</sprite>
     </sprites>
     <sprites name="Tutorial">
@@ -360,6 +361,7 @@
     </scripts>
     <scripts name="Harrier Angel">
       <script>scripts\form_transition.gml</script>
+      <script>scripts\rotate_to_angle.gml</script>
       <script>scripts\scr_harrier_angel_intro.gml</script>
       <script>scripts\scr_harrier_angel_phase_1_1.gml</script>
       <script>scripts\scr_harrier_angel_phase_1_2.gml</script>
@@ -617,7 +619,10 @@
     </objects>
     <objects name="Harrier Angel">
       <object>objects\obj_Harrier_Angel</object>
-      <object>objects\obj_Portal</object>
+      <object>objects\obj_Portal_Entrance</object>
+      <object>objects\obj_Blue_Flash</object>
+      <object>objects\obj_Portal_1</object>
+      <object>objects\obj_Portal_2</object>
     </objects>
     <objects name="The Queen">
       <object>objects\obj_The_Queen</object>
@@ -630,10 +635,12 @@
     </objects>
   </objects>
   <timelines name="timelines">
-    <timeline>timelines\Level_1_Core_Destroyer</timeline>
+    <timeline>timelines\Core_Destroyer_Intro</timeline>
+    <timeline>timelines\Harrier_Angel_2nd_Phase</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
+    <room>rooms\room_Harrier_Angel</room>
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>
@@ -646,7 +653,6 @@
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
       <room>rooms\room_Fleet_Commander_Daemeon</room>
-      <room>rooms\room_Harrier_Angel</room>
       <room>rooms\room_The_Queen</room>
     </rooms>
   </rooms>
