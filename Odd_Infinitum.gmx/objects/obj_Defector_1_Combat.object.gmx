@@ -40,6 +40,9 @@ parry_shot_weakness = 30;
 // Damage indicator
 damaged = false;
 
+// Damage Taken
+damage_taken = 0;
+
 // Status booleans
 defeated = false;
 explosion_imminent = false;
@@ -568,6 +571,12 @@ if (global.show_boss_ui)
 {
     draw_text(80,room_height-120,boss_name);
     draw_healthbar(80,room_height-96,room_width-80,room_height-64,boss_health,c_black,c_red,c_green,0,false,false);
+
+    if (damage_taken &gt; 0)
+    {
+        draw_set_halign(fa_middle);
+        draw_text(room_width-120,room_height-120,damage_taken);
+    }
 }
 </string>
           </argument>

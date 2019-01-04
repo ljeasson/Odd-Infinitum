@@ -39,6 +39,9 @@ flyover = false;
 // Damage
 damaged = false;
 
+// Damage Taken
+damage_taken = 0;
+
 // Attack Timers
 attack_lock = false;
 
@@ -55,7 +58,7 @@ explosion_imminent = false;
 entrance_speed = 5;
 
 // Player damage ratings
-laser_weakness = 2.5;
+laser_weakness = 2;
 triple_shot_weakness = 4;
 rapid_fire_weakness = 0.5;
 giant_laser_weakness = 5;
@@ -185,6 +188,50 @@ global.the_queen_unlocked = true;
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Damage Taken</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Clear Damage Taken
+damage_taken = 0;
+</string>
           </argument>
         </arguments>
       </action>
@@ -572,6 +619,12 @@ if (global.show_boss_ui)
 {
     draw_text(80,room_height-120,boss_name);
     draw_healthbar(80,room_height-96,room_width-80,room_height-64,boss_health,c_black,c_red,c_green,0,false,false);
+    
+    if (damage_taken &gt; 0)
+    {
+        draw_set_halign(fa_middle);
+        draw_text(room_width-120,room_height-120,damage_taken);
+    }
 }
 
 </string>

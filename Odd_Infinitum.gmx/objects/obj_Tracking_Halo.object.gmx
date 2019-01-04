@@ -25,34 +25,6 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize variables
-
-// Number of motions
-num_motions = 0;
-max_num_motions = 5;
-
-// Stopped
-stopped = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>/// Set X and Y
 if (instance_exists(obj_Player))
 {
@@ -61,6 +33,13 @@ if (instance_exists(obj_Player))
 }
 else
     instance_destroy();
+    
+// Number of motions
+num_motions = 0;
+max_num_motions = 5;
+
+// Stopped
+stopped = false;
 </string>
           </argument>
         </arguments>
@@ -116,54 +95,31 @@ stopped = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Move towards target point
-if (!stopped)
-    move_towards_point(target_x, target_y, 10);
+            <string>/// Move towards target a certain number of times
 
-// If target point is reached, stop
-if (x == target_x &amp;&amp; y == target_y)
-    stopped = true;  
-    
-// If stopped, increase number of motions
-if (stopped)
+if (num_motions &lt; max_num_motions)
 {
-    num_motions += 1;
-    /*
-    if (num_motions &lt; max_num_motions)
+    if (!stopped)
     {
-        num_motions += 1;
-        alarm[0] = 120;
+        if (point_distance(x,y,target_x,target_y) &gt; 10) 
+            move_towards_point(target_x, target_y, 10);
+        else
+        {
+            speed = 0;
+            num_motions += 1;
+        
+            stopped = true
+            alarm[0] = 120;
+        }
     }
-    else
+}
+else
+{
+    move_towards_point(-256, random(room_height), 10);
+    
+     if (x &lt;= -256)
         instance_destroy();
-    */
-}   
-
-   
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_set_font(UI_Font_Large);
-draw_text(room_width/2, room_height/2, num_motions);
+}
 </string>
           </argument>
         </arguments>

@@ -9,7 +9,7 @@ if (path_index = -1)
 if (!attack_lock)
 {   
     // Tracking Halo
-    instance_create_once(obj_Harrier_Angel.x-200, obj_Harrier_Angel.y, obj_Tracking_Halo);
+    instance_create(obj_Harrier_Angel.x-200, obj_Harrier_Angel.y, obj_Tracking_Halo);
     
     // Lock Attack
     attack_lock = true;
