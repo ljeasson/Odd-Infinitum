@@ -112,6 +112,7 @@
       <sprite>sprites\spr_Harrier_Angel_2_3</sprite>
       <sprite>sprites\spr_Harrier_Angel_3_1</sprite>
       <sprite>sprites\spr_Harrier_Angel_3_2</sprite>
+      <sprite>sprites\spr_Angel_Projectile</sprite>
     </sprites>
     <sprites name="The Queen">
       <sprite>sprites\spr_The_Queen</sprite>
@@ -620,6 +621,11 @@
     <objects name="Harrier Angel">
       <object>objects\obj_Harrier_Angel</object>
       <object>objects\obj_Portal_Entrance</object>
+      <object>objects\obj_Angel_Projectile_Holder_Middle</object>
+      <object>objects\obj_Angel_Projectile_Holder_Top</object>
+      <object>objects\obj_Angel_Projectile_Holder_Bottom</object>
+      <object>objects\obj_Angel_Projectile</object>
+      <object>objects\obj_Tracking_Halo</object>
       <object>objects\obj_Blue_Flash</object>
       <object>objects\obj_Portal_1</object>
       <object>objects\obj_Portal_2</object>
