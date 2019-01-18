@@ -279,6 +279,7 @@
     </scripts>
     <scripts name="UI Scripts">
       <script>scripts\scr_text.gml</script>
+      <script>scripts\scr_text_timed.gml</script>
       <script>scripts\scr_text_persistent.gml</script>
       <script>scripts\scr_item_description.gml</script>
       <script>scripts\scr_item_description_missile.gml</script>
@@ -444,6 +445,7 @@
         <object>objects\The_Queen_sound</object>
       </objects>
       <objects name="Timeline Controllers">
+        <object>objects\timeline_intro_cinematic</object>
         <object>objects\timeline_controller_Level_1</object>
       </objects>
       <objects name="Screen Shake Controllers">
@@ -677,11 +679,13 @@
     </objects>
   </objects>
   <timelines name="timelines">
+    <timeline>timelines\Intro_Cinematic</timeline>
     <timeline>timelines\Core_Destroyer_Intro</timeline>
     <timeline>timelines\Harrier_Angel_2nd_Phase</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
+    <room>rooms\room_intro_cinematic</room>
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>

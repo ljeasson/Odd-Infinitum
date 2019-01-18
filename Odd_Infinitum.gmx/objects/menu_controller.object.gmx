@@ -99,7 +99,8 @@ if (key_select &amp;&amp; !instance_exists(options_controller))
 {
     if (interest == "Mission")
     {
-        if (!global.seen_tutorial) room_goto(room_tutorial);
+        if (!global.seen_intro) room_goto(room_intro_cinematic);
+        //else if (!global.seen_tutorial) room_goto(room_tutorial);
         else room_goto(room_overworld);
     }
     else if (interest == "Options")

@@ -32,7 +32,12 @@ font = "";
 
 depth = depth - instance_number(obj_text);
 
-alarm[0] = 300;
+time_to_kill = 0;
+
+if (time_to_kill &gt; 0)
+    alarm[0] = time_to_kill;
+else
+    alarm[0] = 300;
 </string>
           </argument>
         </arguments>
