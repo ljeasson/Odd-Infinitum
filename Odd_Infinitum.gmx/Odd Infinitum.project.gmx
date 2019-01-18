@@ -279,7 +279,6 @@
     </scripts>
     <scripts name="UI Scripts">
       <script>scripts\scr_text.gml</script>
-      <script>scripts\scr_text_timed.gml</script>
       <script>scripts\scr_text_persistent.gml</script>
       <script>scripts\scr_item_description.gml</script>
       <script>scripts\scr_item_description_missile.gml</script>
