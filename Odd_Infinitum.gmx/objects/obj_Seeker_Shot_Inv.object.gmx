@@ -105,9 +105,9 @@ if (!global.seeker_shot) instance_destroy();
             <kind>1</kind>
             <string>/// Set Laser or Alt Laser to Seeker Shot
 if (inventory_controller.menu == inventory_states.lasers)
-    global.laser = "seeker_shot";
+    global.laser = lasers.seeker_laser;
 else if (inventory_controller.menu == inventory_states.alt_lasers)
-    global.alt_laser = "seeker_shot";
+    global.alt_laser = lasers.seeker_laser;
 
 clear_inventory_screen();
 inventory_controller.menu = inventory_states.main;

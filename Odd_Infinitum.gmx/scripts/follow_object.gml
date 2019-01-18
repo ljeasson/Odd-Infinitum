@@ -1,4 +1,5 @@
-/// Follow an object
+/// follow_object(object_to_follow, following_speed);
+// Follow an object
 
 object_to_follow = argument0;
 following_speed = argument1;
@@ -10,7 +11,7 @@ if (instance_exists(object_to_follow))
     move_towards_point(object_to_follow.x, object_to_follow.y, following_speed);
     
     // Face towards object
-    image_angle = point_direction(x, y, object_to_follow.x, object_to_follow.y);
+    //image_angle = point_direction(x, y, object_to_follow.x, object_to_follow.y);
 }
 else
     // Otherwise destroy self

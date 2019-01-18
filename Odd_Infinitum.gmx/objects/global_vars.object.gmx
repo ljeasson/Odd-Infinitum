@@ -98,21 +98,20 @@ global.large_asteroid_damage = 30;
 
 // Lasers
 global.basic_laser = true;
-global.triple_shot = false;
-global.rapid_fire = false;
-global.giant_laser = false;
-global.seeker_shot = false;
-global.charge_shot = false;
-global.trident = false;
+global.triple_shot = true;
+global.rapid_fire = true;
+global.seeker_shot = true;
+global.charge_shot = true;
+global.trident = true;
 // Rapid Fire Timer 
 global.shot_timer = 7.5;
 
 // Missiles
 global.basic_missile = true;
-global.homing_missile = false;
-global.missile_barrage = false;
-global.harrier_strike = false;
-global.fleetbreaker = false;
+global.homing_missile = true;
+global.missile_barrage = true;
+global.harrier_strike = true;
+global.fleetbreaker = true;
 
 // Augments
 global.quick_repair = true;
@@ -124,7 +123,7 @@ global.tortise = true;
 global.buckler_repair = true;
 global.buckler_reload = true;
 global.automated_repair = true;
-global.glass_cannon = true;
+global.emergency_supercharge = true;
 
 // Skins 
 </string>
@@ -150,6 +149,8 @@ global.glass_cannon = true;
             <string>/// Options Variables
 global.music_volume = 10;
 global.sfx_volume = 10;
+global.enable_music = true;
+global.enable_sfx = true;
 global.show_player_ui = true;
 global.show_boss_ui = true;
 </string>
@@ -175,16 +176,15 @@ global.show_boss_ui = true;
             <string>/// Inventory Variables
 
 // Laser
-global.laser = "basic_laser";
+global.laser = lasers.pilot_laser;
 // Alt Laser
-global.alt_laser = "basic_laser";
+global.alt_laser = lasers.pilot_laser;
 // Missile
-global.missile = "basic_missile";
+global.missile = missiles.standard_missile;
 // Augment
-global.augment = "quick_repair";
+global.augment = augments.quick_repair;
 // Skin
-global.skin = "pilot";
-
+global.skin = skins.pilot;
 </string>
           </argument>
         </arguments>
@@ -275,9 +275,140 @@ global.aoe_damage = 50;
           <argument>
             <kind>1</kind>
             <string>/// Progression
-global.fleet_commander_daemeon_unlocked = false;
+global.fleet_commander_daemeon_unlocked = true;
 global.harrier_angel_unlocked = true;
-global.the_queen_unlocked = false;
+global.the_queen_unlocked = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enums for Lasers
+
+enum lasers 
+{
+    pilot_laser,
+    spread_shot,
+    rapid_fire,
+    charge_shot,
+    seeker_laser,
+    fleet_trident,
+    fleet_shotgun,
+    fleet_spear
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enum for Missiles
+
+enum missiles
+{
+    standard_missile,
+    homing_missile,
+    missile_barrage,
+    harrier_strike,
+    fleetbreaker
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enum for Augments
+
+enum augments
+{
+    quick_repair,
+    automated_repair,
+    emergency_repair,
+    supply_drop,
+    emergency_supercharge,
+    close_call_stasis,
+    close_call_supercharge,
+    tortise,
+    buckler_repair,
+    buckler_reload,
+    auto_counter,
+    heat_resistance
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enum for Skins
+
+enum skins
+{
+    scouter,
+    pilot,
+    redd_fleet,
+    harrier,
+    eldritch
+}
 </string>
           </argument>
         </arguments>

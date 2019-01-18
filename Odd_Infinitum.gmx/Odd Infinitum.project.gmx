@@ -113,15 +113,22 @@
       <sprite>sprites\spr_Harrier_Angel_3_1</sprite>
       <sprite>sprites\spr_Harrier_Angel_3_2</sprite>
       <sprite>sprites\spr_Angel_Projectile</sprite>
+      <sprite>sprites\spr_Angelic_Dart</sprite>
     </sprites>
     <sprites name="The Queen">
-      <sprite>sprites\spr_The_Queen</sprite>
+      <sprite>sprites\spr_The_Queen_1st</sprite>
+      <sprite>sprites\spr_The_Queen_2nd</sprite>
       <sprite>sprites\spr_Eye</sprite>
+      <sprite>sprites\spr_Core</sprite>
       <sprite>sprites\spr_Egg_Bouncing</sprite>
       <sprite>sprites\spr_Egg_Following</sprite>
+      <sprite>sprites\spr_Egg_Exploding</sprite>
+      <sprite>sprites\spr_Exploding_Egg_Projectile</sprite>
       <sprite>sprites\spr_Cave_Wall</sprite>
       <sprite>sprites\spr_Blood_Explosion</sprite>
-      <sprite>sprites\spr_Tentacles</sprite>
+      <sprite>sprites\spr_Tentacles_Up</sprite>
+      <sprite>sprites\spr_Tentacles_Down</sprite>
+      <sprite>sprites\spr_Alien_Youngling</sprite>
     </sprites>
     <sprites name="Overworld">
       <sprite>sprites\spr_Main_Base</sprite>
@@ -224,6 +231,8 @@
       <sprite>sprites\spr_Beam</sprite>
       <sprite>sprites\spr_Pulsing_Potral_Large</sprite>
       <sprite>sprites\spr_Pulsing_Portal_Small</sprite>
+      <sprite>sprites\spr_AoE</sprite>
+      <sprite>sprites\spr_Large_Glow</sprite>
       <sprite>sprites\spr_Square</sprite>
     </sprites>
     <sprites name="Tutorial">
@@ -254,9 +263,12 @@
       <script>scripts\Chance.gml</script>
       <script>scripts\generate_random_sequence.gml</script>
       <script>scripts\generate_explosions.gml</script>
+      <script>scripts\generate_blood_explosions.gml</script>
       <script>scripts\follow_object.gml</script>
       <script>scripts\instance_create_once.gml</script>
       <script>scripts\toggle_fullscreen.gml</script>
+      <script>scripts\toggle_music.gml</script>
+      <script>scripts\increase_number_to.gml</script>
     </scripts>
     <scripts name="Damage Scripts">
       <script>scripts\player_take_damage.gml</script>
@@ -267,6 +279,7 @@
     </scripts>
     <scripts name="UI Scripts">
       <script>scripts\scr_text.gml</script>
+      <script>scripts\scr_text_persistent.gml</script>
       <script>scripts\scr_item_description.gml</script>
       <script>scripts\scr_item_description_missile.gml</script>
       <script>scripts\scr_message_box.gml</script>
@@ -367,14 +380,17 @@
       <script>scripts\scr_harrier_angel_phase_1_1.gml</script>
       <script>scripts\scr_harrier_angel_phase_1_2.gml</script>
       <script>scripts\scr_harrier_angel_phase_1_3.gml</script>
-      <script>scripts\scr_harrier_angel_phase_2.gml</script>
+      <script>scripts\scr_harrier_angel_phase_2_intro.gml</script>
+      <script>scripts\scr_harrier_angel_phase_2_fight.gml</script>
       <script>scripts\scr_harrier_angel_defeat.gml</script>
     </scripts>
     <scripts name="The Queen">
+      <script>scripts\spawn_bouncing_egg.gml</script>
+      <script>scripts\spawn_following_egg.gml</script>
+      <script>scripts\spawn_exploding_egg.gml</script>
       <script>scripts\scr_the_queen_intro.gml</script>
       <script>scripts\scr_the_queen_phase1.gml</script>
       <script>scripts\scr_the_queen_phase2.gml</script>
-      <script>scripts\scr_the_queen_phase3.gml</script>
       <script>scripts\scr_the_queen_defeat.gml</script>
     </scripts>
   </scripts>
@@ -559,7 +575,6 @@
       <object>objects\obj_Rapid_Fire_Inv</object>
       <object>objects\obj_Seeker_Shot_Inv</object>
       <object>objects\obj_Charge_Shot_Inv</object>
-      <object>objects\obj_Giant_Laser_Inv</object>
       <object>objects\obj_Trident_Inv</object>
       <object>objects\obj_Basic_Missile_Inv</object>
       <object>objects\obj_Homing_Missile_Inv</object>
@@ -572,6 +587,7 @@
     </objects>
     <objects name="UI">
       <object>objects\obj_text</object>
+      <object>objects\obj_text_persistent</object>
       <object>objects\obj_item_description</object>
       <object>objects\obj_message_box</object>
       <object>objects\obj_item_reward</object>
@@ -621,23 +637,43 @@
     <objects name="Harrier Angel">
       <object>objects\obj_Harrier_Angel</object>
       <object>objects\obj_Portal_Entrance</object>
-      <object>objects\obj_Angel_Projectile_Holder_Middle</object>
-      <object>objects\obj_Angel_Projectile_Holder_Top</object>
-      <object>objects\obj_Angel_Projectile_Holder_Bottom</object>
-      <object>objects\obj_Angel_Projectile</object>
-      <object>objects\obj_Tracking_Halo</object>
-      <object>objects\obj_Blue_Flash</object>
-      <object>objects\obj_Portal_1</object>
-      <object>objects\obj_Portal_2</object>
+      <objects name="Default Form">
+        <object>objects\obj_Angel_Projectile_Holder_Middle</object>
+        <object>objects\obj_Angel_Projectile_Holder_Top</object>
+        <object>objects\obj_Angel_Projectile_Holder_Bottom</object>
+        <object>objects\obj_Angel_Projectile</object>
+      </objects>
+      <objects name="Angelic Form">
+        <object>objects\obj_Angelic_Dart</object>
+        <object>objects\obj_Tracking_Halo</object>
+      </objects>
+      <objects name="Eldritch Form">
+        <object>objects\obj_Eldritch_Beam</object>
+      </objects>
+      <objects name="2nd Phase">
+        <object>objects\obj_Blue_Flash</object>
+        <object>objects\obj_Portal_1</object>
+        <object>objects\obj_Portal_2</object>
+      </objects>
     </objects>
     <objects name="The Queen">
       <object>objects\obj_The_Queen</object>
       <object>objects\obj_Eye</object>
+      <object>objects\obj_Core</object>
       <object>objects\obj_Egg_Bouncing</object>
       <object>objects\obj_Egg_Following</object>
+      <object>objects\obj_Egg_Exploding</object>
+      <object>objects\obj_Exploding_Egg_Projectile</object>
       <object>objects\obj_Cave_Wall</object>
       <object>objects\obj_Blood_Explosion</object>
-      <object>objects\obj_Tentacle</object>
+      <object>objects\obj_Tentacle_Controller</object>
+      <object>objects\obj_Tentacle_Up</object>
+      <object>objects\obj_Tentacle_Down</object>
+      <object>objects\obj_AoE_Controller</object>
+      <object>objects\obj_AoE_Creator</object>
+      <object>objects\obj_AoE_Attack</object>
+      <object>objects\obj_Horde_Controller</object>
+      <object>objects\obj_Alien_Youngling</object>
     </objects>
   </objects>
   <timelines name="timelines">
@@ -646,7 +682,6 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
-    <room>rooms\room_Harrier_Angel</room>
     <room>rooms\room_menu</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>
@@ -659,6 +694,7 @@
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
       <room>rooms\room_Fleet_Commander_Daemeon</room>
+      <room>rooms\room_Harrier_Angel</room>
       <room>rooms\room_The_Queen</room>
     </rooms>
   </rooms>

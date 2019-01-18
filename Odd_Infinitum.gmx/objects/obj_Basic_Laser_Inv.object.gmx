@@ -103,9 +103,9 @@ text = "Pilot Laser";
             <kind>1</kind>
             <string>/// Set Laser or Alt Laser to Basic Laser
 if (inventory_controller.menu == inventory_states.lasers)
-    global.laser = "basic_laser";
+    global.laser = lasers.pilot_laser;
 else if (inventory_controller.menu == inventory_states.alt_lasers)
-    global.alt_laser = "basic_laser";
+    global.alt_laser = lasers.pilot_laser;
 
 clear_inventory_screen();
 inventory_controller.menu = inventory_states.main;

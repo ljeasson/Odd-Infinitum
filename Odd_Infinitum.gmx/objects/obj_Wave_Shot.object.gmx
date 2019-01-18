@@ -27,7 +27,10 @@
             <kind>1</kind>
             <string>Amp = 50; //How "Stretched" the wave is
 Freq = 48;  //How much to increase the waves amplitude by (in px)
-hspeed = -4;
+if (obj_Fleet_Commander_Daemeon.orb_count &lt; 1)
+    hspeed = -6;
+else
+    hspeed = -4;
 </string>
           </argument>
         </arguments>

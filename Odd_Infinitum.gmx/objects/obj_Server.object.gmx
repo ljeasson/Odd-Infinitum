@@ -35,9 +35,9 @@ var port = 3065;
 socket = network_create_socket_ext(type, port);
 // Error Check
 if (socket &lt; 0)
-    scr_text("UDP Sever Socket Error", 2, true, UI_Font, room_width/2, room_height/2);  // Error!
+    scr_text("UDP Sever Socket Error", 2, UI_Font, room_width/2, room_height/2);  // Error!
 else
-    scr_text("Friendly Pilot Summoned", 2, true, UI_Font, room_width/2, room_height/2);  // Success!
+    scr_text("Friendly Pilot Summoned", 2, UI_Font, room_width/2, room_height/2);  // Success!
 
 // Placeholders
 remote_port = 0;

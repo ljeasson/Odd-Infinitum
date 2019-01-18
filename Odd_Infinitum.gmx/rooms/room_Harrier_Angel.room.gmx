@@ -16,7 +16,8 @@
     phase_1_1,
     phase_1_2,
     phase_1_3,
-    phase_2,
+    phase_2_intro,
+    phase_2_fight,
     defeat
 }
 

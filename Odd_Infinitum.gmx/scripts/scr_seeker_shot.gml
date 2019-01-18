@@ -6,7 +6,7 @@ if (fire_again)
     audio_play_sound(snd_Seeker_Shot, 2, false);
 
     // Create rapid fire instance
-    instance_create(X+48,Y+24,obj_Seeker_Shot);
+    instance_create(x+48,y+24,obj_Seeker_Shot);
         
     // Decrease overheat by 5
     global.overheat -= 10;

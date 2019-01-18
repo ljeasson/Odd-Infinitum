@@ -54,7 +54,7 @@ stat_counter = -1;
 left_column = room_width/2 - 128;
 right_column = room_width/2 + 128;
 
-scr_text("MISSION SUCCESS", 1, false, UI_Font_Large, room_width/2, room_height/2-192);
+scr_text_persistent("MISSION SUCCESS", 1, UI_Font_Large, room_width/2, room_height/2-192);
 stat_counter += 1;
 alarm[0] = 90;
 </string>
@@ -110,33 +110,33 @@ if (next)
     switch (stat_counter)
     {
         case 0:
-            scr_text("Victory", 1, false, UI_Font_Medium, left_column, room_height/2 - 96);
-            scr_text(string(Victory), 1, false, UI_Font_Medium, right_column, room_height/2 - 96);
+            scr_text_persistent("Victory", 1, UI_Font_Medium, left_column, room_height/2 - 96);
+            scr_text_persistent(string(Victory), 1, UI_Font_Medium, right_column, room_height/2 - 96);
             stat_counter += 1;
             alarm[0] = 60;
             break;
         case 1:
-            scr_text("Missile", 1, false, UI_Font_Medium, left_column, room_height/2 - 48);
-            scr_text(string(Missiles) + " X 1000", 1, false, UI_Font_Medium, right_column, room_height/2 - 48);
+            scr_text_persistent("Missile", 1, UI_Font_Medium, left_column, room_height/2 - 48);
+            scr_text_persistent(string(Missiles) + " X 1000", 1, UI_Font_Medium, right_column, room_height/2 - 48);
             stat_counter += 1;
             alarm[0] = 60;
             break;
         case 2:
-            scr_text("No Overheat", 1, false, UI_Font_Medium, left_column, room_height/2);
-            scr_text(string(No_Overheat), 1, false, UI_Font_Medium, right_column, room_height/2);
+            scr_text_persistent("No Overheat", 1, UI_Font_Medium, left_column, room_height/2);
+            scr_text_persistent(string(No_Overheat), 1, UI_Font_Medium, right_column, room_height/2);
             stat_counter += 1;
             alarm[0] = 60;
             break;
         case 3:
-            scr_text("No Damage", 1, false, UI_Font_Medium, left_column, room_height/2 + 48);
-            scr_text(string(No_Damage), 1, false, UI_Font_Medium, right_column, room_height/2 + 48);
-            scr_text("______________________________", 1, false, UI_Font_Medium, room_width - 720, room_height/2 + 96);
+            scr_text_persistent("No Damage", 1, UI_Font_Medium, left_column, room_height/2 + 48);
+            scr_text_persistent(string(No_Damage), 1, UI_Font_Medium, right_column, room_height/2 + 48);
+            scr_text_persistent("______________________________", 1, UI_Font_Medium, room_width - 720, room_height/2 + 96);
             stat_counter += 1;
             alarm[0] = 60;
             break;
         case 4:
             total = Victory + (Missiles * 1000) + No_Overheat + No_Damage;
-            scr_text("Total: "+ string(total), 1, false, UI_Font_Medium, right_column, room_height/2 + 144);          
+            scr_text_persistent("Total: "+ string(total), 1, UI_Font_Medium, right_column, room_height/2 + 144);          
             stat_counter += 1;
             alarm[0] = 120;
             break;
@@ -151,7 +151,7 @@ if (next)
                 rank="A"
             else if (total &gt; 8000)
                 rank="S"
-            scr_text("RANK: " + rank, 1, false, UI_Font_Medium, right_column, room_height/2 + 192);          
+            scr_text_persistent("RANK: " + rank, 1, UI_Font_Medium, right_column, room_height/2 + 192);          
             stat_counter += 1;
             alarm[0] = 240;
             break;

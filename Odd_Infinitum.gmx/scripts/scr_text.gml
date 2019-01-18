@@ -1,14 +1,13 @@
-/// scr_text("Text", speed, kill_text, font, x, y)
+/// scr_text("Text", speed, font, x, y)
 
-txt = instance_create(argument4, argument5, obj_text);
+txt = instance_create(argument3, argument4, obj_text);
 with (txt)
 {
     padding = 16;
     maxlength = view_wview[0]; // Change later
     text = argument0;
     spd = argument1;
-    kill_text = argument2;
-    font = argument3;
+    font = argument2;
     
     text_length = string_length(text);
     font_size = font_get_size(font);

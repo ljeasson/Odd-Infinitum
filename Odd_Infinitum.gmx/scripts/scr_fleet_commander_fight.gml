@@ -62,7 +62,7 @@ if (obj_Fleet_Commander_Daemeon.orb_count < 1 && !attack_lock_3)
             break;
             
         case 2:
-            // Spred Shot    
+            // Spread Shot    
             // Upper 45 degrees of spread pattern
             for (var i = 180; i > 135; i-=15)
             {

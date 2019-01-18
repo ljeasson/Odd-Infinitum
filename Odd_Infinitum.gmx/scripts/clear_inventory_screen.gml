@@ -18,7 +18,6 @@ instance_destroy(obj_Triple_Shot_Inv);
 instance_destroy(obj_Rapid_Fire_Inv);
 instance_destroy(obj_Seeker_Shot_Inv);
 instance_destroy(obj_Charge_Shot_Inv);
-instance_destroy(obj_Giant_Laser_Inv);
 instance_destroy(obj_Trident_Inv);
 
 // Clear Missile Inventory Items

@@ -44,9 +44,13 @@ damage_taken = 0;
 
 // Attack Timers
 attack_lock = false;
+attack_lock_2 = false;
 
 // Counter
 counter = 0;
+
+// Form Counter
+form_counter = 0;
 
 // Morph Timer
 morph = false;
@@ -188,6 +192,52 @@ global.the_queen_unlocked = true;
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Disable Attack Lock</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>attack_lock_2</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
           </argument>
         </arguments>
       </action>
@@ -417,16 +467,42 @@ switch (state)
     case harrier_angel_states.phase_1_3:
         scr_harrier_angel_phase_1_3();
         break;
-    case harrier_angel_states.phase_2:
-        scr_harrier_angel_phase_2();
+    case harrier_angel_states.phase_2_intro:
+        scr_harrier_angel_phase_2_intro();
+        break;
+    case harrier_angel_states.phase_2_fight:
+        scr_harrier_angel_phase_2_fight();
         break;
     case harrier_angel_states.defeat:
         scr_harrier_angel_defeat();
         break;
 }
 
+// Randomly Switch Between Forms
+if (form_counter == 300)
+{
+    selection = irandom(3);
+    
+    switch (selection)
+    {
+        case 0:
+            state = harrier_angel_states.phase_1_1;
+            form_counter = 0;
+            break;
+        case 1:
+            state = harrier_angel_states.phase_1_2;
+            form_counter = 0;
+            break;
+        case 2:
+            state = harrier_angel_states.phase_1_3;
+            form_counter = 0;
+            break;
+    }
+}
+form_counter += 1;
+
 // If health is at 50%, transition to second phase
-if (boss_health &lt;= 50) {state = harrier_angel_states.phase_2;}
+if (boss_health &lt;= 50) {state = harrier_angel_states.phase_2_intro;}
 
 // If boss health is 0, then enter defeated state
 if (boss_health &lt; 0) {boss_health = 0;}

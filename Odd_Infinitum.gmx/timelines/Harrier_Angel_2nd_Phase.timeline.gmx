@@ -128,8 +128,8 @@ instance_create(room_width-256,room_height/2,obj_Portal_2);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Start 2nd Phase Path
-path_start(path_Harrier_Angel_1, 3, path_action_restart, false);
+            <string>/// Switch state
+obj_Harrier_Angel.state = harrier_angel_states.phase_2_fight;
 </string>
           </argument>
         </arguments>

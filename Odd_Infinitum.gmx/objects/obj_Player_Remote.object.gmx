@@ -245,7 +245,7 @@ if (remote_health &lt;= 0) { remote_state = remote_player_states.dead };
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_Tentacle">
+    <event eventtype="4" ename="obj_Tentacle_Up">
       <action>
         <libid>1</libid>
         <id>601</id>

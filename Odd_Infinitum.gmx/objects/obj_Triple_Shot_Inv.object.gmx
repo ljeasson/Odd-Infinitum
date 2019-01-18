@@ -105,9 +105,9 @@ if (!global.triple_shot) instance_destroy();
             <kind>1</kind>
             <string>/// Set Laser or Alt Laser to Triple Shot
 if (inventory_controller.menu == inventory_states.lasers)
-    global.laser = "triple_shot";
+    global.laser = lasers.spread_shot;
 else if (inventory_controller.menu == inventory_states.alt_lasers)
-    global.alt_laser = "triple_shot";
+    global.alt_laser = lasers.spread_shot;
 
 clear_inventory_screen();
 inventory_controller.menu = inventory_states.main;

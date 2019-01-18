@@ -11,13 +11,13 @@ var spark = instance_create(x,y,obj_aqua_spark);
 // Create instance of laser moving to the right with a speed of 8
 if (player_dodge == 0)
 {
-    var laser = instance_create(X+48,Y+24,obj_Laser);
+    var laser = instance_create(x+48,y+24,obj_Laser);
     laser.direction = 0;
     laser.speed = global.laser_speed;
 }
 else
 {
-    var laser = instance_create(X+48,Y+24,obj_Laser_Short_Range);
+    var laser = instance_create(x+48,y+24,obj_Laser_Short_Range);
     laser.direction = 0;
     laser.speed = global.laser_speed;
 }

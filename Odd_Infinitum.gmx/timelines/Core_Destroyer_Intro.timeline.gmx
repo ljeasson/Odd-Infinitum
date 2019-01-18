@@ -99,6 +99,29 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw Intro Text
+scr_text("SEARCH AND RESCUE", 0.5, UI_Font, room_width/2, room_height/2);
+scr_text("Locate survivors on the remote asteroid colony Thera", 0.5, UI_Font, room_width/2, room_height/2+32);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </entry>
   <entry>

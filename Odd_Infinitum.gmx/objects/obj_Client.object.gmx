@@ -34,9 +34,9 @@ var type = network_socket_udp;
 socket = network_create_socket(type);
 // Error Check
 if (socket &lt; 0)
-    scr_text("UDP Client Socket Error", 2, true, UI_Font, room_width/2, room_height/2);  // Error!
+    scr_text("UDP Client Socket Error", 2, UI_Font, room_width/2, room_height/2);  // Error!
 else
-    scr_text("Summoned as Friendly Pilot", 2, true, UI_Font, room_width/2, room_height/2);  // Success!
+    scr_text("Summoned as Friendly Pilot", 2, UI_Font, room_width/2, room_height/2);  // Success!
 
 // Server IP and Port, needed to send packets
 // Know IP adress for now, will later get from server

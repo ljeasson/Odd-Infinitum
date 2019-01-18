@@ -55,21 +55,18 @@ var box_x = obj_Alt_Laser_Box.x-32;
 var box_y = obj_Alt_Laser_Box.y;
 
 draw_self();
-if (global.alt_laser == "basic_laser")
+if (global.alt_laser == lasers.pilot_laser)
     draw_sprite(spr_Basic_Laser_Shop_Item,0,box_x,box_y);
-else if (global.alt_laser == "triple_shot")
+else if (global.alt_laser == lasers.spread_shot)
     draw_sprite(spr_Triple_Shot_Shop_Item,0,box_x,box_y);
-else if (global.alt_laser == "rapid_fire")
+else if (global.alt_laser == lasers.rapid_fire)
     draw_sprite(spr_Rapid_Fire_Shop_Item,0,box_x,box_y);
-else if (global.alt_laser == "seeker_shot")
+else if (global.alt_laser == lasers.seeker_laser)
     draw_sprite(spr_Seeker_Shot_Shop_Item,0,box_x,box_y);
-else if (global.alt_laser == "charge_shot")
+else if (global.alt_laser == lasers.charge_shot)
     draw_sprite(spr_Charge_Shot_Shop_Item,0,box_x,box_y);
-else if (global.alt_laser == "trident")
+else if (global.alt_laser == lasers.fleet_trident)
     draw_sprite(spr_Trident_Shop_Item,0,box_x,box_y);
-
-else if (global.alt_laser == "giant_laser")
-    draw_sprite(spr_Giant_Laser_Shop_Item,0,box_x,box_y);
 </string>
           </argument>
         </arguments>

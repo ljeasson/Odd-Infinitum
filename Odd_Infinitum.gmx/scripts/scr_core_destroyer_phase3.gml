@@ -3,7 +3,7 @@
 // Play First Voice
 if (!voice_3_played){
     audio_play_sound(vc_Core_Destroyer_3, 2, false);
-    scr_text("Commencing Core Destruction...", 0.5, true, UI_Font, room_width/2, room_height/2);
+    scr_text("Commencing Core Destruction...", 0.5, UI_Font, room_width/2, room_height/2);
     voice_3_played = true;
 }
 

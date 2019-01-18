@@ -1,29 +1,25 @@
 // fire_alt_laser()
 // Fires alternative laser
 
-X = argument0;
-Y = argument1;
-
 // Basic Laser
-if (global.alt_laser == "basic_laser") scr_basic_laser();
-
+if (global.alt_laser == lasers.pilot_laser) scr_basic_laser();
+    
 // Triple shot
-if (global.alt_laser == "triple_shot") scr_triple_shot();
+if (global.alt_laser == lasers.spread_shot) scr_triple_shot();
 
 // Rapid fire
-if (global.alt_laser == "rapid_fire") scr_rapid_fire();
+if (global.alt_laser == lasers.rapid_fire) scr_rapid_fire();
     
-// Seeker shot
-if (global.alt_laser == "seeker_shot") scr_seeker_shot();
-
 // Charge shot
-if (global.alt_laser == "charge_shot") scr_charge_shot();
+if (global.alt_laser == lasers.charge_shot) scr_charge_shot();
 
-// Trident
-if (global.alt_laser == "trident") scr_trident();
+// Seeker shot
+if (global.alt_laser == lasers.seeker_laser) scr_seeker_shot();
 
-// Giant Laser
-//if (global.alt_laser = "giant_laser") scr_giant_laser();
+// Fleet Trident
+if (global.alt_laser == lasers.fleet_trident) scr_trident();
+
+
 
 // If laser is fired with no health, take damage
 if (global.overheat <= 0) player_take_damage_heat(10);

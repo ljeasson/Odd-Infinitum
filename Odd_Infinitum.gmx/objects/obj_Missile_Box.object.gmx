@@ -55,18 +55,14 @@ var box_x = obj_Missile_Box.x-32;
 var box_y = obj_Missile_Box.y;
 
 draw_self();
-if (global.missile == "basic_missile")
-{
+if (global.missile == missiles.standard_missile)
     draw_sprite(spr_Basic_Missile_Shop_Item,0,box_x,box_y);
-}
-if (global.missile == "homing_missile")
-{
+    
+if (global.missile == missiles.homing_missile)
     draw_sprite(spr_Homing_Missile_Shop_Item,0,box_x,box_y);
-}
-if (global.missile == "missile_barrage")
-{
+    
+if (global.missile == missiles.missile_barrage)
     draw_sprite(spr_Missile_Barrage_Shop_Item,0,box_x,box_y);
-}
 </string>
           </argument>
         </arguments>
