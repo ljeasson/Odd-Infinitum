@@ -431,6 +431,9 @@ enum skins
             <kind>1</kind>
             <string>///Go to next room
 room_goto_next();
+
+// Intro Cinematic has been seen
+global.seen_intro = true;
 </string>
           </argument>
         </arguments>

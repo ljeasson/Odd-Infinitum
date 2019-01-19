@@ -684,8 +684,8 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
-    <room>rooms\room_intro_cinematic</room>
     <room>rooms\room_menu</room>
+    <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>
       <room>rooms\room_tutorial_laser</room>

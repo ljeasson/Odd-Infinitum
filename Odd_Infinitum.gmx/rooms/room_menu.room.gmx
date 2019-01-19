@@ -52,10 +52,8 @@
   </views>
   <instances>
     <instance objName="background_object_generator" x="0" y="0" name="inst_25930E6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Star" x="1008" y="336" name="inst_52F0368B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="room_controller" x="0" y="32" name="inst_87CD8F56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="main_menu_sound" x="0" y="96" name="inst_6F095829" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="menu_controller" x="0" y="64" name="inst_637D48DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="main_menu_sound" x="0" y="64" name="inst_6F095829" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="menu_controller" x="0" y="32" name="inst_637D48DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
