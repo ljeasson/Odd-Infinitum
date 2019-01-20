@@ -37,6 +37,7 @@
     <sound>sound\snd_Overworld_New</sound>
     <sound>sound\snd_Victory</sound>
     <sound>sound\snd_Tutorial</sound>
+    <sound>sound\snd_Beep</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">

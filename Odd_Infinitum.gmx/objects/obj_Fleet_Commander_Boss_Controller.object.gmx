@@ -37,31 +37,6 @@ instance_create(x,y,obj_Defector_3_Orbit);
 
 // Mini-boss Number
 mini_boss_num = 0;
-
-// State 
-//state = fleet_commander_states.intro;
-
-// Indicator to Spawn another Mini-boss
-//spawn_another = true;
-
-
-
-
-// Generate Random Non-repeating Sequence
-
-// Create list
-list = ds_list_create();
-// Populate list
-for (var i = 0; i &lt; 3; i++)
-    list[| i] = i;    
-// Shuffle list
-ds_list_shuffle(list);
-// Create array
-size = ds_list_size(list);
-order = array_create(3);
-// Transfer list to array
-for (var i = 0; i &lt; size; i++)
-    order[i] = list[| i];
 </string>
           </argument>
         </arguments>
@@ -85,18 +60,6 @@ for (var i = 0; i &lt; size; i++)
           <argument>
             <kind>1</kind>
             <string>/// Boss Fight Action Manager
-
-// State Machine
-//switch (state)
-//{
-    //Mini-Boss Stages
-    //case fleet_commander_states.intro:
-    //    scr_fleet_commander_intro();
-    //    break;
-    //case fleet_commander_states.idle:
-    //    scr_fleet_commander_idle();
-    //    break;
-//}
 
 // Once Intro is done and all intro objects (Fleet Commander and 3 Defectors)
 // are deleted

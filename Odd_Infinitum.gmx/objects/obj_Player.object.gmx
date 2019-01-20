@@ -26,8 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize state and key variables
+
+// State
 state = player_states.normal;
-fire_again = true;
+
+// Energy Buckler
+energy_buckler_available = true;
 
 // Create Teleportation Effect
 instance_create(x,y,obj_Rotator);
@@ -69,6 +73,30 @@ No_Damage_Earned = 1;
             <kind>1</kind>
             <string>/// Player dies in an explosion (in the game, not in real life)
 instance_create_once(obj_Player.x+24, obj_Player.y+16, obj_Player_Explosion);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset Energy Buckler
+energy_buckler_available = true;
 </string>
           </argument>
         </arguments>

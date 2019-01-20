@@ -58,6 +58,9 @@ if (time &lt; text_length)
 {
     time += spd;
     print = string_copy(text, 0, time);
+    
+    if (!audio_is_playing(snd_Beep))
+        audio_play_sound(snd_Beep,1,false);
 }
 </string>
           </argument>
