@@ -545,6 +545,7 @@
     </objects>
     <objects name="Laser Alternates">
       <object>objects\obj_Triple_Shot</object>
+      <object>objects\obj_Rapid_Fire_controller</object>
       <object>objects\obj_Rapid_Fire</object>
       <object>objects\obj_Seeker_Shot</object>
       <object>objects\obj_Charge_Shot</object>

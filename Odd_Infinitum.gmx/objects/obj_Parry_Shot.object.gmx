@@ -27,9 +27,14 @@
             <kind>1</kind>
             <string>/// Parry Bosses
 
-// Parry-able bosses for Core Destroyer boss fight
+// Core Destroyer boss fight
+if (room = room_Fleet_Commander_Daemeon)
+{
+    if (instance_exists(obj_Blue_Ring))
+        follow_object(obj_Blue_Ring, 8);
+}
 
-// Parry-able bosses for Fleet Commander Daemeon boss fight
+// leet Commander Daemeon boss fight
 if (room = room_Fleet_Commander_Daemeon)
 {
     // Defector 1

@@ -33,8 +33,9 @@ boss_name = "R.E.D.D. Fleet Defector";
 laser_weakness = 10;
 triple_shot_weakness = 20;
 rapid_fire_weakness = 5;
-giant_laser_weakness = 45;
+
 missile_weakness = 25;
+
 parry_shot_weakness = 30;
 
 // Damage indicator

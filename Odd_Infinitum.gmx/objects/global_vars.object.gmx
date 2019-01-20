@@ -103,8 +103,6 @@ global.rapid_fire = true;
 global.seeker_shot = true;
 global.charge_shot = true;
 global.trident = true;
-// Rapid Fire Timer 
-global.shot_timer = 7.5;
 
 // Missiles
 global.basic_missile = true;
@@ -184,7 +182,7 @@ global.missile = "Standard Missile";
 // Augment
 global.augment = "Quick Repair";
 // Skin
-global.skin = skins.pilot;
+global.skin = "Scouter";
 </string>
           </argument>
         </arguments>
@@ -242,15 +240,21 @@ global.red_missile_damage = 35;
 //...
  
 //Harrier Angel
- 
+global.angel_projectile_damage = 15;
+global.angelic_dart_damage = 10;
+global.obj_tracking_halo_damage = 25;
+
 //...
  
 //The Queen
 global.eye_damage = 25;
 global.egg_bouncing_damage = 5;
 global.egg_following_damage = 10;
+global.egg_exploding_damage = 15;
+global.egg_exploding_projectile_damage = 5;
 global.tentacle_damage = 20;
 global.aoe_damage = 50;
+global.alien_youngling_damage = 10;
   
 //The Arbiter of the Cosmos
 
@@ -473,16 +477,33 @@ global.augment_array[11,1] = spr_Heat_Absorption_Shop_Item;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Enum for Skins
+            <string>/// Skins Array
 
-enum skins
-{
-    scouter,
-    pilot,
-    redd_fleet,
-    harrier,
-    eldritch
-}
+// [_,0] = Name
+// [_,1] = Icon
+
+global.num_skins = 5;
+global.skin_array[global.num_skins,1] = "";
+
+// Scouter
+global.skin_array[0,0] = "Scouter";
+global.skin_array[0,1] = spr_Player;
+
+// Pilot
+global.skin_array[1,0] = "Pilot";
+global.skin_array[1,1] = spr_Player;
+
+// R.E.D.D. Fleet
+global.skin_array[2,0] = "R.E.D.D. Fleet";
+global.skin_array[2,1] = spr_Player;
+
+// Harrier
+global.skin_array[3,0] = "Harrier";
+global.skin_array[3,1] = spr_Player;
+
+// Eldritch
+global.skin_array[4,0] = "Eldritch";
+global.skin_array[4,1] = spr_Player;
 </string>
           </argument>
         </arguments>

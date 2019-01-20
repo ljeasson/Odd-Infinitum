@@ -55,8 +55,11 @@ var box_x = obj_Skin_Box.x-24;
 var box_y = obj_Skin_Box.y+12;
 
 draw_self();
-if (global.skin == skins.pilot)
-    draw_sprite(spr_Player,0,box_x,box_y);
+for (i=0; i &lt; global.num_skins; i++)
+{
+    if (global.skin == global.skin_array[i,0])
+        draw_sprite(global.skin_array[i,1],0,box_x,box_y);
+}
 
 </string>
           </argument>
