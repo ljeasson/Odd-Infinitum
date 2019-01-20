@@ -51,15 +51,15 @@ inventory_controller.menu = inventory_states.augments;
           <argument>
             <kind>1</kind>
             <string>///Display Selected Augment
-var box_x = obj_Laser_Box.x-32;
-var box_y = obj_Laser_Box.y;
+var box_x = obj_Augment_Box.x-32;
+var box_y = obj_Augment_Box.y;
 
 draw_self();
-if (global.augment == augments.automated_repair)
-    draw_sprite(spr_Basic_Laser_Shop_Item,0,box_x,box_y);
-    
-else if (global.laser == augments.emergency_repair)
-    draw_sprite(spr_Triple_Shot_Shop_Item,0,box_x,box_y);
+for (i=0; i &lt; global.num_augments; i++)
+{
+    if (global.augment == global.augment_array[i,0])
+        draw_sprite(global.augment_array[i,1],0,box_x,box_y);
+}
 </string>
           </argument>
         </arguments>

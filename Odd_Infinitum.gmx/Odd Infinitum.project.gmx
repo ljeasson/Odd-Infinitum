@@ -141,6 +141,7 @@
     </sprites>
     <sprites name="Shop Items">
       <sprite>sprites\spr_Platform</sprite>
+      <sprite>sprites\spr_Shop_Box</sprite>
       <sprite>sprites\spr_Basic_Laser_Shop_Item</sprite>
       <sprite>sprites\spr_Triple_Shot_Shop_Item</sprite>
       <sprite>sprites\spr_Rapid_Fire_Shop_Item</sprite>
@@ -151,6 +152,18 @@
       <sprite>sprites\spr_Basic_Missile_Shop_Item</sprite>
       <sprite>sprites\spr_Homing_Missile_Shop_Item</sprite>
       <sprite>sprites\spr_Missile_Barrage_Shop_Item</sprite>
+      <sprite>sprites\spr_Quick_Repair_Shop_Item</sprite>
+      <sprite>sprites\spr_Automated_Repair_Shop_Item</sprite>
+      <sprite>sprites\spr_Emergency_Repair_Shop_Item</sprite>
+      <sprite>sprites\spr_Emergency_Supercharge_Shop_Item</sprite>
+      <sprite>sprites\spr_Supply_Drop_Shop_Item</sprite>
+      <sprite>sprites\spr_Close_Call_Stasis_Shop_Item</sprite>
+      <sprite>sprites\spr_Close_Call_Supercharge_Shop_Item</sprite>
+      <sprite>sprites\spr_Tortise_Shop_Item</sprite>
+      <sprite>sprites\spr_Buckler_Repair_Shop_Item</sprite>
+      <sprite>sprites\spr_Buckler_Reload_Shop_Item</sprite>
+      <sprite>sprites\spr_Auto_Counter_Shop_Item</sprite>
+      <sprite>sprites\spr_Heat_Absorption_Shop_Item</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_Title</sprite>
@@ -580,6 +593,18 @@
       <object>objects\obj_Basic_Missile_Inv</object>
       <object>objects\obj_Homing_Missile_Inv</object>
       <object>objects\obj_Missile_Barrage_Inv</object>
+      <object>objects\obj_Quick_Repair_Inv</object>
+      <object>objects\obj_Automated_Repair_Inv</object>
+      <object>objects\obj_Emergency_Repair_Inv</object>
+      <object>objects\obj_Emergency_Supercharge_Inv</object>
+      <object>objects\obj_Supply_Drop_Inv</object>
+      <object>objects\obj_Close_Call_Stasis_Inv</object>
+      <object>objects\obj_Close_Call_Supercharge_Inv</object>
+      <object>objects\obj_Tortise_Inv</object>
+      <object>objects\obj_Buckler_Repair_Inv</object>
+      <object>objects\obj_Buckler_Reload_Inv</object>
+      <object>objects\obj_Auto_Counter_Inv</object>
+      <object>objects\obj_Heat_Absorption_Inv</object>
       <object>objects\obj_Back_Button_Inv</object>
       <object>objects\obj_Done_Button_Inv</object>
       <object>objects\obj_Pilot_Insignia</object>

@@ -104,7 +104,7 @@ if (!global.missile_barrage) instance_destroy();
           <argument>
             <kind>1</kind>
             <string>/// Set Missile to Missile Barrage
-global.missile = "missile_barrage";
+global.missile = global.missile_array[2,0];
 clear_inventory_screen();
 inventory_controller.menu = inventory_states.main;
 </string>

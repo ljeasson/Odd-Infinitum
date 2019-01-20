@@ -176,13 +176,13 @@ global.show_boss_ui = true;
             <string>/// Inventory Variables
 
 // Laser
-global.laser = lasers.pilot_laser;
+global.laser = "Pilot Laser";
 // Alt Laser
-global.alt_laser = lasers.pilot_laser;
+global.alt_laser = "Pilot Laser";
 // Missile
-global.missile = missiles.standard_missile;
+global.missile = "Standard Missile";
 // Augment
-global.augment = augments.quick_repair;
+global.augment = "Quick Repair";
 // Skin
 global.skin = skins.pilot;
 </string>
@@ -298,19 +298,47 @@ global.the_queen_unlocked = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Enums for Lasers
+            <string>/// Laser Array
 
-enum lasers 
-{
-    pilot_laser,
-    spread_shot,
-    rapid_fire,
-    charge_shot,
-    seeker_laser,
-    fleet_trident,
-    fleet_shotgun,
-    fleet_spear
-}
+// [_,0] = Name
+// [_,1] = Icon
+
+global.num_lasers = 6;
+global.laser_array[global.num_lasers,1] = "";
+
+// Pilot Laser
+global.laser_array[0,0] = "Pilot Laser";
+global.laser_array[0,1] = spr_Basic_Laser_Shop_Item;
+
+// Spread Shot
+global.laser_array[1,0] = "Spread Shot";
+global.laser_array[1,1] = spr_Triple_Shot_Shop_Item;
+
+// Rapid Fire
+global.laser_array[2,0] = "Rapid Fire";
+global.laser_array[2,1] = spr_Rapid_Fire_Shop_Item;
+
+// Charge Shot
+global.laser_array[3,0] = "Charge Shot";
+global.laser_array[3,1] = spr_Charge_Shot_Shop_Item;
+
+// Seeker Laser
+global.laser_array[4,0] = "Seeker Laser";
+global.laser_array[4,1] = spr_Seeker_Shot_Shop_Item;
+
+// Fleet Trident
+global.laser_array[5,0] = "Fleet Trident";
+global.laser_array[5,1] = spr_Trident_Shop_Item;
+
+/*
+// Fleet Shotgun
+global.laser_array[6,0] = "Fleet Shotgun";
+global.laser_array[6,1] = "";
+
+// Fleet Spear
+global.laser_array[7,0] = "Fleet Spear";
+global.laser_array[7,1] = "";
+*/
 </string>
           </argument>
         </arguments>
@@ -331,16 +359,25 @@ enum lasers
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Enum for Missiles
+            <string>/// Missile Array
 
-enum missiles
-{
-    standard_missile,
-    homing_missile,
-    missile_barrage,
-    harrier_strike,
-    fleetbreaker
-}
+// [_,0] = Name
+// [_,1] = Icon
+
+global.num_missiles = 3;
+global.missile_array[global.num_missiles,1] = "";
+
+// Standard Missile
+global.missile_array[0,0] = "Standard Missile";
+global.missile_array[0,1] = spr_Basic_Missile_Shop_Item;
+
+// Homing Missile
+global.missile_array[1,0] = "Homing Missile";
+global.missile_array[1,1] = spr_Homing_Missile_Shop_Item;
+
+// Missile Barrage
+global.missile_array[2,0] = "Missile Barrage";
+global.missile_array[2,1] = spr_Missile_Barrage_Shop_Item;
 </string>
           </argument>
         </arguments>
@@ -361,24 +398,61 @@ enum missiles
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Enum for Augments
+            <string>/// Augments Array
 
-enum augments
-{
-    quick_repair,
-    automated_repair,
-    emergency_repair,
-    supply_drop,
-    emergency_supercharge,
-    close_call_stasis,
-    close_call_supercharge,
-    tortise,
-    buckler_repair,
-    buckler_reload,
-    auto_counter,
-    heat_resistance
-}
+// [_,0] = Name
+// [_,1] = Icon
 
+global.num_augments = 12;
+global.augment_array[global.num_augments,1] = "";
+
+// Quick Repair
+global.augment_array[0,0] = "Quick Repair";
+global.augment_array[0,1] = spr_Quick_Repair_Shop_Item;
+
+// Automated Repair
+global.augment_array[1,0] = "Automated Repair";
+global.augment_array[1,1] = spr_Automated_Repair_Shop_Item;
+
+// Emergency Repair
+global.augment_array[2,0] = "Emergency Repair";
+global.augment_array[2,1] = spr_Emergency_Repair_Shop_Item;
+
+// Emergency Supercharge
+global.augment_array[3,0] = "Emergency Supercharge";
+global.augment_array[3,1] = spr_Emergency_Supercharge_Shop_Item;
+
+// Supply Drop
+global.augment_array[4,0] = "Supply Drop";
+global.augment_array[4,1] = spr_Supply_Drop_Shop_Item;
+
+// Close Call Stasis
+global.augment_array[5,0] = "Close Call Stasis";
+global.augment_array[5,1] = spr_Close_Call_Stasis_Shop_Item;
+
+// Close Call Supercharge
+global.augment_array[6,0] = "Close Call Supercharge";
+global.augment_array[6,1] = spr_Close_Call_Supercharge_Shop_Item;
+
+// Tortise
+global.augment_array[7,0] = "Tortise";
+global.augment_array[7,1] = spr_Tortise_Shop_Item;
+
+// Buckler Repair
+global.augment_array[8,0] = "Buckler Repair";
+global.augment_array[8,1] = spr_Buckler_Repair_Shop_Item;
+
+// Buckler Reload
+global.augment_array[9,0] = "Buckler Reload";
+global.augment_array[9,1] = spr_Buckler_Reload_Shop_Item;
+
+// Auto-Counter
+global.augment_array[10,0] = "Auto-Counter";
+global.augment_array[10,1] = spr_Auto_Counter_Shop_Item;
+
+// Heat Absorption
+global.augment_array[11,0] = "Heat Absorption";
+global.augment_array[11,1] = spr_Heat_Absorption_Shop_Item;
 </string>
           </argument>
         </arguments>

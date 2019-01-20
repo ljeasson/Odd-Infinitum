@@ -102,7 +102,7 @@ text = "Standard Missile";
           <argument>
             <kind>1</kind>
             <string>/// Set Missile to Basic Missile
-global.missile = "basic_missile";
+global.missile = global.missile_array[0,0];
 clear_inventory_screen();
 inventory_controller.menu = inventory_states.main;
 </string>

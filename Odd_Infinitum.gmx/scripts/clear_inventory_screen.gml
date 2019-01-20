@@ -26,5 +26,17 @@ instance_destroy(obj_Homing_Missile_Inv);
 instance_destroy(obj_Missile_Barrage_Inv);
 
 // Clear Augments
+instance_destroy(obj_Quick_Repair_Inv);
+instance_destroy(obj_Automated_Repair_Inv);
+instance_destroy(obj_Emergency_Repair_Inv);
+instance_destroy(obj_Emergency_Supercharge_Inv);
+instance_destroy(obj_Supply_Drop_Inv);
+instance_destroy(obj_Close_Call_Stasis_Inv);
+instance_destroy(obj_Close_Call_Supercharge_Inv);
+instance_destroy(obj_Tortise_Inv);
+instance_destroy(obj_Buckler_Repair_Inv);
+instance_destroy(obj_Buckler_Reload_Inv);
+instance_destroy(obj_Auto_Counter_Inv);
+instance_destroy(obj_Heat_Absorption_Inv);
 
 // Clear Skins

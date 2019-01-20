@@ -4,7 +4,7 @@
 if (fire_again)
 {
     // Create energy buckler instance
-    var buckler = instance_create(x,y,obj_Energy_Buckler);
+    var buckler = instance_create(x+24,y+16,obj_Energy_Buckler);
         
     // Decrease overheat by 10
     global.overheat -= 10;
