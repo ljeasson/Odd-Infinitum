@@ -13,13 +13,13 @@ if (player_dodge == 0)
 {
     var laser = instance_create(x+48,y+24,obj_Laser);
     laser.direction = 0;
-    laser.speed = global.laser_speed;
+    laser.speed = 15;
 }
 else
 {
     var laser = instance_create(x+48,y+24,obj_Laser_Short_Range);
     laser.direction = 0;
-    laser.speed = global.laser_speed;
+    laser.speed = 15;
 }
             
 // Decrease energy amount by 20

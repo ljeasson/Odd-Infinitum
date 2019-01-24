@@ -68,7 +68,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Update X and Y position
-if (instance_exists(obj_Player))
+if (instance_exists(obj_Player) &amp;&amp; instance_exists(obj_Energy_Buckler))
 {
     x = obj_Energy_Buckler.x;
     y = obj_Energy_Buckler.y;
