@@ -133,6 +133,9 @@
       <sprite>sprites\spr_Tentacles_Down</sprite>
       <sprite>sprites\spr_Alien_Youngling</sprite>
     </sprites>
+    <sprites name="Arbiter of the Cosmos">
+      <sprite>sprites\spr_Arbiter_of_the_Cosmos</sprite>
+    </sprites>
     <sprites name="Overworld">
       <sprite>sprites\spr_Main_Base</sprite>
       <sprite>sprites\spr_Planet1</sprite>
@@ -269,9 +272,12 @@
     <background>background\back_Pilot_Base</background>
     <background>background\back_Cave</background>
     <background>background\back_flesh</background>
+    <background>background\back_flesh_2</background>
     <background>background\grid_1</background>
     <background>background\grid_2</background>
     <background>background\grid_3</background>
+    <background>background\back_parralax</background>
+    <background>background\back_stars</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_Core_Destroyer_Enter</path>
@@ -716,6 +722,7 @@
       <object>objects\obj_Horde_Controller</object>
       <object>objects\obj_Alien_Youngling</object>
     </objects>
+    <object>objects\obj_Arbiter_of_the_Cosmos</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Intro_Cinematic</timeline>
@@ -724,6 +731,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
+    <room>rooms\room_Arbiter_of_the_Cosmos</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
