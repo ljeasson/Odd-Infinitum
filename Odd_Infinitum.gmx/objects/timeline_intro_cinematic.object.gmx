@@ -57,7 +57,7 @@
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>snd_Main_Menu_New</sound>
+            <sound>snd_Main_Menu</sound>
           </argument>
         </arguments>
       </action>

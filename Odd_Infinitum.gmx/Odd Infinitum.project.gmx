@@ -8,7 +8,11 @@
     <sounds name="Background Music">
       <sound>sound\snd_Main_Menu</sound>
       <sound>sound\snd_Overworld</sound>
+      <sound>sound\snd_Intro_Cinematic</sound>
+      <sound>sound\snd_Intro_Cinematic_2</sound>
+      <sound>sound\snd_Tutorial</sound>
       <sound>sound\snd_Ambient</sound>
+      <sound>sound\snd_Victory</sound>
       <sound>sound\snd_Core_Destroyer</sound>
       <sound>sound\snd_Fleet_Commander</sound>
       <sound>sound\snd_Harrier_Angel</sound>
@@ -34,12 +38,8 @@
       <sound>sound\vc_Core_Destroyer_1</sound>
       <sound>sound\vc_Core_Destroyer_2</sound>
       <sound>sound\vc_Core_Destroyer_3</sound>
+      <sound>sound\snd_Beep</sound>
     </sounds>
-    <sound>sound\snd_Main_Menu_New</sound>
-    <sound>sound\snd_Overworld_New</sound>
-    <sound>sound\snd_Victory</sound>
-    <sound>sound\snd_Tutorial</sound>
-    <sound>sound\snd_Beep</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -135,6 +135,9 @@
     </sprites>
     <sprites name="Arbiter of the Cosmos">
       <sprite>sprites\spr_Arbiter_of_the_Cosmos</sprite>
+      <sprite>sprites\spr_Planet_No_Ring</sprite>
+      <sprite>sprites\spr_Two_Planets</sprite>
+      <sprite>sprites\spr_Ringed_Planet</sprite>
     </sprites>
     <sprites name="Overworld">
       <sprite>sprites\spr_Main_Base</sprite>
@@ -266,6 +269,10 @@
     <sprite>sprites\spr_Spread_Shot</sprite>
     <sprite>sprites\spr_Rapid_Fire_2</sprite>
     <sprite>sprites\spr_Seeker_Shot_2</sprite>
+    <sprite>sprites\spr_Fleet_Trident</sprite>
+    <sprite>sprites\spr_Charge_Shot_2_1</sprite>
+    <sprite>sprites\spr_Charge_Shot_2_2</sprite>
+    <sprite>sprites\spr_Charge_Shot_2_3</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Hangar</background>
@@ -466,8 +473,8 @@
       </objects>
       <objects name="Sound Controllers">
         <object>objects\main_menu_sound</object>
-        <object>objects\tutorial_sound_controller</object>
         <object>objects\overworld_sound</object>
+        <object>objects\tutorial_sound_controller</object>
         <object>objects\Fleet_Commander_sound</object>
         <object>objects\Harrier_Angel_sound</object>
         <object>objects\The_Queen_sound</object>
@@ -569,7 +576,6 @@
       <object>objects\obj_Rapid_Fire</object>
       <object>objects\obj_Seeker_Shot</object>
       <object>objects\obj_Charge_Shot</object>
-      <object>objects\obj_Giant_Laser</object>
       <object>objects\obj_Trident_Laser</object>
     </objects>
     <objects name="Missile Alternates">
@@ -722,7 +728,12 @@
       <object>objects\obj_Horde_Controller</object>
       <object>objects\obj_Alien_Youngling</object>
     </objects>
-    <object>objects\obj_Arbiter_of_the_Cosmos</object>
+    <objects name="Arbiter of the Cosmos">
+      <object>objects\obj_Arbiter_of_the_Cosmos</object>
+      <object>objects\obj_Planet_No_Ring</object>
+      <object>objects\obj_Two_Planets</object>
+      <object>objects\obj_Ringed_Planet</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\Intro_Cinematic</timeline>
@@ -731,7 +742,6 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
-    <room>rooms\room_Arbiter_of_the_Cosmos</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
@@ -747,6 +757,7 @@
       <room>rooms\room_Fleet_Commander_Daemeon</room>
       <room>rooms\room_Harrier_Angel</room>
       <room>rooms\room_The_Queen</room>
+      <room>rooms\room_Arbiter_of_the_Cosmos</room>
     </rooms>
   </rooms>
   <help>

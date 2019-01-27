@@ -176,7 +176,7 @@ global.show_boss_ui = true;
 // Laser
 global.laser = "Pilot Laser";
 // Alt Laser
-global.alt_laser = "Pilot Laser";
+global.alt_laser = "Charge Shot";
 // Missile
 global.missile = "Standard Missile";
 // Augment

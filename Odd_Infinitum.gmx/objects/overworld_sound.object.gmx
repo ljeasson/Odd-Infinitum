@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Stop all sounds and then play music
 audio_stop_all();
-audio_play_sound(snd_Overworld_New, 1, true);
+audio_play_sound(snd_Overworld, 1, true);
 </string>
           </argument>
         </arguments>

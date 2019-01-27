@@ -13,6 +13,7 @@ var spark_bottom = instance_create(x,y,obj_orange_spark);
 spark_bottom.x = obj_Player.x+48;
 spark_bottom.y = obj_Player.x+24+16;
 
+
 // Create 3 triple shot instances
 shot1 = instance_create(x+48,y+24-16,obj_Trident_Laser);
 shot1.direction = 0;
