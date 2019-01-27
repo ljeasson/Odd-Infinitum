@@ -267,12 +267,12 @@
     </sprites>
     <sprite>sprites\spr_Pilot_Laser</sprite>
     <sprite>sprites\spr_Spread_Shot</sprite>
-    <sprite>sprites\spr_Rapid_Fire_2</sprite>
     <sprite>sprites\spr_Seeker_Shot_2</sprite>
-    <sprite>sprites\spr_Fleet_Trident</sprite>
     <sprite>sprites\spr_Charge_Shot_2_1</sprite>
     <sprite>sprites\spr_Charge_Shot_2_2</sprite>
     <sprite>sprites\spr_Charge_Shot_2_3</sprite>
+    <sprite>sprites\spr_Rapid_Fire_2</sprite>
+    <sprite>sprites\spr_Fleet_Trident</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Hangar</background>
@@ -305,7 +305,9 @@
       <script>scripts\instance_create_once.gml</script>
       <script>scripts\toggle_fullscreen.gml</script>
       <script>scripts\toggle_music.gml</script>
+      <script>scripts\calculate_rank.gml</script>
       <script>scripts\increase_number_to.gml</script>
+      <script>scripts\decrease_number_to.gml</script>
     </scripts>
     <scripts name="Damage Scripts">
       <script>scripts\player_take_damage.gml</script>

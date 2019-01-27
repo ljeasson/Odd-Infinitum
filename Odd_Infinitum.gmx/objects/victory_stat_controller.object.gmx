@@ -46,7 +46,7 @@ if (obj_Player.No_Damage_Earned == 1)
     No_Damage = obj_Player.No_Damage;
 
 total = 0;
-rank = "C";
+rank = "D";
 
 next = false;
 stat_counter = -1;
@@ -141,16 +141,7 @@ if (next)
             alarm[0] = 120;
             break;
         case 5:
-            if (total == 2000)
-                rank="D"
-            else if (total &gt; 2000 &amp;&amp; total &lt;= 4000)
-                rank="C"
-            else if (total &gt; 4000 &amp;&amp; total &lt;= 6000)
-                rank="B"
-            else if (total &gt; 6000 &amp;&amp; total &lt;= 8000)
-                rank="A"
-            else if (total &gt; 8000)
-                rank="S"
+            calculate_rank();
             scr_text_persistent("RANK: " + rank, 1, UI_Font_Medium, right_column, room_height/2 + 192);          
             stat_counter += 1;
             alarm[0] = 240;
