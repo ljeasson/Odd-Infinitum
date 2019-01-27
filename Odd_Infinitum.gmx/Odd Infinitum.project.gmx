@@ -266,6 +266,7 @@
       <sprite>sprites\spr_Missile_Training_Ship</sprite>
     </sprites>
     <sprite>sprites\spr_Pilot_Laser</sprite>
+    <sprite>sprites\spr_Regain_Laser_2</sprite>
     <sprite>sprites\spr_Spread_Shot</sprite>
     <sprite>sprites\spr_Seeker_Shot_2</sprite>
     <sprite>sprites\spr_Charge_Shot_2_1</sprite>
