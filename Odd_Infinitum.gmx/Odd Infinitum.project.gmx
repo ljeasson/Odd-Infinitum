@@ -274,6 +274,7 @@
     <sprite>sprites\spr_Charge_Shot_2_3</sprite>
     <sprite>sprites\spr_Rapid_Fire_2</sprite>
     <sprite>sprites\spr_Fleet_Trident</sprite>
+    <sprite>sprites\spr_Fleet_Trident_2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Hangar</background>
@@ -551,10 +552,12 @@
       <object>objects\obj_Marker_Missile</object>
       <object>objects\obj_Back</object>
       <object>objects\obj_To_Mission</object>
-      <object>objects\obj_Laser_Training_Ship</object>
       <object>objects\obj_Training_Spawn</object>
-      <object>objects\obj_Missile_Training_Ship</object>
+      <object>objects\obj_Laser_Training_Ship</object>
+      <object>objects\obj_Combat_Training_Ship</object>
+      <object>objects\obj_Training_Laser</object>
       <object>objects\obj_Training_Spawn_2</object>
+      <object>objects\obj_Missile_Training_Ship</object>
     </objects>
     <objects name="Overworld">
       <object>objects\obj_Player_Overworld</object>
@@ -745,6 +748,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
+    <room>rooms\room_tutorial_health_regain</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">

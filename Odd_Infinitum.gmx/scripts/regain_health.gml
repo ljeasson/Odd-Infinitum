@@ -1,7 +1,6 @@
-/// Regain Health
+/// regain_health()
 
 // Create ellipse
-//effect_create_above(ef_ellipse, obj_Player.x+24, obj_Player.y+16, 1, c_lime);
 instance_create(x,y,obj_Health_Regain_Effect);
 
 // Play audio
