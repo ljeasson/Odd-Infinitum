@@ -17,6 +17,20 @@
     defeat
 }
 
+enum fleet_shotgunner_states
+{
+    intro,
+    fight,
+    defeat
+}
+
+enum fleet_spearman_states
+{
+    intro,
+    fight,
+    defeat
+}
+
 enum fleet_commander_states
 {
     boss_intro,

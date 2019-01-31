@@ -259,6 +259,10 @@
       <sprite>sprites\spr_Pulsing_Portal_Small</sprite>
       <sprite>sprites\spr_AoE</sprite>
       <sprite>sprites\spr_Large_Glow</sprite>
+      <sprite>sprites\spr_Wave_U</sprite>
+      <sprite>sprites\spr_Wave_R</sprite>
+      <sprite>sprites\spr_Wave_D</sprite>
+      <sprite>sprites\spr_Wave_L</sprite>
       <sprite>sprites\spr_Square</sprite>
     </sprites>
     <sprites name="Tutorial">
@@ -413,6 +417,16 @@
         <script>scripts\scr_fleet_fighter_intro.gml</script>
         <script>scripts\scr_fleet_fighter_fight.gml</script>
         <script>scripts\scr_fleet_fighter_defeat.gml</script>
+      </scripts>
+      <scripts name="Fleet Shotgunner">
+        <script>scripts\scr_fleet_shotgunner_intro.gml</script>
+        <script>scripts\scr_fleet_shotgunner_fight.gml</script>
+        <script>scripts\scr_fleet_shotgunner_defeat.gml</script>
+      </scripts>
+      <scripts name="Fleet Spearman">
+        <script>scripts\scr_fleet_spearman_intro.gml</script>
+        <script>scripts\scr_fleet_spearman_fight.gml</script>
+        <script>scripts\scr_fleet_spearman_defeat.gml</script>
       </scripts>
       <scripts name="Fleet Commander Daemeon">
         <script>scripts\scr_fleet_commander_boss_intro.gml</script>

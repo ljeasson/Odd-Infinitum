@@ -33,24 +33,23 @@ boss_name = "R.E.D.D. Fleet Shotgunner";
 laser_weakness = 10;
 triple_shot_weakness = 20;
 rapid_fire_weakness = 5;
-giant_laser_weakness = 45;
+seeker_shot_weakness = 2;
+charge_shot_weakness = 25;
+fleet_trident_weakness = 8;
 missile_weakness = 25;
-
-// Damage indicator
-damaged = false;
-
-// Damage Taken
-damage_taken = 0;
-
-// Status booleans
-defeated = false;
-explosion_imminent = false;
+parry_shot_weakness = 30;
 
 // Attack lock
 attack_lock = false;
 
-// Combat lock
-combat = false;
+// Damage indicator
+damaged = false;
+
+// Status booleans
+explosion_imminent = false;
+
+// State
+state = fleet_shotgunner_states.intro;
 
 // Set (X,Y) to be onscreen
 x = room_width + 256;
@@ -278,98 +277,277 @@ obj_Fleet_Commander_Boss_Controller.mini_boss_num += 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Combat
+            <string>/// State Machine
+
+switch(state)
+{
+    case fleet_shotgunner_states.intro:
+        scr_fleet_shotgunner_intro();
+        break;
+    case fleet_shotgunner_states.fight:
+        scr_fleet_shotgunner_fight();
+        break;
+    case fleet_shotgunner_states.defeat:
+        scr_fleet_shotgunner_defeat();
+        break;
+}
 
 //When health is zero, boss is defeated
 if (boss_health &lt; 0) {boss_health = 0;}
-if (boss_health == 0) {defeated = true;}
-
-// While Not Defeated (i.e. In Combat)
-if (!defeated)
-{
-    if (combat)
-    {
-        // Randomly Generate Red Lasers in a spread pattern
-        if (attack_lock == false)
-        {
-            // Upper 45 degrees of spread pattern
-            for (var i = 180; i &gt; 135; i-=15)
-            {
-                var spread = instance_create(x,y,obj_Red_Laser);
-                spread.direction = i;
-                spread.image_angle = spread.direction;
-                spread.speed = 8;
-            }
-            // Lower 45 degrees of spread pattern 
-            for (var i = 180; i &lt; 225; i+=15)
-            {
-                var spread = instance_create(x,y,obj_Red_Laser);
-                spread.direction = i;
-                spread.image_angle = spread.direction;
-                spread.speed = 8;
-            }        
-    
-            // Lock Attack Window
-            attack_lock = true;
-            // Set Timer for When to Attack Again
-            alarm[0] = random_range(30,120);
-        }
-    
-        // Generate Large Seeker Orbs
-        if (instance_number(obj_Red_Seeker_Large) &lt; 2 &amp;&amp; Chance(0.5,100))
-            instance_create(x,y,obj_Red_Seeker_Large);
-    }
-}
-else
-{
-    // Stop Moving
-    path_end();
-    
-    // Generate Random Explosions
-    generate_explosions(99);
-    
-    // Set Explosion Timer
-    if (!explosion_imminent)
-    {
-        alarm[2] = 180;
-        explosion_imminent = true;
-    }
-}
+if (boss_health == 0) {state = fleet_shotgunner_states.defeat}
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="4" ename="obj_Trident_Laser">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>/// Check if at starting position
-if (x == 1120 &amp;&amp; y == 352 &amp;&amp; !combat)
-{
-    // Set Movement Path
-    path_start(path_Defector_2, 4, path_action_reverse, true);
-    
-    // Enable combat
-    combat = true;
-}
-else if (!combat)
-{
-    // Move towards starting point
-    move_towards_point(1120,352,4);
-}
-</string>
+            <kind>9</kind>
+            <script>boss_take_damage</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>fleet_trident_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Charge_Shot">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>boss_take_damage</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>charge_shot_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Seeker_Shot">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>boss_take_damage</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>seeker_shot_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Rapid_Fire">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>boss_take_damage</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>rapid_fire_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Triple_Shot">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>boss_take_damage</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>triple_shot_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Parry_Shot">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>boss_take_damage</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>parry_shot_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -526,12 +704,6 @@ if (global.show_boss_ui)
 {
     draw_text(80,room_height-120,boss_name);
     draw_healthbar(80,room_height-96,room_width-80,room_height-64,boss_health,c_black,c_red,c_green,0,false,false);
-
-    if (damage_taken &gt; 0)
-    {
-        draw_set_halign(fa_middle);
-        draw_text(room_width-120,room_height-120,damage_taken);
-    }
 }
 </string>
           </argument>
@@ -560,10 +732,10 @@ if (damaged)
     draw_self();
     draw_set_color(c_ltgray);
     shader_reset();
-} else 
-{
+} 
+else
     draw_self();
-}
+
 </string>
           </argument>
         </arguments>

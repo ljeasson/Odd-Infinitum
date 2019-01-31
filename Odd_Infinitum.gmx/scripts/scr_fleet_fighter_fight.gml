@@ -1,7 +1,7 @@
 /// scr_fleet_fighter_fight
 
 // Set Movement Path
-if (path_index = -1)
+if (path_index == -1)
     path_start(path_Defector_1, 4, path_action_reverse, true);
     
 // Randomly Generate 3 Red Lasers
@@ -29,7 +29,6 @@ if (attack_lock == false)
 }
     
 // Generate Small Seeker Orbs
-if (instance_number(obj_Red_Seeker) < 3)
-    if (Chance(0.5,50)) 
-        for (i=0; i<3; i++)
-            instance_create(x,y,obj_Red_Seeker);
+if (instance_number(obj_Red_Seeker) < 3 && Chance(0.5,50)) 
+    for (i=0; i<3; i++)
+        instance_create(x,y,obj_Red_Seeker);
