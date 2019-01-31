@@ -145,6 +145,7 @@ global.emergency_supercharge = true;
           <argument>
             <kind>1</kind>
             <string>/// Options Variables
+global.full_screen = true;
 global.music_volume = 10;
 global.sfx_volume = 10;
 global.enable_music = true;

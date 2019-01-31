@@ -35,6 +35,8 @@ interest = "full_screen";
 left_column = room_width/2 - 256;
 right_column = room_width/2 + 160;
 
+if (instance_exists(pause_controller))
+    depth = pause_controller.depth - 1;
 </string>
           </argument>
         </arguments>

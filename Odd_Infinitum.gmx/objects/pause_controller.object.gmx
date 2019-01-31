@@ -240,33 +240,36 @@ if (file_exists("pause.png"))
             <kind>1</kind>
             <string>/// Draw Pause Menu
 
-if (interest == "Continue")
+if (!instance_exists(options_controller))
 {
-    draw_sprite(spr_Continue, 1, room_width/2, room_height/2 - 75);
-    draw_sprite(spr_Options, 0, room_width/2, room_height/2 - 25+8);
-    draw_sprite(spr_Restart, 0, room_width/2, room_height/2 + 25+16);
-    draw_sprite(spr_Exit, 0, room_width/2, room_height/2 + 75+24);
-}
-else if (interest == "Options")
-{
-    draw_sprite(spr_Continue, 0, room_width/2, room_height/2 - 75);
-    draw_sprite(spr_Options, 1, room_width/2, room_height/2 - 25+8);
-    draw_sprite(spr_Restart, 0, room_width/2, room_height/2 + 25+16);
-    draw_sprite(spr_Exit, 0, room_width/2, room_height/2 + 75+24);
-}
-else if (interest == "Restart")
-{
-    draw_sprite(spr_Continue, 0, room_width/2, room_height/2 - 75);
-    draw_sprite(spr_Options, 0, room_width/2, room_height/2 - 25+8);
-    draw_sprite(spr_Restart, 1, room_width/2, room_height/2 + 25+16);
-    draw_sprite(spr_Exit, 0, room_width/2, room_height/2 + 75+24);
-}
-else if (interest == "Exit")
-{
-    draw_sprite(spr_Continue, 0, room_width/2, room_height/2 - 75);
-    draw_sprite(spr_Options, 0, room_width/2, room_height/2 - 25+8);
-    draw_sprite(spr_Restart, 0, room_width/2, room_height/2 + 25+16);
-    draw_sprite(spr_Exit, 1, room_width/2, room_height/2 + 75+24);
+    if (interest == "Continue")
+    {
+        draw_sprite(spr_Continue, 1, room_width/2, room_height/2 - 75);
+        draw_sprite(spr_Options, 0, room_width/2, room_height/2 - 25+8);
+        draw_sprite(spr_Restart, 0, room_width/2, room_height/2 + 25+16);
+        draw_sprite(spr_Exit, 0, room_width/2, room_height/2 + 75+24);
+    }
+    else if (interest == "Options")
+    {
+        draw_sprite(spr_Continue, 0, room_width/2, room_height/2 - 75);
+        draw_sprite(spr_Options, 1, room_width/2, room_height/2 - 25+8);
+        draw_sprite(spr_Restart, 0, room_width/2, room_height/2 + 25+16);
+        draw_sprite(spr_Exit, 0, room_width/2, room_height/2 + 75+24);
+    }
+    else if (interest == "Restart")
+    {
+        draw_sprite(spr_Continue, 0, room_width/2, room_height/2 - 75);
+        draw_sprite(spr_Options, 0, room_width/2, room_height/2 - 25+8);
+        draw_sprite(spr_Restart, 1, room_width/2, room_height/2 + 25+16);
+        draw_sprite(spr_Exit, 0, room_width/2, room_height/2 + 75+24);
+    }
+    else if (interest == "Exit")
+    {
+        draw_sprite(spr_Continue, 0, room_width/2, room_height/2 - 75);
+        draw_sprite(spr_Options, 0, room_width/2, room_height/2 - 25+8);
+        draw_sprite(spr_Restart, 0, room_width/2, room_height/2 + 25+16);
+        draw_sprite(spr_Exit, 1, room_width/2, room_height/2 + 75+24);
+    }
 }
 </string>
           </argument>

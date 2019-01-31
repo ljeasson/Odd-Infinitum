@@ -748,13 +748,13 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
-    <room>rooms\room_tutorial_health_regain</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>
       <room>rooms\room_tutorial_laser</room>
       <room>rooms\room_tutorial_missile</room>
+      <room>rooms\room_tutorial_health_regain</room>
     </rooms>
     <room>rooms\room_overworld</room>
     <room>rooms\room_pilot_base</room>
