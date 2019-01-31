@@ -10,7 +10,14 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>enum fleet_commander_states
+  <code>enum fleet_fighter_states
+{
+    intro,
+    fight,
+    defeat
+}
+
+enum fleet_commander_states
 {
     boss_intro,
     fight,

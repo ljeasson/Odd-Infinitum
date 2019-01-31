@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Initialize Variables
 boss_health = 100;
-boss_name = "R.E.D.D. Fleet Defector";
+boss_name = "R.E.D.D. Fleet Shotgunner";
 
 // Player damage ratings
 laser_weakness = 10;

@@ -409,9 +409,16 @@
       <script>scripts\scr_core_destroyer_phase3.gml</script>
     </scripts>
     <scripts name="Fleet Commander Daemeon States">
-      <script>scripts\scr_fleet_commander_boss_intro.gml</script>
-      <script>scripts\scr_fleet_commander_fight.gml</script>
-      <script>scripts\scr_fleet_commander_defeat.gml</script>
+      <scripts name="Fleet Fighter">
+        <script>scripts\scr_fleet_fighter_intro.gml</script>
+        <script>scripts\scr_fleet_fighter_fight.gml</script>
+        <script>scripts\scr_fleet_fighter_defeat.gml</script>
+      </scripts>
+      <scripts name="Fleet Commander Daemeon">
+        <script>scripts\scr_fleet_commander_boss_intro.gml</script>
+        <script>scripts\scr_fleet_commander_fight.gml</script>
+        <script>scripts\scr_fleet_commander_defeat.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Harrier Angel">
       <script>scripts\form_transition.gml</script>
@@ -748,6 +755,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
+    <room>rooms\room_Fleet_Commander_Daemeon</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
@@ -761,7 +769,6 @@
     <room>rooms\room_Network_Test</room>
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
-      <room>rooms\room_Fleet_Commander_Daemeon</room>
       <room>rooms\room_Harrier_Angel</room>
       <room>rooms\room_The_Queen</room>
       <room>rooms\room_Arbiter_of_the_Cosmos</room>
