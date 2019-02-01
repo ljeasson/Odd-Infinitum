@@ -62,7 +62,7 @@ else
     showtext = 0;
 }
 
-if (global.missile_barrage)
+if (global.missile_array[global.missile_barrage_index,global.bought_index] = true)
 {
     instance_destroy(obj_item_description);
     instance_destroy();
@@ -159,7 +159,7 @@ if (global.missile_barrage)
 if (global.shop_currency &gt;= cost)
 {
     global.shop_currency -= cost
-    global.missile_barrage = true;
+    global.missile_array[global.missile_barrage_index,global.bought_index] = true;
 }
 else
     scr_message_box("Not enough Pilot Currency", room_width/2, room_height/2);

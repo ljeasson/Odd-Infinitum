@@ -96,14 +96,6 @@ global.large_asteroid_damage = 30;
             <kind>1</kind>
             <string>/// Shop Varaibles
 
-// Lasers
-global.basic_laser = true;
-global.triple_shot = true;
-global.rapid_fire = true;
-global.seeker_shot = true;
-global.charge_shot = true;
-global.trident = true;
-
 // Missiles
 global.basic_missile = true;
 global.homing_missile = true;
@@ -122,8 +114,6 @@ global.buckler_repair_unlocked = true;
 global.buckler_reload_unlocked = true;
 global.automated_repair_unlocked = true;
 global.emergency_supercharge_unlocked = true;
-
-// Skins 
 </string>
           </argument>
         </arguments>
@@ -177,7 +167,7 @@ global.show_boss_ui = true;
 // Laser
 global.laser = "Pilot Laser";
 // Alt Laser
-global.alt_laser = "Charge Shot";
+global.alt_laser = "Pilot Laser";
 // Missile
 global.missile = "Standard Missile";
 // Augment
@@ -307,33 +297,58 @@ global.the_queen_unlocked = true;
 
 // [_,0] = Name
 // [_,1] = Icon
+// [_,2] = Bought (True/False)
+// [_,3] = Cost
+// [_,4] = Item Desciption
 
 global.num_lasers = 6;
-global.laser_array[global.num_lasers,1] = "";
+global.laser_array[global.num_lasers,2] = "";
+
+// First Index
+global.pilot_laser_index = 0;
+global.spread_shot_index = 1;
+global.rapid_fire_index = 2;
+global.charge_shot_index = 3;
+global.seeker_shot_index = 4;
+global.fleet_trident_index = 5;
+
+// Second Index
+global.name_index = 0;
+global.icon_index = 1;
+global.bought_index = 2;
+global.cost_index = 3;
+global.item_descripion_index = 4;
+
 
 // Pilot Laser
 global.laser_array[0,0] = "Pilot Laser";
 global.laser_array[0,1] = spr_Basic_Laser_Shop_Item;
+global.laser_array[0,2] = true;
 
 // Spread Shot
 global.laser_array[1,0] = "Spread Shot";
 global.laser_array[1,1] = spr_Triple_Shot_Shop_Item;
+global.laser_array[1,2] = false;
 
 // Rapid Fire
 global.laser_array[2,0] = "Rapid Fire";
 global.laser_array[2,1] = spr_Rapid_Fire_Shop_Item;
+global.laser_array[2,2] = false;
 
 // Charge Shot
 global.laser_array[3,0] = "Charge Shot";
 global.laser_array[3,1] = spr_Charge_Shot_Shop_Item;
+global.laser_array[3,2] = false;
 
 // Seeker Laser
 global.laser_array[4,0] = "Seeker Laser";
 global.laser_array[4,1] = spr_Seeker_Shot_Shop_Item;
+global.laser_array[4,2] = false;
 
 // Fleet Trident
 global.laser_array[5,0] = "Fleet Trident";
 global.laser_array[5,1] = spr_Trident_Shop_Item;
+global.laser_array[5,2] = false;
 
 /*
 // Fleet Shotgun
@@ -368,21 +383,39 @@ global.laser_array[7,1] = "";
 
 // [_,0] = Name
 // [_,1] = Icon
+// [_,2] = Bought (True/False)
+// [_,3] = Cost
+// [_,4] = Item Desciption
 
 global.num_missiles = 3;
-global.missile_array[global.num_missiles,1] = "";
+global.missile_array[global.num_missiles,2] = "";
+
+// Fire Index
+global.standard_missile_index = 0;
+global.homing_missile_index = 1;
+global.missile_barrage_index = 2;
+
+// Second Index
+global.name_index = 0;
+global.icon_index = 1;
+global.bought_index = 2;
+global.cost_index = 3;
+global.item_descripion_index = 4;
 
 // Standard Missile
 global.missile_array[0,0] = "Standard Missile";
 global.missile_array[0,1] = spr_Basic_Missile_Shop_Item;
+global.missile_array[0,2] = true;
 
 // Homing Missile
 global.missile_array[1,0] = "Homing Missile";
 global.missile_array[1,1] = spr_Homing_Missile_Shop_Item;
+global.missile_array[1,2] = false;
 
 // Missile Barrage
 global.missile_array[2,0] = "Missile Barrage";
 global.missile_array[2,1] = spr_Missile_Barrage_Shop_Item;
+global.missile_array[2,2] = false;
 </string>
           </argument>
         </arguments>

@@ -13,13 +13,33 @@ draw_text(room_width/2, 176, "LASERS");
 
 // Instantiate and Populate Array
 lasers[0,0] = obj_Basic_Laser_Inv;
+
+if (global.laser_array[global.spread_shot_index,global.bought_index]) lasers[1,0] = obj_Triple_Shot_Inv;;
+else lasers[1,0] = obj_Basic_Laser_Inv;
+
+if (global.laser_array[global.rapid_fire_index,global.bought_index]) lasers[2,0] = obj_Rapid_Fire_Inv;;
+else lasers[2,0] = obj_Basic_Laser_Inv;
+
+if (global.laser_array[global.charge_shot_index,global.bought_index]) lasers[3,0] = obj_Charge_Shot_Inv;;
+else lasers[3,0] = obj_Basic_Laser_Inv;
+
+if (global.laser_array[global.seeker_shot_index,global.bought_index]) lasers[0,1] = obj_Seeker_Shot_Inv;;
+else lasers[0,1] = obj_Basic_Laser_Inv;
+
+if (global.laser_array[global.fleet_trident_index,global.bought_index]) lasers[1,1] = obj_Trident_Inv;;
+else lasers[1,1] = obj_Basic_Laser_Inv;
+
+/*
 lasers[1,0] = obj_Triple_Shot_Inv;
 lasers[2,0] = obj_Rapid_Fire_Inv;
 lasers[3,0] = obj_Charge_Shot_Inv;
 lasers[0,1] = obj_Seeker_Shot_Inv;
 lasers[1,1] = obj_Trident_Inv;
-lasers[2,1] = obj_Seeker_Shot_Inv;
-lasers[3,1] = obj_Seeker_Shot_Inv;
+*/
+
+lasers[2,1] = obj_Basic_Laser_Inv;
+lasers[3,1] = obj_Basic_Laser_Inv;
+
 
 // Draw Laser Objects
 for (i = 1; i <= 4; i++)

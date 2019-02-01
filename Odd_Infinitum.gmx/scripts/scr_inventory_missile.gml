@@ -13,13 +13,18 @@ draw_text(room_width/2, 176, "MISSILES");
 
 // Instantiate and Populate Array
 missiles[0,0] = obj_Basic_Missile_Inv;
-missiles[1,0] = obj_Homing_Missile_Inv;
-missiles[2,0] = obj_Missile_Barrage_Inv;
-missiles[3,0] = obj_Missile_Barrage_Inv;
-missiles[0,1] = obj_Missile_Barrage_Inv;
-missiles[1,1] = obj_Missile_Barrage_Inv;
-missiles[2,1] = obj_Missile_Barrage_Inv;
-missiles[3,1] = obj_Missile_Barrage_Inv;
+
+if (global.missile_array[global.homing_missile_index,global.bought_index]) missiles[1,0] = obj_Homing_Missile_Inv;
+else missiles[1,0] = obj_Basic_Missile_Inv;
+
+if (global.missile_array[global.missile_barrage_index,global.bought_index]) missiles[2,0] = obj_Missile_Barrage_Inv;
+else missiles[2,0] = obj_Basic_Missile_Inv;
+
+missiles[3,0] = obj_Basic_Missile_Inv;
+missiles[0,1] = obj_Basic_Missile_Inv;
+missiles[1,1] = obj_Basic_Missile_Inv;
+missiles[2,1] = obj_Basic_Missile_Inv;
+missiles[3,1] = obj_Basic_Missile_Inv;
 
 // Draw Laser Objects
 for (i = 1; i <= 4; i++)

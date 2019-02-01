@@ -62,7 +62,7 @@ else
     showtext = 0;
 }
 
-if (global.triple_shot)
+if (global.laser_array[global.spread_shot_index,global.bought_index])
 {
     instance_destroy(obj_item_description);
     instance_destroy();
@@ -160,7 +160,7 @@ if (global.triple_shot)
 if (global.shop_currency &gt;= cost)
 {
     global.shop_currency -= cost
-    global.triple_shot = true;
+    global.laser_array[global.spread_shot_index,global.bought_index] = true;
 }
 else
     scr_message_box("Not enough Pilot Currency", room_width/2, room_height/2); 
