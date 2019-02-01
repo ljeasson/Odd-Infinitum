@@ -116,16 +116,15 @@ global.harrier_strike = true;
 global.fleetbreaker = true;
 
 // Augments
-global.quick_repair = true;
-global.emergency_repair = true;
-global.auto_counter = true;
-global.close_call_stasis = true;
-global.close_call_supercharge = true;
-global.tortise = true;
-global.buckler_repair = true;
-global.buckler_reload = true;
-global.automated_repair = true;
-global.glass_cannon = true;
+global.quick_repair_unlocked = true;
+global.emergency_repair_unlocked = true;
+global.auto_counter_unlocked = true;
+global.close_call_stasis_unlocked = true;
+global.close_call_supercharge_unlocked = true;
+global.tortise_unlocked = true;
+global.buckler_repair_unlocked = true;
+global.buckler_reload_unlocked = true;
+global.automated_repair_unlocked = true;
 
 // Skins 
 </string>

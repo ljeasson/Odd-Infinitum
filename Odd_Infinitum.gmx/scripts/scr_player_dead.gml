@@ -1,6 +1,13 @@
 /// scr_player_dead()
 // Player is dead; restart level and replenish health
 
+// Emergency Repair
+if (!obj_Player.emergency_repair_used)
+{
+    emergency_repair();
+    state = player_states.normal;
+}
+
 // Stop all audio
 audio_stop_all();
 

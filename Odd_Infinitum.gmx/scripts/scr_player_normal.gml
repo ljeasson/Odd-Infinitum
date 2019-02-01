@@ -90,15 +90,18 @@ if (key_energy_buckler)
         write_buffer_CLIENT(6);
 }
 
-// Heal
+// Quick Repair
 if (key_heal)
 {
-    heal();
+    quick_repair();
     if (instance_exists(obj_Server))
         write_buffer_SERVER(7);
     if (instance_exists(obj_Client))
         write_buffer_CLIENT(7);
 }
+
+// Automated Repair
+automated_repair(120,2);
 
 // Dodge
 dodge();   

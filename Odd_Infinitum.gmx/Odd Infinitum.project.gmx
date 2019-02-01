@@ -368,7 +368,11 @@
       <script>scripts\dodge.gml</script>
       <script>scripts\check_callout.gml</script>
       <script>scripts\callout.gml</script>
-      <script>scripts\heal.gml</script>
+      <scripts name="Augments">
+        <script>scripts\quick_repair.gml</script>
+        <script>scripts\automated_repair.gml</script>
+        <script>scripts\emergency_repair.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Remote Player Scripts">
       <script>scripts\regain_health_remote.gml</script>
@@ -769,7 +773,6 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
-    <room>rooms\room_Fleet_Commander_Daemeon</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
@@ -783,6 +786,7 @@
     <room>rooms\room_Network_Test</room>
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
+      <room>rooms\room_Fleet_Commander_Daemeon</room>
       <room>rooms\room_Harrier_Angel</room>
       <room>rooms\room_The_Queen</room>
       <room>rooms\room_Arbiter_of_the_Cosmos</room>

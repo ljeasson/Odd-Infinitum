@@ -30,6 +30,12 @@
 // State
 state = player_states.normal;
 
+// Counter
+counter = 0;
+
+// Emergency Repair Used indicator
+emergency_repair_used = false;
+
 // Energy Buckler
 energy_buckler_available = true;
 
@@ -170,8 +176,11 @@ if (global.overheat &gt; 100) { global.overheat = 100 };
 
 // If health is greater than 100, set equal to 100
 if (health &gt; 100) { health = 100 };
-// If health is less than 0, change player state to dead
+// If health is less than or equal to 0, player is dead
 if (health &lt;= 0) { state = player_states.dead };
+    
+if (keyboard_check_pressed(ord('Q')))
+    health = 5;
 </string>
           </argument>
         </arguments>
