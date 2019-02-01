@@ -33,6 +33,9 @@ boss_name = "Fleet Commander Daemeon";
 // Orb Count
 orb_count = 3;
 
+// Counter
+counter = 0;
+
 // Instantiate shield
 instance_create(x, y, obj_Shield);
 
@@ -328,7 +331,8 @@ global.harrier_angel_unlocked = true;
           <argument>
             <kind>1</kind>
             <string>/// Create Explosion and Destroy
-instance_create(x,y,obj_Big_Explosion);
+//instance_create(x,y,obj_Big_Explosion);
+instance_create(x,y,obj_Explosion_Small);
 instance_destroy();
 
 // Stop Audio
@@ -883,6 +887,30 @@ if (boss_health == 0)
           <argument>
             <kind>0</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Freeze animation on last frame
+image_index = image_number - 1;
+</string>
           </argument>
         </arguments>
       </action>

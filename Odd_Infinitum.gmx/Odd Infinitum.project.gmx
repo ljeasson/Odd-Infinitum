@@ -93,6 +93,7 @@
     </sprites>
     <sprites name="Fleet Commander Daemeon">
       <sprite>sprites\spr_Fleet_Commander_Daemeon</sprite>
+      <sprite>sprites\spr_Fleet_Commander_Daemeon_Defeat</sprite>
       <sprite>sprites\spr_Defector_1</sprite>
       <sprite>sprites\spr_Defector_2</sprite>
       <sprite>sprites\spr_Defector_3</sprite>

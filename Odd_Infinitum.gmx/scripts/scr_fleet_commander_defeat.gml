@@ -1,25 +1,24 @@
 // Stop Moving
 path_end();
     
-// Generate Random Explosions
-var choice = irandom(3);
+// Change sprite
+if (sprite_index != spr_Fleet_Commander_Daemeon_Defeat)
+    sprite_index = spr_Fleet_Commander_Daemeon_Defeat;
 
-if (choice == 0) {
-    instance_create(random_range(obj_Fleet_Commander_Daemeon.x-(sprite_width/2),obj_Fleet_Commander_Daemeon.x+(sprite_width/2)), random_range(obj_Fleet_Commander_Daemeon.y-(sprite_height/2),obj_Fleet_Commander_Daemeon.y+(sprite_height/2)), obj_Explosion_Small);
-    effect_create_above(ef_smoke, random_range(obj_Fleet_Commander_Daemeon.x-(sprite_width/2),obj_Fleet_Commander_Daemeon.x+(sprite_width/2)), random_range(obj_Fleet_Commander_Daemeon.y-(sprite_width/2),obj_Fleet_Commander_Daemeon.y+(sprite_width/2)), 0, c_ltgray);
+// Generate Random Explosions
+if (counter == 30)
+{
+    effect_create_above(ef_smoke, obj_Fleet_Commander_Daemeon.x, obj_Fleet_Commander_Daemeon.y, 2, c_ltgray);
+    counter = 0;
 }
-else if (choice == 1) {
-    instance_create(random_range(obj_Fleet_Commander_Daemeon.x-(sprite_width/2),obj_Fleet_Commander_Daemeon.x+(sprite_width/2)), random_range(obj_Fleet_Commander_Daemeon.y-(sprite_height/2),obj_Fleet_Commander_Daemeon.y+(sprite_height/2)), obj_Explosion_Medium);
-    effect_create_above(ef_smoke, random_range(obj_Fleet_Commander_Daemeon.x-(sprite_width/2),obj_Fleet_Commander_Daemeon.x+(sprite_width/2)), random_range(obj_Fleet_Commander_Daemeon.y-(sprite_height/2),obj_Fleet_Commander_Daemeon.y+(sprite_height/2)), 1, c_gray);
-}
-else if (choice == 2) {
-    instance_create(random_range(obj_Fleet_Commander_Daemeon.x-(sprite_width/2),obj_Fleet_Commander_Daemeon.x+(sprite_width/2)), random_range(obj_Fleet_Commander_Daemeon.y-(sprite_height/2),obj_Fleet_Commander_Daemeon.y+(sprite_height/2)), obj_Explosion_Large);
-    effect_create_above(ef_smoke, random_range(obj_Fleet_Commander_Daemeon.x-(sprite_width/2),obj_Fleet_Commander_Daemeon.x+(sprite_width/2)), random_range(obj_Fleet_Commander_Daemeon.y-(sprite_height/2),obj_Fleet_Commander_Daemeon.y+(sprite_height/2)), 2, c_dkgray);
-}
+counter += 1;
     
+// Fall back to Earth
+move_towards_point(room_width-512, room_height-128, 1.5);
+
 // Set Explosion Timer
 if (!explosion_imminent)
 {
-    alarm[2] = 180;
+    alarm[2] = 240;
     explosion_imminent = true;
 }
