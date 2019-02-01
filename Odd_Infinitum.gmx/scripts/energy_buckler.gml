@@ -4,7 +4,10 @@
 if (energy_buckler_available)
 {
     // Create energy buckler instance
-    var buckler = instance_create(x+24,y+16,obj_Energy_Buckler);
+    if (global.augment == "Tortise")
+        instance_create(x+24,y+16,obj_Energy_Buckler_Persistent);
+    else
+        instance_create(x+24,y+16,obj_Energy_Buckler);
         
     // Decrease overheat by 10
     global.overheat -= 10;

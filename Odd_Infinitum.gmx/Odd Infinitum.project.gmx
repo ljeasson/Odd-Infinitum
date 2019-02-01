@@ -176,6 +176,7 @@
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_Title</sprite>
+      <sprite>sprites\spr_Title_2</sprite>
       <sprite>sprites\spr_Mission_Button</sprite>
       <sprite>sprites\spr_Options_Button</sprite>
       <sprite>sprites\spr_Credits_Button</sprite>
@@ -535,6 +536,7 @@
       <object>objects\obj_Regain_Laser</object>
       <object>objects\obj_Missile</object>
       <object>objects\obj_Energy_Buckler</object>
+      <object>objects\obj_Energy_Buckler_Persistent</object>
       <object>objects\obj_Energy_Buckler_Parry</object>
       <object>objects\obj_Parry_Shot</object>
       <object>objects\obj_Damaged_Screen</object>
