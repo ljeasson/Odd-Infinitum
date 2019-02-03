@@ -35,6 +35,7 @@ orb_count = 3;
 
 // Counter
 counter = 0;
+counter_2 = 0;
 
 // Instantiate shield
 instance_create(x, y, obj_Shield);

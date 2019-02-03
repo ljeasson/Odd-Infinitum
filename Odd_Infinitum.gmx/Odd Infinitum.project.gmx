@@ -101,10 +101,18 @@
       <sprite>sprites\spr_Red_Laser_Large</sprite>
       <sprite>sprites\spr_Red_Seeker</sprite>
       <sprite>sprites\spr_Red_Seeker_Large</sprite>
+      <sprite>sprites\spr_Red_Grow</sprite>
       <sprite>sprites\spr_Red_Spread</sprite>
       <sprite>sprites\spr_Fleet_Commander_Missile</sprite>
       <sprite>sprites\spr_Shield</sprite>
       <sprite>sprites\spr_Orb</sprite>
+      <sprite>sprites\spr_Red</sprite>
+      <sprite>sprites\spr_Red_Short</sprite>
+      <sprite>sprites\spr_Red_Long</sprite>
+      <sprite>sprites\spr_Red_Long_Large</sprite>
+      <sprite>sprites\spr_Red_Large</sprite>
+      <sprite>sprites\spr_Red_Large_120</sprite>
+      <sprite>sprites\spr_Red_Large_30</sprite>
     </sprites>
     <sprites name="Harrier Angel">
       <sprite>sprites\spr_Harrier_Angel_1</sprite>
@@ -280,7 +288,6 @@
     <sprite>sprites\spr_Charge_Shot_2_3</sprite>
     <sprite>sprites\spr_Rapid_Fire_2</sprite>
     <sprite>sprites\spr_Fleet_Trident</sprite>
-    <sprite>sprites\spr_Fleet_Trident_2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Hangar</background>
@@ -512,6 +519,7 @@
       </objects>
       <objects name="Timeline Controllers">
         <object>objects\timeline_intro_cinematic</object>
+        <object>objects\timeline_fleet_commander</object>
         <object>objects\timeline_controller_Level_1</object>
       </objects>
       <objects name="Screen Shake Controllers">
@@ -771,6 +779,7 @@
   <timelines name="timelines">
     <timeline>timelines\Intro_Cinematic</timeline>
     <timeline>timelines\Core_Destroyer_Intro</timeline>
+    <timeline>timelines\Fleet_Commander_Daemeon_Shield_Down</timeline>
     <timeline>timelines\Harrier_Angel_2nd_Phase</timeline>
   </timelines>
   <rooms name="rooms">

@@ -33,6 +33,7 @@ global.connected = false;
 // UI VARIABLES
 health = 100;
 global.laser_speed = 10;
+global.enemy_laser_speed = 8;
 global.overheat = 100;
 global.overheat_recharge = 0.6;
 global.missile_count = 2;
@@ -74,46 +75,6 @@ global.small_asteroid_damage = 15;
 global.medium_asteroid_damage = 20;
 global.large_asteroid_damage = 30;
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Shop Varaibles
-
-// Missiles
-global.basic_missile = true;
-global.homing_missile = true;
-global.missile_barrage = true;
-global.harrier_strike = true;
-global.fleetbreaker = true;
-
-// Augments
-global.quick_repair_unlocked = true;
-global.emergency_repair_unlocked = true;
-global.auto_counter_unlocked = true;
-global.close_call_stasis_unlocked = true;
-global.close_call_supercharge_unlocked = true;
-global.tortise_unlocked = true;
-global.buckler_repair_unlocked = true;
-global.buckler_reload_unlocked = true;
-global.automated_repair_unlocked = true;
-global.emergency_supercharge_unlocked = true;
 </string>
           </argument>
         </arguments>
@@ -225,11 +186,11 @@ global.red_missile_damage = 35;
 //The Swarm
  
 //...
- 
-//The Swarm
- 
+
+//Overlord
+
 //...
- 
+  
 //Harrier Angel
 global.angel_projectile_damage = 15;
 global.angelic_dart_damage = 10;

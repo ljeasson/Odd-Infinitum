@@ -10,17 +10,17 @@ if (attack_lock == false)
     // Upper Laser
     var attack_U = instance_create(x+16,y-32,obj_Red_Laser);
     attack_U.direction = 180;
-    attack_U.speed = 8;
+    attack_U.speed = 20;
     
     // Center Laser
     var attack_C = instance_create(x,y,obj_Red_Laser);
     attack_C.direction = 180;
-    attack_C.speed = 8;
+    attack_C.speed = 20;
     
     // Lower Laser
     var attack_D = instance_create(x+16,y+32,obj_Red_Laser);
     attack_D.direction = 180;
-    attack_D.speed = 8;
+    attack_D.speed = 20;
     
     // Lock Attack Window
     attack_lock = true;

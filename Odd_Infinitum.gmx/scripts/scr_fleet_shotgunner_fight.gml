@@ -13,7 +13,7 @@ if (attack_lock == false)
         var spread = instance_create(x,y,obj_Red_Laser);
         spread.direction = i;
         spread.image_angle = spread.direction;
-        spread.speed = 8;
+        spread.speed = 15;
     }
     // Lower 45 degrees of spread pattern 
     for (var i = 180; i < 225; i+=15)
@@ -21,7 +21,7 @@ if (attack_lock == false)
         var spread = instance_create(x,y,obj_Red_Laser);
         spread.direction = i;
         spread.image_angle = spread.direction;
-        spread.speed = 8;
+        spread.speed = 15;
     }        
     
     // Lock Attack Window

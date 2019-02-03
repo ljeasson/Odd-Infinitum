@@ -28,36 +28,37 @@ if (obj_Fleet_Commander_Daemeon.orb_count < 2 && !attack_lock_2)
 
 if (obj_Fleet_Commander_Daemeon.orb_count < 1 && !attack_lock_3)
 {
-    // Increase Speed
-    path_speed = 4;    
-
+    // Phase Transition
+    //instance_create(x,y,timeline_fleet_commander);
+    path_speed = 4;
+    
     // Add Laser Attack
     var attack_choice = irandom(3);
     
     switch(attack_choice)
     {
         case 0:
-            // Trident Laser
+            // Fleet Trident
             // Upper Laser
             var attack_U = instance_create(x+16,y-32,obj_Red_Laser);
             attack_U.direction = 180;
-            attack_U.speed = 8;
+            attack_U.speed = 15;
     
             // Center Laser
             var attack_C = instance_create(x,y,obj_Red_Laser);
             attack_C.direction = 180;
-            attack_C.speed = 8;
+            attack_C.speed = 15;
     
             // Lower Laser
             var attack_D = instance_create(x+16,y+32,obj_Red_Laser);
             attack_D.direction = 180;
-            attack_D.speed = 8;
+            attack_D.speed = 15;
             
             break;
             
         case 1:
-            // Contact Beam    
-            var laser = instance_create(x,y,obj_Red_Laser_Large);
+            // Fleet Spear
+            var laser = instance_create(x,y,obj_Red_Large_Laser_Controller);
             
             break;
             
@@ -69,7 +70,7 @@ if (obj_Fleet_Commander_Daemeon.orb_count < 1 && !attack_lock_3)
                 var spread = instance_create(x,y,obj_Red_Laser);
                 spread.direction = i;
                 spread.image_angle = spread.direction;
-                spread.speed = 8;
+                spread.speed = 15;
             }
             // Lower 45 degrees of spread pattern 
             for (var i = 180; i < 225; i+=15)
@@ -77,7 +78,7 @@ if (obj_Fleet_Commander_Daemeon.orb_count < 1 && !attack_lock_3)
                 var spread = instance_create(x,y,obj_Red_Laser);
                 spread.direction = i;
                 spread.image_angle = spread.direction;
-                spread.speed = 8;
+                spread.speed = 15;
             }
             
             break;
