@@ -117,6 +117,7 @@ draw_text(128, room_height-96, name);
           <argument>
             <kind>1</kind>
             <string>/// Render textbox and text
+
 draw_set_alpha(alpha);
 if (alpha &lt; 1) alpha += spd/10; else alpha = 1;
 
@@ -133,7 +134,6 @@ draw_text_ext
     maxlength    
 );
 draw_set_alpha(1);
-
 </string>
           </argument>
         </arguments>

@@ -83,9 +83,9 @@ if (!obj_Player_Overworld.menu &amp;&amp; !obj_Player_Overworld.inventory_open)
     if (global.pilot_insignia)
     {
         // Draw Messaging Beacon Sprite
-        draw_sprite(spr_Pilot_Insignia, 0, room_width/2 - 192, 48); 
+        //draw_sprite(spr_Pilot_Insignia, 0, room_width/2 - 192, 48); 
         // Draw 1 Key Sprite
-        draw_sprite(spr_1, 0, room_width/2 - 240, 48);
+        //draw_sprite(spr_1, 0, room_width/2 - 240, 48);
     }
         
     if (global.friendly_pilot_beacon)

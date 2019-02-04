@@ -57,45 +57,36 @@ instance_create(room_width/2-24, room_height/2+16, obj_Player);
             <kind>1</kind>
             <string>/// Draw Text and Sprites
 
-// Draw Text and Buttons on Left Margin
-draw_set_colour(c_white);
-draw_set_halign(fa_center);
-draw_set_valign(fa_top);
-
 // Instructional Text
-draw_set_font(UI_Font_Large);
-if (global.pilot_insignia)
-    draw_text(room_width/2, 64, "Welcome, Pilot");
-else
-    draw_text(room_width/2, 64, "Welcome, Scouter");
+//draw_set_font(UI_Font_Large);
+//if (global.pilot_insignia)
+//    draw_text(room_width/2, 64, "Welcome, Pilot");
+//else
+//    draw_text(room_width/2, 64, "Welcome, Scouter");
 
-draw_set_font(UI_Font);
-draw_text(room_width/2, 128, "This traing room will teach you how to control your spacecraft");
-draw_text(room_width/2, 192, "You can PROCEED to training module and repeat these as many times as needed");
+//draw_set_font(UI_Font);
+//draw_text(room_width/2, 128, "This traing room will teach you how to control your spacecraft");
+//draw_text(room_width/2, 192, "You can PROCEED to training module and repeat these as many times as needed");
 
-draw_set_font(UI_Font_Medium);
-draw_text(room_width/2, room_height-48, "When you are ready, fly to the right to advance"); 
+//draw_set_font(UI_Font_Medium);
+//draw_text(room_width/2, room_height-48, "When you are ready, fly to the right to advance"); 
 
 // Move
-draw_text(right_margin, room_height/2 - 64, "MOVE");
+draw_set_colour(c_white);
+draw_set_font(UI_Font_Medium);
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_text(room_width/2, 64, "MOVE");
+
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-    draw_sprite(spr_Controller_Stick_L, 0, room_width/2, room_height/2 + 64);
+    draw_sprite(spr_Controller_Stick_L, 0, room_width/2, 128);
 else
 {
-    draw_sprite(spr_Up, 0, right_margin, room_height/2)
-    draw_sprite(spr_Down, 0, right_margin, room_height/2 + 48)
-    draw_sprite(spr_Left, 0, right_margin - 48, room_height/2 + 48)
-    draw_sprite(spr_Right, 0, right_margin + 48, room_height/2 + 48)
+    draw_sprite(spr_Up, 0, room_width/2, 128)
+    draw_sprite(spr_Down, 0, room_width/2, 176)
+    draw_sprite(spr_Left, 0, room_width/2 - 48, 176)
+    draw_sprite(spr_Right, 0, room_width/2 + 48, 176)
 }
-
-/*
-// Speed Boost
-draw_text(left_margin, 320, "SPEED BOOST");
-if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-    draw_sprite(spr_Controller_RT, 0, left_margin, 320 + 96)
-else
-    draw_sprite(spr_Shift, 0, left_margin, 320 + 96)
-*/
 </string>
           </argument>
         </arguments>

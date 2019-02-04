@@ -507,6 +507,7 @@
       </objects>
       <objects name="Tutorial Controllers">
         <object>objects\tutorial_controller</object>
+        <object>objects\tutorial_controller_movement</object>
         <object>objects\tutorial_controller_laser</object>
         <object>objects\tutorial_controller_missile</object>
       </objects>
@@ -588,6 +589,7 @@
       <object>objects\obj_Big_Explosion</object>
     </objects>
     <objects name="Tutorial">
+      <object>objects\obj_Marker_Movement</object>
       <object>objects\obj_Marker_Laser</object>
       <object>objects\obj_Marker_Missile</object>
       <object>objects\obj_Back</object>
@@ -793,6 +795,7 @@
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial</room>
+      <room>rooms\room_tutorial_movement</room>
       <room>rooms\room_tutorial_laser</room>
       <room>rooms\room_tutorial_missile</room>
       <room>rooms\room_tutorial_health_regain</room>

@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>/// Dialogue Number
 dialogue_number = 0;
+dialogue_lock = false;
+//X = room_width/2-450;
+//Y = room_height-180;
+//var dialogue_box = instance_create(x, y, obj_dialogue_box);
+//dialogue_box.name = "Borris";
 </string>
           </argument>
         </arguments>
@@ -54,22 +59,29 @@ dialogue_number = 0;
 switch (dialogue_number)
 {
     case 0:
-        scr_dialogue_box("Oh! Hello!#You must be the new recruit.", "Borris", UI_Font_Medium);
+        //scr_text_persistent("Oh! Hello!#You must be the new recruit.", 1, UI_Font_Medium, room_width/2, room_height/2);
+        if (!dialogue_lock) scr_dialogue_box("Oh! Hello!#You must be the new recruit.", "Borris", UI_Font_Medium);
+        dialogue_lock = true;
         break;
     case 1:
-        scr_dialogue_box("I'm Borris,#and I'll be teaching you the techniques you'll use in the field", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("I'm Borris,#and I'll be teaching you the techniques you'll use in the field", "Borris", UI_Font_Medium);
+        dialogue_lock = true;
         break;
     case 2:
-        scr_dialogue_box("Around you, you'll see several training modules you can interact with.", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("Around you, you'll see several training modules you can interact with.", "Borris", UI_Font_Medium);
+        dialogue_lock = true;
         break;
     case 3:
-        scr_dialogue_box("Go ahead and PROCEED to any of the modules.", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("Go ahead and PROCEED to any of the modules.", "Borris", UI_Font_Medium);
+        dialogue_lock = true;
         break;
     case 4:
-        scr_dialogue_box("You can repeat these modules as much as you want.", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("You can repeat these modules as much as you want.", "Borris", UI_Font_Medium);
+        dialogue_lock = true;
         break;
     case 5:
-        scr_dialogue_box("When you feel ready, fly to the right to advanced to your first mission.", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("When you feel ready, fly to the right to advanced to your first mission.", "Borris", UI_Font_Medium);
+        dialogue_lock = true;
         break;
     default:
         instance_destroy();
@@ -98,6 +110,7 @@ switch (dialogue_number)
             <kind>1</kind>
             <string>/// Increment Dialogue Number
 instance_destroy(obj_dialogue_box);
+dialogue_lock = false;
 dialogue_number += 1;
 </string>
           </argument>

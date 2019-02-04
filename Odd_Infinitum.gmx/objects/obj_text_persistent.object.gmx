@@ -30,7 +30,7 @@ print = "";
 time = 0;
 font = "";
 
-depth = depth - instance_number(obj_text);
+depth = depth - instance_number(obj_text_persistent);
 </string>
           </argument>
         </arguments>

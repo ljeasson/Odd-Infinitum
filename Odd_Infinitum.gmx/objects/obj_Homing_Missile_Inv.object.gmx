@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>showtext = 0;
 text = "Homing Missile";
-
-if (!global.homing_missile) instance_destroy();
 </string>
           </argument>
         </arguments>

@@ -88,21 +88,20 @@ instance_create(right_margin - 32, 64 + room_height/2 + 128, obj_Training_Spawn)
             <string>/// Draw Text and Sprites
 
 // Draw Text and Buttons on Left Margin
-draw_set_colour(c_white);
-draw_set_font(UI_Font_Large);
-draw_set_halign(fa_center);
-draw_set_valign(fa_top);
     
 // Instructional Text
-draw_set_font(UI_Font_Large);
-draw_text(room_width/2, 64, "Laser Weapon Training");
+//draw_set_font(UI_Font_Large);
+//draw_text(room_width/2, 64, "Laser Weapon Training");
 
-draw_set_font(UI_Font);
-draw_text(room_width/2, 128, "Laser Weapons are you primary means of defense, and offense when necessary.");
-draw_text(room_width/2, 192, "You can equip up to two laser weapons at once.#Currently, the Pilot Laser is equipped in both slots");
+//draw_set_font(UI_Font);
+//draw_text(room_width/2, 128, "Laser Weapons are you primary means of defense, and offense when necessary.");
+//draw_text(room_width/2, 192, "You can equip up to two laser weapons at once.#Currently, the Pilot Laser is equipped in both slots");
 
 // Laser
-draw_set_font(UI_Font_Large);
+draw_set_colour(c_white);
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_set_font(UI_Font_Medium);
 draw_text(left_margin, 320, "LASER");
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
     draw_sprite(spr_Controller_A, 0, left_margin, 320 + 96)

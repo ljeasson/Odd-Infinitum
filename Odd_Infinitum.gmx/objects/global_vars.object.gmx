@@ -172,31 +172,11 @@ global.red_spawner_damage = 15;
 global.red_spread_damage = 15;
 global.red_wave_damage = 10;
 global.red_missile_damage = 35;
- 
-//...
- 
-//Dreadnought
- 
-//...
-
-//Gyrator
-
-//...
-
-//The Swarm
- 
-//...
-
-//Overlord
-
-//...
   
 //Harrier Angel
 global.angel_projectile_damage = 15;
 global.angelic_dart_damage = 10;
 global.obj_tracking_halo_damage = 25;
-
-//...
  
 //The Queen
 global.eye_damage = 25;
@@ -289,37 +269,27 @@ global.laser_array[0,2] = true;
 // Spread Shot
 global.laser_array[1,0] = "Spread Shot";
 global.laser_array[1,1] = spr_Triple_Shot_Shop_Item;
-global.laser_array[1,2] = false;
+global.laser_array[1,2] = true;
 
 // Rapid Fire
 global.laser_array[2,0] = "Rapid Fire";
 global.laser_array[2,1] = spr_Rapid_Fire_Shop_Item;
-global.laser_array[2,2] = false;
+global.laser_array[2,2] = true;
 
 // Charge Shot
 global.laser_array[3,0] = "Charge Shot";
 global.laser_array[3,1] = spr_Charge_Shot_Shop_Item;
-global.laser_array[3,2] = false;
+global.laser_array[3,2] = true;
 
 // Seeker Laser
 global.laser_array[4,0] = "Seeker Laser";
 global.laser_array[4,1] = spr_Seeker_Shot_Shop_Item;
-global.laser_array[4,2] = false;
+global.laser_array[4,2] = true;
 
 // Fleet Trident
 global.laser_array[5,0] = "Fleet Trident";
 global.laser_array[5,1] = spr_Trident_Shop_Item;
-global.laser_array[5,2] = false;
-
-/*
-// Fleet Shotgun
-global.laser_array[6,0] = "Fleet Shotgun";
-global.laser_array[6,1] = "";
-
-// Fleet Spear
-global.laser_array[7,0] = "Fleet Spear";
-global.laser_array[7,1] = "";
-*/
+global.laser_array[5,2] = true;
 </string>
           </argument>
         </arguments>
@@ -371,12 +341,12 @@ global.missile_array[0,2] = true;
 // Homing Missile
 global.missile_array[1,0] = "Homing Missile";
 global.missile_array[1,1] = spr_Homing_Missile_Shop_Item;
-global.missile_array[1,2] = false;
+global.missile_array[1,2] = true;
 
 // Missile Barrage
 global.missile_array[2,0] = "Missile Barrage";
 global.missile_array[2,1] = spr_Missile_Barrage_Shop_Item;
-global.missile_array[2,2] = false;
+global.missile_array[2,2] = true;
 </string>
           </argument>
         </arguments>
