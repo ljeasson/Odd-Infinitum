@@ -337,6 +337,7 @@
       <script>scripts\scr_item_description.gml</script>
       <script>scripts\scr_item_description_missile.gml</script>
       <script>scripts\scr_message_box.gml</script>
+      <script>scripts\scr_dialogue_box.gml</script>
     </scripts>
     <scripts name="Networking Scripts">
       <script>scripts\process_packet.gml</script>
@@ -685,6 +686,7 @@
       <object>objects\obj_item_description</object>
       <object>objects\obj_message_box</object>
       <object>objects\obj_item_reward</object>
+      <object>objects\obj_dialogue_box</object>
       <object>objects\obj_Cursor</object>
     </objects>
     <objects name="Core Destroyer">

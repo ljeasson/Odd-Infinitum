@@ -11,7 +11,9 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>// Disable Cursor
-window_set_cursor(cr_none);</code>
+window_set_cursor(cr_none);
+
+scr_dialogue_box("This is a message. This is another message. This is yet another message.", "Borris", UI_Font);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
