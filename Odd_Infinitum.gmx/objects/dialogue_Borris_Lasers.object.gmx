@@ -59,28 +59,19 @@ dialogue_lock = false;
 switch (dialogue_number)
 {
     case 0:
-        //scr_text_persistent("Oh! Hello!#You must be the new recruit.", 1, UI_Font_Medium, room_width/2, room_height/2);
-        if (!dialogue_lock) scr_dialogue_box("Oh! Hello!#You must be the new recruit.", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("Laser Weapons are you primary means of defense,", "Borris", UI_Font_Medium);
         dialogue_lock = true;
         break;
     case 1:
-        if (!dialogue_lock) scr_dialogue_box("I'm Borris,#and I'll be teaching you the techniques you'll use in the field", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("and offense when necessary.", "Borris", UI_Font_Medium);
         dialogue_lock = true;
         break;
     case 2:
-        if (!dialogue_lock) scr_dialogue_box("Around you, you'll see several training modules you can interact with.", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("You can equip up to two laser weapons at once.", "Borris", UI_Font_Medium);
         dialogue_lock = true;
         break;
     case 3:
-        if (!dialogue_lock) scr_dialogue_box("Go ahead and PROCEED to any of the modules.", "Borris", UI_Font_Medium);
-        dialogue_lock = true;
-        break;
-    case 4:
-        if (!dialogue_lock) scr_dialogue_box("You can repeat these modules as much as you want.", "Borris", UI_Font_Medium);
-        dialogue_lock = true;
-        break;
-    case 5:
-        if (!dialogue_lock) scr_dialogue_box("When you feel ready, fly to the right to advanced to your first mission.", "Borris", UI_Font_Medium);
+        if (!dialogue_lock) scr_dialogue_box("Currently, the Pilot Laser is equipped in both slots", "Borris", UI_Font_Medium);
         dialogue_lock = true;
         break;
     default:

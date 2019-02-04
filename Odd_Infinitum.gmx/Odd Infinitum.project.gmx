@@ -513,6 +513,7 @@
       </objects>
       <objects name="Dialogue Controller">
         <object>objects\dialogue_Borris_Intro</object>
+        <object>objects\dialogue_Borris_Lasers</object>
       </objects>
       <objects name="Sound Controllers">
         <object>objects\main_menu_sound</object>
