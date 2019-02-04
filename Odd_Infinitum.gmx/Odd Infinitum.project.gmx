@@ -510,6 +510,9 @@
         <object>objects\tutorial_controller_laser</object>
         <object>objects\tutorial_controller_missile</object>
       </objects>
+      <objects name="Dialogue Controller">
+        <object>objects\dialogue_Borris_Intro</object>
+      </objects>
       <objects name="Sound Controllers">
         <object>objects\main_menu_sound</object>
         <object>objects\overworld_sound</object>
