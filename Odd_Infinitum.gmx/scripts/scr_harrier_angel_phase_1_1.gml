@@ -5,8 +5,11 @@ form_transition(spr_Harrier_Angel_1);
 if (path_index = -1)
     path_start(path_Harrier_Angel_1, 3, path_action_restart, false);
     
-// Rotation   
-//rotate_to_angle(-90, 10);
+// Rotation 
+if (rotate)  
+    rotate_to_angle(-90, 10);
+else
+    rotate_to_angle(0, 10);
      
 // Attacks
 if (!attack_lock)
@@ -19,4 +22,13 @@ if (!attack_lock)
     // Lock Attack
     attack_lock = true;
     alarm[0] = 480;
+}
+if (!attack_lock_2)
+{
+    // Harrier Strike
+    //instance_create_once();
+    
+    // Lock Attack
+    attack_lock_2 = true;
+    alarm[4] = 1200;
 }

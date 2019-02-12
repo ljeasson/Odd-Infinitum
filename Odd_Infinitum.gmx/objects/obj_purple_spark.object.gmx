@@ -50,8 +50,13 @@ object_to_follow = obj_Player;
           <argument>
             <kind>1</kind>
             <string>/// Follow object
-x = object_to_follow.x+48;
-y = object_to_follow.y+24;
+if (instance_exists(obj_Player))
+{
+    x = object_to_follow.x+48;
+    y = object_to_follow.y+24;
+}
+else
+    instance_destroy();
 </string>
           </argument>
         </arguments>

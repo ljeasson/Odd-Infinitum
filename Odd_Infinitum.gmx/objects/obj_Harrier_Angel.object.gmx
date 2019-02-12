@@ -52,6 +52,9 @@ counter = 0;
 // Form Counter
 form_counter = 0;
 
+// Rotation lock
+rotate = false;
+
 // Morph Timer
 morph = false;
 
@@ -478,6 +481,7 @@ switch (state)
         break;
 }
 
+/*
 // Randomly Switch Between Forms
 if (form_counter == 300)
 {
@@ -500,6 +504,7 @@ if (form_counter == 300)
     }
 }
 form_counter += 1;
+*/
 
 // If health is at 50%, transition to second phase
 if (boss_health &lt;= 50) {state = harrier_angel_states.phase_2_intro;}
