@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>showtext = 0;
+            <string>instance_destroy();
+
+showtext = 0;
 text = "Alien Homeworld";
 
 if (!global.the_queen_unlocked) instance_destroy();

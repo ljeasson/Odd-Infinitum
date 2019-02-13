@@ -28,8 +28,8 @@
             <string>showtext = 0;
 mouse_enter = false;
 name = "Missile Barrage";
-desc = "Missile analog to Triple Shot. Highly destructive, but consumes a high quantity of missiles. Use with caution.";
-cost = 50;
+desc = "Missile analog to Spread Shot. Highly destructive, but consumes a high quantity of missiles. Use with caution.";
+cost = 20000;
 m_use = 3;
 </string>
           </argument>

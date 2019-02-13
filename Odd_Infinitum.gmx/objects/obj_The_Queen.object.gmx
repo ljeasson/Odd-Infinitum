@@ -253,7 +253,7 @@ draw_set_font(UI_Font);
 draw_set_halign(fa_left);   
 if (global.show_boss_ui)
 {
-    draw_text(80,room_height-120,boss_name);
+    //draw_text(80,room_height-120,boss_name);
     draw_healthbar(80,room_height-96,room_width-80,room_height-64,boss_health,c_black,c_red,c_green,0,false,false);
 }
 

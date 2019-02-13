@@ -91,17 +91,17 @@ if (!obj_Player_Overworld.menu &amp;&amp; !obj_Player_Overworld.inventory_open)
     if (global.friendly_pilot_beacon)
     {
         // Draw Friendly Pilot Beacon Sprite
-        draw_sprite(spr_Friendly_Pilot_Beacon, 0, room_width/2, 48); 
+        //draw_sprite(spr_Friendly_Pilot_Beacon, 0, room_width/2, 48); 
         // Draw 2 Key Sprite
-        draw_sprite(spr_2, 0, room_width/2 - 64, 48);
+        //draw_sprite(spr_2, 0, room_width/2 - 64, 48);
     }
     
     if (global.hostile_pilot_beacon)
     {
         // Draw Hostile Pilot Beacon Sprite
-        draw_sprite(spr_Hostile_Pilot_Beacon, 0, room_width/2 + 192, 48);
+        //draw_sprite(spr_Hostile_Pilot_Beacon, 0, room_width/2 + 192, 48);
         // Draw 3 Key Sprite
-        draw_sprite(spr_3, 0, room_width/2 + 128, 48);
+        //draw_sprite(spr_3, 0, room_width/2 + 128, 48);
     }
 }
 </string>

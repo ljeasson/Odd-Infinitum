@@ -29,7 +29,7 @@
 mouse_enter = false;
 name = "Charge Shot";
 desc = "Chargeable laser consisting of three power states. Energy drains while laser is charging.";
-cost = 25;
+cost = 12000;
 damage = "Very High";
 </string>
           </argument>

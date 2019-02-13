@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>showtext = 0;
+            <string>instance_destroy();
+
+showtext = 0;
 text = "HN-45";
 
 if (!global.harrier_angel_unlocked) instance_destroy();

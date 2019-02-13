@@ -29,7 +29,7 @@
 mouse_enter = false;
 name = "Rapid Fire";
 desc = "Fires 3 elongated lasers at high speed.  High rate of fire at the cost of low damage per laser";
-cost = 25;
+cost = 8000;
 damage = "Low";
 </string>
           </argument>

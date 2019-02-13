@@ -53,7 +53,7 @@ global.seen_intro = false;
 global.seen_tutorial = false;
 
 // PILOT TOOLS
-global.pilot_insignia = true;
+global.pilot_insignia = false;
 global.friendly_pilot_beacon = false;
 global.hostile_pilot_beacon = false;
 
@@ -68,13 +68,6 @@ global.callout_7 = "Well Done!";
 global.callout_8 = "Copy That";
 global.callout_9 = "Something's up Ahead";
 global.callout_10 = "Enemy Contact!";
-
-// DAMAGE RATINGS (PLAYER)
-// Asteroid Damage Ratings
-global.small_asteroid_damage = 15;
-global.medium_asteroid_damage = 20;
-global.large_asteroid_damage = 30;
-
 </string>
           </argument>
         </arguments>
@@ -159,6 +152,11 @@ global.skin = "Scouter";
 //Boss Damage_Ratings
 global.contact_damage = 25;
  
+// Asteroids
+global.small_asteroid_damage = 15;
+global.medium_asteroid_damage = 20;
+global.large_asteroid_damage = 30;
+
 //Core Destroyer
 global.core_destroyer_damage = 25;
 global.core_destroyer_laser_damage = 50;
@@ -211,9 +209,9 @@ global.alien_youngling_damage = 10;
           <argument>
             <kind>1</kind>
             <string>/// Progression
-global.fleet_commander_daemeon_unlocked = true;
-global.harrier_angel_unlocked = true;
-global.the_queen_unlocked = true;
+global.fleet_commander_daemeon_unlocked = false;
+global.harrier_angel_unlocked = false;
+global.the_queen_unlocked = false;
 </string>
           </argument>
         </arguments>
@@ -269,27 +267,27 @@ global.laser_array[0,2] = true;
 // Spread Shot
 global.laser_array[1,0] = "Spread Shot";
 global.laser_array[1,1] = spr_Triple_Shot_Shop_Item;
-global.laser_array[1,2] = true;
+global.laser_array[1,2] = false;
 
 // Rapid Fire
 global.laser_array[2,0] = "Rapid Fire";
 global.laser_array[2,1] = spr_Rapid_Fire_Shop_Item;
-global.laser_array[2,2] = true;
+global.laser_array[2,2] = false;
 
 // Charge Shot
 global.laser_array[3,0] = "Charge Shot";
 global.laser_array[3,1] = spr_Charge_Shot_Shop_Item;
-global.laser_array[3,2] = true;
+global.laser_array[3,2] = false;
 
 // Seeker Laser
 global.laser_array[4,0] = "Seeker Laser";
 global.laser_array[4,1] = spr_Seeker_Shot_Shop_Item;
-global.laser_array[4,2] = true;
+global.laser_array[4,2] = false;
 
 // Fleet Trident
 global.laser_array[5,0] = "Fleet Trident";
 global.laser_array[5,1] = spr_Trident_Shop_Item;
-global.laser_array[5,2] = true;
+global.laser_array[5,2] = false;
 </string>
           </argument>
         </arguments>
@@ -341,12 +339,12 @@ global.missile_array[0,2] = true;
 // Homing Missile
 global.missile_array[1,0] = "Homing Missile";
 global.missile_array[1,1] = spr_Homing_Missile_Shop_Item;
-global.missile_array[1,2] = true;
+global.missile_array[1,2] = false;
 
 // Missile Barrage
 global.missile_array[2,0] = "Missile Barrage";
 global.missile_array[2,1] = spr_Missile_Barrage_Shop_Item;
-global.missile_array[2,2] = true;
+global.missile_array[2,2] = false;
 </string>
           </argument>
         </arguments>

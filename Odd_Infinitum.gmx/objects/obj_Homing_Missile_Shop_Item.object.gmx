@@ -29,7 +29,7 @@
 mouse_enter = false;
 name = "Homing Missile";
 desc = "Missile that locks onto critical targets. Lower velocity than the Standard Missile, but does not require aiming.";
-cost = 30;
+cost = 12000;
 m_use = 1;
 </string>
           </argument>

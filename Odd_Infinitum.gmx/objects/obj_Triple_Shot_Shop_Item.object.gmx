@@ -29,7 +29,7 @@
 mouse_enter = false;
 name = "Spread Shot";
 desc = "Fires 3 spherical lasers at once at the cost of a high amount of energy. Highly effective in close-quartes combat";
-cost = 10;
+cost = 4000;
 damage = "High";
 </string>
           </argument>
