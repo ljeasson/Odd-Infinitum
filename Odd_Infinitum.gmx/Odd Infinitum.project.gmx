@@ -612,7 +612,7 @@
       <object>objects\obj_Marker_Level_3</object>
       <object>objects\obj_Marker_Level_Final</object>
       <object>objects\obj_Main_Base</object>
-      <object>objects\obj_Borris__Ship</object>
+      <object>objects\obj_Borris_Ship</object>
       <object>objects\obj_Level_1</object>
       <object>objects\obj_Level_2</object>
       <object>objects\obj_Level_3</object>
@@ -741,15 +741,13 @@
     <objects name="Harrier Angel">
       <object>objects\obj_Harrier_Angel</object>
       <object>objects\obj_Portal_Entrance</object>
-      <objects name="Default Form">
+      <objects name="Angelic Form">
+        <object>objects\obj_Angelic_Dart</object>
+        <object>objects\obj_Tracking_Halo</object>
         <object>objects\obj_Angel_Projectile_Holder_Top</object>
         <object>objects\obj_Angel_Projectile_Holder_Middle</object>
         <object>objects\obj_Angel_Projectile_Holder_Bottom</object>
         <object>objects\obj_Angel_Projectile</object>
-      </objects>
-      <objects name="Angelic Form">
-        <object>objects\obj_Angelic_Dart</object>
-        <object>objects\obj_Tracking_Halo</object>
       </objects>
       <objects name="Eldritch Form">
         <object>objects\obj_Eldritch_Beam</object>
@@ -794,6 +792,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\room_init</room>
+    <room>rooms\room_Harrier_Angel</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_intro_cinematic</room>
     <rooms name="Tutorial">
@@ -810,7 +809,6 @@
     <rooms name="Bosses">
       <room>rooms\room_Core_Destroyer</room>
       <room>rooms\room_Fleet_Commander_Daemeon</room>
-      <room>rooms\room_Harrier_Angel</room>
       <room>rooms\room_The_Queen</room>
       <room>rooms\room_Arbiter_of_the_Cosmos</room>
     </rooms>

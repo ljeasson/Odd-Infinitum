@@ -14,20 +14,26 @@ else
 // Attacks
 if (!attack_lock)
 {   
-    // Angelic Projectiles
-    instance_create_once(obj_Harrier_Angel.x-200, obj_Harrier_Angel.y, obj_Angel_Projectile_Holder_Middle);
-    instance_create_once(obj_Harrier_Angel.x-180, obj_Harrier_Angel.y-120, obj_Angel_Projectile_Holder_Top); 
-    instance_create_once(obj_Harrier_Angel.x-180, obj_Harrier_Angel.y+120, obj_Angel_Projectile_Holder_Bottom);
+    // Bident Rapid Fire
     
     // Lock Attack
     attack_lock = true;
     alarm[0] = 480;
 }
+
 if (!attack_lock_2)
 {
+    // Bident Burst Fire
+        
+    // Lock Attack
+    attack_lock_2 = true;
+    alarm[4] = 1200;
+}
+
+if (!attack_lock_3)
+{
     // Harrier Strike
-    //instance_create_once();
-    
+        
     // Lock Attack
     attack_lock_2 = true;
     alarm[4] = 1200;

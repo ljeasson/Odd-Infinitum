@@ -6,7 +6,7 @@ if (path_index = -1)
     path_start(path_Harrier_Angel_1, 3, path_action_restart, true);
     
 // Attacks
-selection = irandom(2);    
+selection = irandom(3);    
 
 switch (selection)
 {
@@ -18,7 +18,7 @@ switch (selection)
                         
             // Lock Attack
             attack_lock = true;
-            alarm[0] = random_range(30,120);
+            alarm[0] = random_range(30,90);
             break;
         }
                
@@ -33,8 +33,21 @@ switch (selection)
             alarm[4] = 960;
             break;
         } 
-               
-     default:
+        
+    case 2: 
+        if (!attack_lock_3) 
+        {  
+            // Angelic Projectiles
+            instance_create_once(obj_Harrier_Angel.x-200, obj_Harrier_Angel.y, obj_Angel_Projectile_Holder_Middle);
+            instance_create_once(obj_Harrier_Angel.x-180, obj_Harrier_Angel.y-120, obj_Angel_Projectile_Holder_Top); 
+            instance_create_once(obj_Harrier_Angel.x-180, obj_Harrier_Angel.y+120, obj_Angel_Projectile_Holder_Bottom);     
+    
+            // Lock Attack
+            attack_lock_3 = true;
+            alarm[5] = 480;
+        }
+        
+    default:
         break;
 }
 
