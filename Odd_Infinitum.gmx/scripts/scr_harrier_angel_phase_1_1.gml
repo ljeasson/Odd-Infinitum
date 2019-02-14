@@ -16,6 +16,10 @@ if (!attack_lock)
 {   
     // Bident Rapid Fire
     
+    // Rotate
+    rotate = true;
+    alarm[6] = 240;
+    
     // Lock Attack
     attack_lock = true;
     alarm[0] = 480;
@@ -33,8 +37,15 @@ if (!attack_lock_2)
 if (!attack_lock_3)
 {
     // Harrier Strike
+    
+    // Rotate
+    rotate = true;
+    alarm[6] = 240;
+    
+    // Create Harrier Missile Generator
+    instance_create(x,y,harrier_strike_controller);
         
     // Lock Attack
-    attack_lock_2 = true;
+    attack_lock_3 = true;
     alarm[4] = 1200;
 }

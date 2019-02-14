@@ -28,14 +28,14 @@
             <string>/// Parry Bosses
 
 // Core Destroyer boss fight
-if (room = room_Fleet_Commander_Daemeon)
+if (room == room_Fleet_Commander_Daemeon)
 {
     if (instance_exists(obj_Blue_Ring))
         follow_object(obj_Blue_Ring, 8);
 }
 
-// leet Commander Daemeon boss fight
-if (room = room_Fleet_Commander_Daemeon)
+// Fleet Commander Daemeon boss fight
+if (room == room_Fleet_Commander_Daemeon)
 {
     // Defector 1
     if (instance_exists(obj_Defector_1_Combat))
@@ -46,6 +46,13 @@ if (room = room_Fleet_Commander_Daemeon)
     // Fleet Commander Daemeon
     else if (instance_exists(obj_Fleet_Commander_Daemeon))
         follow_object(obj_Fleet_Commander_Daemeon, 8);
+}
+
+// Harrier Angel Boss Fight
+if (room == room_Harrier_Angel)
+{
+    if (instance_exists(obj_Harrier_Angel))
+        follow_object(obj_Harrier_Angel, 8);
 }
 </string>
           </argument>

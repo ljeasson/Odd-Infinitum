@@ -19,5 +19,5 @@ else
     instance_destroy(obj_Portal_Entrance);
 
     // State Transition
-    state = harrier_angel_states.phase_1_2;
+    state = harrier_angel_states.phase_1_1;
 }

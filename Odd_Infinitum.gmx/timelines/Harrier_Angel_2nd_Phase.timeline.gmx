@@ -129,7 +129,7 @@ instance_create(room_width-256,room_height/2,obj_Portal_2);
           <argument>
             <kind>1</kind>
             <string>/// Switch state
-obj_Harrier_Angel.state = harrier_angel_states.phase_2_fight;
+obj_Harrier_Angel.state = harrier_angel_states.phase_2_2;
 </string>
           </argument>
         </arguments>

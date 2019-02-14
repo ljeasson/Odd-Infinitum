@@ -457,7 +457,7 @@
       <script>scripts\scr_harrier_angel_phase_1_2.gml</script>
       <script>scripts\scr_harrier_angel_phase_1_3.gml</script>
       <script>scripts\scr_harrier_angel_phase_2_intro.gml</script>
-      <script>scripts\scr_harrier_angel_phase_2_fight.gml</script>
+      <script>scripts\scr_harrier_angel_phase_2_2.gml</script>
       <script>scripts\scr_harrier_angel_defeat.gml</script>
     </scripts>
     <scripts name="The Queen">
@@ -741,6 +741,10 @@
     <objects name="Harrier Angel">
       <object>objects\obj_Harrier_Angel</object>
       <object>objects\obj_Portal_Entrance</object>
+      <objects name="Harrier Form">
+        <object>objects\harrier_strike_controller</object>
+        <object>objects\obj_Harrier_Missile</object>
+      </objects>
       <objects name="Angelic Form">
         <object>objects\obj_Angelic_Dart</object>
         <object>objects\obj_Tracking_Halo</object>

@@ -96,8 +96,16 @@
           <argument>
             <kind>1</kind>
             <string>/// Update X and Y
-x = obj_Harrier_Angel.x-180;
-y = obj_Harrier_Angel.y+120;
+if (obj_Harrier_Angel.state = harrier_angel_states.phase_1_2)
+{
+    x = obj_Harrier_Angel.x-180;
+    y = obj_Harrier_Angel.y+120;
+}
+else if (obj_Harrier_Angel.state = harrier_angel_states.phase_2_2)
+{
+    x = obj_Harrier_Angel.x+180;
+    y = obj_Harrier_Angel.y+120;
+}
 </string>
           </argument>
         </arguments>

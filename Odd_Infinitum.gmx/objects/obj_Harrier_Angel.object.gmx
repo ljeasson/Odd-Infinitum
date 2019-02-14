@@ -68,10 +68,15 @@ entrance_speed = 5;
 // Player damage ratings
 laser_weakness = 2;
 triple_shot_weakness = 4;
-rapid_fire_weakness = 0.5;
-giant_laser_weakness = 5;
+rapid_fire_weakness = 1;
+charge_shot_weakness = 10;
+seeker_shot_weakness = 0.1;
+trident_weakness = 0.5;
+
+parry_shot_weakness = 15;
 
 missile_weakness = 10;
+homing_missile_weakness = 8;
 </string>
           </argument>
         </arguments>
@@ -196,6 +201,52 @@ global.the_queen_unlocked = true;
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Disable Attack Lock</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>rotate</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
           </argument>
         </arguments>
       </action>
@@ -520,8 +571,8 @@ switch (state)
     case harrier_angel_states.phase_2_intro:
         scr_harrier_angel_phase_2_intro();
         break;
-    case harrier_angel_states.phase_2_fight:
-        scr_harrier_angel_phase_2_fight();
+    case harrier_angel_states.phase_2_2:
+        scr_harrier_angel_phase_2_2();
         break;
     case harrier_angel_states.defeat:
         scr_harrier_angel_defeat();
@@ -560,6 +611,48 @@ if (boss_health &lt;= 50) {state = harrier_angel_states.phase_2_intro;}
 if (boss_health &lt; 0) {boss_health = 0;}
 if (boss_health == 0) {state = harrier_angel_states.defeat;}
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Parry_Shot">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>boss_take_damage</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>parry_shot_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
