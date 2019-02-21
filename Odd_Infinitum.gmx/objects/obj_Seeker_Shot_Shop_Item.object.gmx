@@ -29,7 +29,7 @@
 mouse_enter = false;
 name = "Seeker Shot";
 desc = "Individual shots home to critical target. Very low damage output, but aiming not required.";
-cost = 9000;
+cost = 8000;
 damage = "Very Low";
 </string>
           </argument>

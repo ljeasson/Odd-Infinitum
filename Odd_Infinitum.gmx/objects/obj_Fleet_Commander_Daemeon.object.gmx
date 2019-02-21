@@ -63,7 +63,7 @@ exit_speed = 1;
 
 // Player damage ratings
 laser_weakness = 3;
-triple_shot_weakness = 5;
+triple_shot_weakness = 3;
 rapid_fire_weakness = 1;
 seeker_shot_weakness = 0.5;
 charge_shot_weakness = 10;

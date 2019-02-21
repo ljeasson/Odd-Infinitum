@@ -31,7 +31,7 @@ boss_name = "R.E.D.D. Fleet Spearman";
 
 // Player damage ratings
 laser_weakness = 10;
-triple_shot_weakness = 20;
+triple_shot_weakness = 12;
 rapid_fire_weakness = 5;
 seeker_shot_weakness = 2;
 charge_shot_weakness = 25;

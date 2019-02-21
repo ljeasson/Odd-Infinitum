@@ -19,5 +19,5 @@ shot3 = instance_create(x+48,y+24,obj_Triple_Shot);
 shot3.direction = -30;
 shot3.speed = 15;
     
-// Decrease overheat by 25
-global.overheat -= 25;
+// Decrease overheat by 30
+global.overheat -= 30;
