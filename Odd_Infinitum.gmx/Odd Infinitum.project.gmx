@@ -635,7 +635,6 @@
     </objects>
     <objects name="Missile Alternates">
       <object>objects\obj_Homing_Missile</object>
-      <object>objects\obj_Missile_Barrage</object>
     </objects>
     <objects name="Buttons">
       <object>objects\obj_Title</object>

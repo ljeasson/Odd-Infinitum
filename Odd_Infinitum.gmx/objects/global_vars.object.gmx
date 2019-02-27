@@ -125,7 +125,7 @@ global.alt_laser = "Pilot Laser";
 // Missile
 global.missile = "Standard Missile";
 // Augment
-global.augment = "Tortise";
+global.augment = "Quick Repair";
 // Skin
 global.skin = "Scouter";
 </string>
