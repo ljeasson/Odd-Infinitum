@@ -80,7 +80,7 @@ if (time &lt; text_length)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Render portrait and text box
+            <string>/// Render portrait, text box, and buttons
 
 // Portrait Box
 draw_rectangle_colour(32, room_height-256, 224, room_height-64, c_black, c_black, c_black, c_black, false);
@@ -96,6 +96,13 @@ draw_set_font(UI_Font_Large);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text(128, room_height-96, name);
+
+// Draw Button
+if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
+{
+    draw_sprite(spr_Controller_A, 0, room_width/2, room_height-256);
+    draw_text(room_width/2, room_height-192, "Next");
+}
 </string>
           </argument>
         </arguments>

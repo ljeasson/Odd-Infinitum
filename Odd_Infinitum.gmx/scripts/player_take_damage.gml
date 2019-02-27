@@ -5,6 +5,9 @@ if (obj_Player.state == player_states.normal)
 {
     // Disable No Damage Reward
     obj_Player.No_Damage_Earned = 0;    
+    
+    // Destroy Charge Shot
+    instance_destroy(obj_Charge_Shot);
 
     // Play Damage Sound
     audio_play_sound(snd_Player_Damage, 1, false);
