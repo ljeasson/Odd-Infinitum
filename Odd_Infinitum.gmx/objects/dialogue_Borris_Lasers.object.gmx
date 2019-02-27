@@ -56,6 +56,25 @@ dialogue_lock = false;
             <kind>1</kind>
             <string>/// Step through dialogue
 
+key_next = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_shoulderr);
+key_skip = keyboard_check_pressed(vk_rcontrol) || gamepad_button_check_pressed(0, gp_shoulderl); 
+
+// Increment Dialogue Number
+if (key_next)
+{
+    instance_destroy(obj_dialogue_box);
+    dialogue_lock = false;
+    dialogue_number += 1;
+}
+
+// Skip All Dialogue
+if (key_skip)
+{
+    instance_destroy(dialogue_Borris_Intro);
+    instance_destroy(obj_dialogue_box);
+}
+
+//
 switch (dialogue_number)
 {
     case 0:
@@ -77,58 +96,6 @@ switch (dialogue_number)
     default:
         instance_destroy();
         break;}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="17">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Skip all dialogue
-instance_destroy(dialogue_Borris_Intro);
-instance_destroy(obj_dialogue_box);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="13">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Increment Dialogue Number
-instance_destroy(obj_dialogue_box);
-dialogue_lock = false;
-dialogue_number += 1;
 </string>
           </argument>
         </arguments>

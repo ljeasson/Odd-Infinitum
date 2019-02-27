@@ -97,11 +97,26 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_text(128, room_height-96, name);
 
-// Draw Button
+// Draw Buttons
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
 {
-    draw_sprite(spr_Controller_A, 0, room_width/2, room_height-256);
-    draw_text(room_width/2, room_height-192, "Next");
+    // RB Button and 'Next'
+    draw_sprite(spr_Controller_RB, 0, room_width-384, room_height-192);
+    draw_text(room_width-384, room_height-128, "Next");
+    
+    // LB Button and 'Skip'
+    draw_sprite(spr_Controller_LB, 0, room_width-192, room_height-192);
+    draw_text(room_width-192, room_height-128, "Skip");
+}
+else
+{
+    // Enter Button and 'Next'
+    draw_sprite(spr_Enter, 0, room_width-384, room_height-192);
+    draw_text(room_width-384, room_height-128, "Next");
+    
+    // Ctrl Button and 'Skip'
+    draw_sprite(spr_Ctrl, 0, room_width-192, room_height-192);
+    draw_text(room_width-192, room_height-128, "Skip");
 }
 </string>
           </argument>

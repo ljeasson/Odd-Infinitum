@@ -42,7 +42,7 @@ if (room == room_Fleet_Commander_Daemeon)
         follow_object(obj_Defector_1_Combat, 8);
     // Defector 3
     else if (instance_exists(obj_Defector_3_Combat))
-        follow_object(obj_Defector_1_Combat, 8);
+        follow_object(obj_Defector_3_Combat, 8);
     // Fleet Commander Daemeon
     else if (instance_exists(obj_Fleet_Commander_Daemeon))
         follow_object(obj_Fleet_Commander_Daemeon, 8);

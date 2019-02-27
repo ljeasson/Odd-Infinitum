@@ -201,6 +201,8 @@
     <sprites name="Keyboard Buttons">
       <sprite>sprites\spr_Button_Blank</sprite>
       <sprite>sprites\spr_Button_Blank_2</sprite>
+      <sprite>sprites\spr_Enter</sprite>
+      <sprite>sprites\spr_Ctrl</sprite>
       <sprite>sprites\spr_Menu_Back</sprite>
       <sprite>sprites\spr_Up</sprite>
       <sprite>sprites\spr_Down</sprite>
@@ -237,7 +239,9 @@
       <sprite>sprites\spr_Controller_X</sprite>
       <sprite>sprites\spr_Controller_Y</sprite>
       <sprite>sprites\spr_Controller_RB</sprite>
+      <sprite>sprites\spr_Controller_LB</sprite>
       <sprite>sprites\spr_Controller_RT</sprite>
+      <sprite>sprites\spr_Controller_LT</sprite>
     </sprites>
     <sprites name="Effects">
       <sprite>sprites\spr_Explosion_Small</sprite>
