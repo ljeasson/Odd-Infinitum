@@ -96,8 +96,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Follow object
-x = obj_Player.x+24;
-y = obj_Player.y+16;
+if (instance_exists(obj_Player))
+{
+    x = obj_Player.x+24;
+    y = obj_Player.y+16;
+}
+else
+    instance_destroy();
 </string>
           </argument>
         </arguments>

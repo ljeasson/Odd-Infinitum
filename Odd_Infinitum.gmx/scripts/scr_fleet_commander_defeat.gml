@@ -1,6 +1,11 @@
 // Stop Moving
 path_end();
     
+// Destroy Attack Controllers
+instance_destroy(obj_Wave_Shot_Controller);
+instance_destroy(obj_Red_Large_Laser_Controller);
+instance_destroy(obj_Fleet_Commander_Missile);
+
 // Change sprite
 if (sprite_index != spr_Fleet_Commander_Daemeon_Defeat)
     sprite_index = spr_Fleet_Commander_Daemeon_Defeat;

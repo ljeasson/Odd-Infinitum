@@ -84,8 +84,6 @@ if (!global.seen_intro)
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="9" enumb="13">
       <action>
         <libid>1</libid>
         <id>611</id>
@@ -102,31 +100,109 @@ if (!global.seen_intro)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.seen_intro</string>
+            <string>show_skip</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>!global.seen_intro</string>
+            <string>false</string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>11</kind>
-            <room>room_tutorial</room>
+            <kind>1</kind>
+            <string>show_skip</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Skip Intro Cinematic
+
+key_skip = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_face1);
+
+if (key_skip)
+{
+    global.seen_intro = !global.seen_intro;
+    room_goto(room_tutorial);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw Buttons
+
+draw_set_color(c_white);
+draw_set_font(UI_Font_Large);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
+{   
+    // A Button and 'Skip'
+    draw_sprite(spr_Controller_A, 0, room_width-128, room_height-128);
+    draw_text(room_width-128, room_height-64, "Skip");
+}
+else
+{ 
+    // Enter Button and 'Skip'
+    draw_sprite(spr_Enter, 0, room_width-128, room_height-128);
+    draw_text(room_width-128, room_height-64, "Skip");
+}
+</string>
           </argument>
         </arguments>
       </action>

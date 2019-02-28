@@ -39,6 +39,9 @@ global.overheat_recharge = 0.6;
 global.missile_count = 2;
 global.shop_currency = 0;
 
+// SET CONTROLLER DEADZONE
+if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.15);
+
 // PLAYER NUMBER
 global.num_players = 1;
 
@@ -211,7 +214,7 @@ global.alien_youngling_damage = 10;
             <string>/// Progression
 global.fleet_commander_daemeon_unlocked = true;
 global.harrier_angel_unlocked = false;
-global.the_queen_unlocked = false;
+global.the_queen_unlocked = true;
 </string>
           </argument>
         </arguments>
@@ -369,57 +372,70 @@ global.missile_array[2,2] = false;
 
 // [_,0] = Name
 // [_,1] = Icon
+// [_,2] = Bought (True/False)
 
 global.num_augments = 12;
-global.augment_array[global.num_augments,1] = "";
+global.augment_array[global.num_augments,3] = "";
 
 // Quick Repair
 global.augment_array[0,0] = "Quick Repair";
 global.augment_array[0,1] = spr_Quick_Repair_Shop_Item;
+global.augment_array[0,2] = true;
 
 // Automated Repair
 global.augment_array[1,0] = "Automated Repair";
 global.augment_array[1,1] = spr_Automated_Repair_Shop_Item;
+global.augment_array[1,2] = true;
 
 // Emergency Repair
 global.augment_array[2,0] = "Emergency Repair";
 global.augment_array[2,1] = spr_Emergency_Repair_Shop_Item;
+global.augment_array[2,2] = true;
 
 // Emergency Supercharge
 global.augment_array[3,0] = "Emergency Supercharge";
 global.augment_array[3,1] = spr_Emergency_Supercharge_Shop_Item;
+global.augment_array[3,2] = true;
 
 // Supply Drop
 global.augment_array[4,0] = "Supply Drop";
 global.augment_array[4,1] = spr_Supply_Drop_Shop_Item;
+global.augment_array[4,2] = true;
 
 // Close Call Stasis
 global.augment_array[5,0] = "Close Call Stasis";
 global.augment_array[5,1] = spr_Close_Call_Stasis_Shop_Item;
+global.augment_array[5,2] = true;
 
 // Close Call Supercharge
 global.augment_array[6,0] = "Close Call Supercharge";
 global.augment_array[6,1] = spr_Close_Call_Supercharge_Shop_Item;
+global.augment_array[6,2] = true;
 
 // Tortise
 global.augment_array[7,0] = "Tortise";
 global.augment_array[7,1] = spr_Tortise_Shop_Item;
+global.augment_array[7,2] = true;
 
 // Buckler Repair
 global.augment_array[8,0] = "Buckler Repair";
 global.augment_array[8,1] = spr_Buckler_Repair_Shop_Item;
+global.augment_array[8,2] = true;
 
 // Buckler Reload
 global.augment_array[9,0] = "Buckler Reload";
 global.augment_array[9,1] = spr_Buckler_Reload_Shop_Item;
+global.augment_array[9,2] = true;
 
 // Auto-Counter
 global.augment_array[10,0] = "Auto-Counter";
 global.augment_array[10,1] = spr_Auto_Counter_Shop_Item;
+global.augment_array[10,2] = true;
 
 // Heat Absorption
 global.augment_array[11,0] = "Heat Absorption";
 global.augment_array[11,1] = spr_Heat_Absorption_Shop_Item;
+global.augment_array[11,2] = true;
 </string>
           </argument>
         </arguments>

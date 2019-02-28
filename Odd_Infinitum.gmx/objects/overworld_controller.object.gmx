@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// Instantiate Pilot Tools
 
+/*
 // Messaging Beacon
 if (global.pilot_insignia)
     instance_create(room_width/2 - 192, 48, obj_Messaging_Beacon_Tool)
@@ -38,7 +39,7 @@ if (global.friendly_pilot_beacon)
 // Hostile Pilot Beacon
 if (global.hostile_pilot_beacon)
     instance_create(room_width/2 + 192, 48, obj_Hostile_Pilot_Beacon_Tool)
-
+*/
 </string>
           </argument>
         </arguments>

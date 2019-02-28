@@ -569,7 +569,7 @@ if (boss_health == 0) {state = fleet_shotgunner_states.defeat}
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>boss_take_damage</script>
+            <script>boss_take_damage_missile</script>
           </argument>
           <argument>
             <kind>0</kind>

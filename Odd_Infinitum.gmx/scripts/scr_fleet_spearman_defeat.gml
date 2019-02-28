@@ -2,7 +2,7 @@
 
 // Stop Moving
 path_end();
-    
+
 // Generate Random Explosions
 generate_explosions(99);
     
