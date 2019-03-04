@@ -27,7 +27,7 @@ key_dodge_released = keyboard_check_released(vk_shift) || (gamepad_button_check_
 key_energy_buckler = keyboard_check_pressed(ord('T')) || (gamepad_button_check_pressed(0,gp_shoulderlb)) || (gamepad_button_check_pressed(4,gp_shoulderlb));
 
 // Healing controls
-key_heal = keyboard_check_pressed(ord('E'));
+key_use = keyboard_check_pressed(ord('E')) || (gamepad_button_check_pressed(0,gp_shoulderr)) || (gamepad_button_check_pressed(4,gp_shoulderr));;
 
 // Set sprite to normal
 if (obj_Player.sprite_index != spr_Player)
@@ -91,7 +91,7 @@ if (key_energy_buckler)
 }
 
 // Quick Repair
-if (key_heal)
+if (key_use)
 {
     quick_repair();
     if (instance_exists(obj_Server))

@@ -54,6 +54,15 @@ if (room == room_Harrier_Angel)
     if (instance_exists(obj_Harrier_Angel))
         follow_object(obj_Harrier_Angel, 8);
 }
+
+// The Queen Boss Fight
+if (room == room_The_Queen)
+{
+    if (instance_exists(obj_Eye) &amp;&amp; instance_number(obj_Eye) == 1)
+        follow_object(obj_Eye, 8);
+    if (instance_exists(obj_Core))
+        follow_object(obj_Core, 8);
+}
 </string>
           </argument>
         </arguments>

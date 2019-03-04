@@ -13,16 +13,16 @@ draw_text(room_width/2, 176, "AUGMENTS");
 // Instantiate and Populate Array
 augments[0,0] = obj_Quick_Repair_Inv;
 augments[1,0] = obj_Automated_Repair_Inv;
-augments[2,0] = obj_Quick_Repair_Inv;//obj_Emergency_Repair_Inv;
-augments[3,0] = obj_Quick_Repair_Inv;//obj_Emergency_Supercharge_Inv;
-augments[0,1] = obj_Quick_Repair_Inv;//obj_Supply_Drop_Inv;
-augments[1,1] = obj_Quick_Repair_Inv;//obj_Close_Call_Stasis_Inv;
-augments[2,1] = obj_Quick_Repair_Inv;//obj_Close_Call_Supercharge_Inv;
+augments[2,0] = obj_Buckler_Repair_Inv; 
+augments[3,0] = obj_Buckler_Reload_Inv; 
+augments[0,1] = obj_Supply_Drop_Inv;
+augments[1,1] = obj_Emergency_Repair_Inv;
+augments[2,1] = obj_Emergency_Supercharge_Inv;
 augments[3,1] = obj_Tortise_Inv;
-augments[0,2] = obj_Quick_Repair_Inv;//obj_Buckler_Repair_Inv;
-augments[1,2] = obj_Quick_Repair_Inv;//obj_Buckler_Reload_Inv;
-augments[2,2] = obj_Quick_Repair_Inv;//obj_Auto_Counter_Inv;
-augments[3,2] = obj_Quick_Repair_Inv;//obj_Heat_Absorption_Inv;
+augments[0,2] = obj_Quick_Repair_Inv; //obj_Close_Call_Stasis_Inv
+augments[1,2] = obj_Quick_Repair_Inv; //obj_Close_Call_Supercharge_Inv;
+augments[2,2] = obj_Quick_Repair_Inv; //obj_Auto_Counter_Inv;
+augments[3,2] = obj_Quick_Repair_Inv; //obj_Heat_Absorption_Inv;
 
 // Draw Augment Objects
 for (i = 1; i <= 4; i++)

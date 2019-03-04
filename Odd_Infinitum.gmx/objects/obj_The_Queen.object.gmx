@@ -43,14 +43,20 @@ attack_lock_3 = false;
 
 // Status booleans
 explosion_imminent = false;
+explosions = false;
 
 // Player damage ratings
 laser_weakness = 1;
 triple_shot_weakness = 3;
 rapid_fire_weakness = 0.5;
-giant_laser_weakness = 5;
+seeker_shot_weakness = 0.15;
+charge_shot_weakness = 10;
+fleet_trident_weakness = 4;
+
+parry_shot_weakness = 25;
 
 missile_weakness = 15;
+homing_missile_weakness = 10;
 </string>
           </argument>
         </arguments>
@@ -171,9 +177,20 @@ missile_weakness = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create Explosion and Destroy
+            <string>/// Create Explosion
 instance_create(x,y,obj_Big_Explosion);
-instance_destroy();
+
+// Change Sprite
+sprite_index = spr_The_Queen_Dead;
+
+// Create Screen Shake
+instance_create(0,0,screen_shake_boss_death);
+
+// Create Victory Stat Container
+instance_create(0,0,victory_stat_container);
+
+// Disable Explosions
+explosions = false;
 
 // Stop Audio
 audio_stop_all();

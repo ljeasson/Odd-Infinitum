@@ -194,7 +194,8 @@ attack_lock_3 = false;
 // Tentacle Attack from Top
 if (!attack_lock)
 {
-    instance_create(random_range(obj_Player.x+48, room_width-512), -652, obj_Tentacle_Down);
+    if (instance_exists(obj_Player))
+        instance_create(random_range(obj_Player.x+48, room_width-512), -652, obj_Tentacle_Down);
     
     attack_lock = true;
     alarm[0] = random_range(240,480);
@@ -203,7 +204,8 @@ if (!attack_lock)
 // Tentacle Attack from Bottom
 if (!attack_lock_2)
 {
-    instance_create(random_range(obj_Player.x+48, room_width-512), room_height+652, obj_Tentacle_Up);
+    if (instance_exists(obj_Player))
+        instance_create(random_range(obj_Player.x+48, room_width-512), room_height+652, obj_Tentacle_Up);
     
     attack_lock_2 = true;
     alarm[1] = random_range(240,480);

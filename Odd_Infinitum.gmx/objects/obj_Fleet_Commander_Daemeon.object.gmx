@@ -167,8 +167,11 @@ instance_create(room_width/2, room_height/2, obj_Friendly_Pilot_Beacon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Unlock Harrier Angel Boss Fight
-global.harrier_angel_unlocked = true;
+            <string>/// Unlock The Queen Boss Fight
+global.the_queen_unlocked = true;
+
+// Unlock Harrier Angel Boss Fight
+//global.harrier_angel_unlocked = true;
 </string>
           </argument>
         </arguments>

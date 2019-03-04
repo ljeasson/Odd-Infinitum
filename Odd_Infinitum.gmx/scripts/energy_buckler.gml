@@ -7,6 +7,8 @@ if (energy_buckler_available)
     if (global.augment == "Tortise")
     {
         instance_create(x+24,y+16,obj_Energy_Buckler_Persistent);
+        
+        // Stop Speed Boost
         player_dodge = 0;
         obj_Player.image_blend = c_white;
     }

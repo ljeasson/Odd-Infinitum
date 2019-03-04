@@ -130,6 +130,7 @@
     <sprites name="The Queen">
       <sprite>sprites\spr_The_Queen_1st</sprite>
       <sprite>sprites\spr_The_Queen_2nd</sprite>
+      <sprite>sprites\spr_The_Queen_Dead</sprite>
       <sprite>sprites\spr_Eye</sprite>
       <sprite>sprites\spr_Core</sprite>
       <sprite>sprites\spr_Egg_Bouncing</sprite>
@@ -320,7 +321,6 @@
       <script>scripts\Chance.gml</script>
       <script>scripts\generate_random_sequence.gml</script>
       <script>scripts\generate_explosions.gml</script>
-      <script>scripts\generate_blood_explosions.gml</script>
       <script>scripts\follow_object.gml</script>
       <script>scripts\instance_create_once.gml</script>
       <script>scripts\toggle_fullscreen.gml</script>
@@ -380,6 +380,7 @@
       </scripts>
       <script>scripts\missile_regain.gml</script>
       <script>scripts\energy_buckler.gml</script>
+      <script>scripts\parry.gml</script>
       <script>scripts\check_dodge.gml</script>
       <script>scripts\dodge.gml</script>
       <script>scripts\check_callout.gml</script>
@@ -466,6 +467,7 @@
       <script>scripts\scr_harrier_angel_defeat.gml</script>
     </scripts>
     <scripts name="The Queen">
+      <script>scripts\generate_blood_explosions.gml</script>
       <script>scripts\spawn_bouncing_egg.gml</script>
       <script>scripts\spawn_following_egg.gml</script>
       <script>scripts\spawn_exploding_egg.gml</script>
