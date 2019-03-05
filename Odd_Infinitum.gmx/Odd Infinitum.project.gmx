@@ -198,6 +198,7 @@
       <sprite>sprites\spr_Box</sprite>
       <sprite>sprites\spr_Overheat</sprite>
       <sprite>sprites\spr_Cursor</sprite>
+      <sprite>sprites\spr_NEW</sprite>
     </sprites>
     <sprites name="Keyboard Buttons">
       <sprite>sprites\spr_Button_Blank</sprite>
@@ -598,6 +599,7 @@
       <object>objects\obj_Big_Explosion</object>
     </objects>
     <objects name="Tutorial">
+      <object>objects\obj_NEW</object>
       <object>objects\obj_Marker_Movement</object>
       <object>objects\obj_Marker_Laser</object>
       <object>objects\obj_Marker_Missile</object>

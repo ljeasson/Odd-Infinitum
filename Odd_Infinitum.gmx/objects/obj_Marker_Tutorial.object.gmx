@@ -88,6 +88,8 @@ draw_set_font(UI_Font);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
+if (!global.movement_visited || !global.laser_visited || !global.missile_visited) draw_sprite(spr_NEW, 0, x, y-40);
+
 if (showtext == 1)
 {
     draw_set_color(c_white);
