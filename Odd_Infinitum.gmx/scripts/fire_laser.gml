@@ -1,4 +1,4 @@
-// fire_laser()
+/// fire_laser()
 // Fires a laser
 
 if (!instance_exists(obj_Energy_Buckler_Persistent))

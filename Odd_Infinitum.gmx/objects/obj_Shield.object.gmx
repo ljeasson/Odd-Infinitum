@@ -250,7 +250,7 @@ y = obj_Fleet_Commander_Daemeon.y;
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>0</kind>

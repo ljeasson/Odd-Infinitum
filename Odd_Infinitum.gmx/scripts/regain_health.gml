@@ -1,4 +1,6 @@
-/// regain_health()
+/// regain_health(amount)
+
+amount = argument0;
 
 // Create ellipse
 instance_create(x,y,obj_Health_Regain_Effect);
@@ -7,7 +9,7 @@ instance_create(x,y,obj_Health_Regain_Effect);
 audio_play_sound(snd_Health_Regain, 1, false);
 
 // Increase health
-health += 5
+health += amount;
 
 // Destroy Regain Laser
 instance_destroy(other);

@@ -1,4 +1,4 @@
-// dodge()
+/// dodge()
 // Dodge funcionality
 
 if (!instance_exists(obj_Energy_Buckler_Persistent))

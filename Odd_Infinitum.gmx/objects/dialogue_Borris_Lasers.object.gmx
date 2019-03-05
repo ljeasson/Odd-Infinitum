@@ -28,10 +28,6 @@
             <string>/// Dialogue Number
 dialogue_number = 0;
 dialogue_lock = false;
-//X = room_width/2-450;
-//Y = room_height-180;
-//var dialogue_box = instance_create(x, y, obj_dialogue_box);
-//dialogue_box.name = "Borris";
 </string>
           </argument>
         </arguments>

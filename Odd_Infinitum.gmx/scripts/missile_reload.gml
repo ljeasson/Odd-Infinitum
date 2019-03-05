@@ -1,5 +1,7 @@
-// missile_regain()
+/// missile_reload(health_decrease)
 // Replenishes missile at the expense of some health
+
+health_decrease = argument0;
 
 if (!instance_exists(obj_Energy_Buckler_Persistent))
 {
@@ -10,7 +12,9 @@ if (!instance_exists(obj_Energy_Buckler_Persistent))
     //effect_create_above(ef_ellipse,x+24,y+16,1,c_ltgray);    
     var ring = instance_create(x,y,obj_Ring);   
 
-    // Lose 20 health points and gain 2 missiles
-    health -= 20;
+    // Decrease health by decrease amount
+    health -= health_decrease;
+    
+    // Gain 2 missiles
     global.missile_count += 2;
 }

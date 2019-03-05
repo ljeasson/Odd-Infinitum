@@ -1,4 +1,4 @@
-// check_callout()
+/// check_callout()
 // Continually checks for when a Callout button (1 through 0) 
 // is pressed and outputs the corresponding callout based on global vars
 

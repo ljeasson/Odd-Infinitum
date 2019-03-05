@@ -73,7 +73,7 @@ if (key_missile)
 // Missile Regain
 if (key_missile_regain) 
 {
-    missile_regain();
+    missile_reload(20);
     if (instance_exists(obj_Server))
         write_buffer_SERVER(4);
     if (instance_exists(obj_Client))

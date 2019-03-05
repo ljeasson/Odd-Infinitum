@@ -1,4 +1,4 @@
-// check_dodge()
+/// check_dodge()
 // Continually checks if the player is currently dodging
 // adjusts the speed appropriately
 

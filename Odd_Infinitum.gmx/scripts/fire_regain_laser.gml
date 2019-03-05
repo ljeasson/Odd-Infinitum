@@ -1,4 +1,4 @@
-// fire_regain_laser()
+/// fire_regain_laser()
 // Fires a Regain Laser to replenish health
 
 if (!instance_exists(obj_Energy_Buckler_Persistent))

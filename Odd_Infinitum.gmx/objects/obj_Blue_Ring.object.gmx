@@ -946,7 +946,7 @@ if (other.sprite_index == spr_Charge_Shot_3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>0</kind>

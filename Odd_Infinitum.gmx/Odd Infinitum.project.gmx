@@ -378,7 +378,7 @@
         <script>scripts\scr_homing_missile.gml</script>
         <script>scripts\scr_missile_barrage.gml</script>
       </scripts>
-      <script>scripts\missile_regain.gml</script>
+      <script>scripts\missile_reload.gml</script>
       <script>scripts\energy_buckler.gml</script>
       <script>scripts\parry.gml</script>
       <script>scripts\check_dodge.gml</script>

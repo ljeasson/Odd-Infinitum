@@ -1,4 +1,4 @@
-// fire_alt_laser()
+/// fire_alt_laser()
 // Fires alternative laser
 
 if (!instance_exists(obj_Energy_Buckler_Persistent))

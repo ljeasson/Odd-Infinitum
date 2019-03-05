@@ -1,4 +1,4 @@
-// fire_missile()
+/// fire_missile()
 // Fires a missile
 
 if (!instance_exists(obj_Energy_Buckler_Persistent))

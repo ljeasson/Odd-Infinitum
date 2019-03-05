@@ -1,4 +1,4 @@
-// energy_buckler()
+/// energy_buckler()
 // Creates Energy Buckler designed for temporary defense and counters
 
 if (energy_buckler_available)

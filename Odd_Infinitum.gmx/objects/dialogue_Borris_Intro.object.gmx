@@ -28,10 +28,10 @@
             <string>/// Dialogue Number
 dialogue_number = 0;
 dialogue_lock = false;
-//X = room_width/2-450;
-//Y = room_height-180;
-//var dialogue_box = instance_create(x, y, obj_dialogue_box);
-//dialogue_box.name = "Borris";
+
+// If dialogue has been seen and read,
+// skip it
+if (global.seen_borris_intro) instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -72,6 +72,7 @@ if (key_skip)
 {
     instance_destroy(dialogue_Borris_Intro);
     instance_destroy(obj_dialogue_box);
+    global.seen_borris_intro = true;
 }
 
 // 
@@ -104,6 +105,7 @@ switch (dialogue_number)
         break;
     default:
         instance_destroy();
+        global.seen_borris_intro = true;
         break;
 }
 </string>

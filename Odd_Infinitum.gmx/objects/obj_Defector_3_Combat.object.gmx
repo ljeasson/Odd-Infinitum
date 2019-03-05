@@ -667,7 +667,7 @@ if (boss_health == 0) {state = fleet_spearman_states.defeat;}
           </argument>
           <argument>
             <kind>0</kind>
-            <string></string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>0</kind>

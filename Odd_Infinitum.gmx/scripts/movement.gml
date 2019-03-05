@@ -1,4 +1,4 @@
-/// Movement
+/// movement()
 if (key_left and x > 0) 
 { 
     x -= player_speed;

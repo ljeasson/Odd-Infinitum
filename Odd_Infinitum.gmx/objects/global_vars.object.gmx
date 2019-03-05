@@ -211,6 +211,33 @@ global.alien_youngling_damage = 10;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Dialogue
+
+// Borris
+global.seen_borris_intro = false;
+global.seen_borris_movement = false;
+global.seen_borris_lasers = false;
+global.seen_borris_missiles = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Progression
 global.fleet_commander_daemeon_unlocked = false;
 global.harrier_angel_unlocked = false;
