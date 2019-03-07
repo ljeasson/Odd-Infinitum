@@ -69,7 +69,7 @@ window_set_cursor(cr_none);</code>
     <instance objName="obj_Level_1" x="176" y="512" name="inst_3DBC450C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="star_generator" x="0" y="0" name="inst_5DD0ED5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Main_Base" x="208" y="128" name="inst_685D7E5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Marker_Level_1" x="176" y="592" name="inst_45E25CAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Marker_Level_1" x="176" y="576" name="inst_45E25CAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Player_Overworld" x="64" y="688" name="inst_084E9F2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Marker_Pilot_Base" x="320" y="272" name="inst_CD6C165E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="room_controller" x="0" y="32" name="inst_223DE1E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

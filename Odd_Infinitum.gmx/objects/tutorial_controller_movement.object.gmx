@@ -60,10 +60,10 @@ instance_create(room_width/2-24, room_height/2+16, obj_Player);
 // Instructional Text
 
 // Move
-draw_set_font(UI_Font_Medium);
+draw_set_font(UI_Font_Large);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_text(room_width/2, 64, "MOVE");
+draw_text(room_width/2, 48, "MOVE");
 
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
     draw_sprite(spr_Controller_Stick_L, 0, room_width/2, 128);
@@ -76,7 +76,7 @@ else
 }
 
 // Speed Boost
-draw_set_font(UI_Font_Medium);
+draw_set_font(UI_Font_Large);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_text(left_margin, 320, "SPEED BOOST");

@@ -30,7 +30,7 @@
 // INTERNET CONNECTION
 global.connected = false;
 
-// UI VARIABLES
+// PLAYER VARIABLES
 health = 100;
 global.laser_speed = 10;
 global.enemy_laser_speed = 8;
@@ -38,6 +38,8 @@ global.overheat = 100;
 global.overheat_recharge = 0.6;
 global.missile_count = 2;
 global.shop_currency = 0;
+global.damage_buff_enabled = false;
+global.damage_buff_amount = 0;
 
 // SET CONTROLLER DEADZONE
 if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.15);
@@ -212,9 +214,20 @@ global.alien_youngling_damage = 10;
           <argument>
             <kind>1</kind>
             <string>/// Markers
+
+// Tutorial
 global.movement_visited = false;
 global.laser_visited = false;
 global.missile_visited = false;
+
+// Pilot Base
+global.pilot_base_visited = false;
+
+// Boss Levels
+global.core_destroyer_visited = false;
+global.fleet_commander_daemeon_visited = false;
+global.harrier_angel_visited = false;
+global.the_queen_visited = false;
 </string>
           </argument>
         </arguments>

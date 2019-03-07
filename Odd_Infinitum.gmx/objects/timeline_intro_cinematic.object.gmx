@@ -193,13 +193,13 @@ draw_set_valign(fa_middle);
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
 {   
     // A Button and 'Skip'
-    draw_sprite(spr_Controller_A, 0, room_width-128, room_height-128);
+    draw_sprite(spr_Controller_A, 0, room_width-128, room_height-120);
     draw_text(room_width-128, room_height-64, "Skip");
 }
 else
 { 
     // Enter Button and 'Skip'
-    draw_sprite(spr_Enter, 0, room_width-128, room_height-128);
+    draw_sprite(spr_Enter, 0, room_width-128, room_height-120);
     draw_text(room_width-128, room_height-64, "Skip");
 }
 </string>

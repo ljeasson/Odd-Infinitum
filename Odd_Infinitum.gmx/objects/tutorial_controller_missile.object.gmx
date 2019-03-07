@@ -82,15 +82,16 @@ instance_create(right_margin - 32, 64 + room_height/2 + 128, obj_Training_Spawn_
 draw_set_colour(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_set_font(UI_Font_Medium);
+draw_set_font(UI_Font_Large);
+
 draw_text(left_margin, 320, "MISSILE");
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-    draw_sprite(spr_Controller_X, 0, left_margin, 320 + 96)
+    draw_sprite(spr_Controller_X, 0, left_margin, 320 + 80)
 else
-    draw_sprite(spr_F, 0, left_margin, 320 + 96)
+    draw_sprite(spr_F, 0, left_margin, 320 + 80)
 
 // Missile Regain
-draw_text(left_margin, 512, "MISSILE RELOAD");
+draw_text(left_margin, 488, "MISSILE#RELOAD");
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
     draw_sprite(spr_Controller_Y, 0, left_margin, 512 + 96)
 else

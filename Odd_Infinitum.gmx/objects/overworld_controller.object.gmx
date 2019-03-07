@@ -73,9 +73,9 @@ if (instance_number(inventory_controller) == 0)
 {
     draw_text(room_width-90, room_height-134, "Equip#Menu");
     if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-        draw_sprite(spr_Controller_RB, 0, room_width-90, room_height-64);
+        draw_sprite(spr_Controller_RB, 0, room_width-90, room_height-60);
     else
-        draw_sprite(spr_Shift, 0, room_width-90, room_height-64);
+        draw_sprite(spr_Shift, 0, room_width-90, room_height-60);
 }
 
 // Draw Pilot Tools and Number Buttons

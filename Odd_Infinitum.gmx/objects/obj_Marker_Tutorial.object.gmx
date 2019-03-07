@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>showtext = 0;
 text = "TUTORIAL";
+has_new = false;
 </string>
           </argument>
         </arguments>
@@ -88,7 +89,14 @@ draw_set_font(UI_Font);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-if (!global.movement_visited || !global.laser_visited || !global.missile_visited) draw_sprite(spr_NEW, 0, x, y-40);
+if (!global.movement_visited || !global.laser_visited || !global.missile_visited)
+{
+    if (has_new) 
+    {
+        instance_create(x, y-40, obj_NEW);
+        has_new = false;
+    }
+}
 
 if (showtext == 1)
 {
@@ -98,9 +106,9 @@ if (showtext == 1)
     draw_set_font(UI_Font_Large);
     draw_text(room_width/2, room_height - 128, "PROCEED");
     if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-        draw_sprite(spr_Controller_A, 0, room_width/2, room_height - 84);
+        draw_sprite(spr_Controller_A, 0, room_width/2, room_height - 80);
     else
-        draw_sprite(spr_Button_Blank, 0, room_width/2, room_height - 84);
+        draw_sprite(spr_Button_Blank, 0, room_width/2, room_height - 80);
 }
 </string>
           </argument>

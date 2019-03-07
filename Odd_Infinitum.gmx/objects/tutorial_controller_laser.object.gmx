@@ -77,19 +77,20 @@ instance_create(right_margin - 32, 64 + room_height/2 + 128, obj_Training_Spawn)
 draw_set_colour(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_set_font(UI_Font_Medium);
+draw_set_font(UI_Font_Large);
+
 draw_text(left_margin, 320, "LASER");
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-    draw_sprite(spr_Controller_A, 0, left_margin, 320 + 96)
+    draw_sprite(spr_Controller_A, 0, left_margin, 320 + 80)
 else
-    draw_sprite(spr_Button_Blank, 0, left_margin, 320 + 96)
+    draw_sprite(spr_Button_Blank, 0, left_margin, 320 + 80)
 
 // Alt Laser
 draw_text(left_margin, 512, "ALT LASER");
 if (gamepad_is_connected(0) &amp;&amp; gamepad_is_supported())
-    draw_sprite(spr_Controller_B, 0, left_margin, 512 + 96)
+    draw_sprite(spr_Controller_B, 0, left_margin, 512 + 80)
 else
-    draw_sprite(spr_G, 0, left_margin, 512 + 96)
+    draw_sprite(spr_G, 0, left_margin, 512 + 80)
 </string>
           </argument>
         </arguments>
