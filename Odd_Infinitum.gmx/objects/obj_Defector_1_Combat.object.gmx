@@ -37,6 +37,7 @@ seeker_shot_weakness = 2;
 charge_shot_weakness = 25;
 fleet_trident_weakness = 8;
 missile_weakness = 25;
+homing_missile_weakness = 20;
 parry_shot_weakness = 30;
 
 // Attack lock
@@ -295,6 +296,48 @@ switch(state)
 if (boss_health &lt; 0) {boss_health = 0;}
 if (boss_health == 0) {state = fleet_fighter_states.defeat;}
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Homing_Missile">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>boss_take_damage_missile</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>homing_missile_weakness</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
