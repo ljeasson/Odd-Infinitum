@@ -304,7 +304,7 @@ seeking_speed = 6;
 if (follow)
 {
     // Move towards homing_target
-    follow_object(homing_target, 2);        
+    follow_object(homing_target, 2, true, 0);        
 }
 else if (thrust)
 {

@@ -322,11 +322,7 @@
 if (follow)
 {
     // Move towards player
-    follow_object(obj_Player, 2);
-
-    // Face towards player
-    if (instance_number(obj_Player) &gt; 0)
-        image_angle = point_direction(x, y, obj_Player.x, obj_Player.y) + 180;
+    follow_object(obj_Player, 2, true, 180);
 }
 else if (thrust)
 {

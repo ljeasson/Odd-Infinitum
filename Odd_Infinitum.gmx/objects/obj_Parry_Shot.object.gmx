@@ -31,7 +31,7 @@
 if (room == room_Fleet_Commander_Daemeon)
 {
     if (instance_exists(obj_Blue_Ring))
-        follow_object(obj_Blue_Ring, 8);
+        follow_object(obj_Blue_Ring, 8, false, 0);
 }
 
 // Fleet Commander Daemeon boss fight
@@ -39,29 +39,29 @@ if (room == room_Fleet_Commander_Daemeon)
 {
     // Defector 1
     if (instance_exists(obj_Defector_1_Combat))
-        follow_object(obj_Defector_1_Combat, 8);
+        follow_object(obj_Defector_1_Combat, 8, false, 0);
     // Defector 3
     else if (instance_exists(obj_Defector_3_Combat))
-        follow_object(obj_Defector_3_Combat, 8);
+        follow_object(obj_Defector_3_Combat, 8, false, 0);
     // Fleet Commander Daemeon
     else if (instance_exists(obj_Fleet_Commander_Daemeon))
-        follow_object(obj_Fleet_Commander_Daemeon, 8);
+        follow_object(obj_Fleet_Commander_Daemeon, 8, false, 0);
 }
 
 // Harrier Angel Boss Fight
 if (room == room_Harrier_Angel)
 {
     if (instance_exists(obj_Harrier_Angel))
-        follow_object(obj_Harrier_Angel, 8);
+        follow_object(obj_Harrier_Angel, 8, false, 0);
 }
 
 // The Queen Boss Fight
 if (room == room_The_Queen)
 {
     if (instance_exists(obj_Eye) &amp;&amp; instance_number(obj_Eye) == 1)
-        follow_object(obj_Eye, 8);
+        follow_object(obj_Eye, 8, false, 0);
     if (instance_exists(obj_Core))
-        follow_object(obj_Core, 8);
+        follow_object(obj_Core, 8, false, 0);
 }
 </string>
           </argument>

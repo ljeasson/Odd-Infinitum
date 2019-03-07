@@ -82,7 +82,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Home Towards Player
-follow_object(obj_Player, 2);
+follow_object(obj_Player, 2, true, 0);
 
 // Destroy when hit points equal 0
 if (hit_points == 0)

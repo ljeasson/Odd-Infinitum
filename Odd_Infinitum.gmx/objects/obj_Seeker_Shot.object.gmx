@@ -63,7 +63,7 @@ seeking_speed = 6;
             <kind>1</kind>
             <string>/// Home to Target
 if (homing_target != "")
-    follow_object(homing_target, seeking_speed);
+    follow_object(homing_target, seeking_speed, true, 0);
 else
     move_towards_point(room_width+256, random(room_height), seeking_speed);
 </string>
