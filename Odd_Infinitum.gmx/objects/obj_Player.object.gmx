@@ -30,8 +30,9 @@
 // State
 state = player_states.normal;
 
-// Counter
-counter = 0;
+// Counters
+counter_automated_repair = 0;
+counter_supply_drop = 0;
 
 // Emergency Repair Used indicator
 emergency_repair_used = false;
@@ -179,6 +180,16 @@ if (health &gt; 100) { health = 100 };
 // If health is less than or equal to 0, player is dead
 if (health &lt;= 0) { state = player_states.dead };
     
+// Damage Buff
+if (global.damage_buff_enabled) instance_create_once(x,y,obj_Damage_Buff);
+
+// Cap Supply Drop counter at time to drop
+if (obj_Player.counter_supply_drop &gt; 2400) 
+    obj_Player.counter_supply_drop = 2400;
+
+// Increase Supply Drop counter
+obj_Player.counter_supply_drop += 1;
+
 if (keyboard_check_pressed(ord('Q')))
     health = 5;
 </string>

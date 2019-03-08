@@ -128,9 +128,9 @@ global.laser = "Pilot Laser";
 // Alt Laser
 global.alt_laser = "Pilot Laser";
 // Missile
-global.missile = "Homing Missile";
+global.missile = "Standard Missile";
 // Augment
-global.augment = "Buckler Repair";
+global.augment = "Supply Drop";
 // Skin
 global.skin = "Scouter";
 </string>

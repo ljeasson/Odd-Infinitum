@@ -5,14 +5,14 @@ time_to_heal = argument0;
 heal_amount = argument1;
 
 // Check if "Automated Repair" augment is equipped
-if (global.augment == "Automated Repair" && obj_Player.counter == time_to_heal)
+if (global.augment == "Automated Repair" && obj_Player.counter_automated_repair == time_to_heal)
 {
     // Increase health
     health += heal_amount;
     
     // Reset Counter
-    obj_Player.counter = 0;
+    obj_Player.counter_automated_repair = 0;
 }
 
 // Update Counter
-obj_Player.counter += 1;
+obj_Player.counter_automated_repair += 1;

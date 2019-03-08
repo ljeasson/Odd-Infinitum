@@ -295,6 +295,10 @@
     <sprite>sprites\spr_Charge_Shot_2_3</sprite>
     <sprite>sprites\spr_Rapid_Fire_2</sprite>
     <sprite>sprites\spr_Fleet_Trident</sprite>
+    <sprite>sprites\spr_Extra_Health</sprite>
+    <sprite>sprites\spr_Extra_Missile</sprite>
+    <sprite>sprites\spr_Damage_Boost</sprite>
+    <sprite>sprites\spr_Supply_Container</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Hangar</background>
@@ -390,6 +394,7 @@
         <script>scripts\quick_repair.gml</script>
         <script>scripts\automated_repair.gml</script>
         <script>scripts\emergency_repair.gml</script>
+        <script>scripts\supply_drop.gml</script>
       </scripts>
     </scripts>
     <scripts name="Remote Player Scripts">
@@ -578,6 +583,11 @@
       <object>objects\obj_Health_Regain_Effect</object>
       <object>objects\obj_Ring</object>
       <object>objects\obj_Rotator</object>
+      <object>objects\obj_Supply_Container</object>
+      <object>objects\obj_Extra_Health</object>
+      <object>objects\obj_Extra_Missile</object>
+      <object>objects\obj_Damage_Boost</object>
+      <object>objects\obj_Damage_Buff</object>
     </objects>
     <objects name="Stars">
       <object>objects\obj_Star</object>

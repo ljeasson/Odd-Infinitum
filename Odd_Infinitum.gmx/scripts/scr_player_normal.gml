@@ -91,13 +91,11 @@ if (key_energy_buckler)
 }
 
 // Quick Repair
+// Supply Drop
 if (key_use)
 {
     quick_repair();
-    if (instance_exists(obj_Server))
-        write_buffer_SERVER(7);
-    if (instance_exists(obj_Client))
-        write_buffer_CLIENT(7);
+    supply_drop();
 }
 
 // Automated Repair
