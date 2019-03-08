@@ -299,6 +299,11 @@
     <sprite>sprites\spr_Extra_Missile</sprite>
     <sprite>sprites\spr_Damage_Boost</sprite>
     <sprite>sprites\spr_Supply_Container</sprite>
+    <sprite>sprites\spr_pixel_explosion_1</sprite>
+    <sprite>sprites\spr_pixel_explosion_2</sprite>
+    <sprite>sprites\spr_pixel_explosion_3</sprite>
+    <sprite>sprites\spr_pixel_explosion_4</sprite>
+    <sprite>sprites\spr_pixel_explosion_5</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_Hangar</background>
@@ -306,6 +311,7 @@
     <background>background\back_Cave</background>
     <background>background\back_flesh</background>
     <background>background\back_flesh_2</background>
+    <background>background\back_flesh_tiles</background>
     <background>background\grid_1</background>
     <background>background\grid_2</background>
     <background>background\grid_3</background>

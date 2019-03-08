@@ -276,7 +276,7 @@ global.seen_borris_missiles = false;
           <argument>
             <kind>1</kind>
             <string>/// Progression
-global.fleet_commander_daemeon_unlocked = true;
+global.fleet_commander_daemeon_unlocked = false;
 global.harrier_angel_unlocked = false;
 global.the_queen_unlocked = false;
 </string>

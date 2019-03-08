@@ -12,4 +12,4 @@ audio_play_sound(snd_Health_Regain, 1, false);
 health += amount;
 
 // Destroy Regain Laser
-instance_destroy(obj_Regain_Laser);
+instance_destroy(other);
