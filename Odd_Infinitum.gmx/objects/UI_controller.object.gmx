@@ -57,8 +57,11 @@ if (global.show_player_ui)
     draw_set_halign(fa_left);
     draw_text(32,80,global.shop_currency);
     
-    draw_set_halign(fa_center);
-    draw_text(room_width/2,32,obj_Player.counter_supply_drop);
+    if (instance_exists(obj_Player))
+    {
+        draw_set_halign(fa_center);
+        draw_text(room_width/2,32,obj_Player.counter_supply_drop);
+    }
 }
 </string>
           </argument>

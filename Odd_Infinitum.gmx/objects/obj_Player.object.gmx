@@ -184,11 +184,11 @@ if (health &lt;= 0) { state = player_states.dead };
 if (global.damage_buff_enabled) instance_create_once(x,y,obj_Damage_Buff);
 
 // Cap Supply Drop counter at time to drop
-if (obj_Player.counter_supply_drop &gt; 2400) 
-    obj_Player.counter_supply_drop = 2400;
+if (counter_supply_drop &gt; 2400) 
+    counter_supply_drop = 2400;
 
 // Increase Supply Drop counter
-obj_Player.counter_supply_drop += 1;
+counter_supply_drop += 1;
 
 if (keyboard_check_pressed(ord('Q')))
     health = 5;
