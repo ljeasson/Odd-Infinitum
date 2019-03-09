@@ -287,7 +287,7 @@ if (eye_health &lt; 0) eye_health = 0;
 if (eye_health == 0) instance_destroy();
 
 // Face towards player
-image_angle = point_direction(x, y, obj_Player.x, obj_Player.y) - 180;
+if (instance_exists(obj_Player)) image_angle = point_direction(x, y, obj_Player.x, obj_Player.y) - 180;
 
 // Attacks
 if (instance_number(obj_Eye) &lt;= 3) 
